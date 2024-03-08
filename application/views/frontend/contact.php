@@ -15,7 +15,7 @@
     <div style="margin-top: -30px;" ></div>        
     <div class="bg-pages-in ">
         <div class="text-center">
-            <img src="<?php echo base_url("docs\t.logo.png"); ?>" width="132px" height="133px">
+            <img src="<?php echo base_url("docs/t.logo.png"); ?>" width="132px" height="133px">
             <br>
             <div class="mt-4">
                 <span class="font-contact-1">เทศบาลตำบลธงธานี</span><br><br>
