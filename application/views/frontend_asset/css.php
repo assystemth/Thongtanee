@@ -1059,7 +1059,7 @@
 
 
   .footer {
-    background-image: url('<?php echo base_url("docs/k.bg-footer.png"); ?>');
+    background-image: url('<?php echo base_url("docs/t.bg-footer.png"); ?>');
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: center center;
