@@ -38,9 +38,8 @@ class Travel_model extends CI_Model
             'travel_date' => $this->input->post('travel_date'),
             'travel_phone' => $this->input->post('travel_phone'),
             'travel_youtube' => $this->input->post('travel_youtube'),
-            'travel_map' => $this->input->post('travel_map'),
-            // 'travel_lat' => $this->input->post('travel_lat'),
-            // 'travel_long' => $this->input->post('travel_long'),
+            'travel_lat' => $this->input->post('travel_lat'),
+            'travel_long' => $this->input->post('travel_long'),
             'travel_by' => $this->session->userdata('m_fname') // เพิ่มชื่อคนที่แก้ไขข้อมูล
         );
 
@@ -245,9 +244,8 @@ class Travel_model extends CI_Model
             'travel_date' => $this->input->post('travel_date'),
             'travel_phone' => $this->input->post('travel_phone'),
             'travel_youtube' => $this->input->post('travel_youtube'),
-            'travel_map' => $this->input->post('travel_map'),
-            // 'travel_lat' => $this->input->post('travel_lat'),
-            // 'travel_long' => $this->input->post('travel_long'),
+            'travel_lat' => $this->input->post('travel_lat'),
+            'travel_long' => $this->input->post('travel_long'),
             'travel_by' => $this->session->userdata('m_fname'), // เพิ่มชื่อคนที่แก้ไขข้อมูล
             'travel_img' => $filename
         );
@@ -494,9 +492,8 @@ class Travel_model extends CI_Model
             'user_travel_date' => $this->input->post('user_travel_date'),
             'user_travel_phone' => $this->input->post('user_travel_phone'),
             'user_travel_youtube' => $this->input->post('user_travel_youtube'),
-            'user_travel_map' => $this->input->post('user_travel_map'),
-            // 'user_travel_lat' => $this->input->post('user_travel_lat'),
-            // 'user_travel_long' => $this->input->post('user_travel_long'),
+            'user_travel_lat' => $this->input->post('user_travel_lat'),
+            'user_travel_long' => $this->input->post('user_travel_long'),
             'user_travel_by' => $this->session->userdata('m_fname'), // เพิ่มชื่อคนที่แก้ไขข้อมูล
             'user_travel_img' => $filename
         );
@@ -696,7 +693,7 @@ class Travel_model extends CI_Model
         $this->db->select('*');
         $this->db->from('tbl_travel');
         $this->db->where('tbl_travel.travel_status', 'show');
-        $this->db->order_by('travel_id', 'DESC');
+        $this->db->limit(9);
         $query = $this->db->get();
         return $query->result();
     }

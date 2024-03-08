@@ -10,7 +10,7 @@ class HotNews_model extends CI_Model
 
     public function list_all()
     {
-        $this->db->order_by('hotNews_id', 'DESC');
+        $this->db->order_by('hotNews_id', 'asc');
         $query = $this->db->get('tbl_hotnews');
         return $query->result();
     }
@@ -84,7 +84,7 @@ class HotNews_model extends CI_Model
         $this->db->select('*');
         $this->db->from('tbl_hotnews');
         $this->db->where('tbl_hotnews.hotNews_status', 'show');
-        $this->db->order_by('tbl_hotnews.hotNews_id', 'ASC');
+        $this->db->order_by('tbl_hotnews.hotNews_id', 'asc');
         $query = $this->db->get();
         return $query->result();
     }

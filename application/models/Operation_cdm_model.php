@@ -514,6 +514,7 @@ class Operation_cdm_model extends CI_Model
         $this->db->join('tbl_operation_cdm_type', 'tbl_operation_cdm.operation_cdm_ref_id = tbl_operation_cdm_type.operation_cdm_type_id', 'inner'); // เปลี่ยนเป็น INNER JOIN
         $this->db->where('tbl_operation_cdm_type.operation_cdm_type_id', $operation_cdm_type_id);
         $this->db->where('tbl_operation_cdm.operation_cdm_status', 'show');
+        $this->db->order_by('tbl_operation_cdm.operation_cdm_date', 'DESC'); // เพิ่มบรรทัดนี้
         $query = $this->db->get();
         return $query->result();
     }

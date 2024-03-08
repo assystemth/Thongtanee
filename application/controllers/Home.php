@@ -9,7 +9,6 @@ class Home extends CI_Controller
 		$this->load->model('HotNews_model');
 		$this->load->model('banner_model');
 		$this->load->model('activity_model');
-		$this->load->model('video_model');
 		$this->load->model('p_rpo_model');
 		$this->load->model('p_reb_model');
 		$this->load->model('news_model');
@@ -86,7 +85,6 @@ class Home extends CI_Controller
 		$data['qHotnews'] = $this->HotNews_model->hotnews_frontend();
 		$data['qBanner'] = $this->banner_model->banner_frontend();
 		$data['qActivity'] = $this->activity_model->activity_frontend();
-		$data['video_data'] = $this->video_model->video_frontend();
 
 		$data['qP_reb'] = $this->p_reb_model->p_reb_frontend();
 		$data['qP_rpo'] = $this->p_rpo_model->p_rpo_frontend();

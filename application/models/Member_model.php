@@ -62,9 +62,7 @@ class Member_model extends CI_Model
             'm_password' => sha1($this->input->post('m_password')),
             'm_fname' => $this->input->post('m_fname'),
             'm_name' => $this->input->post('m_name'),
-            'm_lname' => $this->input->post('m_lname'),
-            'm_email' => $this->input->post('m_email')
-
+            'm_lname' => $this->input->post('m_lname')
         );
         $query = $this->db->insert('tbl_member', $data);
 
@@ -135,8 +133,8 @@ class Member_model extends CI_Model
                 'ref_pid' => $this->input->post('ref_pid'),
                 'm_fname' => $this->input->post('m_fname'),
                 'm_lname' => $this->input->post('m_lname'),
-                'm_phone' => $this->input->post('m_phone'),
                 'm_email' => $this->input->post('m_email'),
+                'm_phone' => $this->input->post('m_phone'),
                 'm_img' => $filename
             );
 

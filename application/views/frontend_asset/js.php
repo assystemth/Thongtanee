@@ -56,8 +56,8 @@
             arrows: true,
             prevArrow: '<img src="docs/k.pre-travel.png" class="slick-prev-otop">',
             nextArrow: '<img src="docs/k.next-travel.png" class="slick-next-otop">',
-            centerPadding: '0', // ตั้งค่าเป็น '0' หรือค่าบวกที่เหมาะสม
-            variableWidth: true // ปรับความกว้างของภาพตามขนาด
+            // centerPadding: '0', // ตั้งค่าเป็น '0' หรือค่าบวกที่เหมาะสม
+            // variableWidth: true // ปรับความกว้างของภาพตามขนาด
         });
     });
     // ****************************************************************************

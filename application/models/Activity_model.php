@@ -712,7 +712,7 @@ class Activity_model extends CI_Model
         $this->db->select('*');
         $this->db->from('tbl_activity');
         $this->db->where('tbl_activity.activity_status', 'show');
-        $this->db->limit(5);
+        $this->db->limit(4);
         $this->db->order_by('tbl_activity.activity_date', 'DESC');
         $query = $this->db->get();
         return $query->result();

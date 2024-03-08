@@ -9,19 +9,16 @@ class Pages extends CI_Controller
 		$this->load->model('activity_model');
 		$this->load->model('news_model');
 		$this->load->model('announce_model');
-		$this->load->model('award_model');
 		$this->load->model('order_model');
 		$this->load->model('procurement_model');
 		$this->load->model('mui_model');
 		$this->load->model('guide_work_model');
 		$this->load->model('loadform_model');
 		$this->load->model('msg_pres_model');
-		$this->load->model('msg_prem_model');
 
 		$this->load->model('history_model');
 		$this->load->model('otop_model');
 		$this->load->model('gci_model');
-		$this->load->model('emblem_model');
 		$this->load->model('vision_model');
 		$this->load->model('authority_model');
 		$this->load->model('mission_model');
@@ -38,12 +35,6 @@ class Pages extends CI_Controller
 		$this->load->model('p_maintenance_model');
 		$this->load->model('p_education_model');
 		$this->load->model('p_audit_model');
-		$this->load->model('p_dsab_model');
-		$this->load->model('p_cdc_brkm_model');
-		$this->load->model('p_cdc_bpsb_model');
-		$this->load->model('p_cdc_bbj_model');
-		$this->load->model('p_cdc_bnry_model');
-		$this->load->model('p_cdc_bkc_model');
 
 		$this->load->model('plan_pdl_model');
 		$this->load->model('plan_pc3y_model');
@@ -72,19 +63,15 @@ class Pages extends CI_Controller
 		$this->load->model('pbsv_ahs_model');
 		$this->load->model('pbsv_oppr_model');
 		$this->load->model('pbsv_ems_model');
-		$this->load->model('pbsv_ae_model');
 		$this->load->model('pbsv_gup_model');
 		$this->load->model('pbsv_e_book_model');
-		$this->load->model('pbsv_tax_model');
 
 		$this->load->model('operation_reauf_model');
-		$this->load->model('p_rpobuy_model');
 		$this->load->model('p_rpo_model');
 		$this->load->model('p_reb_model');
 		$this->load->model('operation_sap_model');
 		$this->load->model('operation_pm_model');
 		$this->load->model('operation_policy_hr_model');
-		$this->load->model('video_model');
 		$this->load->model('operation_am_hr_model');
 		$this->load->model('operation_rdam_hr_model');
 		$this->load->model('operation_cdm_model');
@@ -98,8 +85,6 @@ class Pages extends CI_Controller
 		$this->load->model('operation_procurement_model');
 		$this->load->model('operation_aa_model');
 		$this->load->model('operation_aditn_model');
-		$this->load->model('operation_eg_model');
-		$this->load->model('operation_ameg_model');
 
 		$this->load->model('newsletter_model');
 		$this->load->model('q_a_model');
@@ -119,7 +104,6 @@ class Pages extends CI_Controller
 		$this->load->model('esv_ods_model');
 		$this->load->model('ita_year_model');
 		$this->load->model('km_model');
-		$this->load->model('eitiit_model');
 	}
 
 	// public function index()
@@ -144,7 +128,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/activity', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -159,7 +143,7 @@ class Pages extends CI_Controller
 		if (!$data['rsActivity']) {
 			$this->load->view('frontend_templat/header');
 			$this->load->view('frontend_asset/css');
-			$this->load->view('frontend_templat/navbar');
+			$this->load->view('frontend_templat/navbar_other');
 			$this->load->view('frontend/empty_detail_pages');
 			$this->load->view('frontend_asset/js');
 			$this->load->view('frontend_templat/footer');
@@ -169,7 +153,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/activity_detail', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -180,7 +164,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/news', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -195,7 +179,7 @@ class Pages extends CI_Controller
 		if (!$data['rsData']) {
 			$this->load->view('frontend_templat/header');
 			$this->load->view('frontend_asset/css');
-			$this->load->view('frontend_templat/navbar');
+			$this->load->view('frontend_templat/navbar_other');
 			$this->load->view('frontend/empty_detail_pages');
 			$this->load->view('frontend_asset/js');
 			$this->load->view('frontend_templat/footer');
@@ -207,7 +191,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/news_detail', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -222,7 +206,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/order', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -237,7 +221,7 @@ class Pages extends CI_Controller
 		if (!$data['rsData']) {
 			$this->load->view('frontend_templat/header');
 			$this->load->view('frontend_asset/css');
-			$this->load->view('frontend_templat/navbar');
+			$this->load->view('frontend_templat/navbar_other');
 			$this->load->view('frontend/empty_detail_pages');
 			$this->load->view('frontend_asset/js');
 			$this->load->view('frontend_templat/footer');
@@ -249,7 +233,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/order_detail', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -265,7 +249,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/announce', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -280,7 +264,7 @@ class Pages extends CI_Controller
 		if (!$data['rsData']) {
 			$this->load->view('frontend_templat/header');
 			$this->load->view('frontend_asset/css');
-			$this->load->view('frontend_templat/navbar');
+			$this->load->view('frontend_templat/navbar_other');
 			$this->load->view('frontend/empty_detail_pages');
 			$this->load->view('frontend_asset/js');
 			$this->load->view('frontend_templat/footer');
@@ -292,7 +276,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/announce_detail', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -302,56 +286,13 @@ class Pages extends CI_Controller
 	{
 		$this->announce_model->increment_download_announce($announce_file_id);
 	}
-	public function award()
-	{
-		$data['query'] = $this->award_model->award_frontend_list();
-
-		$this->load->view('frontend_templat/header');
-		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
-		$this->load->view('frontend/award', $data);
-		$this->load->view('frontend_asset/js');
-		$this->load->view('frontend_templat/footer');
-	}
-	public function award_detail($award_id)
-	{
-		$this->award_model->increment_view($award_id);
-
-		$data['rsData'] = $this->award_model->read($award_id);
-
-		// เพิ่มเงื่อนไขเพื่อตรวจสอบว่ามีข้อมูลหรือไม่
-		if (!$data['rsData']) {
-			$this->load->view('frontend_templat/header');
-			$this->load->view('frontend_asset/css');
-			$this->load->view('frontend_templat/navbar');
-			$this->load->view('frontend/empty_detail_pages');
-			$this->load->view('frontend_asset/js');
-			$this->load->view('frontend_templat/footer');
-			return; // ให้จบการทำงานที่นี่
-		}
-
-		$data['rsFile'] = $this->award_model->read_file($award_id);
-		$data['rsImg'] = $this->award_model->read_img($award_id);
-
-		$this->load->view('frontend_templat/header');
-		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
-		$this->load->view('frontend/award_detail', $data);
-		$this->load->view('frontend_asset/js');
-		$this->load->view('frontend_templat/footer');
-	}
-
-	public function increment_download_award($award_file_id)
-	{
-		$this->award_model->increment_download_award($award_file_id);
-	}
 	public function procurement()
 	{
 		$data['query'] = $this->procurement_model->procurement_frontend_list();
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/procurement', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -366,7 +307,7 @@ class Pages extends CI_Controller
 		if (!$data['rsData']) {
 			$this->load->view('frontend_templat/header');
 			$this->load->view('frontend_asset/css');
-			$this->load->view('frontend_templat/navbar');
+			$this->load->view('frontend_templat/navbar_other');
 			$this->load->view('frontend/empty_detail_pages');
 			$this->load->view('frontend_asset/js');
 			$this->load->view('frontend_templat/footer');
@@ -378,7 +319,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/procurement_detail', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -393,7 +334,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/mui', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -408,7 +349,7 @@ class Pages extends CI_Controller
 		if (!$data['rsData']) {
 			$this->load->view('frontend_templat/header');
 			$this->load->view('frontend_asset/css');
-			$this->load->view('frontend_templat/navbar');
+			$this->load->view('frontend_templat/navbar_other');
 			$this->load->view('frontend/empty_detail_pages');
 			$this->load->view('frontend_asset/js');
 			$this->load->view('frontend_templat/footer');
@@ -420,7 +361,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/mui_detail', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -435,7 +376,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/guide_work', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -450,7 +391,7 @@ class Pages extends CI_Controller
 		if (!$data['rsData']) {
 			$this->load->view('frontend_templat/header');
 			$this->load->view('frontend_asset/css');
-			$this->load->view('frontend_templat/navbar');
+			$this->load->view('frontend_templat/navbar_other');
 			$this->load->view('frontend/empty_detail_pages');
 			$this->load->view('frontend_asset/js');
 			$this->load->view('frontend_templat/footer');
@@ -462,7 +403,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/guide_work_detail', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -477,7 +418,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/loadform', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -492,7 +433,7 @@ class Pages extends CI_Controller
 		if (!$data['rsData']) {
 			$this->load->view('frontend_templat/header');
 			$this->load->view('frontend_asset/css');
-			$this->load->view('frontend_templat/navbar');
+			$this->load->view('frontend_templat/navbar_other');
 			$this->load->view('frontend/empty_detail_pages');
 			$this->load->view('frontend_asset/js');
 			$this->load->view('frontend_templat/footer');
@@ -504,7 +445,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/loadform_detail', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -516,7 +457,7 @@ class Pages extends CI_Controller
 	public function e_gp()
 	{
 		// URL of the Open API
-		$api_url = 'https://opend.data.go.th/govspending/cgdcontract?api-key=TH3JFBwJZlaXdDCpcVfSFGuoofCJ1heX&year=2566&dept_code=6320601&budget_start=0&budget_end=1000000000&offset=0&limit=500&keyword=&winner_tin=';
+		$api_url = 'https://opend.data.go.th/govspending/cgdcontract?api-key=TH3JFBwJZlaXdDCpcVfSFGuoofCJ1heX&year=2566&dept_code=6320120&budget_start=0&budget_end=1000000000&offset=0&limit=500&keyword=&winner_tin=';
 
 		// Fetch data from the API
 		$api_data = file_get_contents($api_url);
@@ -533,7 +474,7 @@ class Pages extends CI_Controller
 
 				$this->load->view('frontend_templat/header');
 				$this->load->view('frontend_asset/css');
-				$this->load->view('frontend_templat/navbar');
+				$this->load->view('frontend_templat/navbar_other');
 				$this->load->view('frontend/e_gp', $data);
 				$this->load->view('frontend_asset/js');
 				$this->load->view('frontend_templat/footer');
@@ -546,7 +487,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/otop', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -557,7 +498,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/history', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -568,7 +509,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/vision', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -579,30 +520,8 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/gci', $data);
-		$this->load->view('frontend_asset/js');
-		$this->load->view('frontend_templat/footer');
-	}
-	public function pbsv_tax()
-	{
-		$data['query'] = $this->pbsv_tax_model->pbsv_tax_frontend();
-
-		$this->load->view('frontend_templat/header');
-		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
-		$this->load->view('frontend/pbsv_tax', $data);
-		$this->load->view('frontend_asset/js');
-		$this->load->view('frontend_templat/footer');
-	}
-	public function emblem()
-	{
-		$data['qemblem'] = $this->emblem_model->emblem_frontend();
-
-		$this->load->view('frontend_templat/header');
-		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
-		$this->load->view('frontend/emblem', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
 	}
@@ -612,7 +531,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/authority', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -623,7 +542,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/mission', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -634,7 +553,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/ci', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -647,7 +566,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/executivepolicy', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -664,7 +583,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/msg_pres', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -673,30 +592,13 @@ class Pages extends CI_Controller
 	{
 		$this->msg_pres_model->increment_download_msg_pres();
 	}
-	public function msg_prem()
-	{
-		$this->msg_prem_model->increment_view();
-
-		$data['query'] = $this->msg_prem_model->msg_prem_frontend();
-
-		$this->load->view('frontend_templat/header');
-		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
-		$this->load->view('frontend/msg_prem', $data);
-		$this->load->view('frontend_asset/js');
-		$this->load->view('frontend_templat/footer');
-	}
-	public function increment_download_msg_prem()
-	{
-		$this->msg_prem_model->increment_download_msg_prem();
-	}
 	public function travel()
 	{
 		$data['query'] = $this->travel_model->travel_frontend();
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/travel', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -711,7 +613,7 @@ class Pages extends CI_Controller
 		if (!$data['rsTravel']) {
 			$this->load->view('frontend_templat/header');
 			$this->load->view('frontend_asset/css');
-			$this->load->view('frontend_templat/navbar');
+			$this->load->view('frontend_templat/navbar_other');
 			$this->load->view('frontend/empty_detail_pages');
 			$this->load->view('frontend_asset/js');
 			$this->load->view('frontend_templat/footer');
@@ -722,7 +624,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/travel_detail', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -733,7 +635,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/si', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -744,7 +646,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/canon_bgps', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -759,7 +661,7 @@ class Pages extends CI_Controller
 		if (!$data['rsData']) {
 			$this->load->view('frontend_templat/header');
 			$this->load->view('frontend_asset/css');
-			$this->load->view('frontend_templat/navbar');
+			$this->load->view('frontend_templat/navbar_other');
 			$this->load->view('frontend/empty_detail_pages');
 			$this->load->view('frontend_asset/js');
 			$this->load->view('frontend_templat/footer');
@@ -771,7 +673,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/canon_bgps_detail', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -786,7 +688,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/canon_chh', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -801,7 +703,7 @@ class Pages extends CI_Controller
 		if (!$data['rsData']) {
 			$this->load->view('frontend_templat/header');
 			$this->load->view('frontend_asset/css');
-			$this->load->view('frontend_templat/navbar');
+			$this->load->view('frontend_templat/navbar_other');
 			$this->load->view('frontend/empty_detail_pages');
 			$this->load->view('frontend_asset/js');
 			$this->load->view('frontend_templat/footer');
@@ -813,7 +715,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/canon_chh_detail', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -828,7 +730,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/canon_ritw', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -843,7 +745,7 @@ class Pages extends CI_Controller
 		if (!$data['rsData']) {
 			$this->load->view('frontend_templat/header');
 			$this->load->view('frontend_asset/css');
-			$this->load->view('frontend_templat/navbar');
+			$this->load->view('frontend_templat/navbar_other');
 			$this->load->view('frontend/empty_detail_pages');
 			$this->load->view('frontend_asset/js');
 			$this->load->view('frontend_templat/footer');
@@ -855,7 +757,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/canon_ritw_detail', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -870,7 +772,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/canon_market', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -885,7 +787,7 @@ class Pages extends CI_Controller
 		if (!$data['rsData']) {
 			$this->load->view('frontend_templat/header');
 			$this->load->view('frontend_asset/css');
-			$this->load->view('frontend_templat/navbar');
+			$this->load->view('frontend_templat/navbar_other');
 			$this->load->view('frontend/empty_detail_pages');
 			$this->load->view('frontend_asset/js');
 			$this->load->view('frontend_templat/footer');
@@ -897,7 +799,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/canon_market_detail', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -912,7 +814,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/canon_rmwp', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -927,7 +829,7 @@ class Pages extends CI_Controller
 		if (!$data['rsData']) {
 			$this->load->view('frontend_templat/header');
 			$this->load->view('frontend_asset/css');
-			$this->load->view('frontend_templat/navbar');
+			$this->load->view('frontend_templat/navbar_other');
 			$this->load->view('frontend/empty_detail_pages');
 			$this->load->view('frontend_asset/js');
 			$this->load->view('frontend_templat/footer');
@@ -939,7 +841,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/canon_rmwp_detail', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -954,7 +856,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/canon_rcsp', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -969,7 +871,7 @@ class Pages extends CI_Controller
 		if (!$data['rsData']) {
 			$this->load->view('frontend_templat/header');
 			$this->load->view('frontend_asset/css');
-			$this->load->view('frontend_templat/navbar');
+			$this->load->view('frontend_templat/navbar_other');
 			$this->load->view('frontend/empty_detail_pages');
 			$this->load->view('frontend_asset/js');
 			$this->load->view('frontend_templat/footer');
@@ -981,7 +883,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/canon_rcsp_detail', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -996,7 +898,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/canon_rcp', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -1011,7 +913,7 @@ class Pages extends CI_Controller
 		if (!$data['rsData']) {
 			$this->load->view('frontend_templat/header');
 			$this->load->view('frontend_asset/css');
-			$this->load->view('frontend_templat/navbar');
+			$this->load->view('frontend_templat/navbar_other');
 			$this->load->view('frontend/empty_detail_pages');
 			$this->load->view('frontend_asset/js');
 			$this->load->view('frontend_templat/footer');
@@ -1023,7 +925,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/canon_rcp_detail', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -1038,7 +940,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/plan_pdl', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -1053,7 +955,7 @@ class Pages extends CI_Controller
 		if (!$data['rsData']) {
 			$this->load->view('frontend_templat/header');
 			$this->load->view('frontend_asset/css');
-			$this->load->view('frontend_templat/navbar');
+			$this->load->view('frontend_templat/navbar_other');
 			$this->load->view('frontend/empty_detail_pages');
 			$this->load->view('frontend_asset/js');
 			$this->load->view('frontend_templat/footer');
@@ -1065,7 +967,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/plan_pdl_detail', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -1080,7 +982,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/plan_pc3y', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -1095,7 +997,7 @@ class Pages extends CI_Controller
 		if (!$data['rsData']) {
 			$this->load->view('frontend_templat/header');
 			$this->load->view('frontend_asset/css');
-			$this->load->view('frontend_templat/navbar');
+			$this->load->view('frontend_templat/navbar_other');
 			$this->load->view('frontend/empty_detail_pages');
 			$this->load->view('frontend_asset/js');
 			$this->load->view('frontend_templat/footer');
@@ -1107,7 +1009,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/plan_pc3y_detail', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -1122,7 +1024,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/plan_pds3y', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -1137,7 +1039,7 @@ class Pages extends CI_Controller
 		if (!$data['rsData']) {
 			$this->load->view('frontend_templat/header');
 			$this->load->view('frontend_asset/css');
-			$this->load->view('frontend_templat/navbar');
+			$this->load->view('frontend_templat/navbar_other');
 			$this->load->view('frontend/empty_detail_pages');
 			$this->load->view('frontend_asset/js');
 			$this->load->view('frontend_templat/footer');
@@ -1149,7 +1051,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/plan_pds3y_detail', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -1164,7 +1066,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/plan_pdpa', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -1179,7 +1081,7 @@ class Pages extends CI_Controller
 		if (!$data['rsData']) {
 			$this->load->view('frontend_templat/header');
 			$this->load->view('frontend_asset/css');
-			$this->load->view('frontend_templat/navbar');
+			$this->load->view('frontend_templat/navbar_other');
 			$this->load->view('frontend/empty_detail_pages');
 			$this->load->view('frontend_asset/js');
 			$this->load->view('frontend_templat/footer');
@@ -1191,7 +1093,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/plan_pdpa_detail', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -1200,16 +1102,13 @@ class Pages extends CI_Controller
 	{
 		$this->plan_pdpa_model->increment_download_plan_pdpa($plan_pdpa_file_id);
 	}
-
-
-	// --------------------------------------
 	public function plan_dpy()
 	{
 		$data['query'] = $this->plan_dpy_model->plan_dpy_frontend();
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/plan_dpy', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -1224,7 +1123,7 @@ class Pages extends CI_Controller
 		if (!$data['rsData']) {
 			$this->load->view('frontend_templat/header');
 			$this->load->view('frontend_asset/css');
-			$this->load->view('frontend_templat/navbar');
+			$this->load->view('frontend_templat/navbar_other');
 			$this->load->view('frontend/empty_detail_pages');
 			$this->load->view('frontend_asset/js');
 			$this->load->view('frontend_templat/footer');
@@ -1236,7 +1135,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/plan_dpy_detail', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -1245,15 +1144,13 @@ class Pages extends CI_Controller
 	{
 		$this->plan_dpy_model->increment_download_plan_dpy($plan_dpy_file_id);
 	}
-
-	// -----------------------------------
 	public function plan_poa()
 	{
 		$data['query'] = $this->plan_poa_model->plan_poa_frontend();
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/plan_poa', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -1268,7 +1165,7 @@ class Pages extends CI_Controller
 		if (!$data['rsData']) {
 			$this->load->view('frontend_templat/header');
 			$this->load->view('frontend_asset/css');
-			$this->load->view('frontend_templat/navbar');
+			$this->load->view('frontend_templat/navbar_other');
 			$this->load->view('frontend/empty_detail_pages');
 			$this->load->view('frontend_asset/js');
 			$this->load->view('frontend_templat/footer');
@@ -1280,7 +1177,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/plan_poa_detail', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -1295,7 +1192,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/plan_pcra', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -1310,7 +1207,7 @@ class Pages extends CI_Controller
 		if (!$data['rsData']) {
 			$this->load->view('frontend_templat/header');
 			$this->load->view('frontend_asset/css');
-			$this->load->view('frontend_templat/navbar');
+			$this->load->view('frontend_templat/navbar_other');
 			$this->load->view('frontend/empty_detail_pages');
 			$this->load->view('frontend_asset/js');
 			$this->load->view('frontend_templat/footer');
@@ -1322,7 +1219,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/plan_pcra_detail', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -1337,7 +1234,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/plan_pop', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -1352,7 +1249,7 @@ class Pages extends CI_Controller
 		if (!$data['rsData']) {
 			$this->load->view('frontend_templat/header');
 			$this->load->view('frontend_asset/css');
-			$this->load->view('frontend_templat/navbar');
+			$this->load->view('frontend_templat/navbar_other');
 			$this->load->view('frontend/empty_detail_pages');
 			$this->load->view('frontend_asset/js');
 			$this->load->view('frontend_templat/footer');
@@ -1364,7 +1261,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/plan_pop_detail', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -1379,7 +1276,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/plan_paca', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -1394,7 +1291,7 @@ class Pages extends CI_Controller
 		if (!$data['rsData']) {
 			$this->load->view('frontend_templat/header');
 			$this->load->view('frontend_asset/css');
-			$this->load->view('frontend_templat/navbar');
+			$this->load->view('frontend_templat/navbar_other');
 			$this->load->view('frontend/empty_detail_pages');
 			$this->load->view('frontend_asset/js');
 			$this->load->view('frontend_templat/footer');
@@ -1406,7 +1303,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/plan_paca_detail', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -1421,7 +1318,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/plan_psi', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -1436,7 +1333,7 @@ class Pages extends CI_Controller
 		if (!$data['rsData']) {
 			$this->load->view('frontend_templat/header');
 			$this->load->view('frontend_asset/css');
-			$this->load->view('frontend_templat/navbar');
+			$this->load->view('frontend_templat/navbar_other');
 			$this->load->view('frontend/empty_detail_pages');
 			$this->load->view('frontend_asset/js');
 			$this->load->view('frontend_templat/footer');
@@ -1448,7 +1345,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/plan_psi_detail', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -1463,7 +1360,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/plan_pmda', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -1478,7 +1375,7 @@ class Pages extends CI_Controller
 		if (!$data['rsData']) {
 			$this->load->view('frontend_templat/header');
 			$this->load->view('frontend_asset/css');
-			$this->load->view('frontend_templat/navbar');
+			$this->load->view('frontend_templat/navbar_other');
 			$this->load->view('frontend/empty_detail_pages');
 			$this->load->view('frontend_asset/js');
 			$this->load->view('frontend_templat/footer');
@@ -1490,7 +1387,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/plan_pmda_detail', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -1505,7 +1402,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/pbsv_cac', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -1520,7 +1417,7 @@ class Pages extends CI_Controller
 		if (!$data['rsData']) {
 			$this->load->view('frontend_templat/header');
 			$this->load->view('frontend_asset/css');
-			$this->load->view('frontend_templat/navbar');
+			$this->load->view('frontend_templat/navbar_other');
 			$this->load->view('frontend/empty_detail_pages');
 			$this->load->view('frontend_asset/js');
 			$this->load->view('frontend_templat/footer');
@@ -1532,7 +1429,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/pbsv_cac_detail', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -1547,7 +1444,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/pbsv_cig', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -1562,7 +1459,7 @@ class Pages extends CI_Controller
 		if (!$data['rsData']) {
 			$this->load->view('frontend_templat/header');
 			$this->load->view('frontend_asset/css');
-			$this->load->view('frontend_templat/navbar');
+			$this->load->view('frontend_templat/navbar_other');
 			$this->load->view('frontend/empty_detail_pages');
 			$this->load->view('frontend_asset/js');
 			$this->load->view('frontend_templat/footer');
@@ -1574,7 +1471,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/pbsv_cig_detail', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -1589,7 +1486,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/pbsv_cjc', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -1604,7 +1501,7 @@ class Pages extends CI_Controller
 		if (!$data['rsData']) {
 			$this->load->view('frontend_templat/header');
 			$this->load->view('frontend_asset/css');
-			$this->load->view('frontend_templat/navbar');
+			$this->load->view('frontend_templat/navbar_other');
 			$this->load->view('frontend/empty_detail_pages');
 			$this->load->view('frontend_asset/js');
 			$this->load->view('frontend_templat/footer');
@@ -1616,7 +1513,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/pbsv_cjc_detail', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -1631,7 +1528,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/pbsv_sags', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -1646,7 +1543,7 @@ class Pages extends CI_Controller
 		if (!$data['rsData']) {
 			$this->load->view('frontend_templat/header');
 			$this->load->view('frontend_asset/css');
-			$this->load->view('frontend_templat/navbar');
+			$this->load->view('frontend_templat/navbar_other');
 			$this->load->view('frontend/empty_detail_pages');
 			$this->load->view('frontend_asset/js');
 			$this->load->view('frontend_templat/footer');
@@ -1658,7 +1555,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/pbsv_sags_detail', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -1673,7 +1570,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/pbsv_ahs', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -1688,7 +1585,7 @@ class Pages extends CI_Controller
 		if (!$data['rsData']) {
 			$this->load->view('frontend_templat/header');
 			$this->load->view('frontend_asset/css');
-			$this->load->view('frontend_templat/navbar');
+			$this->load->view('frontend_templat/navbar_other');
 			$this->load->view('frontend/empty_detail_pages');
 			$this->load->view('frontend_asset/js');
 			$this->load->view('frontend_templat/footer');
@@ -1700,7 +1597,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/pbsv_ahs_detail', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -1715,7 +1612,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/pbsv_oppr', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -1730,7 +1627,7 @@ class Pages extends CI_Controller
 		if (!$data['rsData']) {
 			$this->load->view('frontend_templat/header');
 			$this->load->view('frontend_asset/css');
-			$this->load->view('frontend_templat/navbar');
+			$this->load->view('frontend_templat/navbar_other');
 			$this->load->view('frontend/empty_detail_pages');
 			$this->load->view('frontend_asset/js');
 			$this->load->view('frontend_templat/footer');
@@ -1742,7 +1639,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/pbsv_oppr_detail', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -1757,7 +1654,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/pbsv_ems', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -1772,7 +1669,7 @@ class Pages extends CI_Controller
 		if (!$data['rsData']) {
 			$this->load->view('frontend_templat/header');
 			$this->load->view('frontend_asset/css');
-			$this->load->view('frontend_templat/navbar');
+			$this->load->view('frontend_templat/navbar_other');
 			$this->load->view('frontend/empty_detail_pages');
 			$this->load->view('frontend_asset/js');
 			$this->load->view('frontend_templat/footer');
@@ -1784,7 +1681,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/pbsv_ems_detail', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -1793,55 +1690,13 @@ class Pages extends CI_Controller
 	{
 		$this->pbsv_ems_model->increment_download_pbsv_ems($pbsv_ems_file_id);
 	}
-	public function pbsv_ae()
-	{
-		$data['query'] = $this->pbsv_ae_model->pbsv_ae_frontend();
-
-		$this->load->view('frontend_templat/header');
-		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
-		$this->load->view('frontend/pbsv_ae', $data);
-		$this->load->view('frontend_asset/js');
-		$this->load->view('frontend_templat/footer');
-	}
-	public function pbsv_ae_detail($pbsv_ae_id)
-	{
-		$this->pbsv_ae_model->increment_view($pbsv_ae_id);
-
-		$data['rsData'] = $this->pbsv_ae_model->read($pbsv_ae_id);
-
-		// เพิ่มเงื่อนไขเพื่อตรวจสอบว่ามีข้อมูลหรือไม่
-		if (!$data['rsData']) {
-			$this->load->view('frontend_templat/header');
-			$this->load->view('frontend_asset/css');
-			$this->load->view('frontend_templat/navbar');
-			$this->load->view('frontend/empty_detail_pages');
-			$this->load->view('frontend_asset/js');
-			$this->load->view('frontend_templat/footer');
-			return; // ให้จบการทำงานที่นี่
-		}
-
-		$data['rsFile'] = $this->pbsv_ae_model->read_file($pbsv_ae_id);
-		$data['rsImg'] = $this->pbsv_ae_model->read_img($pbsv_ae_id);
-
-		$this->load->view('frontend_templat/header');
-		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
-		$this->load->view('frontend/pbsv_ae_detail', $data);
-		$this->load->view('frontend_asset/js');
-		$this->load->view('frontend_templat/footer');
-	}
-	public function increment_download_pbsv_ae($pbsv_ae_file_id)
-	{
-		$this->pbsv_ae_model->increment_download_pbsv_ae($pbsv_ae_file_id);
-	}
 	public function pbsv_gup()
 	{
 		$data['query'] = $this->pbsv_gup_model->pbsv_gup_frontend();
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/pbsv_gup', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -1856,7 +1711,7 @@ class Pages extends CI_Controller
 		if (!$data['rsData']) {
 			$this->load->view('frontend_templat/header');
 			$this->load->view('frontend_asset/css');
-			$this->load->view('frontend_templat/navbar');
+			$this->load->view('frontend_templat/navbar_other');
 			$this->load->view('frontend/empty_detail_pages');
 			$this->load->view('frontend_asset/js');
 			$this->load->view('frontend_templat/footer');
@@ -1868,7 +1723,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/pbsv_gup_detail', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -1883,7 +1738,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/pbsv_e_book', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -1898,7 +1753,7 @@ class Pages extends CI_Controller
 		if (!$data['rsData']) {
 			$this->load->view('frontend_templat/header');
 			$this->load->view('frontend_asset/css');
-			$this->load->view('frontend_templat/navbar');
+			$this->load->view('frontend_templat/navbar_other');
 			$this->load->view('frontend/empty_detail_pages');
 			$this->load->view('frontend_asset/js');
 			$this->load->view('frontend_templat/footer');
@@ -1910,7 +1765,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/pbsv_e_book_detail', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -1925,7 +1780,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/operation_reauf', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -1940,7 +1795,7 @@ class Pages extends CI_Controller
 		if (!$data['rsData']) {
 			$this->load->view('frontend_templat/header');
 			$this->load->view('frontend_asset/css');
-			$this->load->view('frontend_templat/navbar');
+			$this->load->view('frontend_templat/navbar_other');
 			$this->load->view('frontend/empty_detail_pages');
 			$this->load->view('frontend_asset/js');
 			$this->load->view('frontend_templat/footer');
@@ -1952,7 +1807,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/operation_reauf_detail', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -1961,55 +1816,13 @@ class Pages extends CI_Controller
 	{
 		$this->operation_reauf_model->increment_download_operation_reauf($operation_reauf_file_id);
 	}
-	public function p_rpobuy()
-	{
-		$data['query'] = $this->p_rpobuy_model->p_rpobuy_frontend_list();
-
-		$this->load->view('frontend_templat/header');
-		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
-		$this->load->view('frontend/p_rpobuy', $data);
-		$this->load->view('frontend_asset/js');
-		$this->load->view('frontend_templat/footer');
-	}
-	public function p_rpobuy_detail($p_rpobuy_id)
-	{
-		$this->p_rpobuy_model->increment_view($p_rpobuy_id);
-
-		$data['rsData'] = $this->p_rpobuy_model->read($p_rpobuy_id);
-
-		// เพิ่มเงื่อนไขเพื่อตรวจสอบว่ามีข้อมูลหรือไม่
-		if (!$data['rsData']) {
-			$this->load->view('frontend_templat/header');
-			$this->load->view('frontend_asset/css');
-			$this->load->view('frontend_templat/navbar');
-			$this->load->view('frontend/empty_detail_pages');
-			$this->load->view('frontend_asset/js');
-			$this->load->view('frontend_templat/footer');
-			return; // ให้จบการทำงานที่นี่
-		}
-
-		$data['rsFile'] = $this->p_rpobuy_model->read_file($p_rpobuy_id);
-		$data['rsImg'] = $this->p_rpobuy_model->read_img($p_rpobuy_id);
-
-		$this->load->view('frontend_templat/header');
-		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
-		$this->load->view('frontend/p_rpobuy_detail', $data);
-		$this->load->view('frontend_asset/js');
-		$this->load->view('frontend_templat/footer');
-	}
-	public function increment_download_p_rpobuy($p_rpobuy_file_id)
-	{
-		$this->p_rpobuy_model->increment_download_p_rpobuy($p_rpobuy_file_id);
-	}
 	public function p_rpo()
 	{
 		$data['query'] = $this->p_rpo_model->p_rpo_frontend_list();
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/p_rpo', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -2024,7 +1837,7 @@ class Pages extends CI_Controller
 		if (!$data['rsData']) {
 			$this->load->view('frontend_templat/header');
 			$this->load->view('frontend_asset/css');
-			$this->load->view('frontend_templat/navbar');
+			$this->load->view('frontend_templat/navbar_other');
 			$this->load->view('frontend/empty_detail_pages');
 			$this->load->view('frontend_asset/js');
 			$this->load->view('frontend_templat/footer');
@@ -2036,7 +1849,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/p_rpo_detail', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -2051,7 +1864,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/p_reb', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -2066,7 +1879,7 @@ class Pages extends CI_Controller
 		if (!$data['rsData']) {
 			$this->load->view('frontend_templat/header');
 			$this->load->view('frontend_asset/css');
-			$this->load->view('frontend_templat/navbar');
+			$this->load->view('frontend_templat/navbar_other');
 			$this->load->view('frontend/empty_detail_pages');
 			$this->load->view('frontend_asset/js');
 			$this->load->view('frontend_templat/footer');
@@ -2078,7 +1891,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/p_reb_detail', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -2093,7 +1906,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/operation_sap', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -2108,7 +1921,7 @@ class Pages extends CI_Controller
 		if (!$data['rsData']) {
 			$this->load->view('frontend_templat/header');
 			$this->load->view('frontend_asset/css');
-			$this->load->view('frontend_templat/navbar');
+			$this->load->view('frontend_templat/navbar_other');
 			$this->load->view('frontend/empty_detail_pages');
 			$this->load->view('frontend_asset/js');
 			$this->load->view('frontend_templat/footer');
@@ -2120,7 +1933,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/operation_sap_detail', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -2192,7 +2005,7 @@ class Pages extends CI_Controller
 		if (!$data['rsData']) {
 			$this->load->view('frontend_templat/header');
 			$this->load->view('frontend_asset/css');
-			$this->load->view('frontend_templat/navbar');
+			$this->load->view('frontend_templat/navbar_other');
 			$this->load->view('frontend/empty_detail_pages');
 			$this->load->view('frontend_asset/js');
 			$this->load->view('frontend_templat/footer');
@@ -2204,7 +2017,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/operation_policy_hr_detail', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -2213,33 +2026,13 @@ class Pages extends CI_Controller
 	{
 		$this->operation_policy_hr_model->increment_download_operation_policy_hr($operation_policy_hr_file_id);
 	}
-
-	// --------------------------
-
-	public function video()
-	{
-		$data['query'] = $this->video_model->video_frontend();
-
-		$this->load->view('frontend_templat/header');
-		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
-		$this->load->view('frontend/video', $data);
-		$this->load->view('frontend_asset/js');
-		$this->load->view('frontend_templat/footer');
-	}
-
-
-
-
-
-
 	public function operation_am_hr()
 	{
 		$data['query'] = $this->operation_am_hr_model->operation_am_hr_frontend();
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/operation_am_hr', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -2254,7 +2047,7 @@ class Pages extends CI_Controller
 		if (!$data['rsData']) {
 			$this->load->view('frontend_templat/header');
 			$this->load->view('frontend_asset/css');
-			$this->load->view('frontend_templat/navbar');
+			$this->load->view('frontend_templat/navbar_other');
 			$this->load->view('frontend/empty_detail_pages');
 			$this->load->view('frontend_asset/js');
 			$this->load->view('frontend_templat/footer');
@@ -2266,7 +2059,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/operation_am_hr_detail', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -2281,7 +2074,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/operation_rdam_hr', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -2296,7 +2089,7 @@ class Pages extends CI_Controller
 		if (!$data['rsData']) {
 			$this->load->view('frontend_templat/header');
 			$this->load->view('frontend_asset/css');
-			$this->load->view('frontend_templat/navbar');
+			$this->load->view('frontend_templat/navbar_other');
 			$this->load->view('frontend/empty_detail_pages');
 			$this->load->view('frontend_asset/js');
 			$this->load->view('frontend_templat/footer');
@@ -2308,7 +2101,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/operation_rdam_hr_detail', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -2323,7 +2116,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/operation_cdm_topic', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -2334,7 +2127,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/operation_cdm', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -2349,7 +2142,7 @@ class Pages extends CI_Controller
 		if (!$data['rsData']) {
 			$this->load->view('frontend_templat/header');
 			$this->load->view('frontend_asset/css');
-			$this->load->view('frontend_templat/navbar');
+			$this->load->view('frontend_templat/navbar_other');
 			$this->load->view('frontend/empty_detail_pages');
 			$this->load->view('frontend_asset/js');
 			$this->load->view('frontend_templat/footer');
@@ -2361,7 +2154,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/operation_cdm_detail', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -2377,7 +2170,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/operation_po', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -2392,7 +2185,7 @@ class Pages extends CI_Controller
 		if (!$data['rsData']) {
 			$this->load->view('frontend_templat/header');
 			$this->load->view('frontend_asset/css');
-			$this->load->view('frontend_templat/navbar');
+			$this->load->view('frontend_templat/navbar_other');
 			$this->load->view('frontend/empty_detail_pages');
 			$this->load->view('frontend_asset/js');
 			$this->load->view('frontend_templat/footer');
@@ -2404,7 +2197,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/operation_po_detail', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -2419,7 +2212,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/operation_eco', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -2434,7 +2227,7 @@ class Pages extends CI_Controller
 		if (!$data['rsData']) {
 			$this->load->view('frontend_templat/header');
 			$this->load->view('frontend_asset/css');
-			$this->load->view('frontend_templat/navbar');
+			$this->load->view('frontend_templat/navbar_other');
 			$this->load->view('frontend/empty_detail_pages');
 			$this->load->view('frontend_asset/js');
 			$this->load->view('frontend_templat/footer');
@@ -2446,7 +2239,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/operation_eco_detail', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -2461,7 +2254,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/operation_pgn', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -2476,7 +2269,7 @@ class Pages extends CI_Controller
 		if (!$data['rsData']) {
 			$this->load->view('frontend_templat/header');
 			$this->load->view('frontend_asset/css');
-			$this->load->view('frontend_templat/navbar');
+			$this->load->view('frontend_templat/navbar_other');
 			$this->load->view('frontend/empty_detail_pages');
 			$this->load->view('frontend_asset/js');
 			$this->load->view('frontend_templat/footer');
@@ -2488,7 +2281,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/operation_pgn_detail', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -2503,7 +2296,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/operation_mcc', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -2518,7 +2311,7 @@ class Pages extends CI_Controller
 		if (!$data['rsData']) {
 			$this->load->view('frontend_templat/header');
 			$this->load->view('frontend_asset/css');
-			$this->load->view('frontend_templat/navbar');
+			$this->load->view('frontend_templat/navbar_other');
 			$this->load->view('frontend/empty_detail_pages');
 			$this->load->view('frontend_asset/js');
 			$this->load->view('frontend_templat/footer');
@@ -2530,7 +2323,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/operation_mcc_detail', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -2545,7 +2338,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/operation_aca', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -2560,7 +2353,7 @@ class Pages extends CI_Controller
 		if (!$data['rsData']) {
 			$this->load->view('frontend_templat/header');
 			$this->load->view('frontend_asset/css');
-			$this->load->view('frontend_templat/navbar');
+			$this->load->view('frontend_templat/navbar_other');
 			$this->load->view('frontend/empty_detail_pages');
 			$this->load->view('frontend_asset/js');
 			$this->load->view('frontend_templat/footer');
@@ -2572,7 +2365,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/operation_aca_detail', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -2587,7 +2380,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/lpa', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -2602,7 +2395,7 @@ class Pages extends CI_Controller
 		if (!$data['rsData']) {
 			$this->load->view('frontend_templat/header');
 			$this->load->view('frontend_asset/css');
-			$this->load->view('frontend_templat/navbar');
+			$this->load->view('frontend_templat/navbar_other');
 			$this->load->view('frontend/empty_detail_pages');
 			$this->load->view('frontend_asset/js');
 			$this->load->view('frontend_templat/footer');
@@ -2614,7 +2407,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/lpa_detail', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -2623,14 +2416,22 @@ class Pages extends CI_Controller
 	{
 		$this->lpa_model->increment_download_lpa($lpa_file_id);
 	}
+	public function ita_all()
+	{
+		$this->load->view('frontend_templat/header');
+		$this->load->view('frontend_asset/css');
+		$this->load->view('frontend_templat/navbar_other');
+		$this->load->view('frontend/ita_all');
+		$this->load->view('frontend_asset/js');
+		$this->load->view('frontend_templat/footer');
+	}
 	public function ita()
 	{
-		$data['qIta'] = $this->ita_model->ita_frontend();
-		$data['qItaYear'] = $this->ita_year_model->ita_year_frontend();
+		$data['query'] = $this->ita_model->ita_frontend();
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/ita', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -2645,7 +2446,7 @@ class Pages extends CI_Controller
 		if (!$data['rsData']) {
 			$this->load->view('frontend_templat/header');
 			$this->load->view('frontend_asset/css');
-			$this->load->view('frontend_templat/navbar');
+			$this->load->view('frontend_templat/navbar_other');
 			$this->load->view('frontend/empty_detail_pages');
 			$this->load->view('frontend_asset/js');
 			$this->load->view('frontend_templat/footer');
@@ -2657,7 +2458,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/ita_detail', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -2667,25 +2468,35 @@ class Pages extends CI_Controller
 		$this->ita_model->increment_download_ita($ita_file_id);
 	}
 
-	public function ita_year($ita_year_id)
+	public function ita_year()
 	{
-		$data['rsData'] = $this->ita_year_model->read($ita_year_id);
+		$data['query'] = $this->ita_year_model->ita_year_frontend();
 
+		$this->load->view('frontend_templat/header');
+		$this->load->view('frontend_asset/css');
+		$this->load->view('frontend_templat/navbar_other');
+		$this->load->view('frontend/ita_year', $data);
+		$this->load->view('frontend_asset/js');
+		$this->load->view('frontend_templat/footer');
+	}
+	public function ita_year_detail($ita_year_id)
+	{
+		$data['query'] = $this->ita_year_model->read($ita_year_id);
+		$data['query_topic'] = $this->ita_year_model->get_ita_year_data($ita_year_id);
 		// เพิ่มเงื่อนไขเพื่อตรวจสอบว่ามีข้อมูลหรือไม่
-		if (!$data['rsData']) {
+		if (!$data['query']) {
 			$this->load->view('frontend_templat/header');
 			$this->load->view('frontend_asset/css');
-			$this->load->view('frontend_templat/navbar');
+			$this->load->view('frontend_templat/navbar_other');
 			$this->load->view('frontend/empty_detail_pages');
 			$this->load->view('frontend_asset/js');
 			$this->load->view('frontend_templat/footer');
 			return; // ให้จบการทำงานที่นี่
 		}
-
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
-		$this->load->view('frontend/ita_year', $data);
+		$this->load->view('frontend_templat/navbar_other');
+		$this->load->view('frontend/ita_year_detail', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
 	}
@@ -2695,7 +2506,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/operation_aditn', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -2710,7 +2521,7 @@ class Pages extends CI_Controller
 		if (!$data['rsData']) {
 			$this->load->view('frontend_templat/header');
 			$this->load->view('frontend_asset/css');
-			$this->load->view('frontend_templat/navbar');
+			$this->load->view('frontend_templat/navbar_other');
 			$this->load->view('frontend/empty_detail_pages');
 			$this->load->view('frontend_asset/js');
 			$this->load->view('frontend_templat/footer');
@@ -2722,7 +2533,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/operation_aditn_detail', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -2731,97 +2542,13 @@ class Pages extends CI_Controller
 	{
 		$this->operation_aditn_model->increment_download_operation_aditn($operation_aditn_file_id);
 	}
-	public function operation_eg()
-	{
-		$data['query'] = $this->operation_eg_model->operation_eg_frontend();
-
-		$this->load->view('frontend_templat/header');
-		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
-		$this->load->view('frontend/operation_eg', $data);
-		$this->load->view('frontend_asset/js');
-		$this->load->view('frontend_templat/footer');
-	}
-	public function operation_eg_detail($operation_eg_id)
-	{
-		$this->operation_eg_model->increment_view($operation_eg_id);
-
-		$data['rsData'] = $this->operation_eg_model->read($operation_eg_id);
-
-		// เพิ่มเงื่อนไขเพื่อตรวจสอบว่ามีข้อมูลหรือไม่
-		if (!$data['rsData']) {
-			$this->load->view('frontend_templat/header');
-			$this->load->view('frontend_asset/css');
-			$this->load->view('frontend_templat/navbar');
-			$this->load->view('frontend/empty_detail_pages');
-			$this->load->view('frontend_asset/js');
-			$this->load->view('frontend_templat/footer');
-			return; // ให้จบการทำงานที่นี่
-		}
-
-		$data['rsFile'] = $this->operation_eg_model->read_file($operation_eg_id);
-		$data['rsImg'] = $this->operation_eg_model->read_img($operation_eg_id);
-
-		$this->load->view('frontend_templat/header');
-		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
-		$this->load->view('frontend/operation_eg_detail', $data);
-		$this->load->view('frontend_asset/js');
-		$this->load->view('frontend_templat/footer');
-	}
-	public function increment_download_operation_eg($operation_eg_file_id)
-	{
-		$this->operation_eg_model->increment_download_operation_eg($operation_eg_file_id);
-	}
-	public function operation_ameg()
-	{
-		$data['query'] = $this->operation_ameg_model->operation_ameg_frontend();
-
-		$this->load->view('frontend_templat/header');
-		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
-		$this->load->view('frontend/operation_ameg', $data);
-		$this->load->view('frontend_asset/js');
-		$this->load->view('frontend_templat/footer');
-	}
-	public function operation_ameg_detail($operation_ameg_id)
-	{
-		$this->operation_ameg_model->increment_view($operation_ameg_id);
-
-		$data['rsData'] = $this->operation_ameg_model->read($operation_ameg_id);
-
-		// เพิ่มเงื่อนไขเพื่อตรวจสอบว่ามีข้อมูลหรือไม่
-		if (!$data['rsData']) {
-			$this->load->view('frontend_templat/header');
-			$this->load->view('frontend_asset/css');
-			$this->load->view('frontend_templat/navbar');
-			$this->load->view('frontend/empty_detail_pages');
-			$this->load->view('frontend_asset/js');
-			$this->load->view('frontend_templat/footer');
-			return; // ให้จบการทำงานที่นี่
-		}
-
-		$data['rsFile'] = $this->operation_ameg_model->read_file($operation_ameg_id);
-		$data['rsImg'] = $this->operation_ameg_model->read_img($operation_ameg_id);
-
-		$this->load->view('frontend_templat/header');
-		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
-		$this->load->view('frontend/operation_ameg_detail', $data);
-		$this->load->view('frontend_asset/js');
-		$this->load->view('frontend_templat/footer');
-	}
-	public function increment_download_operation_ameg($operation_ameg_file_id)
-	{
-		$this->operation_ameg_model->increment_download_operation_ameg($operation_ameg_file_id);
-	}
 	public function operation_procurement()
 	{
 		$data['query'] = $this->operation_procurement_model->operation_procurement_frontend();
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/operation_procurement', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -2836,7 +2563,7 @@ class Pages extends CI_Controller
 		if (!$data['rsData']) {
 			$this->load->view('frontend_templat/header');
 			$this->load->view('frontend_asset/css');
-			$this->load->view('frontend_templat/navbar');
+			$this->load->view('frontend_templat/navbar_other');
 			$this->load->view('frontend/empty_detail_pages');
 			$this->load->view('frontend_asset/js');
 			$this->load->view('frontend_templat/footer');
@@ -2848,7 +2575,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/operation_procurement_detail', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -2863,7 +2590,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/operation_aa', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -2878,7 +2605,7 @@ class Pages extends CI_Controller
 		if (!$data['rsData']) {
 			$this->load->view('frontend_templat/header');
 			$this->load->view('frontend_asset/css');
-			$this->load->view('frontend_templat/navbar');
+			$this->load->view('frontend_templat/navbar_other');
 			$this->load->view('frontend/empty_detail_pages');
 			$this->load->view('frontend_asset/js');
 			$this->load->view('frontend_templat/footer');
@@ -2890,7 +2617,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/operation_aa_detail', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -2905,7 +2632,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/newsletter', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -2920,7 +2647,7 @@ class Pages extends CI_Controller
 		if (!$data['rsData']) {
 			$this->load->view('frontend_templat/header');
 			$this->load->view('frontend_asset/css');
-			$this->load->view('frontend_templat/navbar');
+			$this->load->view('frontend_templat/navbar_other');
 			$this->load->view('frontend/empty_detail_pages');
 			$this->load->view('frontend_asset/js');
 			$this->load->view('frontend_templat/footer');
@@ -2932,7 +2659,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/newsletter_detail', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -2948,7 +2675,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/q_a', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -2957,7 +2684,7 @@ class Pages extends CI_Controller
 	{
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/q_a_form_add');
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -2981,7 +2708,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/q_a_chat', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -2997,7 +2724,7 @@ class Pages extends CI_Controller
 	{
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/complain');
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -3031,7 +2758,7 @@ class Pages extends CI_Controller
 		// โหลด View
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/follow_complain', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -3040,7 +2767,7 @@ class Pages extends CI_Controller
 	{
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/corruption');
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -3058,7 +2785,7 @@ class Pages extends CI_Controller
 	{
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/suggestions');
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -3086,7 +2813,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/e_service', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -3096,7 +2823,7 @@ class Pages extends CI_Controller
 	{
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/esv_ods');
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -3118,7 +2845,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/questions', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -3130,7 +2857,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/site_map', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -3144,7 +2871,7 @@ class Pages extends CI_Controller
 		// exit();
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/contact');
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -3155,7 +2882,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/all_web');
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -3173,7 +2900,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/p_executives', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -3192,7 +2919,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/p_council', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -3209,7 +2936,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/p_unit_leaders', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -3227,7 +2954,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/p_deputy', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -3245,7 +2972,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/p_treasury', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -3262,7 +2989,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/p_maintenance', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -3279,7 +3006,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/p_education', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -3296,110 +3023,8 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/p_audit', $data);
-		$this->load->view('frontend_asset/js');
-		$this->load->view('frontend_templat/footer');
-	}
-	public function p_dsab()
-	{
-		$data['rsOne'] = $this->p_dsab_model->p_dsab_frontend_one();
-		// $data['rsData'] = $this->p_dsab_model->p_dsab_frontend_list();
-		$data['rsrow1'] = $this->p_dsab_model->p_dsab_row_1();
-		$data['rsrow2'] = $this->p_dsab_model->p_dsab_row_2();
-		$data['rsrow3'] = $this->p_dsab_model->p_dsab_row_3();
-		$data['rsrow4'] = $this->p_dsab_model->p_dsab_row_4();
-		$data['rsrow5'] = $this->p_dsab_model->p_dsab_row_5();
-
-		$this->load->view('frontend_templat/header');
-		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
-		$this->load->view('frontend/p_dsab', $data);
-		$this->load->view('frontend_asset/js');
-		$this->load->view('frontend_templat/footer');
-	}
-	public function p_cdc_brkm()
-	{
-		$data['rsOne'] = $this->p_cdc_brkm_model->p_cdc_brkm_frontend_one();
-		// $data['rsData'] = $this->p_cdc_brkm_model->p_cdc_brkm_frontend_list();
-		$data['rsrow1'] = $this->p_cdc_brkm_model->p_cdc_brkm_row_1();
-		$data['rsrow2'] = $this->p_cdc_brkm_model->p_cdc_brkm_row_2();
-		$data['rsrow3'] = $this->p_cdc_brkm_model->p_cdc_brkm_row_3();
-		$data['rsrow4'] = $this->p_cdc_brkm_model->p_cdc_brkm_row_4();
-		$data['rsrow5'] = $this->p_cdc_brkm_model->p_cdc_brkm_row_5();
-
-		$this->load->view('frontend_templat/header');
-		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
-		$this->load->view('frontend/p_cdc_brkm', $data);
-		$this->load->view('frontend_asset/js');
-		$this->load->view('frontend_templat/footer');
-	}
-	public function p_cdc_bpsb()
-	{
-		$data['rsOne'] = $this->p_cdc_bpsb_model->p_cdc_bpsb_frontend_one();
-		// $data['rsData'] = $this->p_cdc_bpsb_model->p_cdc_bpsb_frontend_list();
-		$data['rsrow1'] = $this->p_cdc_bpsb_model->p_cdc_bpsb_row_1();
-		$data['rsrow2'] = $this->p_cdc_bpsb_model->p_cdc_bpsb_row_2();
-		$data['rsrow3'] = $this->p_cdc_bpsb_model->p_cdc_bpsb_row_3();
-		$data['rsrow4'] = $this->p_cdc_bpsb_model->p_cdc_bpsb_row_4();
-		$data['rsrow5'] = $this->p_cdc_bpsb_model->p_cdc_bpsb_row_5();
-
-		$this->load->view('frontend_templat/header');
-		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
-		$this->load->view('frontend/p_cdc_bpsb', $data);
-		$this->load->view('frontend_asset/js');
-		$this->load->view('frontend_templat/footer');
-	}
-	public function p_cdc_bbj()
-	{
-		$data['rsOne'] = $this->p_cdc_bbj_model->p_cdc_bbj_frontend_one();
-		// $data['rsData'] = $this->p_cdc_bbj_model->p_cdc_bbj_frontend_list();
-		$data['rsrow1'] = $this->p_cdc_bbj_model->p_cdc_bbj_row_1();
-		$data['rsrow2'] = $this->p_cdc_bbj_model->p_cdc_bbj_row_2();
-		$data['rsrow3'] = $this->p_cdc_bbj_model->p_cdc_bbj_row_3();
-		$data['rsrow4'] = $this->p_cdc_bbj_model->p_cdc_bbj_row_4();
-		$data['rsrow5'] = $this->p_cdc_bbj_model->p_cdc_bbj_row_5();
-
-		$this->load->view('frontend_templat/header');
-		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
-		$this->load->view('frontend/p_cdc_bbj', $data);
-		$this->load->view('frontend_asset/js');
-		$this->load->view('frontend_templat/footer');
-	}
-	public function p_cdc_bnry()
-	{
-		$data['rsOne'] = $this->p_cdc_bnry_model->p_cdc_bnry_frontend_one();
-		// $data['rsData'] = $this->p_cdc_bnry_model->p_cdc_bnry_frontend_list();
-		$data['rsrow1'] = $this->p_cdc_bnry_model->p_cdc_bnry_row_1();
-		$data['rsrow2'] = $this->p_cdc_bnry_model->p_cdc_bnry_row_2();
-		$data['rsrow3'] = $this->p_cdc_bnry_model->p_cdc_bnry_row_3();
-		$data['rsrow4'] = $this->p_cdc_bnry_model->p_cdc_bnry_row_4();
-		$data['rsrow5'] = $this->p_cdc_bnry_model->p_cdc_bnry_row_5();
-
-		$this->load->view('frontend_templat/header');
-		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
-		$this->load->view('frontend/p_cdc_bnry', $data);
-		$this->load->view('frontend_asset/js');
-		$this->load->view('frontend_templat/footer');
-	}
-	public function p_cdc_bkc()
-	{
-		$data['rsOne'] = $this->p_cdc_bkc_model->p_cdc_bkc_frontend_one();
-		// $data['rsData'] = $this->p_cdc_bkc_model->p_cdc_bkc_frontend_list();
-		$data['rsrow1'] = $this->p_cdc_bkc_model->p_cdc_bkc_row_1();
-		$data['rsrow2'] = $this->p_cdc_bkc_model->p_cdc_bkc_row_2();
-		$data['rsrow3'] = $this->p_cdc_bkc_model->p_cdc_bkc_row_3();
-		$data['rsrow4'] = $this->p_cdc_bkc_model->p_cdc_bkc_row_4();
-		$data['rsrow5'] = $this->p_cdc_bkc_model->p_cdc_bkc_row_5();
-
-		$this->load->view('frontend_templat/header');
-		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
-		$this->load->view('frontend/p_cdc_bkc', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
 	}
@@ -3410,7 +3035,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/laws_all', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -3422,7 +3047,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/laws_ral', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -3434,7 +3059,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/laws_rl_folder', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -3446,7 +3071,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/laws_rl_file', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -3458,7 +3083,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/laws_rm', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -3469,7 +3094,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/laws_act', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -3480,7 +3105,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/laws_ec', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -3493,7 +3118,7 @@ class Pages extends CI_Controller
 		if (!$data['rsData']) {
 			$this->load->view('frontend_templat/header');
 			$this->load->view('frontend_asset/css');
-			$this->load->view('frontend_templat/navbar');
+			$this->load->view('frontend_templat/navbar_other');
 			$this->load->view('frontend/empty_detail_pages');
 			$this->load->view('frontend_asset/js');
 			$this->load->view('frontend_templat/footer');
@@ -3502,7 +3127,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/laws_la', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -3514,7 +3139,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/km', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -3529,7 +3154,7 @@ class Pages extends CI_Controller
 		if (!$data['rsData']) {
 			$this->load->view('frontend_templat/header');
 			$this->load->view('frontend_asset/css');
-			$this->load->view('frontend_templat/navbar');
+			$this->load->view('frontend_templat/navbar_other');
 			$this->load->view('frontend/empty_detail_pages');
 			$this->load->view('frontend_asset/js');
 			$this->load->view('frontend_templat/footer');
@@ -3541,7 +3166,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/km_detail', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -3549,34 +3174,5 @@ class Pages extends CI_Controller
 	public function increment_download_km($km_file_id)
 	{
 		$this->km_model->increment_download_km($km_file_id);
-	}
-
-	public function eitiit_detail($eitiit_id)
-	{
-		$this->eitiit_model->increment_view($eitiit_id);
-
-		$data['rsData'] = $this->eitiit_model->read($eitiit_id);
-
-		// เพิ่มเงื่อนไขเพื่อตรวจสอบว่ามีข้อมูลหรือไม่
-		if (!$data['rsData']) {
-			$this->load->view('frontend_templat/header');
-			$this->load->view('frontend_asset/css');
-			$this->load->view('frontend_templat/navbar');
-			$this->load->view('frontend/empty_detail_pages');
-			$this->load->view('frontend_asset/js');
-			$this->load->view('frontend_templat/footer');
-			return; // ให้จบการทำงานที่นี่
-		}
-
-		$this->load->view('frontend_templat/header');
-		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
-		$this->load->view('frontend/eitiit_detail', $data);
-		$this->load->view('frontend_asset/js');
-		$this->load->view('frontend_templat/footer');
-	}
-	public function increment_download_eitiit($eitiit_file_id)
-	{
-		$this->eitiit_model->increment_download_eitiit($eitiit_file_id);
 	}
 }
