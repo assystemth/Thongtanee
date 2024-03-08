@@ -1122,13 +1122,15 @@
   }
 
   .bg-pages {
-    /* background-image: url('<?php echo base_url("docs/s.bg-other.jpg"); ?>');
+    /* background-image: url('<?php echo base_url("docs/t.bg-other.jpg"); ?>');
     background-repeat: no-repeat;
     background-size: 100%; */
     background-color: #fff;
     width: 1280px;
     height: 1520px;
     position: relative;
+    border-left: 1px solid #0FC2C0;
+    border-right: 1px solid #0FC2C0;
   }
 
   .bg-pages-news {
@@ -1265,16 +1267,16 @@
   }
 
   .pad-path {
-    margin-left: 60px;
-    margin-top: 30px;
+    margin-left: 20px;
+    padding-top: 30px;
   }
 
   .path1-1 {
-    background-image: url('<?php echo base_url("docs/k.path1-1.png"); ?>');
+    background-image: url('<?php echo base_url("docs/t.path1-1.png"); ?>');
     background-size: 100%;
     background-repeat: no-repeat;
-    width: 92px;
-    height: 28px;
+    width: 98px;
+    height: 34px;
     z-index: 3;
     text-align: center;
     display: flex;
@@ -1283,13 +1285,13 @@
   }
 
   .path2-1 {
-    background-image: url('<?php echo base_url("docs/k.path2-1.png"); ?>');
+    background-image: url('<?php echo base_url("docs/t.path2-1.png"); ?>');
     background-size: 100%;
     background-repeat: no-repeat;
-    width: 131px;
-    height: 28px;
+    width: 138px;
+    height: 32px;
     z-index: 2;
-    margin-left: -13px;
+    margin-left: -20px;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -1297,13 +1299,13 @@
   }
 
   .path2-2 {
-    background-image: url('<?php echo base_url("docs/k.path2-2.png"); ?>');
+    background-image: url('<?php echo base_url("docs/t.path2-2.png"); ?>');
     background-size: 100%;
     background-repeat: no-repeat;
-    width: 160px;
+    width: 182px;
     height: 28px;
     z-index: 2;
-    margin-left: -13px;
+    margin-left: -20px;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -1311,7 +1313,7 @@
   }
 
   .path2-3 {
-    background-image: url('<?php echo base_url("docs/k.path2-3.png"); ?>');
+    background-image: url('<?php echo base_url("docs/k.path2-1.png"); ?>');
     background-size: 100%;
     background-repeat: no-repeat;
     width: 200px;
@@ -1339,13 +1341,14 @@
   }
 
   .font-path-1 {
-    color: #FFF;
+    color: #EEE;
     font-family: Kanit;
     font-size: 17px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
     margin-left: -10px;
+    margin-top: -7px;
   }
 
   .font-path-2 {
@@ -1377,11 +1380,10 @@
   }
 
   .head-pages {
-    background-image: url('<?php echo base_url("docs/k.head-pages.png"); ?>');
+    background-image: url('<?php echo base_url("docs/t.head-pages1.png"); ?>');
     background-size: 100%;
     width: 488px;
     height: 96px;
-    margin-top: 70px;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -1389,11 +1391,10 @@
   }
 
   .head-pages-two {
-    background-image: url('<?php echo base_url("docs/k.head-pages2.png"); ?>');
+    background-image: url('<?php echo base_url("docs/t.head-pages2.png"); ?>');
     background-size: 100%;
     width: 570px;
     height: 96px;
-    margin-top: 70px;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -1401,11 +1402,10 @@
   }
 
   .head-pages-three {
-    background-image: url('<?php echo base_url("docs/k.head-pages3.png"); ?>');
+    background-image: url('<?php echo base_url("docs/t.head-pages3.png"); ?>');
     background-size: 100%;
     width: 690px;
     height: 96px;
-    margin-top: 70px;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -1426,18 +1426,19 @@
   } */
 
   .font-pages-head {
-    color: var(--main, #082555);
+    color: #023535;
     text-shadow: 0px 2.685px 6.712px rgba(0, 0, 0, 0.25);
     font-family: Kanit;
     font-size: 30px;
     font-style: normal;
     font-weight: 500;
     line-height: 26.494px;
+    /* 88.313% */
     margin-top: -5px;
   }
 
   .font-pages-head-long {
-    color: var(--main, #082555);
+    color: #023535;
     text-shadow: 0px 2.685px 6.712px rgba(0, 0, 0, 0.25);
     font-family: Kanit;
     font-size: 26px;
@@ -1448,7 +1449,7 @@
   }
 
   .font-pages-head-long2 {
-    color: var(--main, #082555);
+    color: #023535;
     text-shadow: 0px 2.685px 6.712px rgba(0, 0, 0, 0.25);
     font-family: Kanit;
     font-size: 23px;
@@ -1945,7 +1946,7 @@
   .font-24 {
     font-size: 24px;
   }
-  
+
 
   .font-24b {
     font-size: 24px;
@@ -2137,9 +2138,9 @@
   }
 
   .pagination .page-item.active .page-link {
-    background-color: #082555;
+    background-color: #023535;
     /* สีเขียว */
-    border-color: #082555;
+    border-color: #023535;
     color: #fff;
   }
 
@@ -2248,7 +2249,8 @@
 
   .pages-select-pdf {
     border-radius: 34px;
-    background: var(--PDF, rgba(159, 218, 255, 0.25));
+    background: rgba(170, 255, 250, 0.25);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     padding: 15px;
     margin-bottom: 15px;
     width: 100%;

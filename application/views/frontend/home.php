@@ -1,9 +1,9 @@
-<div class="image-slide-stick-mid">
+<!-- <div class="image-slide-stick-mid">
     <a href="https://itas.nacc.go.th/go/eit/qu7msc" target="_blank">
         <img src="docs/eit-slide-mid.png">
     </a>
     <img src="docs/eit-slide-close.png" class="close-button-slide-mid" onclick="closeImageSlideMid()">
-</div>
+</div> -->
 <div class="welcome">
 
     <!-- <div class="tab-container">
@@ -471,7 +471,7 @@
         <div id="tabtwo1" class="tab-content-two">
             <?php foreach ($qNews as $news) { ?>
                 <div class="content-news-detail">
-                    <a href="<?php echo site_url('Pages/news/' . $news->news_id); ?>">
+                    <a href="<?php echo site_url('Pages/news_detail/' . $news->news_id); ?>">
                         <div class="row">
                             <div class="col-10">
                                 <span class="text-news"><img src="docs/k.logo.png" width="30px" height="34px">&nbsp;&nbsp;<?= strip_tags($news->news_name); ?></span>
@@ -718,7 +718,7 @@
         <div id="tab3" class="tab-content">
             <?php foreach ($qP_reb as $anou) { ?>
                 <div class="content-news-detail">
-                    <a href="<?php echo site_url('Pages/p_reb/' . $anou->p_reb_id); ?>">
+                    <a href="<?php echo site_url('Pages/p_reb_detail/' . $anou->p_reb_id); ?>">
                         <div class="row">
                             <div class="col-10">
                                 <span class="text-news"><img src="docs/k.logo.png" width="30px" height="34px">&nbsp;&nbsp;<?= strip_tags($anou->p_reb_name); ?></span>
@@ -751,7 +751,7 @@
         <div id="tab4" class="tab-content">
             <?php foreach ($qP_rpo as $anou) { ?>
                 <div class="content-news-detail">
-                    <a href="<?php echo site_url('Pages/p_rpo/' . $anou->p_rpo_id); ?>">
+                    <a href="<?php echo site_url('Pages/p_rpo_detail/' . $anou->p_rpo_id); ?>">
                         <div class="row">
                             <div class="col-10">
                                 <span class="text-news"><img src="docs/k.logo.png" width="30px" height="34px">&nbsp;&nbsp;<?= strip_tags($anou->p_rpo_name); ?></span>

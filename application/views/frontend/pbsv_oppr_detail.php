@@ -32,7 +32,7 @@
                             <div class="col-6">
                                 <div class="d-flex justify-content-end">
                                     <a onclick="downloadFile(event, <?= $file->pbsv_oppr_file_id; ?>)" href="<?= base_url('docs/file/' . $file->pbsv_oppr_file_pdf); ?>" download>
-                                        <img src="<?php echo base_url("docs/s.btn-download.png"); ?>">
+                                        <img src="<?php echo base_url("docs/t.btn-download.png"); ?>">
                                     </a>
                                     <script>
                                         function downloadFile(event, pbsv_oppr_file_id) {

@@ -70,8 +70,8 @@
                 </div>
             </div>
         <?php } ?>
-<!-- แสดงปุ่ม Next และ Previous -->
-<nav aria-label="Page navigation example">
+        <!-- แสดงปุ่ม Next และ Previous -->
+        <nav aria-label="Page navigation example">
             <ul class="pagination">
                 <?php if ($currentPage > 1) : ?>
                     <li class="page-item">

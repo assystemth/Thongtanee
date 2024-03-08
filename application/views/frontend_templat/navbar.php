@@ -69,7 +69,7 @@
 
 
 <div style="position: relative; width: 1280px; ">
-    <img src="<?php echo base_url("docs/k.navbar-top.png"); ?>">
+    <img src="<?php echo base_url("docs/t.navbar-top.png"); ?>">
     <a href="<?php echo site_url('Home'); ?>" onmouseover="changeImage(`<?php echo base_url('docs/k.item-nav-top1v3-hover.png'); ?>`)" onmouseout="restoreImage(`<?php echo base_url('docs/k.item-nav-top1v3.png'); ?>`)">
         <img src="<?php echo base_url("docs/k.item-nav-top1v3.png"); ?>" alt="" style="position: absolute; top: 20%; left: 70%;">
     </a>
