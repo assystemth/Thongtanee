@@ -249,7 +249,7 @@
   }
 
   .welcome {
-    background-image: url('<?php echo base_url("docs/k.welcome.gif"); ?>');
+    background-image: url('<?php echo base_url("docs/t.welcome.gif"); ?>');
     background-repeat: no-repeat;
     background-size: 100%;
     margin-top: -182px;
