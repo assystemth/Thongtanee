@@ -9,7 +9,7 @@
     </div>
     <div class="page-center">
         <div class="head-pages">
-            <span class="font-pages-head">ข้อมูลสภาพทั่วไป5555</span>
+            <span class="font-pages-head">ข้อมูลสภาพทั่วไป</span>
         </div>
     </div>
     <?php foreach ($qGci as $rs) { ?>
