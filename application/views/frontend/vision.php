@@ -22,7 +22,7 @@
                         <?php if (!empty($rs->vision_img)): ?>
                             <img src="<?php echo base_url('docs/img/' . $rs->vision_img); ?>" width="545px" height="352px">
                         <?php else: ?>
-                            <img src="<?php echo base_url('docs/logo.png'); ?>" width="545px" height="352px">
+                            <img src="<?php echo base_url('docs/t.logo.png'); ?>" width="545px" height="352px">
                         <?php endif; ?>
                     </div>
                 </div>

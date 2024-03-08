@@ -1065,14 +1065,14 @@
         </div>
         <div class="swiper mySwiper">
             <div class="swiper-wrapper">
-                <div class="swiper-slide"><a href="https://www2.surin.go.th/frontpage" target="_blank"><img src="docs/k.link-link1v2.png"></a></div>
-                <div class="swiper-slide"><a href="https://surinpao.go.th/" target="_blank"><img src="docs/k.link-link2v2.png"></a></div>
-                <div class="swiper-slide"><a href="https://surin.moph.go.th/SPHO/" target="_blank"><img src="docs/k.link-link3v2.png"></a></div>
+                <div class="swiper-slide"><a href="https://www.roiet.go.th/101province/" target="_blank"><img src="docs/k.link-link1v2.png"></a></div>
+                <div class="swiper-slide"><a href="https://surinpao.go.th/" target="_blank"><img src="docs/t.link-link2.png"></a></div>
+                <div class="swiper-slide"><a href="http://www.sasuk101.moph.go.th/" target="_blank"><img src="docs/t.link-link3.png"></a></div>
                 <div class="swiper-slide"><a href="https://www.cgd.go.th/cs/internet/internet/%E0%B8%AB%E0%B8%99%E0%B9%89%E0%B8%B2%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%812.html?page_locale=th_TH" target="_blank"><img src="docs/s.link-link4.png"></a></div>
                 <div class="swiper-slide"><a href="https://moi.go.th/moi/" target="_blank"><img src="docs/s.link-link5.png"></a></div>
                 <div class="swiper-slide"><a href="https://www.doe.go.th/" target="_blank"><img src="docs/s.link-link6.png"></a></div>
                 <div class="swiper-slide"><a href="https://www.nhso.go.th/" target="_blank"><img src="docs/s.link-link7.png"></a></div>
-                <div class="swiper-slide"><a href="https://www2.surin.go.th/damrongdhama/frontpage" target="_blank"><img src="docs/s.link-link8v3.png"></a></div>
+                <div class="swiper-slide"><a href="https://www.roiet.go.th/dumrong/" target="_blank"><img src="docs/s.link-link8v3.png"></a></div>
                 <div class="swiper-slide"><a href="https://www.admincourt.go.th/admincourt/site/09illustration.html" target="_blank"><img src="docs/s.link-link9.png"></a></div>
                 <div class="swiper-slide"><a href="https://www.dla.go.th/index.jsp" target="_blank"><img src="docs/s.link-link10.png"></a></div>
                 <div class="swiper-slide"><a href="https://info.go.th/" target="_blank"><img src="docs/s.link-link11.png"></a></div>
