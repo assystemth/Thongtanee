@@ -310,14 +310,14 @@
   }
 
   .vision {
-    background-image: url('<?php echo base_url("docs/k.bg-vision.png"); ?>');
+    background-image: url('<?php echo base_url("docs/t.bg-vision.png"); ?>');
     background-repeat: no-repeat;
     background-size: 100%;
-    height: 881px;
+    height: 815px;
     width: 1280px;
     z-index: 2;
     margin-top: -71px;
-    padding-top: 120px;
+    padding-top: 250px;
     padding-left: 40px;
     padding-right: 40px;
   }

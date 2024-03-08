@@ -39,71 +39,58 @@
     <div class="row">
         <div class="col-4">
             <div class="d-flex justify-content-center">
-                <img class="mark-logo" src="docs/k.item-vision-left1.png">
+                <img class="mark-logo" src="docs/t.item-vision-left1.png">
             </div>
-            <div class="d-flex justify-content-center">
-                <img class="mark-logo" src="docs/k.item-vision-left2v2.png">
+            <div class="d-flex justify-content-center mt-2">
+                <img class="mark-logo" src="docs/t.item-vision-left2.png">
             </div>
-            <div class="d-flex justify-content-center">
+            <div class="d-flex justify-content-center mt-2">
                 <a href="<?php echo site_url('Pages/msg_pres'); ?>" class="zoom-otop">
-                    <img class="mark-logo" src="docs/k.item-vision-left3v3.png">
+                    <img class="mark-logo" src="docs/t.item-vision-left3.png">
                 </a>
             </div>
         </div>
-        <div class="col-4" style="margin-top: 128px;">
+        <div class="col-8">
             <div class="d-flex justify-content-center">
-                <img src="docs/k.item-vision-mid2.png">
+                <img src="docs/t.item-vision-mid1.png">
             </div>
-        </div>
-        <div class="col-4">
-            <div class="d-flex justify-content-center">
-                <img class="mark-logo" src="docs/k.item-vision-right1.png">
-            </div>
-            <div class="d-flex justify-content-center">
-                <img class="mark-logo" src="docs/k.item-vision-right2v2.png">
-            </div>
-            <div class="d-flex justify-content-center">
-                <a href="<?php echo site_url('Pages/msg_prem'); ?>" class="zoom-otop">
-                    <img class="mark-logo" src="docs/k.item-vision-right3v3.png">
-                </a>
-            </div>
-        </div>
-    </div>
-    <div class="row mt-5">
-        <div class="col-4">
-            <div class="d-flex justify-content-center mt-4">
-                <a href="<?php echo site_url('Pages/ita'); ?>" class="zoom-otop">
-                    <img class="mark-logo" src="docs/k.menu-eservice-top1v2.png">
-                </a>
-            </div>
-            <div class="d-flex justify-content-center mt-4">
-                <a href="https://www.oic.go.th/INFOCENTER25/2518/" class="zoom-otop" target="_blank">
-                    <img class="mark-logo" src="docs/k.menu-eservice-top2v2.png">
-                </a>
-            </div>
-        </div>
-        <div class="col-4">
-            <div class="d-flex justify-content-center mt-4">
-                <a href="#oss" class="zoom-otop">
-                    <img class="mark-logo" src="docs/k.menu-eservice-top3v2.png">
-                </a>
-            </div>
-            <div class="d-flex justify-content-center mt-4">
-                <a href="<?php echo site_url('Pages/km'); ?>" class="zoom-otop">
-                    <img class="mark-logo" src="docs/k.menu-eservice-top4v2.png">
-                </a>
-            </div>
-        </div>
-        <div class="col-4">
-            <div class="d-flex justify-content-center mt-4">
-                <a href="https://dbdregcom.dbd.go.th/mainsite/index.php?id=28" class="zoom-otop" target="_blank">
-                    <img class="mark-logo" src="docs/k.menu-eservice-top5v2.png">
-                </a>
-            </div>
-            <div class="d-flex justify-content-center mt-4">
-                <a href="<?php echo site_url('Pages/laws_all'); ?>" class="zoom-otop">
-                    <img class="mark-logo" src="docs/k.menu-eservice-top6v2.png">
-                </a>
+            <div class="row" style="padding-top: 50px;">
+                <div class="col-4">
+                    <div class="d-flex justify-content-center">
+                        <a href="<?php echo site_url('Pages/ita'); ?>" class="zoom-otop">
+                            <img class="mark-logo" src="docs/t.item-vision-right1.png">
+                        </a>
+                    </div>
+                    <div class="d-flex justify-content-center mt-4">
+                        <a href="#" class="zoom-otop" target="_blank">
+                            <img class="mark-logo" src="docs/t.item-vision-right4.png">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="d-flex justify-content-center">
+                        <a href="#oss" class="zoom-otop">
+                            <img class="mark-logo" src="docs/t.item-vision-right2.png">
+                        </a>
+                    </div>
+                    <div class="d-flex justify-content-center mt-4">
+                        <a href="<?php echo site_url('Pages/km'); ?>" class="zoom-otop">
+                            <img class="mark-logo" src="docs/t.item-vision-right5.png">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="d-flex justify-content-center">
+                        <a href="https://dbdregcom.dbd.go.th/mainsite/index.php?id=28" class="zoom-otop" target="_blank">
+                            <img class="mark-logo" src="docs/t.item-vision-right3.png">
+                        </a>
+                    </div>
+                    <div class="d-flex justify-content-center mt-4">
+                         <a href="<?php echo site_url('Pages/laws_all'); ?>" class="zoom-otop">
+                            <img class="mark-logo" src="docs/t.item-vision-right6.png">
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
