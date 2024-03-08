@@ -1,0 +1,100 @@
+<?php
+class Intra_discipline_model extends CI_Model
+{
+    public function __construct()
+    {
+        parent::__construct();
+        $this->load->model('space_model');
+    }
+
+    public function add()
+    {
+        $config['upload_path'] = './docs/intranet/file';
+        $config['allowed_types'] = 'pdf|doc|docx|xls|';
+        $this->load->library('upload', $config);
+
+        if (!$this->upload->do_upload('intra_discipline_pdf')) {
+            // ไม่สามารถอัปโหลดไฟล์ได้
+            $error = array('error' => $this->upload->display_errors());
+            print_r($error);
+            exit;
+        }
+
+        // สำเร็จในการอัปโหลดไฟล์
+        $data = $this->upload->data();
+        $filename = $data['file_name'];
+
+        // ตรวจสอบพื้นที่ในการบันทึก
+        $used_space_mb = $this->space_model->get_used_space();
+        $upload_limit_mb = $this->space_model->get_limit_storage();
+        $total_space_required = $data['file_size'];
+
+        if ($used_space_mb + ($total_space_required / (1024 * 1024)) >= $upload_limit_mb) {
+            $this->session->set_flashdata('save_error', TRUE);
+            redirect('Intra_discipline');
+            return;
+        }
+
+        // ข้อมูลสำหรับบันทึกลงในฐานข้อมูล
+        $insert_data = array(
+            'intra_discipline_name' => $this->input->post('intra_discipline_name'),
+            'intra_discipline_by' => $this->session->userdata('m_fname'),
+            'intra_discipline_pdf' => $filename
+        );
+
+        // บันทึกลงในฐานข้อมูล
+        $query = $this->db->insert('tbl_intra_discipline', $insert_data);
+
+        // อัพเดตข้อมูลพื้นที่ในการใช้งาน
+        $this->space_model->update_server_current();
+
+        // ตรวจสอบความสำเร็จของการบันทึก
+        if ($query) {
+            $this->session->set_flashdata('save_success', TRUE);
+        } else {
+            $this->session->set_flashdata('save_error', TRUE);
+        }
+    }
+
+    public function list_all()
+    {
+        $this->db->order_by('intra_discipline_id', 'DESC');
+        $query = $this->db->get('tbl_intra_discipline');
+        return $query->result();
+    }
+
+    //show discipline edit
+    public function read($intra_discipline_id)
+    {
+        $this->db->where('intra_discipline_id', $intra_discipline_id);
+        $query = $this->db->get('tbl_intra_discipline');
+        if ($query->num_rows() > 0) {
+            $data = $query->row();
+            return $data;
+        }
+        return FALSE;
+    }
+
+    public function del_intra_discipline($intra_discipline_id)
+    {
+        // ดึงข้อมูลรูปเก่า
+        $old_document = $this->db->get_where('tbl_intra_discipline', array('intra_discipline_id' => $intra_discipline_id))->row();
+
+        $old_file_path = './docs/intranet/file/' . $old_document->intra_discipline_pdf;
+        if (file_exists($old_file_path)) {
+            unlink($old_file_path);
+        }
+
+        $this->db->delete('tbl_intra_discipline', array('intra_discipline_id' => $intra_discipline_id));
+    }
+
+    public function search($search_term)
+    {
+        // ปรับแต่ง query ตามความต้องการ
+        $this->db->like('intra_discipline_name', $search_term);
+        // เพิ่มเงื่อนไขค้นหาเพิ่มเติมตามความต้องการ
+
+        $query = $this->db->get('tbl_intra_discipline');
+        return $query->result();
+    }
+}
