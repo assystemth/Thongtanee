@@ -6,8 +6,8 @@
   <meta charset="UTF-8">
   <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <link rel="icon" href="<?php echo base_url("docs/k.logo.png"); ?>" type="image/x-icon">
-  <title>เทศบาลตำบลกาบเชิง</title>
+  <link rel="icon" href="<?php echo base_url("docs/t.logo.png"); ?>" type="image/x-icon">
+  <title>เทศบาลตำบลธงธานี</title>
 
 
   <!-- boostrap  -->

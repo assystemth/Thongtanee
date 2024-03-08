@@ -1233,7 +1233,7 @@
     margin-top: 40px;
     margin-bottom: 5%;
     border-radius: 22.86px;
-    background: #C6E7FF;
+    background: #CDF6F6;
     box-shadow: 0px 0px 6.724px 0px rgba(0, 0, 0, 0.25);
     height: 1500px;
     width: 1069px;
@@ -2261,7 +2261,7 @@
   .pages-select-e-gp {
     border-radius: 16.042px;
     /* border: 0.668px solid var(--02, #ECB23F); */
-    background: #C6E7FF;
+    background: #CDF6F6;
     padding: 15px;
     margin-bottom: 15px;
     flex-shrink: 0;
@@ -2275,7 +2275,7 @@
     gap: 6.699px;
     flex-shrink: 0;
     border-radius: 22.777px;
-    background: #C6E7FF;
+    background: #CDF6F6;
     box-shadow: 0px 0px 6.699px 0px rgba(0, 0, 0, 0.25);
   }
 
@@ -2297,7 +2297,7 @@
     padding-left: 5%;
     padding-right: 5%;
     border-radius: 17.085px;
-    background: #C6E7FF;
+    background: #CDF6F6;
     box-shadow: 0px 0px 6.701px 0px rgba(0, 0, 0, 0.25);
     height: 260px;
     width: 914px;
@@ -2309,7 +2309,7 @@
     padding-left: 5%;
     padding-right: 5%;
     border-radius: 17.085px;
-    background: #C6E7FF;
+    background: #CDF6F6;
     box-shadow: 0px 0px 6.701px 0px rgba(0, 0, 0, 0.25);
     height: 600px;
     width: 914px;
@@ -2321,7 +2321,7 @@
     padding-left: 5%;
     padding-right: 5%;
     border-radius: 17.085px;
-    background: #C6E7FF;
+    background: #CDF6F6;
     box-shadow: 0px 0px 6.701px 0px rgba(0, 0, 0, 0.25);
     height: 350px;
     width: 914px;
@@ -2333,7 +2333,7 @@
     padding-left: 5%;
     padding-right: 5%;
     border-radius: 17.085px;
-    background: #C6E7FF;
+    background: #CDF6F6;
     box-shadow: 0px 0px 6.701px 0px rgba(0, 0, 0, 0.25);
     height: 515px;
     width: 914px;
@@ -2345,7 +2345,7 @@
     padding-left: 5%;
     padding-right: 5%;
     border-radius: 17.085px;
-    background: #C6E7FF;
+    background: #CDF6F6;
     box-shadow: 0px 0px 6.701px 0px rgba(0, 0, 0, 0.25);
     height: 320px;
     width: 667px;
@@ -2376,7 +2376,7 @@
     padding-left: 5%;
     padding-right: 5%;
     border-radius: 17.085px;
-    background: #C6E7FF;
+    background: #CDF6F6;
     box-shadow: 0px 0px 6.701px 0px rgba(0, 0, 0, 0.25);
     height: 600px;
     width: 914px;
@@ -2391,7 +2391,7 @@
     gap: 13.398px;
     flex-shrink: 0;
     border-radius: 22.777px;
-    background: #C6E7FF;
+    background: #CDF6F6;
     box-shadow: 0px 0px 6.699px 0px rgba(0, 0, 0, 0.25);
   }
 

@@ -928,7 +928,7 @@
                             <div class="text-center">
                                 <div class="row">
                                     <div class="col-4 d-flex justify-content-end">
-                                        <div class="card-view" id="card1"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16" style="color: #1D4A95;">
+                                        <div class="card-view" id="card1"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16" style="color: #046867;">
                                                 <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
                                             </svg></i>&nbsp;<span>ออนไลน์</span>
                                         </div>
