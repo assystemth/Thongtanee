@@ -115,6 +115,7 @@ class Complain_model extends CI_Model
 
         if ($complainData2) {
             $message .= "ข้อความจากการอัพเดต: " . $complainData2->complain_detail_com . "\n";
+            $message .= "ข้อความจากการอัพเดต: " . $complainData2->complain_detail_com . "\n";
         }
 
         // print_r($complainData);
