@@ -1128,7 +1128,7 @@
   }
 
   .bg-pages-p {
-    width: 1280px;
+    width: 1270px;
     height: auto;
     position: relative;
   }

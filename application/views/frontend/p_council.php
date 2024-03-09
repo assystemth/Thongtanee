@@ -12,7 +12,7 @@
             <span class="font-pages-head-long">สมาชิกสภาเทศบาล</span>
         </div>
     </div>
-    <div class="bg-pages-in">
+    <div class="bg-pages-p">
         <div class="scrollable-container">
             <div class="page-center">
                 <?php foreach ($rsOne as $rs) { ?>
