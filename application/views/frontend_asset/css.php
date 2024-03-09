@@ -417,13 +417,13 @@
   }
 
   .dropdown-content {
-    background-image: url('<?php echo base_url("docs/k.bg-nav-content.png"); ?>');
+    background-image: url('<?php echo base_url("docs/t.bg-nav-content.png"); ?>');
     background-repeat: no-repeat;
     background-size: 100%;
     display: none;
     position: absolute;
     width: 1280px;
-    height: 408px;
+    height: 413px;
     z-index: 2;
     margin-left: 3px;
   }
@@ -445,7 +445,7 @@
   }
 
   .dropdown-item:hover {
-    color: #0D699C;
+    color: #0FC2C0;
     font-family: Kanit;
     font-size: 20px;
     font-style: normal;
@@ -633,7 +633,7 @@
   }
 
   .bg-otop {
-    background-image: url('<?php echo base_url("docs/t.bg-otop.jpg"); ?>');
+    background-image: url('<?php echo base_url("docs/t.bg-otop2.jpg"); ?>');
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: center center;
@@ -764,7 +764,7 @@
   }
 
   .bg-page-bottom {
-    background-image: url('<?php echo base_url("docs/t.bg-page-btm.jpg"); ?>');
+    background-image: url('<?php echo base_url("docs/t.bg-page-btm2.jpg"); ?>');
     background-repeat: no-repeat;
     background-size: 100%;
     width: 1280px;
@@ -953,7 +953,7 @@
 
   .progress-bar {
     border-radius: 6.671px;
-    background: var(--unnamed, linear-gradient(180deg, #D39B2C -14.71%, #FAE370 18.72%, #F9CC42 52.2%, #FFF1A7 109.3%));
+    background: var(--unnamed, linear-gradient(180deg, #04C7C3 -14.71%, #79F7F5 18.72%, #4AE4E1 52.2%, #04C3C0 109.3%));
     box-shadow: 0px 1.334px 1.334px 0px rgba(0, 0, 0, 0.10);
     width: 57%;
     height: 20px;
@@ -2865,7 +2865,7 @@
   }
 
   .bg-qa-list {
-    background-image: url('<?php echo base_url("docs/k-bg-qa-listv2.png"); ?>');
+    background-image: url('<?php echo base_url("docs/t-bg-qa-list.png"); ?>');
     background-repeat: no-repeat;
     background-size: 100%;
     height: 513px;
