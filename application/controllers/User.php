@@ -142,7 +142,7 @@ class User extends CI_Controller
 
 		$reset_link = base_url('user/resetPassword/' . $reset_token);
 
-		$this->email->from('changepw@mukdahan-smartcity.com', 'Admin');
+		$this->email->from('no-reply@thongtanee.go.th', 'Admin');
 		$this->email->to($email);
 		$this->email->subject('Reset Password');
 		$this->email->message('คลิก <a href="' . $reset_link . '">ที่นี่</a> เพื่อรีเซ็ตรหัสผ่านของคุณ');
