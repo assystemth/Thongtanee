@@ -37,7 +37,7 @@
     // ตัวเลื่อนด้านล่างสุด หน้า home ******************************************************
     $(document).ready(function() {
         $(".slick-carousel").slick({
-            slidesToShow: 4,
+            slidesToShow: 5,
             slidesToScroll: 1,
             autoplay: true,
             autoplaySpeed: 5000,
@@ -49,7 +49,7 @@
 
     $(document).ready(function() {
         $(".slick-carousel-otop").slick({
-            slidesToShow: 4,
+            slidesToShow: 5,
             slidesToScroll: 1,
             autoplay: true,
             autoplaySpeed: 5000,

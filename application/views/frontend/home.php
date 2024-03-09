@@ -86,7 +86,7 @@
                         </a>
                     </div>
                     <div class="d-flex justify-content-center mt-4">
-                         <a href="<?php echo site_url('Pages/laws_all'); ?>" class="zoom-otop">
+                        <a href="<?php echo site_url('Pages/laws_all'); ?>" class="zoom-otop">
                             <img class="mark-logo" src="docs/t.item-vision-right6.png">
                         </a>
                     </div>
@@ -98,7 +98,7 @@
 
 <div class="bg-main">
     <!-- แทบวิ่ง  -->
-    <img src="docs/k.item-news-top3.png" width="272" height="81" style="position: absolute; z-index: 2; margin-top: -22px;">
+    <img src="docs/t.item-news-top2.png" width="285" height="90" style="position: absolute; z-index: 2; margin-top: -22px;">
 
     <div class="tab-container">
         <?php
@@ -224,38 +224,6 @@
 
         <!-- Dropdown 3 -->
         <button class="dropdown-trigger" style="border: none; background: none; padding: 0; margin: 0; padding-left: 75px; padding-top: 5px;">
-            บริการประชาชน
-        </button>
-        <div class="dropdown-content">
-            <ul class="no-bullets mt-4">
-                <div class="dropdown-left">
-                    <!-- <li>
-                            <div class="dropdown-item mb-3 mt-5"><img class="mx-5" src="docs/navmid-head6.png"></div>
-                        </li> -->
-                    <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/pbsv_cac'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;ศูนย์ช่วยเหลือประชาชน</a></li>
-                    <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/pbsv_cig'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;ศูนย์ข้อมูลข่าวสารทางราชการ</a></li>
-                    <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/pbsv_cjc'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;ศูนย์ยุติธรรมชุมชน</a></li>
-                    <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/pbsv_sags'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;คู่มือและมาตรฐานการให้บริการ</a></li>
-                    <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/pbsv_gup'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;คู่มือสำหรับประชาชน</a></li>
-                    <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/pbsv_ahs'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;หลักประกันสุขภาพเทศบาลตำบลกาบเชิง</a></li>
-                </div>
-                <div class="dropdown-center">
-                    <!-- <li>
-                            <div class="dropdown-item" href="#"><img class="mar-left-9" src="docs/s.item-nav-mid4v2.6.png"></div>
-                        </li> -->
-
-                    <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/pbsv_oppr'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;งานอาสาสมัครป้องกันภัยฝ่ายพลเรือน (อปพร.)</a></li>
-                    <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/pbsv_ems'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;งานกู้ชีพ / การบริการการแพทย์ฉุกเฉิน (EMS)</a></li>
-                    <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/pbsv_ae'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;เบี้ยผู้สูงอายุ</a></li>
-                    <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/pbsv_e_book'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;ดาวน์โหลดแบบฟอร์ม E-Book</a></li>
-                    <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/pbsv_tax'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;ข้อมูลการชำระภาษี</a></li>
-                </div>
-            </ul>
-        </div>
-
-
-        <!-- Dropdown 4 -->
-        <button class="dropdown-trigger" style="border: none; background: none; padding: 0; margin: 0; padding-left: 90px; padding-top: 5px;">
             แผนงาน
         </button>
         <div class="dropdown-content">
@@ -286,8 +254,33 @@
         </div>
 
 
+
+        <!-- Dropdown 4 -->
+        <button class="dropdown-trigger" style="border: none; background: none; padding: 0; margin: 0; padding-left: 90px; padding-top: 5px;">
+            มาตรการภายในงาน
+        </button>
+        <div class="dropdown-content">
+            <ul class="no-bullets mt-4">
+                <div class="dropdown-left">
+                    <!-- <li>
+                            <div class="dropdown-item mb-3 mt-5"><img class="mx-5" src="docs/navmid-head6.png"></div>
+                        </li> -->
+
+                    <!-- <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/order'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;คำสั่งเทศบาล</a></li> -->
+                    <!-- <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/announce'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;ประกาศเทศบาล</a></li> -->
+                    <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/mui'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;มาตรการภายใน</a></li>
+                    <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/guide_work'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;คู่มือการปฏิบัติงาน</a></li>
+                    <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/km'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;Knowledge Management : KM<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; การจัดการความรู้ของท้องถิ่น</a></li>
+                    <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/loadform'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;ดาวน์โหลดแบบฟอร์ม</a></li>
+                    <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/newsletter'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;จดหมายข่าว</a></li>
+
+                </div>
+            </ul>
+        </div>
+
+
         <!-- Dropdown 5 -->
-        <button class="dropdown-trigger" style="border: none; background: none; padding: 0; margin: 0; padding-left: 105px; padding-top: 5px;">
+        <button class="dropdown-trigger" style="border: none; background: none; padding: 0; margin: 0; padding-left: 100px; padding-top: 5px;">
             การดำเนินงาน
         </button>
         <div class="dropdown-content">
@@ -335,8 +328,8 @@
 
 
         <!-- Dropdown 6 -->
-        <button class="dropdown-trigger" style="border: none; background: none; padding: 0; margin: 0; padding-left: 90px; padding-top: 5px;">
-            มาตรการภายใน
+        <button class="dropdown-trigger" style="border: none; background: none; padding: 0; margin: 0; padding-left: 65px; padding-top: 5px;">
+            บริการประชาชน
         </button>
         <div class="dropdown-content">
             <ul class="no-bullets mt-4">
@@ -344,18 +337,27 @@
                     <!-- <li>
                             <div class="dropdown-item mb-3 mt-5"><img class="mx-5" src="docs/navmid-head6.png"></div>
                         </li> -->
+                    <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/pbsv_cac'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;ศูนย์ช่วยเหลือประชาชน</a></li>
+                    <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/pbsv_cig'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;ศูนย์ข้อมูลข่าวสารทางราชการ</a></li>
+                    <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/pbsv_cjc'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;ศูนย์ยุติธรรมชุมชน</a></li>
+                    <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/pbsv_sags'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;คู่มือและมาตรฐานการให้บริการ</a></li>
+                    <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/pbsv_gup'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;คู่มือสำหรับประชาชน</a></li>
+                    <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/pbsv_ahs'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;หลักประกันสุขภาพเทศบาลตำบลกาบเชิง</a></li>
+                </div>
+                <div class="dropdown-center">
+                    <!-- <li>
+                            <div class="dropdown-item" href="#"><img class="mar-left-9" src="docs/s.item-nav-mid4v2.6.png"></div>
+                        </li> -->
 
-                    <!-- <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/order'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;คำสั่งเทศบาล</a></li> -->
-                    <!-- <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/announce'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;ประกาศเทศบาล</a></li> -->
-                    <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/mui'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;มาตรการภายใน</a></li>
-                    <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/guide_work'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;คู่มือการปฏิบัติงาน</a></li>
-                    <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/km'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;Knowledge Management : KM<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; การจัดการความรู้ของท้องถิ่น</a></li>
-                    <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/loadform'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;ดาวน์โหลดแบบฟอร์ม</a></li>
-                    <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/newsletter'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;จดหมายข่าว</a></li>
-
+                    <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/pbsv_oppr'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;งานอาสาสมัครป้องกันภัยฝ่ายพลเรือน (อปพร.)</a></li>
+                    <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/pbsv_ems'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;งานกู้ชีพ / การบริการการแพทย์ฉุกเฉิน (EMS)</a></li>
+                    <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/pbsv_ae'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;เบี้ยผู้สูงอายุ</a></li>
+                    <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/pbsv_e_book'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;ดาวน์โหลดแบบฟอร์ม E-Book</a></li>
+                    <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/pbsv_tax'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;ข้อมูลการชำระภาษี</a></li>
                 </div>
             </ul>
         </div>
+
 
 
 
@@ -365,11 +367,11 @@
 
 <div class="bg-activity">
     <div class="d-flex justify-content-center" style="padding-top: 3%;">
-        <img src="docs/k.head-activity.png">
+        <img src="docs/t.head-activity.png">
     </div>
-    <div class="row d-flex justify-content-center" style="padding-top: 70px; margin-left: -50px;">
+    <div class="row d-flex justify-content-center" style="padding-top: 40px; margin-left: 10px;">
         <?php foreach ($qActivity as $activity) { ?>
-            <div class="card-activity col-2 mx-4">
+            <div class="card-activity col-2 ">
                 <?php if (!empty($activity->activity_img)) : ?>
                     <a href="<?= site_url('pages/activity_detail/' . $activity->activity_id); ?>">
                         <img src="<?php echo base_url('docs/img/' . $activity->activity_img); ?>">
@@ -402,42 +404,11 @@
             </div>
         <?php } ?>
     </div>
-    <div class="d-flex justify-content-center" style="margin-top: 13%;">
+    <div class="d-flex justify-content-center" style="margin-top: 3%;">
         <a href="<?php echo site_url('pages/activity'); ?>">
             <img src="docs/k.btn-all.png">
         </a>
     </div>
-</div>
-
-<div class="bg-video">
-    <div class="d-flex justify-content-center" style="padding-top: 1%;">
-        <img src="docs/k.head-video.png">
-    </div>
-    <div class="bg-content-video">
-        <!-- <?php if (!empty($video_data) && !empty($video_data->video_link)) : ?>
-            <?php
-                    $youtube_url = $video_data->video_link;
-                    $video_id = get_youtube_video_id($youtube_url);
-            ?>
-            <?php if (!empty($video_id)) : ?>
-                <?php
-                        $embed_url = "https://www.youtube.com/embed/$video_id";
-                ?>
-                <iframe width="482" height="295" src="<?php echo $embed_url; ?>" frameborder="0" allowfullscreen></iframe>
-            <?php else : ?>
-                <p>Invalid YouTube URL</p>
-            <?php endif; ?>
-        <?php else : ?>
-            <p>No video available</p>
-        <?php endif; ?> -->
-        <iframe width="482" height="295" src="https://www.youtube.com/embed/NhFwG6Dz_sg?si=KU6Vwv23GbhXPp8s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    </div>
-    <div class="d-flex justify-content-center mt-3">
-        <a href="<?php echo site_url('pages/video'); ?>">
-            <img src="docs/k.btn-all.png">
-        </a>
-    </div>
-
 
     <div class="content-news-bg-two underline">
         <div class="tab-container2">
@@ -594,7 +565,7 @@
     </div>
 
 
-    <div class="content-news-bg mt-5 underline">
+    <div class="content-news-bg underline">
         <div class="tab-container2">
             <div class="tab-link" onclick="openTab('tab1')">
                 <img src="docs/k.news-head5.png" alt="Tab 1">
@@ -772,15 +743,18 @@
 </div>
 
 <div class="bg-travel">
+    <div class="d-flex justify-content-center" style="padding-top: 5%;">
+        <img src="docs/t.head-travel.png">
+    </div>
     <div class="travel-content">
         <div class="slick-carousel ">
             <?php foreach ($qTravel as $travel) { ?>
                 <div class="text-center zoom-travel mt-5">
                     <a href="<?php echo site_url('Pages/travel_detail/' . $travel->travel_id); ?>">
-                        <img src="<?php echo base_url('docs/img/' . $travel->travel_img); ?>" width="270px" height="254px" class="image-with-shadow-travel">
+                        <img src="<?php echo base_url('docs/img/' . $travel->travel_img); ?>" width="209px" height="197px" class="image-with-shadow-travel">
                     </a>
                     <br>
-                    <div class="d-flex justify-content-center" style="margin-left: 0px; width:270px;">
+                    <div class="d-flex justify-content-center" style="margin-left: 0px; width:209px;">
                         <a class="underline" href="<?php echo site_url('Pages/travel_detail/' . $travel->travel_id); ?>">
                             <span class="text-content-travel"><?= $travel->travel_name; ?></span>
                         </a>
@@ -788,7 +762,7 @@
                 </div>
             <?php } ?>
         </div>
-        <div class="d-flex justify-content-center" style="margin-top: 3%;">
+        <div class="d-flex justify-content-center">
             <a href="<?php echo site_url('pages/travel'); ?>">
                 <img src="docs/k.btn-all.png">
             </a>
@@ -797,15 +771,18 @@
 </div>
 
 <div class="bg-otop">
+<div class="d-flex justify-content-center" style="padding-top: 5%;">
+        <img src="docs/t.head-otop.png">
+    </div>
     <div class="otop-content">
         <div class="slick-carousel-otop">
             <?php foreach ($qOtop as $otop) { ?>
                 <div class="text-center zoom-travel mt-5">
                     <a href="<?php echo site_url('Pages/otop_detail/' . $otop->otop_id); ?>">
-                        <img src="<?php echo base_url('docs/img/' . $otop->otop_img); ?>" width="270px" height="336px" class="image-with-shadow-travel">
+                        <img src="<?php echo base_url('docs/img/' . $otop->otop_img); ?>" width="209px" height="197px" class="image-with-shadow-travel">
                     </a>
                     <br>
-                    <div class="d-flex justify-content-center" style="margin-left: 0px; width:270px;">
+                    <div class="d-flex justify-content-center" style="margin-left: 0px; width:209px;">
                         <a class="underline" href="<?php echo site_url('Pages/otop_detail/' . $otop->otop_id); ?>">
                             <span class="text-content-otop"><?= $otop->otop_name; ?></span>
                         </a>
@@ -822,8 +799,8 @@
 </div>
 
 <div class="bg-page-bottom">
-    <div class="d-flex justify-content-center" style="padding-top: 70px;" id="oss">
-        <img src="docs/k.head-e-service.png">
+    <div class="d-flex justify-content-center" style="padding-top: 50px;" id="oss">
+        <img src="docs/t.head-e-service.png">
     </div>
     <br>
     <!-- <div class="d-flex justify-content-center">
@@ -1059,7 +1036,7 @@
             </div>
         </div>
     </div>
-    <div class="bg-links" style="margin-top: -30px;">
+    <div class="bg-links" style="margin-top: 50px;">
         <div class="text-center">
             <img src="docs/k.head-links.png">
         </div>

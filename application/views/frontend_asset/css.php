@@ -252,7 +252,7 @@
     background-image: url('<?php echo base_url("docs/t.welcome.gif"); ?>');
     background-repeat: no-repeat;
     background-size: 100%;
-    margin-top: -182px;
+    margin-top: -115px;
     z-index: 1;
     width: 1280px;
     height: 690px;
@@ -301,7 +301,7 @@
   }
 
   .bg-main {
-    background-image: url('<?php echo base_url("docs/k.bg-main.jpg"); ?>');
+    background-image: url('<?php echo base_url("docs/t.bg-main.jpg"); ?>');
     background-repeat: no-repeat;
     background-size: 100%;
     height: 850px;
@@ -323,7 +323,7 @@
   }
 
   .head-activity {
-    background-image: url('<?php echo base_url("docs/k.bg-nav-mid3.png"); ?>');
+    background-image: url('<?php echo base_url("docs/t.bg-nav-mid.png"); ?>');
     background-repeat: no-repeat;
     background-size: 100%;
     height: 64px;
@@ -359,10 +359,10 @@
   }
 
   .bg-activity {
-    background-image: url('<?php echo base_url("docs/k.bg-activity2.jpg"); ?>');
+    background-image: url('<?php echo base_url("docs/t.bg-activity2.jpg"); ?>');
     background-repeat: no-repeat;
     background-size: 100%;
-    height: 677px;
+    height: 2860px;
     width: 1280px;
     margin: auto;
   }
@@ -370,9 +370,9 @@
   .card-activity {
     /* border-radius: 24px;
     background-color: #FDF5E1; */
-    height: 160px;
-    width: 180px;
-
+    height: 261px;
+    width: 215px;
+    margin: 25px 5px;
     /* border: 2px solid #EABA48;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, .2); */
   }
@@ -540,7 +540,7 @@
     box-shadow: 0px 0px 7.023px 0px rgba(63, 62, 47, 0.25);
     padding: 1% 4%;
     margin-left: 59px;
-    margin-top: 20px;
+    margin-top: 130px;
   }
 
   .content-news-bg-two {
@@ -551,7 +551,7 @@
     box-shadow: 0px 0px 7.023px 0px rgba(63, 62, 47, 0.25);
     padding: 1% 4%;
     margin-left: 59px;
-    margin-top: 65px;
+    margin-top: 160px;
 
   }
 
@@ -633,19 +633,17 @@
   }
 
   .bg-otop {
-    background-image: url('<?php echo base_url("docs/k.bg-otop.jpg"); ?>');
+    background-image: url('<?php echo base_url("docs/t.bg-otop.jpg"); ?>');
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: center center;
     width: 1280px;
-    height: 727px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    height: 797px;
   }
 
   .otop-content {
-    padding-top: 100px;
+    margin-top: -25px;
+    margin-left: 85px;
     max-width: 1120px;
   }
 
@@ -694,20 +692,17 @@
   }
 
   .bg-travel {
-    background-image: url('<?php echo base_url("docs/k.bg-travel.jpg"); ?>');
+    background-image: url('<?php echo base_url("docs/t.bg-travel.jpg"); ?>');
     background-repeat: no-repeat;
     background-size: 100%;
     width: 1280px;
-    height: 744px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    height: 720px;
   }
 
   .travel-content {
     max-width: 1120px;
-    margin-top: 110px;
-    /* ปรับตามความต้องการ */
+    margin-top: -25px;
+    margin-left: 85px;
   }
 
   .slick-prev,
@@ -741,19 +736,18 @@
   }
 
   .text-travel {
-    color: #FFE072;
+    color: #CA942B;
     -webkit-text-stroke: 1px black;
     font-family: Kanit;
     font-size: 36.024px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
-    margin-left: -20px;
   }
 
   .image-with-shadow-travel {
     border-radius: 30.145px;
-    border: 4.433px solid var(--Style, #D39B2C);
+    border: 4.433px solid var(--Style, #CA942B);
     background: url(<path-to-image>), lightgray 50% / cover no-repeat, url(<path-to-image>), lightgray 50% / cover no-repeat;
     box-shadow: 3.546px 3.546px 8.866px 0px rgba(0, 0, 0, 0.25);
   }
@@ -770,11 +764,11 @@
   }
 
   .bg-page-bottom {
-    background-image: url('<?php echo base_url("docs/k.bg-page-btm2.jpg"); ?>');
+    background-image: url('<?php echo base_url("docs/t.bg-page-btm.jpg"); ?>');
     background-repeat: no-repeat;
     background-size: 100%;
     width: 1280px;
-    height: 2000px;
+    height: 2040px;
     z-index: 1;
   }
 
@@ -812,7 +806,7 @@
 
   .bg-view {
     border-radius: 34px;
-    border: 1px solid var(--Radial, #9E5313);
+    border: 5px solid var(--Radial, #90BCBB);
     background: #FFF;
     width: 350px;
     height: 413px;
@@ -827,7 +821,7 @@
   }
 
   .font-view {
-    color: #7FD9FF;
+    color: #015958;
     text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
     font-family: Kanit;
     font-size: 24px;
@@ -906,7 +900,7 @@
 
   .bg-like {
     border-radius: 34px;
-    border: 1px solid var(--Style, #9E5313);
+    border: 5px solid var(--Style, #90BCBB);
     background: #FFF;
     width: 339px;
     height: 413px;
@@ -920,7 +914,7 @@
   }
 
   .font-like {
-    color: #7FD9FF;
+    color: #015958;
     text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
     font-family: Kanit;
     font-size: 24px;
@@ -1059,7 +1053,7 @@
 
 
   .footer {
-    background-image: url('<?php echo base_url("docs/t.bg-footer.png"); ?>');
+    background-image: url('<?php echo base_url("docs/t.bg-footer2.png"); ?>');
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: center center;
@@ -2849,7 +2843,7 @@
   }
 
   .text-content-travel {
-    color: #FAE370;
+    color: #F9CC42;
     text-shadow: -1px 0 #014674, 0 2px #014674,
       2px 0 #014674, 0 -1px #014674;
     font-family: Kanit;
@@ -2860,7 +2854,7 @@
   }
 
   .text-content-otop {
-    color: #FAE370;
+    color: #F9CC42;
     /* text-shadow: -1px 0 #014674, 0 2px #014674,
       2px 0 #014674, 0 -1px #014674; */
     font-family: Kanit;
