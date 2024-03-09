@@ -1297,7 +1297,7 @@
     background-size: 100%;
     background-repeat: no-repeat;
     width: 182px;
-    height: 28px;
+    height: 32px;
     z-index: 2;
     margin-left: -20px;
     text-align: center;
@@ -1310,10 +1310,10 @@
     background-image: url('<?php echo base_url("docs/k.path2-1.png"); ?>');
     background-size: 100%;
     background-repeat: no-repeat;
-    width: 200px;
-    height: 28px;
+    width: 240px;
+    height: 32px;
     z-index: 2;
-    margin-left: -13px;
+    margin-left: -20px;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -1374,9 +1374,9 @@
   }
 
   .head-pages {
-    background-image: url('<?php echo base_url("docs/t.head-pages1.png"); ?>');
+    background-image: url('<?php echo base_url("docs/t.head-pages1v2.png"); ?>');
     background-size: 100%;
-    width: 488px;
+    width: 422px;
     height: 96px;
     text-align: center;
     display: flex;
@@ -1385,9 +1385,9 @@
   }
 
   .head-pages-two {
-    background-image: url('<?php echo base_url("docs/t.head-pages2.png"); ?>');
+    background-image: url('<?php echo base_url("docs/t.head-pages2v2.png"); ?>');
     background-size: 100%;
-    width: 570px;
+    width: 650px;
     height: 96px;
     text-align: center;
     display: flex;
@@ -1396,9 +1396,9 @@
   }
 
   .head-pages-three {
-    background-image: url('<?php echo base_url("docs/t.head-pages3.png"); ?>');
+    background-image: url('<?php echo base_url("docs/t.head-pages3v2.png"); ?>');
     background-size: 100%;
-    width: 690px;
+    width: 999px;
     height: 96px;
     text-align: center;
     display: flex;
