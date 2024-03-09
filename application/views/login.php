@@ -5,7 +5,7 @@
     <!-- Design by foolishdeveloper.com -->
     <link rel="icon" href="<?php echo base_url("docs/k.logo.png"); ?>" type="image/x-icon">
 
-    <title>เทศบาลตำบลกาบเชิง</title>
+    <title>เทศบาลธงธานี</title>
     <!-- icon -->
     <link href='https://fonts.googleapis.com/css?family=Kanit' rel='stylesheet'>
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -43,7 +43,7 @@
 
         .bg {
             /* The image used */
-            background-image: url('<?php echo base_url("docs/k.bg-select-login.jpg"); ?>');
+            background-image: url('<?php echo base_url("docs/t.bg-select-login.jpg"); ?>');
             /* Full height */
             height: 100vh;
             /* Center the image horizontally and vertically */
@@ -99,8 +99,8 @@
                 <div class="text-center mt-4">
                     <img src="<?php echo base_url("docs/k.logo.png"); ?>" width="120" height="120">
                     <div class="mt-3">
-                        <h2>เทศบาลตำบลกาบเชิง</h2>
-                        <h3>อำเภอกาบเชิง จังหวัดสุรินทร์</h3>
+                        <h2>เทศบาลตำบลธงธานี</h2>
+                        <h3>อำเภอธวัชบุรี จังหวัดร้อยเอ็ด</h3>
                     </div>
                 </div>
                 <div class="d-flex justify-content-between" style="margin-left: 60px; margin-right: 50px; margin-top: 70px;">
