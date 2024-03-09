@@ -1127,6 +1127,12 @@
     border-right: 1px solid #0FC2C0;
   }
 
+  .bg-pages-p {
+    width: 1280px;
+    height: auto;
+    position: relative;
+  }
+
   .bg-pages-news {
     background-image: url('<?php echo base_url("docs/s.bg-other.jpg"); ?>');
     background-repeat: no-repeat;
@@ -1146,7 +1152,6 @@
     position: relative;
     margin-top: 230px;
   }
-
 
   .bg-pages-in {
     /* background-color: white; */
@@ -1270,7 +1275,7 @@
     background-size: 100%;
     background-repeat: no-repeat;
     width: 98px;
-    height: 34px;
+    height: 32px;
     z-index: 3;
     text-align: center;
     display: flex;
@@ -1307,7 +1312,7 @@
   }
 
   .path2-3 {
-    background-image: url('<?php echo base_url("docs/k.path2-1.png"); ?>');
+    background-image: url('<?php echo base_url("docs/t.path2-3.png"); ?>');
     background-size: 100%;
     background-repeat: no-repeat;
     width: 240px;
@@ -1353,6 +1358,7 @@
     font-weight: 300;
     line-height: normal;
     margin-left: -10px;
+    margin-top: -5px;
   }
 
   .page-center {
