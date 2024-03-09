@@ -5,7 +5,7 @@
     <!-- Design by foolishdeveloper.com -->
     <link rel="icon" href="<?php echo base_url("docs/k.logo.png"); ?>" type="image/x-icon">
 
-    <title>เทศบาลตำบลกาบเชิง ระบบแอดมิน</title>
+    <title>เทศบาลธงธานี ระบบแอดมิน</title>
     <!-- icon -->
     <link href='https://fonts.googleapis.com/css?family=Kanit' rel='stylesheet'>
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -165,7 +165,7 @@
 
         .bg {
             /* The image used */
-            background-image: url('<?php echo base_url("docs/k.bg-select-login.jpg"); ?>');
+            background-image: url('<?php echo base_url("docs/t.bg-select-loginv2.jpg"); ?>');
             /* Full height */
             height: 100vh;
             /* Center the image horizontally and vertically */

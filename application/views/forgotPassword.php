@@ -4,7 +4,7 @@
 <head>
     <!-- Design by foolishdeveloper.com -->
     <link rel="icon" href="<?php echo base_url("docs/logo.png"); ?>" type="image/x-icon">
-    <title>อบต.สว่าง ระบบแอดมิน</title>
+    <title>เทศบาลธงธานี ระบบแอดมิน</title>
     <!-- icon -->
     <link href='https://fonts.googleapis.com/css?family=Kanit' rel='stylesheet'>
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -160,7 +160,7 @@
 
         .bg {
             /* The image used */
-            background-image: url('<?php echo base_url("docs/s.bg-admin.jpg"); ?>');
+            background-image: url('<?php echo base_url("docs/t.bg-select-loginv2.jpg"); ?>');
             /* Full height */
             height: 100%;
             /* Center the image horizontally and vertically */
