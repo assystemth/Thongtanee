@@ -98,7 +98,7 @@
 
 <div class="bg-main">
     <!-- แทบวิ่ง  -->
-    <img src="docs/t.item-news-top2.png" width="285" height="90" style="position: absolute; z-index: 2; margin-top: -22px;">
+    <img src="docs/t.item-news-top3.png" width="285" height="90" style="position: absolute; z-index: 2; margin-top: -22px;">
 
     <div class="tab-container">
         <?php
