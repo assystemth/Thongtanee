@@ -2,23 +2,23 @@
     <div class="row">
         <div class="col-md-2"></div>
         <div class="col-md-7">
-            <h4>แก้ไขข้อมูลทะเบียนเบี้ยยังชีพผู้สูงอายุ</h4>
-            <form action=" <?php echo site_url('pbsv_ae_backend/edit/' . $rsedit->pbsv_ae_id); ?> " method="post" class="form-horizontal" enctype="multipart/form-data">
+            <h4>แก้ไขการออกคำสั่งด้านการบริหารงานบุคคล</h4>
+            <form action=" <?php echo site_url('operation_omp_backend/edit/' . $rsedit->operation_omp_id); ?> " method="post" class="form-horizontal" enctype="multipart/form-data">
                 <br>
                 <div class="form-group row">
                     <div class="col-sm-3 control-label">เรื่อง</div>
                     <div class="col-sm-9">
-                        <input type="text" name="pbsv_ae_name" id="pbsv_ae_name" class="form-control" value="<?= $rsedit->pbsv_ae_name; ?>">
+                        <input type="text" name="operation_omp_name" id="operation_omp_name" class="form-control" value="<?= $rsedit->operation_omp_name; ?>">
                     </div>
                 </div>
                 <br>
                 <div class="form-group row">
                     <div class="col-sm-3 control-label">รายละเอียด</div>
                     <div class="col-sm-9">
-                        <textarea name="pbsv_ae_detail" id="pbsv_ae_detail"><?= $rsedit->pbsv_ae_detail; ?></textarea>
+                        <textarea name="operation_omp_detail" id="operation_omp_detail"><?= $rsedit->operation_omp_detail; ?></textarea>
                         <script>
                             ClassicEditor
-                                .create(document.querySelector('#pbsv_ae_detail'), {
+                                .create(document.querySelector('#operation_omp_detail'), {
                                     toolbar: {
                                         items: [
                                             'undo', 'redo',
@@ -44,14 +44,14 @@
                 <div class="form-group row">
                     <div class="col-sm-3 control-label">วันที่อัพโหลด</div>
                     <div class="col-sm-5">
-                        <input type="datetime-local" name="pbsv_ae_date" id="pbsv_ae_date" class="form-control" value="<?= $rsedit->pbsv_ae_date; ?>" required>
+                        <input type="datetime-local" name="operation_omp_date" id="operation_omp_date" class="form-control" value="<?= $rsedit->operation_omp_date; ?>" required>
                     </div>
                 </div>
                 <br>
                 <div class="form-group row">
                     <div class="col-sm-3 control-label">ลิงค์เพิ่มเติม</div>
                     <div class="col-sm-9">
-                        <input type="text" name="pbsv_ae_link" id="pbsv_ae_link" class="form-control" value="<?= $rsedit->pbsv_ae_link; ?>">
+                        <input type="text" name="operation_omp_link" id="operation_omp_link" class="form-control" value="<?= $rsedit->operation_omp_link; ?>">
                     </div>
                 </div>
                 <br>
@@ -59,15 +59,15 @@
                     <div class="col-sm-3 control-label">รูปภาพหน้าปก</div>
                     <div class="col-sm-6">
                         ภาพเก่า <br>
-                        <?php if (!empty($rsedit->pbsv_ae_img)) : ?>
-                            <img src="<?= base_url('docs/img/' . $rsedit->pbsv_ae_img); ?>" width="250px" height="210">
+                        <?php if (!empty($rsedit->operation_omp_img)) : ?>
+                            <img src="<?= base_url('docs/img/' . $rsedit->operation_omp_img); ?>" width="250px" height="210">
                         <?php else : ?>
                             <img src="<?= base_url('docs/k.logo.png'); ?>" width="250px" height="210">
                         <?php endif; ?>
                         <br>
                         เลือกใหม่
                         <br>
-                        <input type="file" name="pbsv_ae_img" class="form-control" accept="image/*">
+                        <input type="file" name="operation_omp_img" class="form-control" accept="image/*">
                     </div>
                 </div>
                 <br>
@@ -79,8 +79,8 @@
                             <?php foreach ($rsImg as $img) { ?>
                                 <div class="row">
                                     <div class="col-sm-5">
-                                        <img src="<?= base_url('docs/img/' . $img->pbsv_ae_img_img); ?>" width="140px" height="100px">
-                                        <a class="btn btn-danger btn-sm mb-2" href="#" role="button" onclick="confirmDeleteImg(<?= $img->pbsv_ae_img_id; ?>, '<?= $img->pbsv_ae_img_img; ?>');">
+                                        <img src="<?= base_url('docs/img/' . $img->operation_omp_img_img); ?>" width="140px" height="100px">
+                                        <a class="btn btn-danger btn-sm mb-2" href="#" role="button" onclick="confirmDeleteImg(<?= $img->operation_omp_img_id; ?>, '<?= $img->operation_omp_img_img; ?>');">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
                                                 <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z" />
                                             </svg> ลบไฟล์
@@ -101,7 +101,7 @@
                                         }).then((result) => {
                                             if (result.isConfirmed) {
                                                 // หลังจากคลิกยืนยันให้เรียก Controller ที่ใช้ในการลบไฟล์ PDF
-                                                window.location.href = "<?= site_url('pbsv_ae_backend/del_img/'); ?>" + file_id;
+                                                window.location.href = "<?= site_url('operation_omp_backend/del_img/'); ?>" + file_id;
                                             }
                                         });
                                     }
@@ -109,7 +109,7 @@
                             <?php } ?>
                         <?php } ?>
                         เลือกใหม่: <br>
-                        <input type="file" name="pbsv_ae_img_img[]" class="form-control" accept="image/*" multiple>
+                        <input type="file" name="operation_omp_img_img[]" class="form-control" accept="image/*" multiple>
                         <span class="black-add">สามารถอัพโหลดได้หลายไฟล์</span>
                         <br>
                         <span class="red-add">(เฉพาะไฟล์ .JPG/.JPEG/.PNG)</span>
@@ -121,8 +121,8 @@
                     <div class="col-sm-6">
                         <?php if (!empty($rsFile)) { ?>
                             <?php foreach ($rsFile as $file) { ?>
-                                <a class="btn btn-info btn-sm mb-2" href="<?= base_url('docs/file/' . $file->pbsv_ae_file_pdf); ?>" target="_blank">ดูไฟล์ <?= $file->pbsv_ae_file_pdf; ?></a>
-                                <a class="btn btn-danger btn-sm mb-2" href="#" role="button" onclick="confirmDelete(<?= $file->pbsv_ae_file_id; ?>, '<?= $file->pbsv_ae_file_pdf; ?>');">
+                                <a class="btn btn-info btn-sm mb-2" href="<?= base_url('docs/file/' . $file->operation_omp_file_pdf); ?>" target="_blank">ดูไฟล์ <?= $file->operation_omp_file_pdf; ?></a>
+                                <a class="btn btn-danger btn-sm mb-2" href="#" role="button" onclick="confirmDelete(<?= $file->operation_omp_file_id; ?>, '<?= $file->operation_omp_file_pdf; ?>');">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
                                         <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z" />
                                     </svg> ลบไฟล์
@@ -144,12 +144,12 @@
                                 }).then((result) => {
                                     if (result.isConfirmed) {
                                         // หลังจากคลิกยืนยันให้เรียก Controller ที่ใช้ในการลบไฟล์ PDF
-                                        window.location.href = "<?= site_url('pbsv_ae_backend/del_pdf/'); ?>" + file_id;
+                                        window.location.href = "<?= site_url('operation_omp_backend/del_pdf/'); ?>" + file_id;
                                     }
                                 });
                             }
                         </script>
-                        <input type="file" name="pbsv_ae_file_pdf[]" class="form-control mt-1" accept="application/pdf" multiple>
+                        <input type="file" name="operation_omp_file_pdf[]" class="form-control mt-1" accept="application/pdf" multiple>
                         <span class="black-add">สามารถอัพโหลดได้หลายไฟล์</span>
                         <br>
                         <span class="red-add">(เฉพาะไฟล์ PDF)</span>
@@ -160,7 +160,7 @@
                     <div class="col-sm-3 control-label"></div>
                     <div class="col-sm-6">
                         <button type="submit" class="btn btn-success">บันทึกข้อมูล</button>
-                        <a class="btn btn-danger" href="<?= site_url('pbsv_ae_backend'); ?>" role="button">ยกเลิก</a>
+                        <a class="btn btn-danger" href="<?= site_url('operation_omp_backend'); ?>" role="button">ยกเลิก</a>
                     </div>
                 </div>
             </form>

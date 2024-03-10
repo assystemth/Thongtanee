@@ -166,13 +166,18 @@
                         <a class="collapse-item" href="<?php echo site_url('Pbsv_cig_backend'); ?>">ศูนย์ข้อมูลข่าวสารทางราชการ</a>
                         <a class="collapse-item" href="<?php echo site_url('Pbsv_cjc_backend'); ?>">ศูนย์ยุติธรรมชุมชน</a>
                         <a class="collapse-item" href="<?php echo site_url('Pbsv_ahs_backend'); ?>">หลักประกันสุขภาพตำบล</a>
-                        <a class="collapse-item" href="<?php echo site_url('Pbsv_ae_backend'); ?>">เบี้ยผู้สูงอายุ</a>
                         <a class="collapse-item" href="<?php echo site_url('Pbsv_e_book_backend'); ?>">ดาวโหลดแบบฟอร์ม E-book</a> 
                         <a class="collapse-item" href="<?php echo site_url('Pbsv_tax_backend'); ?>">ข้อมูลชำระภาษี</a> 
                         <a class="collapse-item" href="<?php echo site_url('Pbsv_oppr_backend'); ?>">งานอาสาป้องกันภัย<br>ฝ่ายพลเรือน(อปพร.)</a>
                         <a class="collapse-item" href="<?php echo site_url('Pbsv_ems_backend'); ?>">งานกู้ชีพ/บริการ<br>การแพทย์ฉุกเฉิน(EMS)</a>
                         <a class="collapse-item" href="<?php echo site_url('Pbsv_sags_backend'); ?>">คู่มือและ<br>มาตราฐานการให้บริการ</a>
+                        <a class="collapse-item" href="<?php echo site_url('Pbsv_dss_backend'); ?>">ข้อมูลเชิงสถิติการให้บริการ</a>
+                        <a class="collapse-item" href="<?php echo site_url('Pbsv_ae_backend'); ?>">ข้อมูลทะเบียนเบี้ยยังชีพ<br>ผู้สูงอายุ</a>
+                        <a class="collapse-item" href="<?php echo site_url('Pbsv_rfc_backend'); ?>">รายงานการสำรวจความ<br>พึงพอใจการให้บริการ</a>
+                        <a class="collapse-item" href="<?php echo site_url('Pbsv_is_backend'); ?>">ข้อมูลบริการ</a>
                         <a class="collapse-item" href="<?php echo site_url('Pbsv_gup_backend'); ?>">คู่มือสำหรับประชาชน</a>
+                        <a class="collapse-item" href="<?php echo site_url('Pbsv_fp_backend'); ?>">การรับฟังความคิดเห็นของ<br>ประชาชน</a>
+                        <a class="collapse-item" href="<?php echo site_url('Pbsv_ppdp_backend'); ?>">นโยบายคุ้มครองข้อมูลส่วนบุคคล</a>
                     </div>
                 </div>
             </li>
@@ -185,6 +190,7 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <!-- <h6 class="collapse-header">Custom Components:</h6> -->
                         <a class="collapse-item" href="<?php echo site_url('Operation_reauf_backend'); ?>">รายงานติดตาม<br>และประเมินผลแผน</a>
+                        <a class="collapse-item" href="<?php echo site_url('Operation_rse_backend'); ?>">รายงานผลการประหยัด<br>พลังงาน</a>
                         <a class="collapse-item" href="<?php echo site_url('P_rpobuy_backend'); ?>">รายงานผลการดำเนินงาน<br>การจัดซื้อจัดจ้าง</a>
                         <a class="collapse-item" href="<?php echo site_url('P_rpo_backend'); ?>">รายงานผลการดำเนินงาน</a>
                         <a class="collapse-item" href="<?php echo site_url('P_reb_backend'); ?>">รายงานใช้จ่ายงบประมาณ</a>
@@ -192,7 +198,9 @@
                         <a class="collapse-item" href="<?php echo site_url('Operation_pm_backend'); ?>">การมีส่วนร่วมของผู้บริหาร</a>
                         <a class="collapse-item" href="<?php echo site_url('Operation_policy_hr_backend'); ?>">นโยบายบริหาร<br>ทรัพยากรบุคคล</a>
                         <a class="collapse-item" href="<?php echo site_url('Operation_am_hr_backend'); ?>">การดำเนินการบริหาร<br>ทรัพยากรบุคคล</a>
-                        <a class="collapse-item" href="<?php echo site_url('Operation_rdam_hr_backend'); ?>">รายงานผลการบริหาร<br>และพัฒนาทรัพยากรบุคคล</a>
+                        <a class="collapse-item" href="<?php echo site_url('Operation_am_hr_backend'); ?>">การดำเนินการบริหาร<br>ทรัพยากรบุคคล</a>
+                        <a class="collapse-item" href="<?php echo site_url('Operation_omp_backend'); ?>">การออกคำสั่งด้านการบริหาร<br>งานบุคคล</a>
+                        <a class="collapse-item" href="<?php echo site_url('operation_sp_backend'); ?>">สรปุผลการจัดซื้อจัดจ้าง</a>
                         <a class="collapse-item" href="<?php echo site_url('Operation_cdm_backend'); ?>">หลักเกณฑ์การบริหาร<br>และพัฒนา</a>
                         <a class="collapse-item" href="<?php echo site_url('Operation_po_backend'); ?>">การเปิดโอกาสให้มีส่วนร่วม</a>
                         <a class="collapse-item" href="<?php echo site_url('Operation_eco_backend'); ?>">การเสริมสร้าง<br>วัฒนธรรมองค์กร</a>
