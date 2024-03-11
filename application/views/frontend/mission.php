@@ -8,7 +8,7 @@
         </div>
     </div>
     <div class="page-center">
-        <div class="head-pages">
+        <div class="head-pages-two">
             <span class="font-pages-head">ภารกิจและความรับผิดชอบ</span>
         </div>
     </div>
@@ -24,7 +24,7 @@
                     <?php endif; ?>
                 </div>
             </div>
-            <div class="scrollable-container">
+            <div class="scrollable-container-550">
                 <div class="pages-content break-word mt-5">
                     <!-- <span class="font-gi-head">อบต. มีหน้าที่ตามพระราชบัญญัติสภาตำบล และองค์การบริหารส่วน ตำบล พ.ศ. 2537 และ แก้ไขเพิ่มเติม (ฉบับที่ 3 พ.ศ. 2542)</span><br> -->
                     <span class="font-gi-content">
