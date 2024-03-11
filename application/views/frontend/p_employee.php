@@ -9,23 +9,23 @@
     </div>
     <div class="page-center">
         <div class="head-pages">
-            <span class="font-pages-head">กองสาธารณสุขและสิ่งแวดล้อม</span>
+            <span class="font-pages-head">พนักงานเทศบาล</span>
         </div>
     </div>
-    <div class="bg-pages">
+    <div class="bg-pages-p">
         <div class="scrollable-container">
             <div class="page-center">
                 <?php foreach ($rsOne as $rs) { ?>
                     <div class="bg-personnel-s">
                         <div class="rounded-image-s">
-                            <img src="<?= base_url('docs/img/' . $rs->p_dsab_img); ?>" width="100%" height="100%">
+                            <img src="<?= base_url('docs/img/' . $rs->p_employee_img); ?>" width="100%" height="100%">
                         </div>
                     </div>
                     <div class="mt-4 center-center">
-                        <span class="font-p-name"><?= $rs->p_dsab_name; ?></span>
-                        <span class="font-p-rank"><?= $rs->p_dsab_rank; ?></span>
-                        <?php if (!empty($rs->p_dsab_phone)) : ?>
-                            <span class="font-p-detail">เบอร์ <?= $rs->p_dsab_phone; ?></span>
+                        <span class="font-p-name"><?= $rs->p_employee_name; ?></span>
+                        <span class="font-p-rank"><?= $rs->p_employee_rank; ?></span>
+                        <?php if (!empty($rs->p_employee_phone)) : ?>
+                            <span class="font-p-detail">เบอร์ <?= $rs->p_employee_phone; ?></span>
                         <?php endif; ?>
                     </div>
                 <?php } ?>
@@ -35,13 +35,13 @@
                     <div class="col-3 col-md-3 mb-3 center-center">
                         <div class="bg-personnel-s">
                             <div class="rounded-image-s">
-                                <img src="<?= base_url('docs/img/' . $rs->p_dsab_img); ?>" width="100%" height="100%">
+                                <img src="<?= base_url('docs/img/' . $rs->p_employee_img); ?>" width="100%" height="100%">
                             </div>
                         </div>
-                        <span class="font-p-name"><?= $rs->p_dsab_name; ?></span>
-                        <span class="font-p-rank"><?= $rs->p_dsab_rank; ?></span>
-                        <?php if (!empty($rs->p_dsab_phone)) : ?>
-                            <span class="font-p-detail">เบอร์ <?= $rs->p_dsab_phone; ?></span>
+                        <span class="font-p-name"><?= $rs->p_employee_name; ?></span>
+                        <span class="font-p-rank"><?= $rs->p_employee_rank; ?></span>
+                        <?php if (!empty($rs->p_employee_phone)) : ?>
+                            <span class="font-p-detail">เบอร์ <?= $rs->p_employee_phone; ?></span>
                         <?php endif; ?>
                     </div>
                 <?php endforeach; ?>
@@ -52,13 +52,13 @@
                     <div class="col-3 col-md-3 mb-3 center-center">
                         <div class="bg-personnel-s">
                             <div class="rounded-image-s">
-                                <img src="<?= base_url('docs/img/' . $rs->p_dsab_img); ?>" width="100%" height="100%">
+                                <img src="<?= base_url('docs/img/' . $rs->p_employee_img); ?>" width="100%" height="100%">
                             </div>
                         </div>
-                        <span class="font-p-name "><?= $rs->p_dsab_name; ?></span>
-                        <span class="font-p-rank"><?= $rs->p_dsab_rank; ?></span>
-                        <?php if (!empty($rs->p_dsab_phone)) : ?>
-                            <span class="font-p-detail ">เบอร์ <?= $rs->p_dsab_phone; ?></span>
+                        <span class="font-p-name "><?= $rs->p_employee_name; ?></span>
+                        <span class="font-p-rank"><?= $rs->p_employee_rank; ?></span>
+                        <?php if (!empty($rs->p_employee_phone)) : ?>
+                            <span class="font-p-detail ">เบอร์ <?= $rs->p_employee_phone; ?></span>
                         <?php endif; ?>
                         <br>
                     </div>
@@ -70,13 +70,13 @@
                     <div class="col-3 col-md-3 mb-3 center-center">
                         <div class="bg-personnel-s">
                             <div class="rounded-image-s">
-                                <img src="<?= base_url('docs/img/' . $rs->p_dsab_img); ?>" width="100%" height="100%">
+                                <img src="<?= base_url('docs/img/' . $rs->p_employee_img); ?>" width="100%" height="100%">
                             </div>
                         </div>
-                        <span class="font-p-name "><?= $rs->p_dsab_name; ?></span>
-                        <span class="font-p-rank"><?= $rs->p_dsab_rank; ?></span>
-                        <?php if (!empty($rs->p_dsab_phone)) : ?>
-                            <span class="font-p-detail ">เบอร์ <?= $rs->p_dsab_phone; ?></span>
+                        <span class="font-p-name "><?= $rs->p_employee_name; ?></span>
+                        <span class="font-p-rank"><?= $rs->p_employee_rank; ?></span>
+                        <?php if (!empty($rs->p_employee_phone)) : ?>
+                            <span class="font-p-detail ">เบอร์ <?= $rs->p_employee_phone; ?></span>
                         <?php endif; ?>
                     </div>
                 <?php endforeach; ?>
@@ -87,13 +87,13 @@
                     <div class="col-3 col-md-3 mb-3 center-center">
                         <div class="bg-personnel-s">
                             <div class="rounded-image-s">
-                                <img src="<?= base_url('docs/img/' . $rs->p_dsab_img); ?>" width="100%" height="100%">
+                                <img src="<?= base_url('docs/img/' . $rs->p_employee_img); ?>" width="100%" height="100%">
                             </div>
                         </div>
-                        <span class="font-p-name "><?= $rs->p_dsab_name; ?></span>
-                        <span class="font-p-rank"><?= $rs->p_dsab_rank; ?></span>
-                        <?php if (!empty($rs->p_dsab_phone)) : ?>
-                            <span class="font-p-detail ">เบอร์ <?= $rs->p_dsab_phone; ?></span>
+                        <span class="font-p-name "><?= $rs->p_employee_name; ?></span>
+                        <span class="font-p-rank"><?= $rs->p_employee_rank; ?></span>
+                        <?php if (!empty($rs->p_employee_phone)) : ?>
+                            <span class="font-p-detail ">เบอร์ <?= $rs->p_employee_phone; ?></span>
                         <?php endif; ?>
                     </div>
                 <?php endforeach; ?>
@@ -104,13 +104,13 @@
                     <div class="col-3 col-md-3 mb-3 center-center">
                         <div class="bg-personnel-s">
                             <div class="rounded-image-s">
-                                <img src="<?= base_url('docs/img/' . $rs->p_dsab_img); ?>" width="100%" height="100%">
+                                <img src="<?= base_url('docs/img/' . $rs->p_employee_img); ?>" width="100%" height="100%">
                             </div>
                         </div>
-                        <span class="font-p-name "><?= $rs->p_dsab_name; ?></span>
-                        <span class="font-p-rank"><?= $rs->p_dsab_rank; ?></span>
-                        <?php if (!empty($rs->p_dsab_phone)) : ?>
-                            <span class="font-p-detail ">เบอร์ <?= $rs->p_dsab_phone; ?></span>
+                        <span class="font-p-name "><?= $rs->p_employee_name; ?></span>
+                        <span class="font-p-rank"><?= $rs->p_employee_rank; ?></span>
+                        <?php if (!empty($rs->p_employee_phone)) : ?>
+                            <span class="font-p-detail ">เบอร์ <?= $rs->p_employee_phone; ?></span>
                         <?php endif; ?>
                     </div>
                 <?php endforeach; ?>

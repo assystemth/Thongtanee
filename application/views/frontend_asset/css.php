@@ -633,7 +633,7 @@
   }
 
   .bg-otop {
-    background-image: url('<?php echo base_url("docs/t.bg-otop2.jpg"); ?>');
+    background-image: url('<?php echo base_url("docs/t.bg-otop3.jpg"); ?>');
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: center center;
@@ -1820,7 +1820,7 @@
   }
 
   .font-p-rank {
-    color: #082555;
+    color: #000;
     font-family: Kanit;
     font-size: 22px;
     font-style: normal;

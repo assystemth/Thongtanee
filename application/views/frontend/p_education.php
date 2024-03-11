@@ -8,8 +8,8 @@
         </div>
     </div>
     <div class="page-center">
-        <div class="head-pages">
-            <span class="font-pages-head-long">กองการศึกษา</span>
+        <div class="head-pages-two">
+            <span class="font-pages-head">กองการศึกษาศาสนาและวัฒนธรรม</span>
         </div>
     </div>
     <div class="bg-pages-p">
