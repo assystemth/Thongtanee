@@ -11,7 +11,7 @@
                     <img src="<?= base_url('docs/k.logo.png'); ?>" alt="" width="64px" height="64px">
                 </div>
 
-                <div class="sidebar-brand-text mx-3">กาบเชิง</div>
+                <div class="sidebar-brand-text mx-3">ธงธานี</div>
             </a>
 
             <!-- Divider -->
