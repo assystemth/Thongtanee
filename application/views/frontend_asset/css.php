@@ -1271,11 +1271,11 @@
   }
 
   .path1-1 {
-    background-image: url('<?php echo base_url("docs/t.path1-1.png"); ?>');
+    background-image: url('<?php echo base_url("docs/t.path1-1v3.png"); ?>');
     background-size: 100%;
     background-repeat: no-repeat;
     width: 98px;
-    height: 32px;
+    height: 34px;
     z-index: 3;
     text-align: center;
     display: flex;
@@ -1284,11 +1284,11 @@
   }
 
   .path2-1 {
-    background-image: url('<?php echo base_url("docs/t.path2-1.png"); ?>');
+    background-image: url('<?php echo base_url("docs/t.path2-1v3.png"); ?>');
     background-size: 100%;
     background-repeat: no-repeat;
     width: 138px;
-    height: 32px;
+    height: 34px;
     z-index: 2;
     margin-left: -20px;
     text-align: center;
@@ -1298,11 +1298,11 @@
   }
 
   .path2-2 {
-    background-image: url('<?php echo base_url("docs/t.path2-2.png"); ?>');
+    background-image: url('<?php echo base_url("docs/t.path2-2v3.png"); ?>');
     background-size: 100%;
     background-repeat: no-repeat;
     width: 182px;
-    height: 32px;
+    height: 34px;
     z-index: 2;
     margin-left: -20px;
     text-align: center;
@@ -1312,7 +1312,7 @@
   }
 
   .path2-3 {
-    background-image: url('<?php echo base_url("docs/t.path2-3.png"); ?>');
+    background-image: url('<?php echo base_url("docs/t.path2-3v3.png"); ?>');
     background-size: 100%;
     background-repeat: no-repeat;
     width: 240px;
