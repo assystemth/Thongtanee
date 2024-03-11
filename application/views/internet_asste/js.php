@@ -31,32 +31,7 @@
 <!-- Page level custom scripts -->
 <script src="<?= base_url('asset/'); ?>js/demo/datatables-demo.js"></script>
 
-<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-
 <script>
-  $(document).ready(function() {
-    $('.btn-navbar').on('click', function() {
-      // ลบคลาสทั้งหมดที่มีชื่อ active
-      $('.btn-navbar').removeClass('active');
-
-      // เพิ่มคลาส active ให้กับองค์ประกอบที่ถูกคลิก
-      $(this).addClass('active');
-    });
-  });
-
-
-  // เวลาพิม แล้ว ให้ลบคำว่า ค้นหา ****************************
-  $(document).ready(function() {
-    $(".searchTerm").focus(function() {
-      $(this).attr("placeholder", "");
-    });
-    $(".searchTerm").blur(function() {
-      $(this).attr("placeholder", "         ค้นหา");
-    });
-  });
-  // ***************************************************
-
   // คำหยาบ vulgar **********************************
   $(document).ready(function() {
     // เมื่อคลิกปุ่ม "จัดการ"

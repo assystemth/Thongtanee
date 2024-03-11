@@ -35,13 +35,13 @@
 <div class="flex-item-right-share-file">
     <div class="row">
         <div class="col-6 mt-5">
-            <img src="<?php echo base_url("docs/folder.png"); ?>" width="auto" style="max-width: 100%;">
+            <img src="<?php echo base_url("docs/intranet/folder.png"); ?>" width="auto" style="max-width: 100%;">
             <span class="font-folder-detail mx-3">สำนักปลัด</span>
         </div>
         <div class="col-6 mt-5">
             <div class="d-flex justify-content-end">
                 <a href="#" class="popup-insert" data-target="#popupInsert">
-                    <img src="<?php echo base_url("docs/btn-intra-add-file.png"); ?>" width="auto" style="max-width: 100%;">
+                    <img src="<?php echo base_url("docs/intranet/btn-intra-add-file.png"); ?>" width="auto" style="max-width: 100%;">
                 </a>
             </div>
         </div>
@@ -87,11 +87,11 @@
                 // กำหนดรูปภาพตามลงท้ายของไฟล์
                 $iconImage = "";
                 if ($fileExtension === 'pdf') {
-                    $iconImage = "docs/icon-pdf-intra.png";
+                    $iconImage = "docs/intranet/icon-pdf-intra.png";
                 } elseif ($fileExtension === 'doc' || $fileExtension === 'docx') {
-                    $iconImage = "docs/icon-doc-intra.png";
+                    $iconImage = "docs/intranet/icon-doc-intra.png";
                 } elseif ($fileExtension === 'xls') {
-                    $iconImage = "docs/icon-xls-intra.png";
+                    $iconImage = "docs/intranet/icon-xls-intra.png";
                 }
             ?>
                 <div class="col-sm-6 mt-2">
@@ -151,7 +151,7 @@
     <div class="row mt-3">
         <div class="col-sm-2">
             <a href="<?= site_url('Intra_share_file'); ?>" class="underline">
-                <img src="<?php echo base_url("docs/btn-intra-back.png"); ?>" width="auto" style="max-width: 100%;">
+                <img src="<?php echo base_url("docs/intranet/btn-intra-back.png"); ?>" width="auto" style="max-width: 100%;">
             </a>
         </div>
         <div class="col-sm-8">

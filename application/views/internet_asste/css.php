@@ -1,34 +1,39 @@
 <style>
     body {
-        padding: 0;
-        margin: 0;
-
-    }
-
-    main {
-        margin: 0 auto;
-        padding: 0;
-        width: 100%;
-        max-width: 1280px;
-        /* กำหนดความกว้างสูงสุดที่ 1280px */
-        height: 2000px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        margin: 0px;
+        padding: 0px;
+        font-family: 'Kanit', sans-serif;
     }
 
     .bg-header {
         /* The image used */
-        background-image: url('<?php echo base_url("docs/s.navbar-intranet.png"); ?>');
-        width: 1280px;
-        height: 62px;
-        /* Center the image horizontally and vertically */
-        background-position: center center;
-        /* Do not repeat the background image */
+        background-image: url('<?php echo base_url("docs/intranet/navbar-intranet19v4.png"); ?>');
+        background-size: contain;
         background-repeat: no-repeat;
-        /* Cover the entire div with the background image */
-        background-size: cover;
+        width: 100%;
+        height: 7.1vh;
+        z-index: 2;
+
     }
+
+    .welcome {
+        background-image: url('<?php echo base_url("docs/intranet/welcome19.jpg"); ?>');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        z-index: 1;
+        width: 100%;
+        height: 40vh;
+    }
+
+    .welcome-btm {
+        width: 100%;
+        height: 10vh;
+        margin-top: -75px;
+        z-index: 2;
+    }
+
+
 
     /* สีทั้งหมด color-all ********************************************************************  */
     .black {
@@ -174,26 +179,15 @@
     }
 
     /* scroll bar เลื่อนซ้ายขวา เลื่อนบนล่าง ****************************************************** */
-    .form__icon {
-        position: absolute;
-        left: 20px;
-        top: 50%;
-        transform: translateY(-50%);
-        color: #6D758F;
-        /* เลือกสีที่ต้องการ */
-        z-index: 2;
-        cursor: pointer;
-    }
 
     .search {
         margin-right: 1%;
-        width: 336px;
-        height: 35px;
+
     }
 
     .searchTerm {
-        border-radius: 84.414px;
-        box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.15);
+        border-radius: 15px;
+
     }
 
     .searchButton {
@@ -221,15 +215,14 @@
 
     .menu {
         display: flex;
-        background-color: #F8F8F8;
-        width: 1280px;
+        margin-top: 1.2%;
+        height: 80vh;
     }
 
     .flex-item-left {
-        flex: 0 0 22%;
-        /* 30% ของขนาดเริ่มต้นของ container */
-        background-color: #309b4d;
-        color: #E4E4E4;
+        flex: 0 0 20%;
+        background-color: #F8F8F8;
+        color: #fff;
         /* เพิ่มสีพื้นหลังเพื่อดูง่ายขึ้น */
     }
 
@@ -237,11 +230,8 @@
         flex: 1;
         /* รับพื้นที่ที่เหลือทั้งหมด */
         /* background-color: #f8f8f8; */
-        margin-left: 30px;
-        margin-top: 50px;
-        border-radius: 34px;
-        background: #FFF;
-        box-shadow: 0px 4px 1px 0px rgba(0, 0, 0, 0.08);
+        margin-left: 5%;
+        margin-right: 5%;
     }
 
     .flex-item-right-share-file {
@@ -263,10 +253,9 @@
     .bg-navbar {
         /* background-image: url('<?php echo base_url("docs/bg-intra-navbar3.png"); ?>');
         background-repeat: no-repeat;
-        background-size: cover cover; */
-        background-color: #E4E4E4;
-        height: 1138px;
-        width: 240px;
+        background-size: cover cover;
+        height: 100%; */
+        background-color: #F8F8F8;
     }
 
 
@@ -369,9 +358,9 @@
     }
 
     .pagination .page-item.active .page-link {
-        background-color: #6BBF4D;
+        background-color: #0FC2C0;
         /* สีเขียว */
-        border-color: #6BBF4D;
+        border-color: #0FC2C0;
         color: #fff;
     }
 
@@ -382,8 +371,8 @@
     }
 
     .pagination .page-link:hover {
-        color: #F1F3F7;
-        background-color: #07834D;
+        color: #000;
+        background-color: #E9E9E9;
     }
 
     .popup {
@@ -414,117 +403,27 @@
         font-size: 14px;
     }
 
-    .credit {
-        background: linear-gradient(180deg, #6BBF4D 28.67%, #07834D 100%);
-        height: 80px;
-        padding-top: 20px;
-    }
-
-    /* .footer {
-        background-image: url('<?php echo base_url("docs/s.bg-footer.png"); ?>');
+    .footer {
+        background-image: url('<?php echo base_url("docs/intranet/bg-footer19.png"); ?>');
+        background-size: contain;
         background-repeat: no-repeat;
-        background-size: 100%;
-        background-position: center center;
-        min-height: 425px;
-        width: 1280px;
-        position: relative;
+        width: 100vw;
+        height: 31vh;
         z-index: 2;
-        margin-top: -350px;
+        padding-top: 150px;
+    }
+
+    .font-footer {
+        font-size: 19px;
+        color: #000;
+    }
+
+    /* .credit {
+        background-image: url('<?php echo base_url("docs/intranet/bg-footer19.png"); ?>');
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 100vw;
+        height: 10vh;
+        z-index: 2;
     } */
-
-    /* เอา ::marker ออกจาก dropdown menu */
-    .dropdown-menu li {
-        list-style-type: none;
-    }
-
-    /* ปรับ margin ของแต่ละรายการเพื่อให้ไม่มีระยะห่าง */
-    .dropdown-menu li a {
-        margin: 0;
-    }
-
-    .bg-notify {
-        background: #fff;
-        border-radius: 50%;
-        width: 41.37px;
-        height: 39px;
-        flex-shrink: 0;
-    }
-
-    .input-group {
-        display: flex;
-    }
-
-    .input-group-prepend {
-        margin-right: 10px;
-        /* ปรับตำแหน่งของ icon ตามความต้องการ */
-        display: flex;
-        align-items: center;
-    }
-
-    .fa-bell {
-        transform: scale(1.5);
-        /* ปรับขนาดตามที่ต้องการ */
-    }
-
-    .btn-navbar {
-        color: var(--, #6D758F);
-        font-family: Kanit;
-        font-size: 18px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 50px;
-        width: 206px;
-        height: 41.718px;
-        flex-shrink: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .btn-navbar:hover {
-        width: 206px;
-        height: 41.718px;
-        flex-shrink: 0;
-        fill: #FFF;
-        filter: drop-shadow(2px 4px 4px rgba(0, 0, 0, 0.15));
-        color: #FFBA5E;
-        font-family: Kanit;
-        font-size: 18px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 50px;
-        background-color: #FFF;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .btn-navbar.active {
-        width: 206px;
-        height: 41.718px;
-        flex-shrink: 0;
-        fill: #FFF;
-        filter: drop-shadow(2px 4px 4px rgba(0, 0, 0, 0.15));
-        color: #FFF;
-        font-family: Kanit;
-        font-size: 18px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 50px;
-        background-color: #FFBA5E;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .banner{
-        width: 1280px;
-        height: 373px;
-        z-index: 1 ;
-    }
-
-    .navbar-bottom{
-        z-index: 5;
-        margin-top: -20px;
-    }
 </style>
