@@ -1,6 +1,6 @@
 <div class="image-slide-stick-mid">
-    <a href="https://itas.nacc.go.th/go/eit/qu7msc" target="_blank">
-        <img src="docs/eit-slide-mid.png">
+    <a href="https://itas.nacc.go.th/go/eit/1e8vml" target="_blank">
+        <img src="docs/eit-slide-midv2.png">
     </a>
     <img src="docs/eit-slide-close.png" class="close-button-slide-mid" onclick="closeImageSlideMid()">
 </div>
@@ -260,8 +260,8 @@
         <div class="dropdown-content">
             <ul class="no-bullets mt-4">
                 <div class="dropdown-left">
-                    <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/order'); ?>"><img src="docs/t.item-img-navmid.png">&nbsp;&nbsp;คำสั่ง</a></li>
-                    <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/announce'); ?>"><img src="docs/t.item-img-navmid.png">&nbsp;&nbsp;ประกาศ</a></li>
+                    <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/order'); ?>"><img src="docs/t.item-img-navmid.png">&nbsp;&nbsp;คำสั่งเทศบาล</a></li>
+                    <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/announce'); ?>"><img src="docs/t.item-img-navmid.png">&nbsp;&nbsp;ประกาศเทศบาล</a></li>
                     <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/mui'); ?>"><img src="docs/t.item-img-navmid.png">&nbsp;&nbsp;มาตรการภายใน</a></li>
                     <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/guide_work'); ?>"><img src="docs/t.item-img-navmid.png">&nbsp;&nbsp;คู่มือการปฏิบัติงาน</a></li>
                     <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/km'); ?>"><img src="docs/t.item-img-navmid.png">&nbsp;&nbsp;Knowledge Management : KM<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; การจัดการความรู้ของท้องถิ่น</a></li>
@@ -307,16 +307,16 @@
                     <li><a class="mar-left-12 dropdown-item" href="<?php echo site_url('Pages/operation_eco'); ?>"><img src="docs/t.item-img-navmid.png">&nbsp;&nbsp;การเสริมสร้างวัฒนธรรมองค์กร</a></li>
                     <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/lpa'); ?>"><img src="docs/t.item-img-navmid.png">&nbsp;&nbsp;LPA การประเมินประสิทธิภาพขององค์กร</a></li>
 
-                    <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/operation_am_hr'); ?>"><img src="docs/t.item-img-navmid.png">&nbsp;&nbsp;การดำเนินการบริหารทรัพยากรบุคคล</a></li>
-                    <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/operation_cdm_topic'); ?>"><img src="docs/t.item-img-navmid.png">&nbsp;&nbsp;หลักเกณฑ์และการบริหารและพัฒนา</a></li>
+                    <!-- <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/operation_am_hr'); ?>"><img src="docs/t.item-img-navmid.png">&nbsp;&nbsp;การดำเนินการบริหารทรัพยากรบุคคล</a></li>
+                    <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/operation_cdm_topic'); ?>"><img src="docs/t.item-img-navmid.png">&nbsp;&nbsp;หลักเกณฑ์และการบริหารและพัฒนา</a></li> -->
 
 
 
                 </div>
                 <div class="dropdown-right">
                     <li><a class="mar-left-3 dropdown-item" href="<?php echo site_url('Pages/operation_sp'); ?>"><img src="docs/t.item-img-navmid.png">&nbsp;&nbsp;สรปุผลการจัดซื้อจัดจ้าง</a></li>
-                    <li><a class="mar-left-3 dropdown-item" href="<?php echo site_url('Pages/#'); ?>"><img src="docs/t.item-img-navmid.png">&nbsp;&nbsp;การประเมินความเสี่ยงการทุจริตประพฤติมิชอบ</a></li>
-                    <li><a class="mar-left-3 dropdown-item" href="<?php echo site_url('Pages/#'); ?>"><img src="docs/t.item-img-navmid.png">&nbsp;&nbsp;การดำเนินการเพื่อจัดการความเสี่ยงการทุจริต</a></li>
+                    <li><a class="mar-left-3 dropdown-item" href="<?php echo site_url('Pages/operation_erc'); ?>"><img src="docs/t.item-img-navmid.png">&nbsp;&nbsp;การประเมินความเสี่ยงการทุจริตประพฤติมิชอบ</a></li>
+                    <li><a class="mar-left-3 dropdown-item" href="<?php echo site_url('Pages/operation_amf'); ?>"><img src="docs/t.item-img-navmid.png">&nbsp;&nbsp;การดำเนินการเพื่อจัดการความเสี่ยงการทุจริต</a></li>
                     <li><a class="mar-left-3 dropdown-item" href="<?php echo site_url('Pages/operation_pm'); ?>"><img src="docs/t.item-img-navmid.png">&nbsp;&nbsp;การมีส่วนร่วมของผู้บริหาร</a></li>
                     <li><a class="mar-left-3 dropdown-item" href="<?php echo site_url('Pages/operation_aa'); ?>"><img src="docs/t.item-img-navmid.png">&nbsp;&nbsp;กิจการสภา</a></li>
 
@@ -348,8 +348,8 @@
                     <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/pbsv_cig'); ?>"><img src="docs/t.item-img-navmid.png">&nbsp;&nbsp;ศูนย์ข้อมูลข่าวสารทางราชการ</a></li>
                     <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/pbsv_sags'); ?>"><img src="docs/t.item-img-navmid.png">&nbsp;&nbsp;คู่มือและมาตรฐานการให้บริการ</a></li>
                     <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/pbsv_dss'); ?>"><img src="docs/t.item-img-navmid.png">&nbsp;&nbsp;ข้อมูลเชิงสถิติการให้บริการ</a></li>
-                    <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/ae'); ?>"><img src="docs/t.item-img-navmid.png">&nbsp;&nbsp;ข้อมูลทะเบียนเบี้ยยังชีพผู้สูงอายุ</a></li>
-                    <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/rfc'); ?>"><img src="docs/t.item-img-navmid.png">&nbsp;&nbsp;รายงานการสำรวจความพึงพอใจการให้บริการ</a></li>
+                    <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/pbsv_ae'); ?>"><img src="docs/t.item-img-navmid.png">&nbsp;&nbsp;ข้อมูลทะเบียนเบี้ยยังชีพผู้สูงอายุ</a></li>
+                    <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/pbsv_rfc'); ?>"><img src="docs/t.item-img-navmid.png">&nbsp;&nbsp;รายงานการสำรวจความพึงพอใจการให้บริการ</a></li>
                 </div>
                 <div class="dropdown-center">
                     <!-- <li>
@@ -368,7 +368,7 @@
                 </div>
                 <div class="dropdown-right">
                     <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/pbsv_e_book'); ?>"><img src="docs/t.item-img-navmid.png">&nbsp;&nbsp;ดาวน์โหลดแบบฟอร์ม E-Book</a></li>
-                    <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/pbsv_e_book'); ?>"><img src="docs/t.item-img-navmid.png">&nbsp;&nbsp;แจ้งเรื่องทุจริตหน่วยงานภาครัฐ</a></li>
+                    <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/adding_corruption'); ?>"><img src="docs/t.item-img-navmid.png">&nbsp;&nbsp;แจ้งเรื่องทุจริตหน่วยงานภาครัฐ</a></li>
                     <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/pbsv_gup'); ?>"><img src="docs/t.item-img-navmid.png">&nbsp;&nbsp;คู่มือสำหรับประชาชน</a></li>
                     <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/pbsv_fp'); ?>"><img src="docs/t.item-img-navmid.png">&nbsp;&nbsp;การรับฟังความคิดเห็นของประชาชน</a></li>
                     <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/pbsv_ppdp'); ?>"><img src="docs/t.item-img-navmid.png">&nbsp;&nbsp;นโยบายคุ้มครองข้อมูลส่วนบุคคล</a></li>

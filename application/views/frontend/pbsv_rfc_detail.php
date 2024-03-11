@@ -10,7 +10,7 @@
 
     <div class="page-center">
         <div class="head-pages-two">
-            <span class="font-pages-head">รายงานการสำรวจความพึงพอใจการให้บริการ</span>
+            <span class="font-pages-head-long">รายงานการสำรวจความพึงพอใจการให้บริการ</span>
         </div>
     </div>
     <div class="bg-pages-in ">

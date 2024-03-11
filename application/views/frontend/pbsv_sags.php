@@ -1,4 +1,4 @@
-<<div class="bg-pages">
+<div class="bg-pages">
     <div class="row pad-path">
         <div class="path1-1">
             <span class="font-path-1 underline"><a href="<?php echo site_url('Home'); ?>">หน้าแรก</a></span>

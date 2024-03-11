@@ -9,7 +9,7 @@
     </div>
     <div class="container-pages-news">
         <div class="page-center">
-            <div class="head-pages">
+            <div class="head-pages-two">
                 <span class="font-pages-head">การมีส่วนร่วมของผู้บริหาร</span>
             </div>
         </div>

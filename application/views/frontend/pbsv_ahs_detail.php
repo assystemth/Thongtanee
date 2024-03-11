@@ -4,13 +4,13 @@
             <span class="font-path-1 underline"><a href="<?php echo site_url('Home'); ?>">หน้าแรก</a></span>
         </div>
         <div class="path2-2">
-            <span class="font-path-2 underline"><a href="#">หลักประกันสุขภาพตำบลสว่าง</a></span>
+            <span class="font-path-2 underline"><a href="#">บริการประชาชน</a></span>
         </div>
     </div>
 
     <div class="page-center">
         <div class="head-pages-two">
-            <span class="font-pages-head">หลักประกันสุขภาพตำบลสว่าง</span>
+            <span class="font-pages-head">หลักประกันสุขภาพตำบลธงธานี</span>
         </div>
     </div>
     <div class="bg-pages-in ">
