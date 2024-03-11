@@ -1255,12 +1255,12 @@
   }
 
   .bg-pages-ita {
-    background-color: white;
+    /* background-color: white; */
     margin-top: 40px;
     margin-bottom: 5%;
     border-radius: 22.86px;
-    background: rgba(253, 245, 225, 0.80);
-    box-shadow: 0px 0px 6.724px 0px rgba(0, 0, 0, 0.25);
+    /* background: rgba(253, 245, 225, 0.80); */
+    /* box-shadow: 0px 0px 6.724px 0px rgba(0, 0, 0, 0.25); */
     height: 1362px;
     width: 1069px;
   }
@@ -2710,8 +2710,8 @@
   }
 
   .btn-ita-open {
-    color: #693708;
-    background: #FCBF6A;
+    color: #fff;
+    background: #06C8B1;
     font-size: 20px;
     font-weight: 500;
     font-family: kanit;
@@ -2726,7 +2726,7 @@
 
   .btn-ita-open:hover {
     color: #693708;
-    background: #FCBF6A;
+    background: #06BCC8;
     font-size: 20px;
     font-weight: 500;
     font-family: kanit;
@@ -2932,5 +2932,12 @@
     /* สีปุ่มปิด */
     border: none;
     cursor: pointer;
+  }
+  .font-ita-content-detail {
+    color: #000;
+    font-family: Kanit;
+    font-size: 20px;
+    font-style: normal;
+    padding-left: 150px;
   }
 </style>

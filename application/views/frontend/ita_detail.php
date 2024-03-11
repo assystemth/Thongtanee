@@ -8,7 +8,7 @@
         </div>
     </div>
     <div class="page-center">
-        <div class="head-pages-three">
+        <div class="head-pages-two">
             <span class="font-pages-head-long">ITA การประเมินคุณธรรมและความโปร่งใส</span>
         </div>
     </div>

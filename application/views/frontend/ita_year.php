@@ -1,472 +1,85 @@
-<div class="bg-pages ">
-    <div class="container-pages-detail">
-        <div class="page-center">
-            <div class="head-pages-three">
-                <span class="font-pages-head">ITA การประเมินคุณธรรมและความโปร่งใส</span>
-            </div>
-        </div>
-        <div class="row">
+<div class="bg-pages">
+	        <div class="row pad-path">
             <div class="path1-1">
                 <span class="font-path-1 underline"><a href="<?php echo site_url('Home'); ?>">หน้าแรก</a></span>
             </div>
             <div class="path2-2">
-                <span class="font-path-2 underline"><a href="#"><?= $rsData->ita_year_year; ?></a></span>
+                <span class="font-path-2 underline"><a href="#">ITA ประจำปี</a></span>
             </div>
         </div>
-        <div class="bg-pages-ita">
-            <div class="scrollable-container-news">
-                <div class="bg-ita-empty">
-                    <div class="d-flex justify-content-start mt-3">
-                        <span class="font-ita-head">ข้อมูลพื้นฐาน</span>
+    <div class="container-pages-news">
+        <div class="page-center">
+            <div class="head-pages-two">
+                <span class="font-pages-head">การประเมินคุณธรรมและความโปร่งใส ITA</span>
+            </div>
+        </div>
+
+        <div style="padding-top: 80px;"></div>
+        <?php
+        $count = count($query);
+        $itemsPerPage = 10; // จำนวนรายการต่อหน้า
+        $totalPages = ceil($count / $itemsPerPage);
+
+        $currentPage = isset($_GET['page']) ? $_GET['page'] : 1;
+
+        // ปรับตำแหน่งที่กำหนดค่า $numToShow
+        $numToShow = 3; // จำนวนปุ่มที่ต้องการแสดง
+        $half = floor($numToShow / 2);
+
+        $startPage = max($currentPage - $half, 1);
+        $endPage = min($startPage + $numToShow - 1, $totalPages);
+
+        $startIndex = ($currentPage - 1) * $itemsPerPage;
+        $endIndex = min($startIndex + $itemsPerPage - 1, $count - 1);
+
+        for ($i = $startIndex; $i <= $endIndex; $i++) {
+            $rs = $query[$i];
+        ?>
+            <div class="pages-select-pdf underline">
+                <div class="row">
+                    <div class="col-1 style-col-img">
+                        <img class="border-radius24" src="<?php echo base_url('docs/k.logo.png'); ?>" width="94px" height="63px">
                     </div>
-                    <div class="ita-detail-content">
-                        <div class="row mt-3">
-                            <div class="col-10">
-                                <span class="font-ita-content"><?= $rsData->ita_year_name1; ?></span>
-                            </div>
-                            <div class="col-2">
-                                <a class="btn btn-ita-open" target="_blank" href="<?= $rsData->ita_year_link1; ?>">เปิด</a>
-                            </div>
-                        </div>
-                        <div class="row mt-3">
-                            <div class="col-10">
-                                <span class="font-ita-content"><?= $rsData->ita_year_name2; ?></span>
-                            </div>
-                            <div class="col-2">
-                                <a class="btn btn-ita-open" target="_blank" href="<?= $rsData->ita_year_link2; ?>">เปิด</a>
-                            </div>
-                        </div>
-                        <div class="row mt-3">
-                            <div class="col-10">
-                                <span class="font-ita-content"><?= $rsData->ita_year_name3; ?></span>
-                            </div>
-                            <div class="col-2">
-                                <a class="btn btn-ita-open" target="_blank" href="<?= $rsData->ita_year_link3; ?>">เปิด</a>
-                            </div>
-                        </div>
-                        <div class="row mt-3">
-                            <div class="col-10">
-                                <span class="font-ita-content"><?= $rsData->ita_year_name4; ?></span>
-                            </div>
-                            <div class="col-2">
-                                <a class="btn btn-ita-open" target="_blank" href="<?= $rsData->ita_year_link4; ?>">เปิด</a>
-                            </div>
-                        </div>
-                        <div class="row mt-3">
-                            <div class="col-10">
-                                <span class="font-ita-content"><?= $rsData->ita_year_name5; ?></span>
-                            </div>
-                            <div class="col-2">
-                                <a class="btn btn-ita-open" target="_blank" href="<?= $rsData->ita_year_link5; ?>">เปิด</a>
-                            </div>
-                        </div>
-                        <div class="row mt-3">
-                            <div class="col-10">
-                                <span class="font-ita-content"><?= $rsData->ita_year_name6; ?></span>
-                            </div>
-                            <div class="col-2">
-                                <a class="btn btn-ita-open" target="_blank" href="<?= $rsData->ita_year_link6; ?>">เปิด</a>
-                            </div>
-                        </div>
+                    <div class="col-9 font-pages-content">
+                        <a href="<?php echo site_url('Pages/ita_year_detail/' . $rs->ita_year_id); ?>">
+                            <span class="one-line-ellipsis">ITA ประจำปี <?= $rs->ita_year_year; ?></span>
+                        </a>
                     </div>
-                </div>
-                <div class="bg-ita-color mt-3">
-                    <div class="d-flex justify-content-start mt-3">
-                        <span class="font-ita-head">การประชาสัมพันธ์</span>
-                    </div>
-                    <div class="ita-detail-content">
-                        <div class="row mt-3">
-                            <div class="col-10">
-                                <span class="font-ita-content"><?= $rsData->ita_year_name7; ?></span>
-                            </div>
-                            <div class="col-2">
-                                <a class="btn btn-ita-open" target="_blank" href="<?= $rsData->ita_year_link7; ?>">เปิด</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-ita-empty">
-                    <div class="d-flex justify-content-start mt-3">
-                        <span class="font-ita-head">การปฏิสัมพันธ์ข้อมูล</span>
-                    </div>
-                    <div class="ita-detail-content">
-                        <div class="row mt-3">
-                            <div class="col-10">
-                                <span class="font-ita-content"><?= $rsData->ita_year_name8; ?></span>
-                            </div>
-                            <div class="col-2">
-                                <a class="btn btn-ita-open" target="_blank" href="<?= $rsData->ita_year_link8; ?>">เปิด</a>
-                            </div>
-                        </div>
-                        <div class="row mt-3">
-                            <div class="col-10">
-                                <span class="font-ita-content"><?= $rsData->ita_year_name9; ?></span>
-                            </div>
-                            <div class="col-2">
-                                <a class="btn btn-ita-open" target="_blank" href="<?= $rsData->ita_year_link9; ?>">เปิด</a>
-                            </div>
-                        </div>
-                        <div class="row mt-3">
-                            <div class="col-10">
-                                <span class="font-ita-content"><?= $rsData->ita_year_name10; ?></span>
-                            </div>
-                            <div class="col-2">
-                                <a class="btn btn-ita-open" target="_blank" href="<?= $rsData->ita_year_link10; ?>">เปิด</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-ita-color mt-3">
-                    <div class="d-flex justify-content-start mt-3">
-                        <span class="font-ita-head">การดำเนินงาน</span>
-                    </div>
-                    <div class="ita-detail-content">
-                        <div class="row mt-3">
-                            <div class="col-10">
-                                <span class="font-ita-content"><?= $rsData->ita_year_name11; ?></span>
-                            </div>
-                            <div class="col-2">
-                                <a class="btn btn-ita-open" target="_blank" href="<?= $rsData->ita_year_link11; ?>">เปิด</a>
-                            </div>
-                        </div>
-                        <div class="row mt-3">
-                            <div class="col-10">
-                                <span class="font-ita-content"><?= $rsData->ita_year_name12; ?></span>
-                            </div>
-                            <div class="col-2">
-                                <a class="btn btn-ita-open" target="_blank" href="<?= $rsData->ita_year_link12; ?>">เปิด</a>
-                            </div>
-                        </div>
-                        <div class="row mt-3">
-                            <div class="col-10">
-                                <span class="font-ita-content"><?= $rsData->ita_year_name13; ?></span>
-                            </div>
-                            <div class="col-2">
-                                <a class="btn btn-ita-open" target="_blank" href="<?= $rsData->ita_year_link13; ?>">เปิด</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-ita-empty">
-                    <div class="d-flex justify-content-start mt-3">
-                        <span class="font-ita-head">การปฏิบัติงาน</span>
-                    </div>
-                    <div class="ita-detail-content">
-                        <div class="row mt-3">
-                            <div class="col-10">
-                                <span class="font-ita-content"><?= $rsData->ita_year_name14; ?></span>
-                            </div>
-                            <div class="col-2">
-                                <a class="btn btn-ita-open" target="_blank" href="<?= $rsData->ita_year_link14; ?>">เปิด</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-ita-color mt-3">
-                    <div class="d-flex justify-content-start mt-3">
-                        <span class="font-ita-head">การให้บริการ</span>
-                    </div>
-                    <div class="ita-detail-content">
-                        <div class="row mt-3">
-                            <div class="col-10">
-                                <span class="font-ita-content"><?= $rsData->ita_year_name15; ?></span>
-                            </div>
-                            <div class="col-2">
-                                <a class="btn btn-ita-open" target="_blank" href="<?= $rsData->ita_year_link15; ?>">เปิด</a>
-                            </div>
-                        </div>
-                        <div class="row mt-3">
-                            <div class="col-10">
-                                <span class="font-ita-content"><?= $rsData->ita_year_name16; ?></span>
-                            </div>
-                            <div class="col-2">
-                                <a class="btn btn-ita-open" target="_blank" href="<?= $rsData->ita_year_link16; ?>">เปิด</a>
-                            </div>
-                        </div>
-                        <div class="row mt-3">
-                            <div class="col-10">
-                                <span class="font-ita-content"><?= $rsData->ita_year_name17; ?></span>
-                            </div>
-                            <div class="col-2">
-                                <a class="btn btn-ita-open" target="_blank" href="<?= $rsData->ita_year_link17; ?>">เปิด</a>
-                            </div>
-                        </div>
-                        <div class="row mt-3">
-                            <div class="col-10">
-                                <span class="font-ita-content"><?= $rsData->ita_year_name18; ?></span>
-                            </div>
-                            <div class="col-2">
-                                <a class="btn btn-ita-open" target="_blank" href="<?= $rsData->ita_year_link18; ?>">เปิด</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-ita-empty">
-                    <div class="d-flex justify-content-start mt-3">
-                        <span class="font-ita-head">การจัดซื้อจัดจ้างหรือการจัดหาพัสดุ</span>
-                    </div>
-                    <div class="ita-detail-content">
-                        <div class="row mt-3">
-                            <div class="col-10">
-                                <span class="font-ita-content"><?= $rsData->ita_year_name19; ?></span>
-                            </div>
-                            <div class="col-2">
-                                <a class="btn btn-ita-open" target="_blank" href="<?= $rsData->ita_year_link19; ?>">เปิด</a>
-                            </div>
-                        </div>
-                        <div class="row mt-3">
-                            <div class="col-10">
-                                <span class="font-ita-content"><?= $rsData->ita_year_name20; ?></span>
-                            </div>
-                            <div class="col-2">
-                                <a class="btn btn-ita-open" target="_blank" href="<?= $rsData->ita_year_link20; ?>">เปิด</a>
-                            </div>
-                        </div>
-                        <div class="row mt-3">
-                            <div class="col-10">
-                                <span class="font-ita-content"><?= $rsData->ita_year_name21; ?></span>
-                            </div>
-                            <div class="col-2">
-                                <a class="btn btn-ita-open" target="_blank" href="<?= $rsData->ita_year_link21; ?>">เปิด</a>
-                            </div>
-                        </div>
-                        <div class="row mt-3">
-                            <div class="col-10">
-                                <span class="font-ita-content"><?= $rsData->ita_year_name22; ?></span>
-                            </div>
-                            <div class="col-2">
-                                <a class="btn btn-ita-open" target="_blank" href="<?= $rsData->ita_year_link22; ?>">เปิด</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-ita-color mt-3">
-                    <div class="d-flex justify-content-start mt-3">
-                        <span class="font-ita-head">การบริหารและพัฒนาทรัพยากรบุคคล</span>
-                    </div>
-                    <div class="ita-detail-content">
-                        <div class="row mt-3">
-                            <div class="col-10">
-                                <span class="font-ita-content"><?= $rsData->ita_year_name23; ?></span>
-                            </div>
-                            <div class="col-2">
-                                <a class="btn btn-ita-open" target="_blank" href="<?= $rsData->ita_year_link23; ?>">เปิด</a>
-                            </div>
-                        </div>
-                        <div class="row mt-3">
-                            <div class="col-10">
-                                <span class="font-ita-content"><?= $rsData->ita_year_name24; ?></span>
-                            </div>
-                            <div class="col-2">
-                                <a class="btn btn-ita-open" target="_blank" href="<?= $rsData->ita_year_link24; ?>">เปิด</a>
-                            </div>
-                        </div>
-                        <div class="row mt-3">
-                            <div class="col-10">
-                                <span class="font-ita-content"><?= $rsData->ita_year_name25; ?></span>
-                            </div>
-                            <div class="col-2">
-                                <a class="btn btn-ita-open" target="_blank" href="<?= $rsData->ita_year_link25; ?>">เปิด</a>
-                            </div>
-                        </div>
-                        <div class="row mt-3">
-                            <div class="col-10">
-                                <span class="font-ita-content"><?= $rsData->ita_year_name26; ?></span>
-                            </div>
-                            <div class="col-2">
-                                <a class="btn btn-ita-open" target="_blank" href="<?= $rsData->ita_year_link26; ?>">เปิด</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-ita-empty">
-                    <div class="d-flex justify-content-start mt-3">
-                        <span class="font-ita-head">การจัดการเรื่องร้องเรียนการทุจริตและประพฤติมิชอบ</span>
-                    </div>
-                    <div class="ita-detail-content">
-                        <div class="row mt-3">
-                            <div class="col-10">
-                                <span class="font-ita-content"><?= $rsData->ita_year_name27; ?></span>
-                            </div>
-                            <div class="col-2">
-                                <a class="btn btn-ita-open" target="_blank" href="<?= $rsData->ita_year_link27; ?>">เปิด</a>
-                            </div>
-                        </div>
-                        <div class="row mt-3">
-                            <div class="col-10">
-                                <span class="font-ita-content"><?= $rsData->ita_year_name28; ?></span>
-                            </div>
-                            <div class="col-2">
-                                <a class="btn btn-ita-open" target="_blank" href="<?= $rsData->ita_year_link28; ?>">เปิด</a>
-                            </div>
-                        </div>
-                        <div class="row mt-3">
-                            <div class="col-10">
-                                <span class="font-ita-content"><?= $rsData->ita_year_name29; ?></span>
-                            </div>
-                            <div class="col-2">
-                                <a class="btn btn-ita-open" target="_blank" href="<?= $rsData->ita_year_link29; ?>">เปิด</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-ita-color mt-3">
-                    <div class="d-flex justify-content-start mt-3">
-                        <span class="font-ita-head">การเปิดโอกาสให้เกิดการมีส่วนร่วม</span>
-                    </div>
-                    <div class="ita-detail-content">
-                        <div class="row mt-3">
-                            <div class="col-10">
-                                <span class="font-ita-content"><?= $rsData->ita_year_name30; ?></span>
-                            </div>
-                            <div class="col-2">
-                                <a class="btn btn-ita-open" target="_blank" href="<?= $rsData->ita_year_link30; ?>">เปิด</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-ita-empty">
-                    <div class="d-flex justify-content-start mt-3">
-                        <span class="font-ita-head">การดำเนินการเพื่อป้องกันการทุจริต</span>
-                    </div>
-                    <div class="ita-detail-content">
-                        <div class="row mt-3">
-                            <div class="col-10">
-                                <span class="font-ita-content"><?= $rsData->ita_year_name31; ?></span>
-                            </div>
-                            <div class="col-2">
-                                <a class="btn btn-ita-open" target="_blank" href="<?= $rsData->ita_year_link31; ?>">เปิด</a>
-                            </div>
-                        </div>
-                        <div class="row mt-3">
-                            <div class="col-10">
-                                <span class="font-ita-content"><?= $rsData->ita_year_name32; ?></span>
-                            </div>
-                            <div class="col-2">
-                                <a class="btn btn-ita-open" target="_blank" href="<?= $rsData->ita_year_link32; ?>">เปิด</a>
-                            </div>
-                        </div>
-                        <div class="row mt-3">
-                            <div class="col-10">
-                                <span class="font-ita-content"><?= $rsData->ita_year_name33; ?></span>
-                            </div>
-                            <div class="col-2">
-                                <a class="btn btn-ita-open" target="_blank" href="<?= $rsData->ita_year_link33; ?>">เปิด</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-ita-color mt-3">
-                    <div class="d-flex justify-content-start mt-3">
-                        <span class="font-ita-head">การประเมินความเสี่ยงเพื่อการป้องกันการทุจริต</span>
-                    </div>
-                    <div class="ita-detail-content">
-                        <div class="row mt-3">
-                            <div class="col-10">
-                                <span class="font-ita-content"><?= $rsData->ita_year_name34; ?></span>
-                            </div>
-                            <div class="col-2">
-                                <a class="btn btn-ita-open" target="_blank" href="<?= $rsData->ita_year_link34; ?>">เปิด</a>
-                            </div>
-                        </div>
-                        <div class="row mt-3">
-                            <div class="col-10">
-                                <span class="font-ita-content"><?= $rsData->ita_year_name35; ?></span>
-                            </div>
-                            <div class="col-2">
-                                <a class="btn btn-ita-open" target="_blank" href="<?= $rsData->ita_year_link35; ?>">เปิด</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-ita-empty">
-                    <div class="d-flex justify-content-start mt-3">
-                        <span class="font-ita-head">แผนป้องกันการทุจริต</span>
-                    </div>
-                    <div class="ita-detail-content">
-                        <div class="row mt-3">
-                            <div class="col-10">
-                                <span class="font-ita-content"><?= $rsData->ita_year_name36; ?></span>
-                            </div>
-                            <div class="col-2">
-                                <a class="btn btn-ita-open" target="_blank" href="<?= $rsData->ita_year_link36; ?>">เปิด</a>
-                            </div>
-                        </div>
-                        <div class="row mt-3">
-                            <div class="col-10">
-                                <span class="font-ita-content"><?= $rsData->ita_year_name37; ?></span>
-                            </div>
-                            <div class="col-2">
-                                <a class="btn btn-ita-open" target="_blank" href="<?= $rsData->ita_year_link37; ?>">เปิด</a>
-                            </div>
-                        </div>
-                        <div class="row mt-3">
-                            <div class="col-10">
-                                <span class="font-ita-content"><?= $rsData->ita_year_name38; ?></span>
-                            </div>
-                            <div class="col-2">
-                                <a class="btn btn-ita-open" target="_blank" href="<?= $rsData->ita_year_link38; ?>">เปิด</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-ita-color mt-3">
-                    <div class="d-flex justify-content-start mt-3">
-                        <span class="font-ita-head">มาตรการเสริมสร้างมาตรฐานทางจริยธรรม</span>
-                    </div>
-                    <div class="ita-detail-content">
-                        <div class="row mt-3">
-                            <div class="col-10">
-                                <span class="font-ita-content"><?= $rsData->ita_year_name39; ?></span>
-                            </div>
-                            <div class="col-2">
-                                <a class="btn btn-ita-open" target="_blank" href="<?= $rsData->ita_year_link39; ?>">เปิด</a>
-                            </div>
-                        </div>
-                        <div class="row mt-3">
-                            <div class="col-10">
-                                <span class="font-ita-content"><?= $rsData->ita_year_name40; ?></span>
-                            </div>
-                            <div class="col-2">
-                                <a class="btn btn-ita-open" target="_blank" href="<?= $rsData->ita_year_link40; ?>">เปิด</a>
-                            </div>
-                        </div>
-                        <div class="row mt-3">
-                            <div class="col-10">
-                                <span class="font-ita-content"><?= $rsData->ita_year_name41; ?></span>
-                            </div>
-                            <div class="col-2">
-                                <a class="btn btn-ita-open" target="_blank" href="<?= $rsData->ita_year_link41; ?>">เปิด</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-ita-empty">
-                    <div class="d-flex justify-content-start mt-3">
-                        <span class="font-ita-head">มาตรการส่งเสริมความโปร่งใสและป้องกันการทุจริตภายในหน่วยงาน</span>
-                    </div>
-                    <div class="ita-detail-content">
-                        <div class="row mt-3">
-                            <div class="col-10">
-                                <span class="font-ita-content"><?= $rsData->ita_year_name42; ?></span>
-                            </div>
-                            <div class="col-2">
-                                <a class="btn btn-ita-open" target="_blank" href="<?= $rsData->ita_year_link42; ?>">เปิด</a>
-                            </div>
-                        </div>
-                        <div class="row mt-3">
-                            <div class="col-10">
-                                <span class="font-ita-content"><?= $rsData->ita_year_name43; ?></span>
-                            </div>
-                            <div class="col-2">
-                                <a class="btn btn-ita-open" target="_blank" href="<?= $rsData->ita_year_link43; ?>">เปิด</a>
-                            </div>
-                        </div>
+                    <div class="col-2 span-time-pages-news">
+                        <span>
+                        </span>
                     </div>
                 </div>
             </div>
-            <div class="margin-top-delete d-flex justify-content-end">
-                <a href="<?php echo site_url('Pages/ita'); ?>"><img src="<?php echo base_url("docs/s.btn-back.png"); ?>"></a>
-            </div>
+        <?php } ?>
+      <!-- แสดงปุ่ม Next และ Previous -->
+      <nav aria-label="Page navigation example">
+            <ul class="pagination">
+                <?php if ($currentPage > 1) : ?>
+                    <li class="page-item">
+                        <a class="page-link-next-pre underline" href="?page=<?php echo $currentPage - 1; ?>" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                <?php endif; ?>
+
+                <?php for ($i = 1; $i <= $totalPages; $i++) : ?>
+                    <li class="page-item <?php echo ($i == $currentPage) ? 'active' : ''; ?>">
+                        <a class="page-link" href="?page=<?php echo $i; ?>"><?php echo $i; ?></a>
+                    </li>
+                <?php endfor; ?>
+
+                <?php if ($currentPage < $totalPages) : ?>
+                    <li class="page-item">
+                        <a class="page-link-next-pre underline" href="?page=<?php echo $currentPage + 1; ?>" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                <?php endif; ?>
+            </ul>
+        </nav>
+        <div class="margin-top-delete-topic d-flex justify-content-end">
+            <a href="<?php echo site_url('Pages/ita_all'); ?>"><img src="<?php echo base_url("docs/k.btn-back.png"); ?>"></a>
         </div>
     </div>
+</div>

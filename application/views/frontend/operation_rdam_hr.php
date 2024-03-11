@@ -9,7 +9,7 @@
     </div>
     <div class="container-pages-news">
         <div class="page-center">
-            <div class="head-pages-three">
+            <div class="head-pages-two">
                 <span class="font-pages-head-long">รายงานผลการบริหารและพัฒนาทรัพยากรบุคคล</span>
             </div>
         </div>

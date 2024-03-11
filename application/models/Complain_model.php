@@ -114,7 +114,7 @@ class Complain_model extends CI_Model
         $complainData2 = $this->db->get_where('tbl_complain_detail', array('complain_detail_case_id' => $complain_detail_case_id))->row();
 
         if ($complainData2) {
-            $message .= "ข้อความจากการอัพเดต: " . $complainData2->complain_detail_com . "\n";
+            $message .= "ชื่อผู้อัพเดตข้อมูล: " . $complainData2->complain_detail_by . "\n";
             $message .= "ข้อความจากการอัพเดต: " . $complainData2->complain_detail_com . "\n";
         }
 
