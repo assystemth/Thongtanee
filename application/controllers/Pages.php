@@ -27,14 +27,17 @@ class Pages extends CI_Controller
 		$this->load->model('travel_model');
 		$this->load->model('si_model');
 
+		$this->load->model('p_palace_model');
 		$this->load->model('p_executives_model');
 		$this->load->model('p_council_model');
 		$this->load->model('p_unit_leaders_model');
+		$this->load->model('p_employee_model');
 		$this->load->model('p_deputy_model');
 		$this->load->model('p_treasury_model');
 		$this->load->model('p_maintenance_model');
 		$this->load->model('p_education_model');
 		$this->load->model('p_audit_model');
+		$this->load->model('p_dsab_model');
 
 		$this->load->model('plan_pdl_model');
 		$this->load->model('plan_pc3y_model');
@@ -45,8 +48,12 @@ class Pages extends CI_Controller
 		$this->load->model('plan_pcra_model');
 		$this->load->model('plan_pop_model');
 		$this->load->model('plan_paca_model');
+		$this->load->model('plan_bgy_model');
+		$this->load->model('plan_pse_model');
 		$this->load->model('plan_psi_model');
 		$this->load->model('plan_pmda_model');
+		$this->load->model('plan_pae_model');
+		$this->load->model('plan_spgl_model');
 
 		$this->load->model('canon_bgps_model');
 		$this->load->model('canon_chh_model');
@@ -1321,6 +1328,90 @@ class Pages extends CI_Controller
 	{
 		$this->plan_paca_model->increment_download_plan_paca($plan_paca_file_id);
 	}
+	public function plan_bgy()
+	{
+		$data['query'] = $this->plan_bgy_model->plan_bgy_frontend();
+
+		$this->load->view('frontend_templat/header');
+		$this->load->view('frontend_asset/css');
+		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend/plan_bgy', $data);
+		$this->load->view('frontend_asset/js');
+		$this->load->view('frontend_templat/footer');
+	}
+	public function plan_bgy_detail($plan_bgy_id)
+	{
+		$this->plan_bgy_model->increment_view($plan_bgy_id);
+
+		$data['rsData'] = $this->plan_bgy_model->read($plan_bgy_id);
+
+		// เพิ่มเงื่อนไขเพื่อตรวจสอบว่ามีข้อมูลหรือไม่
+		if (!$data['rsData']) {
+			$this->load->view('frontend_templat/header');
+			$this->load->view('frontend_asset/css');
+			$this->load->view('frontend_templat/navbar');
+			$this->load->view('frontend/empty_detail_pages');
+			$this->load->view('frontend_asset/js');
+			$this->load->view('frontend_templat/footer');
+			return; // ให้จบการทำงานที่นี่
+		}
+
+		$data['rsFile'] = $this->plan_bgy_model->read_file($plan_bgy_id);
+		$data['rsImg'] = $this->plan_bgy_model->read_img($plan_bgy_id);
+
+		$this->load->view('frontend_templat/header');
+		$this->load->view('frontend_asset/css');
+		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend/plan_bgy_detail', $data);
+		$this->load->view('frontend_asset/js');
+		$this->load->view('frontend_templat/footer');
+	}
+	public function increment_download_plan_bgy($plan_bgy_file_id)
+	{
+		$this->plan_bgy_model->increment_download_plan_bgy($plan_bgy_file_id);
+	}
+	public function plan_pse()
+	{
+		$data['query'] = $this->plan_pse_model->plan_pse_frontend();
+
+		$this->load->view('frontend_templat/header');
+		$this->load->view('frontend_asset/css');
+		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend/plan_pse', $data);
+		$this->load->view('frontend_asset/js');
+		$this->load->view('frontend_templat/footer');
+	}
+	public function plan_pse_detail($plan_pse_id)
+	{
+		$this->plan_pse_model->increment_view($plan_pse_id);
+
+		$data['rsData'] = $this->plan_pse_model->read($plan_pse_id);
+
+		// เพิ่มเงื่อนไขเพื่อตรวจสอบว่ามีข้อมูลหรือไม่
+		if (!$data['rsData']) {
+			$this->load->view('frontend_templat/header');
+			$this->load->view('frontend_asset/css');
+			$this->load->view('frontend_templat/navbar');
+			$this->load->view('frontend/empty_detail_pages');
+			$this->load->view('frontend_asset/js');
+			$this->load->view('frontend_templat/footer');
+			return; // ให้จบการทำงานที่นี่
+		}
+
+		$data['rsFile'] = $this->plan_pse_model->read_file($plan_pse_id);
+		$data['rsImg'] = $this->plan_pse_model->read_img($plan_pse_id);
+
+		$this->load->view('frontend_templat/header');
+		$this->load->view('frontend_asset/css');
+		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend/plan_pse_detail', $data);
+		$this->load->view('frontend_asset/js');
+		$this->load->view('frontend_templat/footer');
+	}
+	public function increment_download_plan_pse($plan_pse_file_id)
+	{
+		$this->plan_pse_model->increment_download_plan_pse($plan_pse_file_id);
+	}
 	public function plan_psi()
 	{
 		$data['query'] = $this->plan_psi_model->plan_psi_frontend();
@@ -1404,6 +1495,90 @@ class Pages extends CI_Controller
 	public function increment_download_plan_pmda($plan_pmda_file_id)
 	{
 		$this->plan_pmda_model->increment_download_plan_pmda($plan_pmda_file_id);
+	}
+	public function plan_pae()
+	{
+		$data['query'] = $this->plan_pae_model->plan_pae_frontend();
+
+		$this->load->view('frontend_templat/header');
+		$this->load->view('frontend_asset/css');
+		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend/plan_pae', $data);
+		$this->load->view('frontend_asset/js');
+		$this->load->view('frontend_templat/footer');
+	}
+	public function plan_pae_detail($plan_pae_id)
+	{
+		$this->plan_pae_model->increment_view($plan_pae_id);
+
+		$data['rsData'] = $this->plan_pae_model->read($plan_pae_id);
+
+		// เพิ่มเงื่อนไขเพื่อตรวจสอบว่ามีข้อมูลหรือไม่
+		if (!$data['rsData']) {
+			$this->load->view('frontend_templat/header');
+			$this->load->view('frontend_asset/css');
+			$this->load->view('frontend_templat/navbar');
+			$this->load->view('frontend/empty_detail_pages');
+			$this->load->view('frontend_asset/js');
+			$this->load->view('frontend_templat/footer');
+			return; // ให้จบการทำงานที่นี่
+		}
+
+		$data['rsFile'] = $this->plan_pae_model->read_file($plan_pae_id);
+		$data['rsImg'] = $this->plan_pae_model->read_img($plan_pae_id);
+
+		$this->load->view('frontend_templat/header');
+		$this->load->view('frontend_asset/css');
+		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend/plan_pae_detail', $data);
+		$this->load->view('frontend_asset/js');
+		$this->load->view('frontend_templat/footer');
+	}
+	public function increment_download_plan_pae($plan_pae_file_id)
+	{
+		$this->plan_pae_model->increment_download_plan_pae($plan_pae_file_id);
+	}
+	public function plan_spgl()
+	{
+		$data['query'] = $this->plan_spgl_model->plan_spgl_frontend();
+
+		$this->load->view('frontend_templat/header');
+		$this->load->view('frontend_asset/css');
+		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend/plan_spgl', $data);
+		$this->load->view('frontend_asset/js');
+		$this->load->view('frontend_templat/footer');
+	}
+	public function plan_spgl_detail($plan_spgl_id)
+	{
+		$this->plan_spgl_model->increment_view($plan_spgl_id);
+
+		$data['rsData'] = $this->plan_spgl_model->read($plan_spgl_id);
+
+		// เพิ่มเงื่อนไขเพื่อตรวจสอบว่ามีข้อมูลหรือไม่
+		if (!$data['rsData']) {
+			$this->load->view('frontend_templat/header');
+			$this->load->view('frontend_asset/css');
+			$this->load->view('frontend_templat/navbar');
+			$this->load->view('frontend/empty_detail_pages');
+			$this->load->view('frontend_asset/js');
+			$this->load->view('frontend_templat/footer');
+			return; // ให้จบการทำงานที่นี่
+		}
+
+		$data['rsFile'] = $this->plan_spgl_model->read_file($plan_spgl_id);
+		$data['rsImg'] = $this->plan_spgl_model->read_img($plan_spgl_id);
+
+		$this->load->view('frontend_templat/header');
+		$this->load->view('frontend_asset/css');
+		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend/plan_spgl_detail', $data);
+		$this->load->view('frontend_asset/js');
+		$this->load->view('frontend_templat/footer');
+	}
+	public function increment_download_plan_spgl($plan_spgl_file_id)
+	{
+		$this->plan_spgl_model->increment_download_plan_spgl($plan_spgl_file_id);
 	}
 	public function pbsv_cac()
 	{
@@ -3274,6 +3449,23 @@ class Pages extends CI_Controller
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
 	}
+	public function p_palace()
+	{
+		$data['rsOne'] = $this->p_palace_model->p_palace_frontend_one();
+		// $data['rsData'] = $this->p_palace_model->p_palace_frontend_list();
+		$data['rsrow1'] = $this->p_palace_model->p_palace_row_1();
+		$data['rsrow2'] = $this->p_palace_model->p_palace_row_2();
+		$data['rsrow3'] = $this->p_palace_model->p_palace_row_3();
+		$data['rsrow4'] = $this->p_palace_model->p_palace_row_4();
+		$data['rsrow5'] = $this->p_palace_model->p_palace_row_5();
+
+		$this->load->view('frontend_templat/header');
+		$this->load->view('frontend_asset/css');
+		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend/p_palace', $data);
+		$this->load->view('frontend_asset/js');
+		$this->load->view('frontend_templat/footer');
+	}
 
 	public function p_executives()
 	{
@@ -3325,6 +3517,23 @@ class Pages extends CI_Controller
 		$this->load->view('frontend_asset/css');
 		$this->load->view('frontend_templat/navbar');
 		$this->load->view('frontend/p_unit_leaders', $data);
+		$this->load->view('frontend_asset/js');
+		$this->load->view('frontend_templat/footer');
+	}
+	public function p_employee()
+	{
+		$data['rsOne'] = $this->p_employee_model->p_employee_frontend_one();
+		// $data['rsData'] = $this->p_employee_model->p_employee_frontend_list();
+		$data['rsrow1'] = $this->p_employee_model->p_employee_row_1();
+		$data['rsrow2'] = $this->p_employee_model->p_employee_row_2();
+		$data['rsrow3'] = $this->p_employee_model->p_employee_row_3();
+		$data['rsrow4'] = $this->p_employee_model->p_employee_row_4();
+		$data['rsrow5'] = $this->p_employee_model->p_employee_row_5();
+
+		$this->load->view('frontend_templat/header');
+		$this->load->view('frontend_asset/css');
+		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend/p_employee', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
 	}
@@ -3412,6 +3621,23 @@ class Pages extends CI_Controller
 		$this->load->view('frontend_asset/css');
 		$this->load->view('frontend_templat/navbar');
 		$this->load->view('frontend/p_audit', $data);
+		$this->load->view('frontend_asset/js');
+		$this->load->view('frontend_templat/footer');
+	}
+	public function p_dsab()
+	{
+		$data['rsOne'] = $this->p_dsab_model->p_dsab_frontend_one();
+		// $data['rsData'] = $this->p_dsab_model->p_dsab_frontend_list();
+		$data['rsrow1'] = $this->p_dsab_model->p_dsab_row_1();
+		$data['rsrow2'] = $this->p_dsab_model->p_dsab_row_2();
+		$data['rsrow3'] = $this->p_dsab_model->p_dsab_row_3();
+		$data['rsrow4'] = $this->p_dsab_model->p_dsab_row_4();
+		$data['rsrow5'] = $this->p_dsab_model->p_dsab_row_5();
+
+		$this->load->view('frontend_templat/header');
+		$this->load->view('frontend_asset/css');
+		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend/p_dsab', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
 	}

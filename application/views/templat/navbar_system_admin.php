@@ -95,20 +95,17 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <!-- <h6 class="collapse-header">Custom Components:</h6> -->
                         <a class="collapse-item" href="<?php echo site_url('Site_map_backend'); ?>">แผนผังโครงสร้างภาพรวม</a>
+                        <a class="collapse-item" href="<?php echo site_url('P_palace_backend'); ?>">ทำเนียบเทศบาลธงธานี</a>
                         <a class="collapse-item" href="<?php echo site_url('P_executives_backend'); ?>">คณะผู้บริหาร</a>
                         <a class="collapse-item" href="<?php echo site_url('P_council_backend'); ?>">สมาชิกสภา</a>
                         <a class="collapse-item" href="<?php echo site_url('P_unit_leaders_backend'); ?>">หัวหน้าส่วนราชการ</a>
-                        <a class="collapse-item" href="<?php echo site_url('P_deputy_backend'); ?>">สำนักปลัด อบต.</a>
+                        <a class="collapse-item" href="<?php echo site_url('P_employee_backend'); ?>">พนักงานเทศบาล</a>
+                        <a class="collapse-item" href="<?php echo site_url('P_deputy_backend'); ?>">สำนักปลัด</a>
                         <a class="collapse-item" href="<?php echo site_url('P_treasury_backend'); ?>">กองคลัง</a>
                         <a class="collapse-item" href="<?php echo site_url('P_maintenance_backend'); ?>">กองช่าง</a>
-                        <a class="collapse-item" href="<?php echo site_url('P_education_backend'); ?>">กองการศึกษา</a>
-                        <!-- <a class="collapse-item" href="<?php echo site_url('P_audit_backend'); ?>">หน่วยตรวจสอบภายใน</a> -->
-                        <a class="collapse-item" href="<?php echo site_url('P_dsab_backend'); ?>">กองยุทธศาสตร์<br>และงบประมาณ</a>
-                        <a class="collapse-item" href="<?php echo site_url('P_cdc_brkm_backend'); ?>">ศูนย์พัฒนาเด็กเล็ก<br>บ้านตาเกาว์ใหม</a>
-                        <a class="collapse-item" href="<?php echo site_url('P_cdc_bpsb_backend'); ?>">ศูนย์พัฒนาเด็กเล็ก<br>บ้านปราสาทเบง</a>
-                        <a class="collapse-item" href="<?php echo site_url('P_cdc_bbj_backend'); ?>">ศูนย์พัฒนาเด็กเล็ก<br>บ้านบักจรัง</a>
-                        <a class="collapse-item" href="<?php echo site_url('P_cdc_bnry_backend'); ?>">ศูนย์พัฒนาเด็กเล็ก<br>บ้านน้อยร่มเย็น</a>
-                        <a class="collapse-item" href="<?php echo site_url('P_cdc_bkc_backend'); ?>">ศูนย์พัฒนาเด็กเล็ก<br>บ้านกาบเชิง</a>
+                        <a class="collapse-item" href="<?php echo site_url('P_audit_backend'); ?>">กองประปา</a>
+                        <a class="collapse-item" href="<?php echo site_url('P_dsab_backend'); ?>">กองสาธารณสุข<br>และสิ่งแวดล้อม</a>
+                        <a class="collapse-item" href="<?php echo site_url('P_education_backend'); ?>">กองการศึกษาศาสนา<br>และวัฒนธรรม</a>
                     </div>
                 </div>
             </li>
@@ -129,8 +126,12 @@
                         <a class="collapse-item" href="<?php echo site_url('Plan_pcra_backend'); ?>">แผนเก็บรายได้ประจำปี</a>
                         <a class="collapse-item" href="<?php echo site_url('Plan_pop_backend'); ?>">แผนปฏิบัติการจัดซื้อจัดจ้าง</a>
                         <a class="collapse-item" href="<?php echo site_url('Plan_paca_backend'); ?>">แผนปฏิบัติการป้องกัน<br>การทุจริต</a>
+                        <a class="collapse-item" href="<?php echo site_url('Plan_bgy_backend'); ?>">แผนการใช้จ่ายงบประมาณ<br>ประจำปี</a>
+                        <a class="collapse-item" href="<?php echo site_url('Plan_pse_backend'); ?>">แผนประหยัดพลังงาน</a>
                         <a class="collapse-item" href="<?php echo site_url('Plan_psi_backend'); ?>">แผนแม่บทสารสนเทศ</a>
                         <a class="collapse-item" href="<?php echo site_url('Plan_pmda_backend'); ?>">แผนป้องกันและบรรเทา<br>สาธารณภัยประจำปี</a>
+                        <a class="collapse-item" href="<?php echo site_url('Plan_pae_backend'); ?>">โครงการส่งเสริม<br>กิจกรรมผู้สูงอายุ</a>
+                        <a class="collapse-item" href="<?php echo site_url('Plan_spgl_backend'); ?>">มาตรฐานกำหมดตำแหน่ง<br>พนักงานเทศบาล</a>
 
                     </div>
                 </div>
@@ -166,8 +167,8 @@
                         <a class="collapse-item" href="<?php echo site_url('Pbsv_cig_backend'); ?>">ศูนย์ข้อมูลข่าวสารทางราชการ</a>
                         <a class="collapse-item" href="<?php echo site_url('Pbsv_cjc_backend'); ?>">ศูนย์ยุติธรรมชุมชน</a>
                         <a class="collapse-item" href="<?php echo site_url('Pbsv_ahs_backend'); ?>">หลักประกันสุขภาพตำบล</a>
-                        <a class="collapse-item" href="<?php echo site_url('Pbsv_e_book_backend'); ?>">ดาวโหลดแบบฟอร์ม E-book</a> 
-                        <a class="collapse-item" href="<?php echo site_url('Pbsv_tax_backend'); ?>">ข้อมูลชำระภาษี</a> 
+                        <a class="collapse-item" href="<?php echo site_url('Pbsv_e_book_backend'); ?>">ดาวโหลดแบบฟอร์ม E-book</a>
+                        <a class="collapse-item" href="<?php echo site_url('Pbsv_tax_backend'); ?>">ข้อมูลชำระภาษี</a>
                         <a class="collapse-item" href="<?php echo site_url('Pbsv_oppr_backend'); ?>">งานอาสาป้องกันภัย<br>ฝ่ายพลเรือน(อปพร.)</a>
                         <a class="collapse-item" href="<?php echo site_url('Pbsv_ems_backend'); ?>">งานกู้ชีพ/บริการ<br>การแพทย์ฉุกเฉิน(EMS)</a>
                         <a class="collapse-item" href="<?php echo site_url('Pbsv_sags_backend'); ?>">คู่มือและ<br>มาตราฐานการให้บริการ</a>
