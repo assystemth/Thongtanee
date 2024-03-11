@@ -8,7 +8,7 @@
         </div>
     </div>
     <div class="page-center">
-        <div class="head-pages">
+        <div class="head-pages-two">
             <span class="font-pages-head">กองสาธารณสุขและสิ่งแวดล้อม</span>
         </div>
     </div>
