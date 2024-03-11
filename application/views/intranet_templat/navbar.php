@@ -5,43 +5,36 @@
                 <span class="font-head"><b>งานบริการภายใน</b></span>
             </div>
             <div class="border-navbar"></div> -->
-            <div class="navbar-right">
-                <a class="btn btn-navbar" href="#">
-                    ข่าวภายในองค์กร
-                </a>
-                <br>
-                <a class="btn btn-navbar" href="#">
-                    แบบฟอร์ม
-                </a>
-                <br>
-                <a class="btn btn-navbar" href="#">
-                    คำสั่ง/ประกาศ
-                </a>
-                <br>
-                <a class="btn btn-navbar" href="#">
-                    ระเบียบ
-                </a>
-                <br>
-                <a class="btn btn-navbar" href="#">
-                    ระบบแชร์ไฟล์
-                </a>
-                <br>
-                <a class="btn btn-navbar" href="#">
-                    คลังรูปภาพ/วิดีโอ
-                </a>
-                <br>
-                <a class="btn btn-navbar" href="#">
-                    E-Book
-                </a>
-                <br>
-                <a class="btn btn-navbar" href="#">
-                    รายงานภาพรวม
-                </a>
-                <br>
-                <a class="btn btn-navbar" href="#">
-                    ผลิตภัณฑ์
-                </a>
 
+
+            <div class="navbar-right">
+                <a class="navbar-link" data-image-src="<?php echo base_url("docs/intranet/nav-intranet-btn-hover1.png"); ?>" href="<?php echo site_url('System_intranet'); ?>">
+                    <img src="<?php echo base_url("docs/intranet/nav-intranet-btn1.png"); ?>" width="100%" height="100%" style="padding-top: 13%;">
+                </a>
+                <br>
+                <a class="navbar-link" data-image-src="<?php echo base_url("docs/intranet/nav-intranet-btn-hover2.png"); ?>" href="<?php echo site_url('Intra_form'); ?>">
+                    <img src="<?php echo base_url("docs/intranet/nav-intranet-btn2.png"); ?>" width="100%" height="100%" style="padding-top: 5%;">
+                </a>
+                <br>
+                <a class="navbar-link" data-image-src="<?php echo base_url("docs/intranet/nav-intranet-btn-hover3.png"); ?>" href="<?php echo site_url('Intra_announce'); ?>">
+                    <img src="<?php echo base_url("docs/intranet/nav-intranet-btn3.png"); ?>" width="100%" height="100%" style="padding-top: 5%;">
+                </a>
+                <br>
+                <a class="navbar-link" data-image-src="<?php echo base_url("docs/intranet/nav-intranet-btn-hover4.png"); ?>" href="<?php echo site_url('Intra_discipline'); ?>">
+                    <img src="<?php echo base_url("docs/intranet/nav-intranet-btn4.png"); ?>" width="100%" height="100%" style="padding-top: 5%;">
+                </a>
+                <br>
+                <a class="navbar-link" data-image-src="<?php echo base_url("docs/intranet/nav-intranet-btn-hover5.png"); ?>" href="<?php echo site_url('Intra_share_file'); ?>">
+                    <img src="<?php echo base_url("docs/intranet/nav-intranet-btn5.png"); ?>" width="100%" height="100%" style="padding-top: 5%;">
+                </a>
+                <br>
+                <a class="navbar-link" data-image-src="<?php echo base_url("docs/intranet/nav-intranet-btn-hover6.png"); ?>" href="<?php echo site_url('Intra_gallery'); ?>">
+                    <img src="<?php echo base_url("docs/intranet/nav-intranet-btn6.png"); ?>" width="100%" height="100%" style="padding-top: 5%;">
+                </a>
+                <br>
+                <a class="navbar-link" data-image-src="<?php echo base_url("docs/intranet/nav-intranet-btn-hover7.png"); ?>" href="<?php echo site_url('Intra_e_book'); ?>">
+                    <img src="<?php echo base_url("docs/intranet/nav-intranet-btn7.png"); ?>" width="100%" height="100%" style="padding-top: 5%;">
+                </a>
             </div>
         </div>
 

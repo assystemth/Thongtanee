@@ -2,7 +2,7 @@
 <div class="flex-item-right">
    <div class="d-flex justify-content-end" style="margin-top: 2%;">
       <a href="<?= site_url('System_intranet/adding'); ?>">
-         <img src="<?php echo base_url("docs/btn-intra-add-news.png"); ?>" width="auto" style="max-width: 100%;">
+         <img src="<?php echo base_url("docs/intranet/btn-intra-add-news.png"); ?>" width="auto" style="max-width: 100%;">
       </a>
    </div>
    <div class="row mt-4">
@@ -72,4 +72,5 @@
          </ul>
       </nav>
    </div>
+
 </div>

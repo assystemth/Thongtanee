@@ -35,13 +35,13 @@
 <div class="flex-item-right-share-file">
     <div class="row">
         <div class="col-6 mt-5">
-            <img src="<?php echo base_url("docs/album.png"); ?>" width="auto" style="max-width: 100%;">
+            <img src="<?php echo base_url("docs/intranet/album.png"); ?>" width="auto" style="max-width: 100%;">
             <span class="font-folder-detail mx-3"><?= $rsedit->intra_gallery_name; ?></span>
         </div>
         <div class="col-6 mt-5">
             <div class="d-flex justify-content-end">
                 <a href="#" class="popup-insert" data-target="#popupInsert">
-                    <img src="<?php echo base_url("docs/btn-intra-add-img-video.png"); ?>" width="auto" style="max-width: 100%;">
+                    <img src="<?php echo base_url("docs/intranet/btn-intra-add-img-video.png"); ?>" width="auto" style="max-width: 100%;">
                 </a>
             </div>
         </div>
@@ -155,7 +155,7 @@
     <div class="row mt-3">
         <div class="col-sm-2">
             <a href="<?= site_url('Intra_gallery'); ?>" class="underline">
-                <img src="<?php echo base_url("docs/btn-intra-back.png"); ?>" width="auto" style="max-width: 100%;">
+                <img src="<?php echo base_url("docs/intranet/btn-intra-back.png"); ?>" width="auto" style="max-width: 100%;">
             </a>
         </div>
         <div class="col-sm-8">

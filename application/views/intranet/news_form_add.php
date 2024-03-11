@@ -70,7 +70,6 @@
                                 <span class="red-add">(เฉพาะไฟล์ PDF)</span>
                             </div>
                         </div>
-                        <br>
                         <div class="form-group row">
                             <div class="col-sm-2 control-label"></div>
                             <div class="col-sm-10">

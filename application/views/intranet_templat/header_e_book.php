@@ -11,9 +11,9 @@
 <script src="https://cdn.jsdelivr.net/npm/cdbootstrap/js/cdb.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/cdbootstrap/js/bootstrap.min.js"></script>
 <script src="https://kit.fontawesome.com/9d1d9a82d2.js" crossorigin="anonymous"></script> -->
-    <!-- <link rel="icon" href="<?php echo base_url("docs/logo.png"); ?>" type="image/x-icon"> -->
+    <link rel="icon" href="<?php echo base_url("docs/logo.png"); ?>" type="image/x-icon">
 
-    <title>อบต.กาเกาะ - ระบบอินทราเน็ต</title>
+    <title>เทศบาลธงธานี - ระบบอินทราเน็ต</title>
     <!-- boostrap  -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <!-- icon -->
@@ -47,7 +47,7 @@
 
 
     <div class="bg-header">
-        <div class="d-flex justify-content-end" style="padding-top: 1.5%;">
+        <div class="d-flex justify-content-end" style="padding-top: 0.7%;">
             <div class="search">
                 <form id="searchForm" action="<?= site_url('Intra_e_book/search'); ?>" method="post">
                     <div class="input-group">
@@ -69,5 +69,11 @@
         </div>
     </div>
     <!-- End of Topbar -->
+
+    <div class="welcome">
+    </div>
+    <div class="welcome-btm">
+        <img src="<?= base_url('docs/intranet/btm-welcome19.png'); ?>" style="max-width: 100%; height: auto;">
+    </div>
 
     <div class="menu flex-container">
