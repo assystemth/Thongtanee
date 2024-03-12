@@ -2933,11 +2933,26 @@
     border: none;
     cursor: pointer;
   }
+
   .font-ita-content-detail {
     color: #000;
     font-family: Kanit;
     font-size: 20px;
     font-style: normal;
     padding-left: 150px;
+  }
+
+  .active-button {
+    /* background-color: #0F9C8B; */
+    /* เปลี่ยนเป็นสีที่คุณต้องการเมื่อ active */
+    color: #0F9C8B;
+    /* เปลี่ยนเป็นสีข้อความที่คุณต้องการเมื่อ active */
+  }
+
+  .inactive-button {
+    background-color: #000;
+    /* เปลี่ยนเป็นสีที่คุณต้องการเมื่อไม่ active */
+    color: #000;
+    /* เปลี่ยนเป็นสีข้อความที่คุณต้องการเมื่อไม่ active */
   }
 </style>
