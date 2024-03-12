@@ -23,6 +23,26 @@
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.31/dist/sweetalert2.all.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
+    // กดปุ่มแล้วเปลี่ยนสี navbar กลาง *********************************************************************
+    $(document).ready(function() {
+        var buttons = $('.dropdown-trigger');
+
+        buttons.on('click', function() {
+            // ลบ class 'active-button' จาก button ทั้งหมด
+            buttons.removeClass('active-button').addClass('inactive-button');
+
+            // เพิ่ม class 'active-button' ที่ถูกคลิก
+            $(this).removeClass('inactive-button').addClass('active-button');
+        });
+
+        // เพิ่มเหตุการณ์ click สำหรับ document เพื่อลบ class 'active-button' จาก button ทั้งหมด
+        $(document).on('click', function(event) {
+            if (!$(event.target).closest('.dropdown-trigger').length) {
+                buttons.removeClass('active-button').addClass('inactive-button');
+            }
+        });
+    });
+
     // ปุ่มย้อนกลับของยกเลิก *********************************************************************
     function goBack() {
         window.history.back();
