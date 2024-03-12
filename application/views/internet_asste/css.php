@@ -11,19 +11,19 @@
         background-size: contain;
         background-repeat: no-repeat;
         width: 100%;
-        height: 7.1vh;
+        height: 7.7vh;
         z-index: 2;
 
     }
 
     .welcome {
-        background-image: url('<?php echo base_url("docs/intranet/welcome19.jpg"); ?>');
+        background-image: url('<?php echo base_url("docs/intranet/welcome19v2.jpg"); ?>');
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
         z-index: 1;
         width: 100%;
-        height: 40vh;
+        height: 44.2vh;
     }
 
     .welcome-btm {
@@ -215,7 +215,7 @@
 
     .menu {
         display: flex;
-        margin-top: 1.2%;
+        margin-top: 1.6%;
         height: 80vh;
     }
 
@@ -268,8 +268,8 @@
     }
 
     .navbar-right {
-        margin-left: 20%;
-        padding-right: 9px;
+        margin-left: 10%;
+        padding-right: 10px;
     }
 
     .box-folder {
@@ -408,7 +408,7 @@
         background-size: contain;
         background-repeat: no-repeat;
         width: 100vw;
-        height: 31vh;
+        height: 34vh;
         z-index: 2;
         padding-top: 150px;
     }

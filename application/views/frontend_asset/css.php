@@ -2850,8 +2850,8 @@
 
   .text-content-travel {
     color: #F9CC42;
-    text-shadow: -1px 0 #014674, 0 2px #014674,
-      2px 0 #014674, 0 -1px #014674;
+    /* text-shadow: -1px 0 #014674, 0 2px #014674,
+      2px 0 #014674, 0 -1px #014674; */
     font-family: Kanit;
     font-size: 32px;
     font-style: normal;
