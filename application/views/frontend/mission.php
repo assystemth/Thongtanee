@@ -20,7 +20,7 @@
                     <?php if (!empty($rs->mission_img)): ?>
                         <img src="<?php echo base_url('docs/img/' . $rs->mission_img); ?>" width="545px" height="352px">
                     <?php else: ?>
-                        <img src="<?php echo base_url('docs/logo.png'); ?>" width="545px" height="352px">
+                        <img src="<?php echo base_url('docs/k.logo.png'); ?>" width="545px" height="352px">
                     <?php endif; ?>
                 </div>
             </div>
