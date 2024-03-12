@@ -1605,7 +1605,7 @@
   }
 
   .font-head-topic {
-    color: #693708;
+    color: #00BCA5;
     leading-trim: both;
     text-edge: cap;
     font-family: Kanit;
@@ -1619,7 +1619,7 @@
   }
 
   .font-ita-head {
-    color: #693708;
+    color: #00BCA5;
     font-family: Kanit;
     font-size: 24px;
     font-style: normal;
