@@ -216,7 +216,7 @@
     .menu {
         display: flex;
         margin-top: 1.6%;
-        height: 80vh;
+        height: 100vh;
     }
 
     .flex-item-left {
