@@ -10,7 +10,7 @@
     <div class="container-pages-news">
         <div class="page-center">
             <div class="head-pages-two">
-                <span class="font-pages-head">มาตรฐานกำหมดตำแหน่งพนักงานเทศบาล</span>
+                <span class="font-pages-head-long">มาตรฐานกำหมดตำแหน่งพนักงานเทศบาล</span>
             </div>
         </div>
         <div style="padding-top: 80px;"></div>
