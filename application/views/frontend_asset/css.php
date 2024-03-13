@@ -2950,7 +2950,7 @@
   }
 
   .inactive-button {
-    background-color: #000;
+    /* background-color: #000; */
     /* เปลี่ยนเป็นสีที่คุณต้องการเมื่อไม่ active */
     color: #000;
     /* เปลี่ยนเป็นสีข้อความที่คุณต้องการเมื่อไม่ active */
