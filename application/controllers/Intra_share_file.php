@@ -11,7 +11,16 @@ class Intra_share_file extends CI_Controller
             $this->session->userdata('m_level') != 1 &&
             $this->session->userdata('m_level') != 2 &&
             $this->session->userdata('m_level') != 3 &&
-            $this->session->userdata('m_level') != 4
+            $this->session->userdata('m_level') != 4 &&
+            $this->session->userdata('m_level') != 5 &&
+            $this->session->userdata('m_level') != 6 &&
+            $this->session->userdata('m_level') != 7 &&
+            $this->session->userdata('m_level') != 8 &&
+            $this->session->userdata('m_level') != 9 &&
+            $this->session->userdata('m_level') != 10 &&
+            $this->session->userdata('m_level') != 11 &&
+            $this->session->userdata('m_level') != 12 &&
+            $this->session->userdata('m_level') != 13
         ) {
             redirect('user', 'refresh');
         }
@@ -138,9 +147,116 @@ class Intra_share_file extends CI_Controller
         $this->session->set_flashdata('del_success', TRUE);
         redirect('Intra_share_file/sf_executive');
     }
+    // ทำเนียบธงธานี **********************************************************************
+    public function sf_palace()
+    {
+        $data['query'] = $this->Intra_share_file_model->list_sf_palace();
+
+
+        $this->load->view('intranet_templat/header_sf_palace');
+        $this->load->view('internet_asste/css');
+        $this->load->view('intranet_templat/navbar');
+        $this->load->view('intranet/sf_palace', $data);
+        $this->load->view('internet_asste/js');
+        $this->load->view('intranet_templat/footer');
+    }
+
+    public function search_sf_palace()
+    {
+        $search_term = $this->input->post('search_term');
+
+        // ถ้ามีคำค้นหา
+        if (!empty($search_term)) {
+            $data['query'] = $this->Intra_share_file_model->search_sf_palace($search_term);
+        } else {
+            // ถ้าไม่มีคำค้นหา ดึงข้อมูลทั้งหมด
+            $data['query'] = $this->Intra_share_file_model->list_sf_palace();
+        }
+
+        $this->load->view('intranet_templat/header_sf_palace');
+        $this->load->view('internet_asste/css');
+        $this->load->view('intranet_templat/navbar');
+        $this->load->view('intranet/sf_palace', $data);
+        $this->load->view('internet_asste/js');
+        $this->load->view('intranet_templat/footer');
+    }
+
+    public function add_sf_palace()
+    {
+        // echo '<pre>';
+        // print_r($_POST);
+        // echo '</pre>';
+        // echo '<pre>';
+        // print_r($_FILES);
+        // echo '</pre>';
+        // exit;
+        $this->Intra_share_file_model->add_sf_palace();
+        redirect('Intra_share_file/sf_palace');
+    }
+
+    public function del_sf_palace($intra_form_id)
+    {
+        $this->Intra_share_file_model->del_sf_palace($intra_form_id);
+        $this->session->set_flashdata('del_success', TRUE);
+        redirect('Intra_share_file/sf_palace');
+    }
+    // *****************************************************************************************
+    // พนักงานเทศบาล **********************************************************************
+    public function sf_employee()
+    {
+        $data['query'] = $this->Intra_share_file_model->list_sf_employee();
+
+
+        $this->load->view('intranet_templat/header_sf_employee');
+        $this->load->view('internet_asste/css');
+        $this->load->view('intranet_templat/navbar');
+        $this->load->view('intranet/sf_employee', $data);
+        $this->load->view('internet_asste/js');
+        $this->load->view('intranet_templat/footer');
+    }
+
+    public function search_sf_employee()
+    {
+        $search_term = $this->input->post('search_term');
+
+        // ถ้ามีคำค้นหา
+        if (!empty($search_term)) {
+            $data['query'] = $this->Intra_share_file_model->search_sf_employee($search_term);
+        } else {
+            // ถ้าไม่มีคำค้นหา ดึงข้อมูลทั้งหมด
+            $data['query'] = $this->Intra_share_file_model->list_sf_employee();
+        }
+
+        $this->load->view('intranet_templat/header_sf_employee');
+        $this->load->view('internet_asste/css');
+        $this->load->view('intranet_templat/navbar');
+        $this->load->view('intranet/sf_employee', $data);
+        $this->load->view('internet_asste/js');
+        $this->load->view('intranet_templat/footer');
+    }
+
+    public function add_sf_employee()
+    {
+        // echo '<pre>';
+        // print_r($_POST);
+        // echo '</pre>';
+        // echo '<pre>';
+        // print_r($_FILES);
+        // echo '</pre>';
+        // exit;
+        $this->Intra_share_file_model->add_sf_employee();
+        redirect('Intra_share_file/sf_employee');
+    }
+
+    public function del_sf_employee($intra_form_id)
+    {
+        $this->Intra_share_file_model->del_sf_employee($intra_form_id);
+        $this->session->set_flashdata('del_success', TRUE);
+        redirect('Intra_share_file/sf_employee');
+    }
     // *****************************************************************************************
 
-    // หน่วยตรวจสอบภายใน ************************************************************************
+    // กองประปา ************************************************************************
     public function sf_audit()
     {
         $data['query'] = $this->Intra_share_file_model->list_sf_audit();
@@ -191,6 +307,59 @@ class Intra_share_file extends CI_Controller
         $this->Intra_share_file_model->del_sf_audit($intra_form_id);
         $this->session->set_flashdata('del_success', TRUE);
         redirect('Intra_share_file/sf_audit');
+    }
+    // *****************************************************************************************
+    // กองประปา ************************************************************************
+    public function sf_dsab()
+    {
+        $data['query'] = $this->Intra_share_file_model->list_sf_dsab();
+
+        $this->load->view('intranet_templat/header_sf_dsab');
+        $this->load->view('internet_asste/css');
+        $this->load->view('intranet_templat/navbar');
+        $this->load->view('intranet/sf_dsab', $data);
+        $this->load->view('internet_asste/js');
+        $this->load->view('intranet_templat/footer');
+    }
+
+    public function search_sf_dsab()
+    {
+        $search_term = $this->input->post('search_term');
+
+        // ถ้ามีคำค้นหา
+        if (!empty($search_term)) {
+            $data['query'] = $this->Intra_share_file_model->search_sf_dsab($search_term);
+        } else {
+            // ถ้าไม่มีคำค้นหา ดึงข้อมูลทั้งหมด
+            $data['query'] = $this->Intra_share_file_model->list_sf_dsab();
+        }
+
+        $this->load->view('intranet_templat/header_sf_dsab');
+        $this->load->view('internet_asste/css');
+        $this->load->view('intranet_templat/navbar');
+        $this->load->view('intranet/sf_dsab', $data);
+        $this->load->view('internet_asste/js');
+        $this->load->view('intranet_templat/footer');
+    }
+
+    public function add_sf_dsab()
+    {
+        // echo '<pre>';
+        // print_r($_POST);
+        // echo '</pre>';
+        // echo '<pre>';
+        // print_r($_FILES);
+        // echo '</pre>';
+        // exit;
+        $this->Intra_share_file_model->add_sf_dsab();
+        redirect('Intra_share_file/sf_dsab');
+    }
+
+    public function del_sf_dsab($intra_form_id)
+    {
+        $this->Intra_share_file_model->del_sf_dsab($intra_form_id);
+        $this->session->set_flashdata('del_success', TRUE);
+        redirect('Intra_share_file/sf_dsab');
     }
     // *****************************************************************************************
 
