@@ -11,7 +11,16 @@ class System_intranet extends CI_Controller
             $this->session->userdata('m_level') != 1 &&
             $this->session->userdata('m_level') != 2 &&
             $this->session->userdata('m_level') != 3 &&
-            $this->session->userdata('m_level') != 4
+            $this->session->userdata('m_level') != 4 &&
+            $this->session->userdata('m_level') != 5 &&
+            $this->session->userdata('m_level') != 6 &&
+            $this->session->userdata('m_level') != 7 &&
+            $this->session->userdata('m_level') != 8 &&
+            $this->session->userdata('m_level') != 9 &&
+            $this->session->userdata('m_level') != 10 &&
+            $this->session->userdata('m_level') != 11 &&
+            $this->session->userdata('m_level') != 12 &&
+            $this->session->userdata('m_level') != 13
         ) {
             redirect('user', 'refresh');
         }

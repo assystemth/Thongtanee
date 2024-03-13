@@ -4,19 +4,19 @@
 <div id="popupInsert" class="popup">
     <div class="popup-content">
         <h4 class="black"><b>เพิ่มข้อมูล</b></h4>
-        <form action="<?php echo site_url('Intra_share_file/add_sf_audit'); ?>" method="post" class="form-horizontal" enctype="multipart/form-data">
+        <form action="<?php echo site_url('Intra_share_file/add_sf_dsab'); ?>" method="post" class="form-horizontal" enctype="multipart/form-data">
             <br>
             <div class="form-group row container">
                 <div class="col-sm-1 control-label font-18">ชื่อไฟล์</div>
                 <div class="col-sm-6">
-                    <input type="text" name="intra_sf_audit_name" required class="form-control">
+                    <input type="text" name="intra_sf_dsab_name" required class="form-control">
                 </div>
             </div>
             <br>
             <div class="form-group row container">
                 <div class="col-sm-1 control-label font-18">เอกสาร</div>
                 <div class="col-sm-6">
-                    <input type="file" name="intra_sf_audit_pdf" class="form-control" accept=".pdf, .docx, .xls, .doc" required>
+                    <input type="file" name="intra_sf_dsab_pdf" class="form-control" accept=".pdf, .docx, .xls, .doc" required>
                     <span class="red">เฉพาะไฟล์ .pdf, .docx, .xls, .doc</span>
                 </div>
             </div>
@@ -25,7 +25,7 @@
                 <div class="col-sm-1 control-label"></div>
                 <div class="col-sm-5">
                     <button type="submit" class="btn btn-success">บันทึกข้อมูล</button>
-                    <a class="btn btn-danger" href="<?= site_url('Intra_share_file/sf_audit'); ?>" role="button">ยกเลิก</a>
+                    <a class="btn btn-danger" href="<?= site_url('Intra_share_file/sf_dsab'); ?>" role="button">ยกเลิก</a>
                 </div>
             </div>
         </form>
@@ -36,7 +36,7 @@
     <div class="row">
         <div class="col-6 mt-5">
             <img src="<?php echo base_url("docs/intranet/folder.png"); ?>" width="auto" style="max-width: 100%;">
-            <span class="font-folder-detail mx-3">กองประปา</span>
+            <span class="font-folder-detail mx-3">กองสาธารณสุขและสิ่งแวดล้อม</span>
         </div>
         <div class="col-6 mt-5">
             <div class="d-flex justify-content-end">
@@ -79,7 +79,7 @@
                 $rs = $query[$i];
 
                 // ดึงข้อมูลของไฟล์
-                $fileInfo = pathinfo($rs->intra_sf_audit_pdf);
+                $fileInfo = pathinfo($rs->intra_sf_dsab_pdf);
 
                 // ตรวจสอบลงท้ายของไฟล์
                 $fileExtension = strtolower($fileInfo['extension']);
@@ -96,9 +96,9 @@
             ?>
                 <div class="col-sm-6 mt-2">
                     <span class="black font-20 limit-font-one">
-                        <a class="underline" href="<?php echo base_url('docs/intranet/file/' . $rs->intra_sf_audit_pdf); ?>" download>
+                        <a class="underline" href="<?php echo base_url('docs/intranet/file/' . $rs->intra_sf_dsab_pdf); ?>" download>
                             <img src="<?php echo base_url($iconImage); ?>" width="25">
-                            <?= $rs->intra_sf_audit_name; ?>
+                            <?= $rs->intra_sf_dsab_name; ?>
                         </a>
                     </span>
                 </div>
@@ -106,7 +106,7 @@
                     <span class="font-18">
                     <?php
                         // ในการใช้งาน setThaiMonth
-                        $date = new DateTime($rs->intra_sf_audit_datesave);
+                        $date = new DateTime($rs->intra_sf_dsab_datesave);
                         $day_th = $date->format('d');
                         $month_th = setThaiMonth($date->format('F')); // เรียกใช้ setThaiMonth สำหรับชื่อเดือน
                         $year_th = $date->format('Y') + 543; // เพิ่มขึ้น 543 ปี
@@ -116,18 +116,18 @@
                     </span>
                 </div>
                 <div class="col-sm-2 mt-2">
-                    <span class="font-18"><?= $rs->intra_sf_audit_by; ?></span>
+                    <span class="font-18"><?= $rs->intra_sf_dsab_by; ?></span>
                 </div>
                 <div class="col-sm-2 mt-2 white">
 
-                <?php if ($_SESSION['m_level'] == 1 || $_SESSION['m_level'] == 2 || $_SESSION['m_fname'] == $rs->intra_sf_audit_by) : ?>
+                <?php if ($_SESSION['m_level'] == 1 || $_SESSION['m_level'] == 2 || $_SESSION['m_fname'] == $rs->intra_sf_dsab_by) : ?>
                     <div class="d-flex justify-content-end">
-                        <a href="#" class="btn btn-danger btn-sm" role="button" onclick="confirmDelete(<?= $rs->intra_sf_audit_id; ?>);"><i class="bi bi-trash fa-lg mx-2"></i>ลบ</a>
+                        <a href="#" class="btn btn-danger btn-sm" role="button" onclick="confirmDelete(<?= $rs->intra_sf_dsab_id; ?>);"><i class="bi bi-trash fa-lg mx-2"></i>ลบ</a>
                     </div>
                     <?php endif; ?>
 
                     <script>
-                        function confirmDelete(intra_sf_audit_id) {
+                        function confirmDelete(intra_sf_dsab_id) {
                             Swal.fire({
                                 title: 'กดเพื่อยืนยัน?',
                                 text: "คุณจะไม่สามรถกู้คืนได้อีก!",
@@ -139,7 +139,7 @@
                                 cancelButtonText: 'ยกเลิก' // เปลี่ยนข้อความปุ่ม Cancel เป็นภาษาไทย
                             }).then((result) => {
                                 if (result.isConfirmed) {
-                                    window.location.href = "<?= site_url('Intra_share_file/del_sf_audit/'); ?>" + intra_sf_audit_id;
+                                    window.location.href = "<?= site_url('Intra_share_file/del_sf_dsab/'); ?>" + intra_sf_dsab_id;
                                 }
                             });
                         }

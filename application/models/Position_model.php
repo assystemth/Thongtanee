@@ -8,7 +8,7 @@ class Position_model extends CI_Model
 
     public function list_position()
     {
-        $this->db->order_by('pid', 'DESC'); 
+        $this->db->order_by('pid', 'ASC'); 
         $query = $this->db->get('tbl_position');
         return $query->result();
     }

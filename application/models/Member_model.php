@@ -17,9 +17,9 @@ class Member_model extends CI_Model
     {
         $this->db->select('m.*, p.pname');
         $this->db->from('tbl_member as m');
-        $this->db->join('tbl_position as p', 'm.ref_pid = p.pid', 'DESC');
+        $this->db->join('tbl_position as p', 'm.ref_pid = p.pid', 'ASC');
         // $this->db->where('p.pid !=', 1);  // เพิ่มเงื่อนไขที่ไม่ให้แสดงข้อมูลที่มี pid เท่ากับ 1
-        $this->db->order_by('m.m_id', 'DESC');
+        $this->db->order_by('m.m_id', 'ASC');
         $query = $this->db->get();
         return $query->result();
     }
@@ -239,23 +239,23 @@ class Member_model extends CI_Model
         $this->db->update('tbl_member', $data);
 
         // ตรวจสอบ session สำหรับสมาชิกที่เข้าสู่ระบบ
-        $current_member_data = $this->db->get_where('tbl_member', array('m_id' => $m_id))->row();
+        // $current_member_data = $this->db->get_where('tbl_member', array('m_id' => $m_id))->row();
 
-        if (
-            $current_member_data->m_id == $this->session->userdata('m_id') &&
-            $current_member_data->m_fname == $this->session->userdata('m_fname') &&
-            $current_member_data->m_img == $this->session->userdata('m_img')
-        ) {
-            // ไม่ต้องทำอะไรเพราะข้อมูล session ปัจจุบันตรงกับฐานข้อมูล
-        } else {
-            // ทำการอัพเดต session หลังจากอัพเดตข้อมูลในฐานข้อมูล
-            $updated_member_data = array(
-                'm_id' => $current_member_data->m_id,
-                'm_fname' => $current_member_data->m_fname,
-                'm_img' => $current_member_data->m_img,
-            );
-            $this->session->set_userdata($updated_member_data);
-        }
+        // if (
+        //     $current_member_data->m_id == $this->session->userdata('m_id') &&
+        //     $current_member_data->m_fname == $this->session->userdata('m_fname') &&
+        //     $current_member_data->m_img == $this->session->userdata('m_img')
+        // ) {
+        //     // ไม่ต้องทำอะไรเพราะข้อมูล session ปัจจุบันตรงกับฐานข้อมูล
+        // } else {
+        //     // ทำการอัพเดต session หลังจากอัพเดตข้อมูลในฐานข้อมูล
+        //     $updated_member_data = array(
+        //         'm_id' => $current_member_data->m_id,
+        //         'm_fname' => $current_member_data->m_fname,
+        //         'm_img' => $current_member_data->m_img,
+        //     );
+        //     $this->session->set_userdata($updated_member_data);
+        // }
         // ลบถึงตรงนี้ 
 
         $this->space_model->update_server_current();
