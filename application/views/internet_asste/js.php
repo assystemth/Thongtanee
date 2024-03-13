@@ -6,6 +6,9 @@
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.31/dist/sweetalert2.all.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
+<!-- chart พาย  -->
+<script src="<?= base_url('asset/'); ?>rpie.js"></script>
+
 <!-- sb-admin-2 -->
 <!-- Bootstrap core JavaScript-->
 <script src="<?= base_url(); ?>vendor/jquery/jquery.min.js"></script>

@@ -435,7 +435,7 @@
                     #CFD7FE;
                 <?php elseif ($rs->complain_status === 'รอดำเนินการ') : ?>
                     #FFECE7;
-                <?php elseif ($rs->complain_status === 'ดำเนินการแก้ไขเรียบร้อย') : ?>
+                <?php elseif ($rs->complain_status === 'ดำเนินการเรียบร้อย') : ?>
                     #DBFFDD;
                 <?php elseif ($rs->complain_status === 'ยกเลิก') : ?>
                     #FFE3E3;
@@ -449,7 +449,7 @@
                     #3D5AF1;
                 <?php elseif ($rs->complain_status === 'รอดำเนินการ') : ?>
                     #E05A33;
-                <?php elseif ($rs->complain_status === 'ดำเนินการแก้ไขเรียบร้อย') : ?>
+                <?php elseif ($rs->complain_status === 'ดำเนินการเรียบร้อย') : ?>
                     #00B73E;
                 <?php elseif ($rs->complain_status === 'ยกเลิก') : ?>
                     #FF0202;
@@ -463,7 +463,7 @@
                     #3D5AF1;
                 <?php elseif ($rs->complain_status === 'รอดำเนินการ') : ?>
                     #E05A33;
-                <?php elseif ($rs->complain_status === 'ดำเนินการแก้ไขเรียบร้อย') : ?>
+                <?php elseif ($rs->complain_status === 'ดำเนินการเรียบร้อย') : ?>
                     #00B73E;
                 <?php elseif ($rs->complain_status === 'ยกเลิก') : ?>
                     #FF0202;

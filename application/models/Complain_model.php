@@ -77,6 +77,16 @@ class Complain_model extends CI_Model
         return $query->result();
     }
 
+    public function intranet_complain()
+    {
+        $this->db->select('*');
+        $this->db->from('tbl_complain as c');
+        $this->db->limit(5);
+        $this->db->order_by('c.complain_id', 'DESC');
+        $query = $this->db->get();
+        return $query->result();
+    }
+
     public function updateComplain($complain_detail_case_id, $complain_detail_status, $complain_detail_com)
     {
         // อัปเดต tbl_complain
