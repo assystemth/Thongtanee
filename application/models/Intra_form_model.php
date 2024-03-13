@@ -98,4 +98,11 @@ class Intra_form_model extends CI_Model
         $query = $this->db->get('tbl_intra_form');
         return $query->result();
     }
+
+    public function increment_download($intra_form_id)
+    {
+        $this->db->where('intra_form_id', $intra_form_id);
+        $this->db->set('intra_form_download', 'intra_form_download + 1', false); // บวกค่า operation_policy_hr_download ทีละ 1
+        $this->db->update('tbl_intra_form');
+    }
 }

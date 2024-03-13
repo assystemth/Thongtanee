@@ -15,7 +15,7 @@
                 <div class="form-group row">
                     <div class="col-sm-2 control-label">link</div>
                     <div class="col-sm-6">
-                        <input type="text" name="banner_link" required class="form-control" value="<?= $rsedit->banner_link; ?>">
+                        <input type="text" name="banner_link" class="form-control" value="<?= $rsedit->banner_link; ?>">
                     </div>
                 </div>
                 <br>

@@ -51,9 +51,9 @@ class Intra_discipline extends CI_Controller
         redirect('Intra_discipline', 'refresh');
     }
 
-    public function del_intra_discipline($intra_form_id)
+    public function del_intra_discipline($intra_discipline_id)
     {
-        $this->Intra_discipline_model->del_intra_discipline($intra_form_id);
+        $this->Intra_discipline_model->del_intra_discipline($intra_discipline_id);
         $this->session->set_flashdata('del_success', TRUE);
         redirect('Intra_discipline', 'refresh');
     }
@@ -76,5 +76,22 @@ class Intra_discipline extends CI_Controller
         $this->load->view('intranet/discipline', $data);
         $this->load->view('internet_asste/js');
         $this->load->view('intranet_templat/footer');
+    }
+
+    public function discipline_detail($intra_discipline_id)
+    {
+        $data['rsedit'] = $this->Intra_discipline_model->read($intra_discipline_id);
+
+        $this->load->view('intranet_templat/header_discipline');
+        $this->load->view('internet_asste/css');
+        $this->load->view('intranet_templat/navbar');
+        $this->load->view('intranet/discipline_detail', $data);
+        $this->load->view('internet_asste/js');
+        $this->load->view('intranet_templat/footer');
+    }
+
+    public function increment_download($intra_discipline_id)
+    {
+        $this->Intra_discipline_model->increment_download($intra_discipline_id);
     }
 }

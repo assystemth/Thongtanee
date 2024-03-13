@@ -30,7 +30,7 @@
             <div class="row">
                 <?php foreach ($complains as $rs) { ?>
                     <div class="col-sm-3 ">
-                        <span class="limit-font-one"><?= $rs->complain_topic; ?></span>
+                        <span class="limit-font-one black"><?= $rs->complain_topic; ?></span>
                         <?php
                         // วันที่จากฐานข้อมูลหรือตัวแปรอื่น ๆ
                         $complain_date = $rs->complain_datesave;
@@ -61,7 +61,7 @@
                         <span style="font-size: 13; color: #888;"><?= $formatted_date . ' ' . $formatted_time; ?></span>
                     </div>
                     <div class="col-sm-3 mt-2">
-                        <p class="small-font limit-font-one" style="font-size: 13px;"><?= $rs->complain_by; ?></p>
+                        <p class="small-font limit-font-one black" style="font-size: 16px;"><?= $rs->complain_by; ?></p>
                     </div>
                     <div class="col-sm-2 mt-2">
                         <p class="small-font text-center" style=" font-size: 14px; background-color:

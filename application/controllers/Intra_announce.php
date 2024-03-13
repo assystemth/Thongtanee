@@ -51,9 +51,9 @@ class Intra_announce extends CI_Controller
         redirect('Intra_announce', 'refresh');
     }
 
-    public function del_intra_announce($intra_form_id)
+    public function del_intra_announce($intra_announce_id)
     {
-        $this->Intra_announce_model->del_intra_announce($intra_form_id);
+        $this->Intra_announce_model->del_intra_announce($intra_announce_id);
         $this->session->set_flashdata('del_success', TRUE);
         redirect('Intra_announce', 'refresh');
     }
@@ -76,5 +76,22 @@ class Intra_announce extends CI_Controller
         $this->load->view('intranet/announce', $data);
         $this->load->view('internet_asste/js');
         $this->load->view('intranet_templat/footer');
+    }
+
+    public function announce_detail($intra_announce_id)
+    {
+        $data['rsedit'] = $this->Intra_announce_model->read($intra_announce_id);
+
+        $this->load->view('intranet_templat/header_announce');
+        $this->load->view('internet_asste/css');
+        $this->load->view('intranet_templat/navbar');
+        $this->load->view('intranet/announce_detail', $data);
+        $this->load->view('internet_asste/js');
+        $this->load->view('intranet_templat/footer');
+    }
+
+    public function increment_download($intra_announce_id)
+    {
+        $this->Intra_announce_model->increment_download($intra_announce_id);
     }
 }

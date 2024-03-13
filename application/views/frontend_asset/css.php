@@ -2466,26 +2466,25 @@
     margin-top: 10px;
   }
 
-  /* กำหนดสไตล์ scroll bar สำหรับ WebKit (Chrome, Safari) */
-  ::-webkit-scrollbar {
+  .scrollable-container::-webkit-scrollbar {
     height: 5px;
-    width: 5px;
+    width: 10px;
   }
 
-  ::-webkit-scrollbar-track {
+  .scrollable-container::-webkit-scrollbar-track {
     border-radius: 33.559px;
-    background: #FFF;
+    background: #888;
     box-shadow: 0px 2.685px 2.685px 0px rgba(0, 0, 0, 0.25);
   }
 
-  ::-webkit-scrollbar-thumb {
+  .scrollable-container::-webkit-scrollbar-thumb {
     border-radius: 33.559px;
     background: #082555;
     box-shadow: 0px 2.685px 2.685px 0px rgba(0, 0, 0, 0.25);
   }
 
-  ::-webkit-scrollbar-thumb:hover {
-    background: #888;
+  .scrollable-container::-webkit-scrollbar-thumb:hover {
+    background: #D9D9D9;
   }
 
   /* scroll bar เลื่อนซ้ายขวา เลื่อนบนล่าง ****************************************************** */

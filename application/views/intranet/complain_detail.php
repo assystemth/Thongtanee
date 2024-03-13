@@ -14,11 +14,11 @@
         </div>
         <div class="detail" style="padding-left: 20px;">
             <div class="pad-10"></div>
-            <span>เรื่องร้องเรียน case ที่ : <?= $qcomplain->complain_id; ?></span><br>
+            <span>เรื่องร้องเรียน case ที่ : <span class="black" ><?= $qcomplain->complain_id; ?></span></span><br>
             <div class="pad-30"></div>
-            <span>เรื่อง : <?= $qcomplain->complain_topic; ?></span><br>
+            <span>เรื่อง : <span class="black" ><?= $qcomplain->complain_topic; ?></span></span><br>
             <div class="pad-30"></div>
-            <span>รายละเอียด : <?= $qcomplain->complain_detail; ?></span><br>
+            <span>รายละเอียด : <span class="black" ><?= $qcomplain->complain_detail; ?></span></span><br>
             <div class="pad-30"></div><div class="pad-30"></div>
             <div>
                 <span>รูปภาพ :&nbsp;</span>
@@ -27,11 +27,11 @@
                 <?php endforeach; ?>
             </div><br>
             <div class="pad-30"></div>
-            <span>ผู้แจ้ง : <?= $qcomplain->complain_by; ?></span><br>
+            <span>ผู้แจ้ง : <span class="black" ><?= $qcomplain->complain_by; ?></span></span><br>
             <div class="pad-30"></div>
-            <span>ติดต่อ : <?= $qcomplain->complain_phone; ?></span><br>
+            <span>ติดต่อ : <span class="black" ><?= $qcomplain->complain_phone; ?></span></span><br>
             <div class="pad-30"></div>
-            <span>วันที่ : <?= date('d/m/Y H:i', strtotime($qcomplain->complain_datesave . '+543 years')) ?> น.</span><br>
+            <span>วันที่ : <span class="black" ><?= date('d/m/Y H:i', strtotime($qcomplain->complain_datesave . '+543 years')) ?> น.</span></span><br>
             <div class="pad-30"></div>
             <span>สถานะ :</span>&nbsp;<span class="small-font text-center" style=" font-size: 14px; background-color:
                 <?php if ($qcomplain->complain_status === 'รับเรื่องแล้ว') : ?>

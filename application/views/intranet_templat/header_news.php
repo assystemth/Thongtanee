@@ -60,10 +60,10 @@
                     </div>
                 </form>
             </div>
-            <div class="mr-2 d-none d-lg-inline text-gray-600">
+            <!-- <div class="mr-2 d-none d-lg-inline text-gray-600">
                 <img class="img-profile rounded-circle" width="30px" src="<?php echo base_url('docs/img/') . $this->session->userdata('m_img'); ?>">
                 <span style="color:black">&nbsp;<?php echo $this->session->userdata('m_fname'); ?></span>
-            </div>
+            </div> -->
             <a class="logout" href="<?php echo site_url('Login_intranet/logout'); ?>" onclick="return confirm('ยืนยัน');">
                 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0z" />

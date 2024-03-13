@@ -98,4 +98,11 @@ class Intra_announce_model extends CI_Model
         $query = $this->db->get('tbl_intra_announce');
         return $query->result();
     }
+
+    public function increment_download($intra_announce_id)
+    {
+        $this->db->where('intra_announce_id', $intra_announce_id);
+        $this->db->set('intra_announce_download', 'intra_announce_download + 1', false); // บวกค่า operation_policy_hr_download ทีละ 1
+        $this->db->update('tbl_intra_announce');
+    }
 }

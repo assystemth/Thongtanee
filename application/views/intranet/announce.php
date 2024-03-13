@@ -72,9 +72,9 @@
                 <div class="col-sm-1">
                     <img src="<?php echo base_url($iconImage); ?>" width="80%">
                 </div>
-                <div class="col-sm-5">
+                <div class="col-sm-7">
                     <span>ชื่อ</span><br>
-                    <a class="underline" href="<?php echo base_url('docs/intranet/intranet/file/' . $rs->intra_announce_pdf); ?>" download>
+                    <a href="<?= site_url('Intra_announce/announce_detail/' . $rs->intra_announce_id); ?>">
                         <span class="black font-20 limit-font-one"><?= $rs->intra_announce_name; ?></span>
                     </a>
                 </div>
@@ -96,7 +96,7 @@
                     <span>ผู้อัพโหลด</span><br>
                     <span class="font-18"><?= $rs->intra_announce_by; ?></span>
                 </div>
-                <div class="col-sm-2">
+                <!-- <div class="col-sm-2">
                     <div class="d-flex justify-content-end">
                         <a href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="bi bi-three-dots-vertical" style="font-size:30px; color: gray;"></i>
@@ -141,7 +141,7 @@
 
                         </ul>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     <?php } ?>

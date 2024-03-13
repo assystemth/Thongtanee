@@ -77,4 +77,21 @@ class Intra_form extends CI_Controller
         $this->load->view('internet_asste/js');
         $this->load->view('intranet_templat/footer');
     }
+
+    public function form_detail($intra_form_id)
+    {
+        $data['rsedit'] = $this->Intra_form_model->read($intra_form_id);
+
+        $this->load->view('intranet_templat/header_form');
+        $this->load->view('internet_asste/css');
+        $this->load->view('intranet_templat/navbar');
+        $this->load->view('intranet/form_detail', $data);
+        $this->load->view('internet_asste/js');
+        $this->load->view('intranet_templat/footer');
+    }
+
+    public function increment_download($intra_form_id)
+    {
+        $this->Intra_form_model->increment_download($intra_form_id);
+    }
 }

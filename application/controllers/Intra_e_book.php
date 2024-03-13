@@ -71,10 +71,27 @@ class Intra_e_book extends CI_Controller
         redirect('Intra_e_book', 'refresh');
     }
 
-    public function del_intra_e_book($intra_form_id)
+    public function del_intra_e_book($intra_e_book_id)
     {
-        $this->Intra_e_book_model->del_intra_e_book($intra_form_id);
+        $this->Intra_e_book_model->del_intra_e_book($intra_e_book_id);
         $this->session->set_flashdata('del_success', TRUE);
         redirect('Intra_e_book', 'refresh');
+    }
+
+    public function e_book_detail($intra_e_book_id)
+    {
+        $data['rsedit'] = $this->Intra_e_book_model->read($intra_e_book_id);
+
+        $this->load->view('intranet_templat/header_e_book');
+        $this->load->view('internet_asste/css');
+        $this->load->view('intranet_templat/navbar');
+        $this->load->view('intranet/e_book_detail', $data);
+        $this->load->view('internet_asste/js');
+        $this->load->view('intranet_templat/footer');
+    }
+
+    public function increment_download($intra_e_book_id)
+    {
+        $this->Intra_e_book_model->increment_download($intra_e_book_id);
     }
 }

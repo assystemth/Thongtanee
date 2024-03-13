@@ -97,4 +97,11 @@ class Intra_discipline_model extends CI_Model
         $query = $this->db->get('tbl_intra_discipline');
         return $query->result();
     }
+
+    public function increment_download($intra_discipline_id)
+    {
+        $this->db->where('intra_discipline_id', $intra_discipline_id);
+        $this->db->set('intra_discipline_download', 'intra_discipline_download + 1', false); // บวกค่า operation_policy_hr_download ทีละ 1
+        $this->db->update('tbl_intra_discipline');
+    }
 }

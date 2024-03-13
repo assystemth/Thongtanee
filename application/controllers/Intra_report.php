@@ -51,7 +51,6 @@ class Intra_report extends CI_Controller
         $this->load->view('intranet_templat/navbar');
         $this->load->view('intranet/complain_all', ['complains' => $complains]);
         $this->load->view('internet_asste/js');
-        $this->load->view('internet_asste/php');
         $this->load->view('intranet_templat/footer');
     }
 
@@ -67,7 +66,6 @@ class Intra_report extends CI_Controller
         $this->load->view('intranet_templat/navbar');
         $this->load->view('intranet/complain_detail', $data);
         $this->load->view('internet_asste/js');
-        $this->load->view('internet_asste/php');
         $this->load->view('intranet_templat/footer');
     }
 }

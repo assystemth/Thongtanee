@@ -158,27 +158,6 @@
         margin-top: 50px;
     } */
 
-
-
-    /* กำหนดสไตล์ scroll bar สำหรับ WebKit (Chrome, Safari) */
-    ::-webkit-scrollbar {
-        height: 5px;
-        width: 5px;
-    }
-
-    ::-webkit-scrollbar-track {
-        background: #fff;
-    }
-
-    ::-webkit-scrollbar-thumb {
-        background: #888;
-        border-radius: 10px;
-    }
-
-    ::-webkit-scrollbar-thumb:hover {
-        background: #888;
-    }
-
     /* scroll bar เลื่อนซ้ายขวา เลื่อนบนล่าง ****************************************************** */
 
     .search {
@@ -597,10 +576,51 @@
         overflow-x: hidden;
         margin-bottom: 40px;
     }
-    .pad-30{
+
+    .scrollable-container::-webkit-scrollbar {
+        height: 5px;
+        width: 10px;
+    }
+
+    .scrollable-container::-webkit-scrollbar-track {
+        border-radius: 33.559px;
+        background: #888;
+        box-shadow: 0px 2.685px 2.685px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    .scrollable-container::-webkit-scrollbar-thumb {
+        border-radius: 33.559px;
+        background: #0FC2C0;
+        box-shadow: 0px 2.685px 2.685px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    .scrollable-container::-webkit-scrollbar-thumb:hover {
+        background: #D9D9D9;
+    }
+
+
+
+
+    .pad-30 {
         padding-top: 30px;
     }
-    .pad-10{
+
+    .pad-10 {
         padding-top: 10px;
+    }
+
+    .font-head-pdf {
+        color: #000;
+        font-family: Kanit;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 1000;
+        line-height: 22px;
+        /* 122.222% */
+    }
+
+    .font-download-pdf {
+        font-family: Kanit;
+        font-size: 20px;
     }
 </style>
