@@ -9,7 +9,7 @@
     </div>
     <div class="page-center">
         <div class="head-pages-two">
-            <span class="font-pages-head">สรปุผลการจัดซื้อจัดจ้าง</span>
+            <span class="font-pages-head">สรุปผลการจัดซื้อจัดจ้าง</span>
         </div>
     </div>
     <div class="bg-pages-in ">

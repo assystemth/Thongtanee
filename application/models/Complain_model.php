@@ -367,7 +367,7 @@ class Complain_model extends CI_Model
     {
         $this->db->select('COUNT(complain_id) AS total_complain_success');
         $this->db->from('tbl_complain');
-        $this->db->where('tbl_complain.complain_status', 'ดำเนินการเสร็จสิ้น');
+        $this->db->where('tbl_complain.complain_status', 'ดำเนินการเรียบร้อย');
         $query = $this->db->get();
         return $query->row()->total_complain_success;
     }
@@ -379,6 +379,14 @@ class Complain_model extends CI_Model
         $query = $this->db->get();
         return $query->row()->total_complain_operation;
     }
+    public function count_complain_accept()
+    {
+        $this->db->select('COUNT(complain_id) AS total_complain_accept');
+        $this->db->from('tbl_complain');
+        $this->db->where('tbl_complain.complain_status', 'รับเรื่องแล้ว');
+        $query = $this->db->get();
+        return $query->row()->total_complain_accept;
+    }
     public function count_complain_doing()
     {
         $this->db->select('COUNT(complain_id) AS total_complain_doing');
@@ -386,5 +394,23 @@ class Complain_model extends CI_Model
         $this->db->where('tbl_complain.complain_status', 'กำลังดำเนินการ');
         $query = $this->db->get();
         return $query->row()->total_complain_doing;
+    }
+
+    public function count_complain_wait()
+    {
+        $this->db->select('COUNT(complain_id) AS total_complain_wait');
+        $this->db->from('tbl_complain');
+        $this->db->where('tbl_complain.complain_status', 'รอรับเรื่อง');
+        $query = $this->db->get();
+        return $query->row()->total_complain_wait;
+    }
+
+    public function count_complain_cancel()
+    {
+        $this->db->select('COUNT(complain_id) AS total_complain_cancel');
+        $this->db->from('tbl_complain');
+        $this->db->where('tbl_complain.complain_status', 'ยกเลิก');
+        $query = $this->db->get();
+        return $query->row()->total_complain_cancel;
     }
 }

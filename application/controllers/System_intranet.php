@@ -38,11 +38,12 @@ class System_intranet extends CI_Controller
 
         $this->load->model('Intra_news_model');
         $this->load->model('banner_model');
+        $this->load->model('member_model');
     }
     public function index()
     {
         $data['query'] = $this->Intra_news_model->list_all();
-		$data['qBanner'] = $this->banner_model->banner_frontend();
+        $data['qBanner'] = $this->banner_model->banner_frontend();
 
         $this->load->view('intranet_templat/header_news', $data);
         $this->load->view('internet_asste/css');
@@ -147,5 +148,38 @@ class System_intranet extends CI_Controller
         $this->load->view('intranet/news', $data);
         $this->load->view('internet_asste/js');
         $this->load->view('intranet_templat/footer');
+    }
+
+    public function profile()
+    {
+        $m_id = $_SESSION['m_id'];
+
+        // echo $m_id;
+        // print_r($_SESSION);
+        // exit;
+
+        $data['rsedit'] = $this->member_model->read($m_id);
+
+        // echo '<pre>';
+        // print_r($data);
+        // echo '</pre>';
+        // exit;
+
+        $this->load->view('intranet_templat/header_news');
+        $this->load->view('internet_asste/css');
+        $this->load->view('intranet_templat/navbar');
+        $this->load->view('intranet/profile', $data);
+        $this->load->view('internet_asste/js');
+        $this->load->view('intranet_templat/footer');
+    }
+
+    public function edit_Member($m_id)
+    {
+        // echo '<pre>';
+        // print_r($_POST);
+        // echo '</pre>';
+        // exit;
+        $this->member_model->edit_Member($m_id);
+        redirect('System_intranet/profile');
     }
 }

@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-md-2"></div>
         <div class="col-md-7">
-            <h4>แก้ไขสรปุผลการจัดซื้อจัดจ้าง</h4>
+            <h4>แก้ไขสรุปผลการจัดซื้อจัดจ้าง</h4>
             <form action=" <?php echo site_url('operation_sp_backend/edit/' . $rsedit->operation_sp_id); ?> " method="post" class="form-horizontal" enctype="multipart/form-data">
                 <br>
                 <div class="form-group row">

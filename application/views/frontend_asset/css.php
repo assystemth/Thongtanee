@@ -1105,6 +1105,15 @@
     flex-shrink: 0;
   }
 
+  .map-contact-home {
+    border-radius: 18px;
+    width: 366px;
+    height: 253px;
+    border-radius: 18px;
+    border: 5px solid #90BCBB;
+  }
+
+
   .bg-pages-all-web {
     background-image: url('<?php echo base_url("docs/s.bg-other.jpg"); ?>');
     background-repeat: no-repeat;

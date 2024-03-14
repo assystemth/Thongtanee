@@ -10,7 +10,7 @@
 
     <div class="page-center">
         <div class="head-pages-two">
-            <span class="font-pages-head">หลักประกันสุขภาพตำบลธงธานี</span>
+            <span class="font-pages-head">หลักประกันสุขภาพตำบล</span>
         </div>
     </div>
     <div class="bg-pages-in ">

@@ -165,7 +165,7 @@
                         <a class="collapse-item" href="<?php echo site_url('Pbsv_is_backend'); ?>">ข้อมูลบริการ</a>
                         <a class="collapse-item" href="<?php echo site_url('Pbsv_oppr_backend'); ?>">งานอาสาป้องกันภัย<br>ฝ่ายพลเรือน(อปพร.)</a>
                         <a class="collapse-item" href="<?php echo site_url('Pbsv_ems_backend'); ?>">งานกู้ชีพ/บริการ<br>การแพทย์ฉุกเฉิน(EMS)</a>
-                        <a class="collapse-item" href="<?php echo site_url('Pbsv_ahs_backend'); ?>">หลักประกันสุขภาพตำบล</a>
+                        <a class="collapse-item" href="<?php echo site_url('Pbsv_ahs_backend'); ?>">หลักประกันสุขภาพเทศบาล</a>
                         <a class="collapse-item" href="<?php echo site_url('Pbsv_e_book_backend'); ?>">ดาวโหลดแบบฟอร์ม E-book</a>
                         <a class="collapse-item" href="<?php echo site_url('Pbsv_gup_backend'); ?>">คู่มือสำหรับประชาชน</a>
                         <a class="collapse-item" href="<?php echo site_url('Pbsv_fp_backend'); ?>">การรับฟังความคิดเห็นของ<br>ประชาชน</a>
@@ -197,7 +197,7 @@
                         <a class="collapse-item" href="<?php echo site_url('Operation_po_backend'); ?>">การเปิดโอกาสให้มีส่วนร่วม</a>
                         <a class="collapse-item" href="<?php echo site_url('Operation_eco_backend'); ?>">การเสริมสร้าง<br>วัฒนธรรมองค์กร</a>
                         <a class="collapse-item" href="<?php echo site_url('Lpa_backend'); ?>">LPA การประเมินประสิทธิภาพ<br>ขององค์กร</a>
-                        <a class="collapse-item" href="<?php echo site_url('operation_sp_backend'); ?>">สรปุผลการจัดซื้อจัดจ้าง</a>
+                        <a class="collapse-item" href="<?php echo site_url('operation_sp_backend'); ?>">สรุปผลการจัดซื้อจัดจ้าง</a>
                         <a class="collapse-item" href="<?php echo site_url('operation_erc_backend'); ?>">การประเมินความเสี่ยง<br>การทุจริตประพฤติมิชอบ</a>
                         <a class="collapse-item" href="<?php echo site_url('operation_amf_backend'); ?>">การดำเนินการเพื่อจัดการ<br>ความเสี่ยงการทุจริต</a>
                         <a class="collapse-item" href="<?php echo site_url('Operation_pm_backend'); ?>">การมีส่วนร่วมของผู้บริหาร</a>

@@ -20,6 +20,15 @@ class Intra_report extends CI_Controller
     }
     public function index()
     {
+        // ภาพรวมเรื่องร้องเรียน
+        $data['total_complain_year'] = $this->complain_model->count_complain_year();
+        $data['total_complain_success'] = $this->complain_model->count_complain_success();
+        $data['total_complain_operation'] = $this->complain_model->count_complain_operation();
+        $data['total_complain_accept'] = $this->complain_model->count_complain_accept();
+        $data['total_complain_doing'] = $this->complain_model->count_complain_doing();
+        $data['total_complain_wait'] = $this->complain_model->count_complain_wait();
+        $data['total_complain_cancel'] = $this->complain_model->count_complain_cancel();
+
         $data['rs_complain'] = $this->complain_model->intranet_complain();
 
         $this->load->view('intranet_templat/header_form');

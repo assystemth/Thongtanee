@@ -2,11 +2,15 @@
     $(document).ready(function() {
         var obj = {
             values: [
-                10,
-                15,
-                20
+                <?php echo $total_complain_year; ?>,
+                <?php echo $total_complain_success; ?>,
+                <?php echo $total_complain_operation; ?>,
+                <?php echo $total_complain_accept; ?>,
+                <?php echo $total_complain_doing; ?>,
+                <?php echo $total_complain_wait; ?>,
+                <?php echo $total_complain_cancel; ?>
             ],
-            colors: ['#AEE1F7', '#FFDF63', '#046867'],
+            colors: ['#F5900A', '#DBFFDD', '#FFA085', '#CFE5FF', '#CFD7FE', '#FFD361', '#FFE3E3'],
             animation: true,
             animationSpeed: 10,
             fillTextData: false,

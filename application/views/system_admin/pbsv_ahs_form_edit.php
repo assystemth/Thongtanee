@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-md-2"></div>
         <div class="col-md-7">
-            <h4>แก้ไขข้อมูลหลักประกันสุขภาพตำบลกาเกาะ</h4>
+            <h4>แก้ไขข้อมูลหลักประกันสุขภาพเทศบาล</h4>
             <form action=" <?php echo site_url('pbsv_ahs_backend/edit/' . $rsedit->pbsv_ahs_id); ?> " method="post" class="form-horizontal" enctype="multipart/form-data">
                 <br>
                 <div class="form-group row">

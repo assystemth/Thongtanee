@@ -1004,25 +1004,33 @@
                 </div>
             </div>
 
-            <div class="mt-5" style="z-index: 6;">
+            <!-- <div class="mt-5" style="z-index: 6;">
                 <a href="https://www.nacc.go.th/NACCPPWFC?" target="_blank" rel="noopener noreferrer">
                     <img src="docs/t.raise_the_level_of_will.jpg" width="702px" height="100px">
                 </a>
-            </div>
+            </div> -->
         </div>
 
         <div class="col-5 ">
-            <div class="d-flex justify-content-end">
+            <!-- <div class="d-flex justify-content-end">
                 <div class="fb-page" data-href="https://www.facebook.com/p/%E0%B9%80%E0%B8%9E%E0%B8%88%E0%B9%80%E0%B8%97%E0%B8%A8%E0%B8%9A%E0%B8%B2%E0%B8%A5%E0%B8%95%E0%B8%B3%E0%B8%9A%E0%B8%A5%E0%B8%81%E0%B8%B2%E0%B8%9A%E0%B9%80%E0%B8%8A%E0%B8%B4%E0%B8%87-%E0%B8%88%E0%B8%B1%E0%B8%87%E0%B8%AB%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B8%AA%E0%B8%B8%E0%B8%A3%E0%B8%B4%E0%B8%99%E0%B8%97%E0%B8%A3%E0%B9%8C-100068962338320/?paipv=0&amp;eav=AfYCD9ii8z2jYOf-yDTAcU0tSdfuES5OG8jVboIwWvJMOFe4IwBXCqB-v9ir_A8V9-Q&amp;_rdr" data-tabs="timeline" data-width="386" data-height="523" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
                     <blockquote cite="https://www.facebook.com/p/%E0%B9%80%E0%B8%9E%E0%B8%88%E0%B9%80%E0%B8%97%E0%B8%A8%E0%B8%9A%E0%B8%B2%E0%B8%A5%E0%B8%95%E0%B8%B3%E0%B8%9A%E0%B8%A5%E0%B8%81%E0%B8%B2%E0%B8%9A%E0%B9%80%E0%B8%8A%E0%B8%B4%E0%B8%87-%E0%B8%88%E0%B8%B1%E0%B8%87%E0%B8%AB%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B8%AA%E0%B8%B8%E0%B8%A3%E0%B8%B4%E0%B8%99%E0%B8%97%E0%B8%A3%E0%B9%8C-100068962338320/?paipv=0&amp;eav=AfYCD9ii8z2jYOf-yDTAcU0tSdfuES5OG8jVboIwWvJMOFe4IwBXCqB-v9ir_A8V9-Q&amp;_rdr" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/p/%E0%B9%80%E0%B8%9E%E0%B8%88%E0%B9%80%E0%B8%97%E0%B8%A8%E0%B8%9A%E0%B8%B2%E0%B8%A5%E0%B8%95%E0%B8%B3%E0%B8%9A%E0%B8%A5%E0%B8%81%E0%B8%B2%E0%B8%9A%E0%B9%80%E0%B8%8A%E0%B8%B4%E0%B8%87-%E0%B8%88%E0%B8%B1%E0%B8%87%E0%B8%AB%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B8%AA%E0%B8%B8%E0%B8%A3%E0%B8%B4%E0%B8%99%E0%B8%97%E0%B8%A3%E0%B9%8C-100068962338320/?paipv=0&amp;eav=AfYCD9ii8z2jYOf-yDTAcU0tSdfuES5OG8jVboIwWvJMOFe4IwBXCqB-v9ir_A8V9-Q&amp;_rdr">เพจเทศบาลตำบลกาบเชิง จังหวัดสุรินทร์</a></blockquote>
                 </div>
-            </div>
-            <div class="d-flex justify-content-end mt-5">
+            </div> -->
+            <div class="d-flex justify-content-end">
                 <?php foreach ($qPublicize_ita as $index => $rs) { ?>
                     <a href="<?= $rs->publicize_ita_link; ?>" target="_blank" rel="noopener noreferrer">
                         <img src="<?php echo base_url('docs/img/' . $rs->publicize_ita_img); ?>" width="386px" height="546px">
                     </a>
                 <?php } ?>
+            </div>
+            <div class="d-flex justify-content-end mt-4">
+                <a href="https://www.nacc.go.th/NACCPPWFC?" target="_blank" rel="noopener noreferrer">
+                    <img src="docs/t.raise_the_level_of_will2.jpg" width="371px" height="128px">
+                </a>
+            </div>
+            <div class="d-flex justify-content-end mt-4">
+                <iframe class="map-contact-home" width="366" height="253" frameborder="0" src="https://www.google.com/maps?q=สำนักงานเทศบาลตำบลธงธานี&output=embed" allowfullscreen></iframe>
             </div>
         </div>
     </div>

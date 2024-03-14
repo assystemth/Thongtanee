@@ -8,7 +8,7 @@
 
     .bg-header {
         /* The image used */
-        background-image: url('<?php echo base_url("docs/intranet/navbar-intranet19v4.png"); ?>');
+        background-image: url('<?php echo base_url("docs/intranet/navbar-intranet19v5.png"); ?>');
         background-size: contain;
         background-repeat: no-repeat;
         width: 100%;
@@ -18,13 +18,13 @@
     }
 
     .welcome {
-        background-image: url('<?php echo base_url("docs/intranet/welcome19v2.jpg"); ?>');
+        background-image: url('<?php echo base_url("docs/intranet/welcome19v4.jpg"); ?>');
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
         z-index: 1;
         width: 100%;
-        height: 44.2vh;
+        height: 44vh;
     }
 
     .welcome-btm {
@@ -385,13 +385,13 @@
     }
 
     .footer {
-        background-image: url('<?php echo base_url("docs/intranet/bg-footer19.png"); ?>');
+        background-image: url('<?php echo base_url("docs/intranet/bg-footer19v2.png"); ?>');
         background-size: contain;
         background-repeat: no-repeat;
         width: 100vw;
-        height: 34vh;
+        height: 33vh;
         z-index: 2;
-        padding-top: 150px;
+        padding-top: 8%;
     }
 
     .font-footer {
@@ -518,15 +518,6 @@
         padding: 25px 30px;
     }
 
-    .limit-font-one {
-        /* margin-bottom: 10px; */
-        overflow: hidden;
-        text-overflow: ellipsis;
-        display: -webkit-box;
-        -webkit-line-clamp: 1;
-        -webkit-box-orient: vertical;
-    }
-
     .btn-all-complain {
         border-radius: 14px;
         background: #FFBA5D;
@@ -622,5 +613,73 @@
     .font-download-pdf {
         font-family: Kanit;
         font-size: 20px;
+    }
+
+    .img-profile {
+        width: 40px;
+    }
+
+    .nav-item {
+        list-style: none;
+    }
+
+    .font-header-name {
+        overflow: hidden;
+        color: #FFF;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-family: Kanit;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .font-rank-name {
+        overflow: hidden;
+        color: #D9D9D9;
+        text-overflow: ellipsis;
+        font-family: Kanit;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+    }
+
+    .dropdown-toggle::after {
+        display: none !important;
+    }
+
+    .font-dropdown-name {
+        color: var(--font, #015958);
+        font-family: Kanit;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .font-dropdown-rank {
+        overflow: hidden;
+        color: #727272;
+        text-overflow: ellipsis;
+        font-family: Kanit;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+    }
+
+    .dropdown-item {
+        color: #015958;
+    }
+
+    .bg-edit-profile {
+        border-radius: 34px;
+        background: #FFF;
+        box-shadow: 0px 4px 1px 0px rgba(0, 0, 0, 0.08);
+        width: 100%;
+        height: auto;
+        padding: 25px 30px;
     }
 </style>

@@ -17,7 +17,7 @@
                                 <span class="font-detail-all-report">จำนวนเรื่องร้องเรียน</span>
                             </div>
                             <div class="col-sm-6 d-flex justify-content-end">
-                                <span class="font-detail-all-report">1234</span>
+                                <span class="font-detail-all-report"><?php echo $total_complain_year; ?></span>
                             </div>
                         </div>
                     </div>
@@ -27,7 +27,7 @@
                                 <span class="font-detail-all-report">ดำเนินการเรียบร้อย</span>
                             </div>
                             <div class="col-sm-6 d-flex justify-content-end">
-                                <span class="font-detail-all-report">1234</span>
+                                <span class="font-detail-all-report"><?php echo $total_complain_success; ?></span>
                             </div>
                         </div>
                     </div>
@@ -37,7 +37,7 @@
                                 <span class="font-detail-all-report">รอดำเนินการ</span>
                             </div>
                             <div class="col-sm-6 d-flex justify-content-end">
-                                <span class="font-detail-all-report">1234</span>
+                                <span class="font-detail-all-report"><?php echo $total_complain_operation; ?></span>
                             </div>
                         </div>
                     </div>
@@ -47,7 +47,7 @@
                                 <span class="font-detail-all-report">รับเรื่องแล้ว</span>
                             </div>
                             <div class="col-sm-6 d-flex justify-content-end">
-                                <span class="font-detail-all-report">1234</span>
+                                <span class="font-detail-all-report"><?php echo $total_complain_accept; ?></span>
                             </div>
                         </div>
                     </div>
@@ -59,7 +59,7 @@
                                 <span class="font-detail-all-report">กำลังดำเนินการ</span>
                             </div>
                             <div class="col-sm-6 d-flex justify-content-end">
-                                <span class="font-detail-all-report">1234</span>
+                                <span class="font-detail-all-report"><?php echo $total_complain_doing; ?></span>
                             </div>
                         </div>
                     </div>
@@ -69,7 +69,7 @@
                                 <span class="font-detail-all-report">รอรับเรื่อง</span>
                             </div>
                             <div class="col-sm-6 d-flex justify-content-end">
-                                <span class="font-detail-all-report">1234</span>
+                                <span class="font-detail-all-report"><?php echo $total_complain_wait; ?></span>
                             </div>
                         </div>
                     </div>
@@ -79,7 +79,7 @@
                                 <span class="font-detail-all-report">ยกเลิก</span>
                             </div>
                             <div class="col-sm-6 d-flex justify-content-end">
-                                <span class="font-detail-all-report">1234</span>
+                                <span class="font-detail-all-report"><?php echo $total_complain_cancel; ?></span>
                             </div>
                         </div>
                     </div>
