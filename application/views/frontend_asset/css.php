@@ -2952,15 +2952,11 @@
 
   .active-button {
     /* background-color: #0F9C8B; */
-    /* เปลี่ยนเป็นสีที่คุณต้องการเมื่อ active */
     color: #0F9C8B;
-    /* เปลี่ยนเป็นสีข้อความที่คุณต้องการเมื่อ active */
   }
 
   .inactive-button {
     /* background-color: #000; */
-    /* เปลี่ยนเป็นสีที่คุณต้องการเมื่อไม่ active */
     color: #000;
-    /* เปลี่ยนเป็นสีข้อความที่คุณต้องการเมื่อไม่ active */
   }
 </style>
