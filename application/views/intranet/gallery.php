@@ -2,7 +2,8 @@
 <div id="popupInsert" class="popup">
     <div class="popup-content">
         <h4 class="black"><b>เพิ่มคลังรูปภาพ</b></h4>
-        <form action="<?php echo site_url('Intra_gallery/add'); ?>" method="post" class="form-horizontal" enctype="multipart/form-data">
+        <form action="<?php echo site_url('Intra_gallery/add'); ?>" method="post" class="form-horizontal"
+            enctype="multipart/form-data">
             <br>
             <div class="form-group row container">
                 <div class="col-sm-3 control-label font-18">ชื่อคลังรูปภาพ</div>
@@ -22,7 +23,8 @@
             <div class="form-group row container">
                 <div class="col-sm-3 control-label font-18">วิดีโอ (เพิ่มได้หลายวิดีโอ)</div>
                 <div class="col-sm-6">
-                    <input type="file" name="intra_gallery_video_video[]" class="form-control" accept="video/*" multiple>
+                    <input type="file" name="intra_gallery_video_video[]" class="form-control" accept="video/*"
+                        multiple>
                 </div>
             </div>
             <br>
@@ -52,7 +54,7 @@
             <div class="card-body" style="margin-top: -45px;">
                 <div class="row">
                     <div class="col-12 mb-2">
-                        <?php foreach ($storage as $server) : ?>
+                        <?php foreach ($storage as $server): ?>
                             <?php
                             $serverStorage = $server->server_storage;
                             $serverCurrent = $server->server_current;
@@ -65,42 +67,63 @@
                             }
                             ?>
 
+                        </div>
                     </div>
-                </div>
-                <h5 style="margin-top:20px;">
-                    <!-- <?php
-                            ?>
+                    <h5 style="margin-top:20px;">
+                        <!-- <?php
+                        ?>
                         <?php echo number_format($percentage, 2); ?>% -->
-                </h5>
-                <div class="progress progress-sm mr-6">
-                    <div class="progress-bar" role="progressbar" style="background-color: <?php echo $color; ?>; width: <?php echo $percentage; ?>%" aria-valuenow="<?php echo $percentage; ?>" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-                <!-- color: <?php echo $color; ?>; -->
-                <div class="mt-3 row">
-                    <div class="col-sm-4">
-                        <div class="d-flex justify-content-start">
-                            <span style="font-size: 13px; color: #888;">Used space: <?php echo number_format($serverCurrent, 2); ?> GB</span>
+                    </h5>
+                    <div class="progress progress-sm mr-6">
+                        <div class="progress-bar" role="progressbar"
+                            style="background-color: <?php echo $color; ?>; width: <?php echo $percentage; ?>%"
+                            aria-valuenow="<?php echo $percentage; ?>" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <!-- color: <?php echo $color; ?>; -->
+                    <div class="mt-3 row">
+                        <div class="col-sm-4">
+                            <div class="d-flex justify-content-start">
+                                <span style="font-size: 13px; color: #888;">Used space:
+                                    <?php echo number_format($serverCurrent, 2); ?> GB
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="d-flex justify-content-center">
+                                <span style="font-size: 13px; color: #888;">Free space:
+                                    <?php echo number_format($serverStorage - $serverCurrent, 2); ?> GB
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="d-flex justify-content-end">
+                                <span style="font-size: 13px; color: #888;">Capacity:
+                                    <?php echo number_format($serverStorage, 2); ?> GB
+                                </span>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-sm-4">
-                        <div class="d-flex justify-content-center">
-                            <span style="font-size: 13px; color: #888;">Free space: <?php echo number_format($serverStorage - $serverCurrent, 2); ?> GB</span>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="d-flex justify-content-end">
-                            <span style="font-size: 13px; color: #888;">Capacity: <?php echo number_format($serverStorage, 2); ?> GB</span>
-                        </div>
-                    </div>
-                </div>
-            <?php endforeach; ?>
+                <?php endforeach; ?>
             </div>
         </div>
     </div>
 
     <div class="d-flex justify-content-end mb-4" style="margin-top: 2%;">
+        <div class="search">
+            <form id="searchForm" action="<?= site_url('Intra_announce/search'); ?>" method="post">
+                <div class="input-group">
+                    <input type="text" name="search_term" class="searchTerm form-control" placeholder="ค้นหา">
+                    <div class="input-group-append">
+                        <button type="submit" class="searchButton btn btn-outline">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
         <a href="#" class="popup-insert" data-target="#popupInsert">
-            <img src="<?php echo base_url("docs/intranet/btn-intra-add-storage-img-video.png"); ?>" width="auto" style="max-width: 100%;">
+            <img src="<?php echo base_url("docs/intranet/btn-intra-add-storage-img-video.png"); ?>" width="auto"
+                style="max-width: 100%;">
         </a>
     </div>
 
@@ -116,7 +139,7 @@
 
     for ($i = $startIndex; $i <= $endIndex; $i++) {
         $rs = $query[$i];
-    ?>
+        ?>
         <div class="file-pdf">
             <div class="row">
                 <div class="col-sm-1">
@@ -125,7 +148,9 @@
                 <div class="col-sm-5">
                     <span>ชื่อ</span><br>
                     <a class="underline" href="<?= site_url('Intra_gallery/detail/' . $rs->intra_gallery_id); ?>">
-                        <span class="black font-20 limit-font-one"><?= $rs->intra_gallery_name; ?></span>
+                        <span class="black font-20 limit-font-one">
+                            <?= $rs->intra_gallery_name; ?>
+                        </span>
                     </a>
                 </div>
                 <div class="col-sm-2">
@@ -144,7 +169,9 @@
                 </div>
                 <div class="col-sm-2">
                     <span>ผู้อัพโหลด</span><br>
-                    <span class="font-18"><?= $rs->intra_gallery_by; ?></span>
+                    <span class="font-18">
+                        <?= $rs->intra_gallery_by; ?>
+                    </span>
                 </div>
                 <div class="col-sm-2">
                     <div class="d-flex justify-content-end">
@@ -153,20 +180,23 @@
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                             <li>
-                                <a class="dropdown-item" href="<?= site_url('Intra_gallery/detail/' . $rs->intra_gallery_id); ?>">
+                                <a class="dropdown-item"
+                                    href="<?= site_url('Intra_gallery/detail/' . $rs->intra_gallery_id); ?>">
                                     <img src="<?php echo base_url("docs/intranet/icon-open-intra.png"); ?>" width="20">
                                     &nbsp; เปิด</a>
                             </li>
                             <li>
-                                <a class="dropdown-item" href="<?php echo site_url('Intra_gallery/download_all_images/' . $rs->intra_gallery_id); ?>">
+                                <a class="dropdown-item"
+                                    href="<?php echo site_url('Intra_gallery/download_all_images/' . $rs->intra_gallery_id); ?>">
                                     <img src="<?php echo base_url("docs/intranet/icon-download-intra.png"); ?>" width="20">
                                     &nbsp; ดาวน์โหลดทั้งหมด
                                 </a>
                             </li>
 
-                            <?php if ($_SESSION['m_level'] == 1 || $_SESSION['m_level'] == 2 || $_SESSION['m_fname'] == $rs->intra_gallery_by) : ?>
+                            <?php if ($_SESSION['m_level'] == 1 || $_SESSION['m_level'] == 2 || $_SESSION['m_fname'] == $rs->intra_gallery_by): ?>
                                 <li>
-                                    <a class="dropdown-item" href="#" ole="button" onclick="confirmDelete(<?= $rs->intra_gallery_id; ?>);">
+                                    <a class="dropdown-item" href="#" ole="button"
+                                        onclick="confirmDelete(<?= $rs->intra_gallery_id; ?>);">
                                         <img src="<?php echo base_url("docs/intranet/icon-del-intra.png"); ?>" width="20">
                                         &nbsp; ลบ</a>
                                     <script>
@@ -200,7 +230,7 @@
     <div class="d-flex justify-content-center mt-5">
         <nav aria-label="Page navigation example">
             <ul class="pagination">
-                <?php if ($currentPage > 1) : ?>
+                <?php if ($currentPage > 1): ?>
                     <li class="page-item">
                         <a class="page-link" href="?page=<?php echo $currentPage - 1; ?>" aria-label="Previous">
                             <span aria-hidden="true">&laquo;</span>
@@ -208,13 +238,15 @@
                     </li>
                 <?php endif; ?>
 
-                <?php for ($i = 1; $i <= $totalPages; $i++) : ?>
+                <?php for ($i = 1; $i <= $totalPages; $i++): ?>
                     <li class="page-item <?php echo ($i == $currentPage) ? 'active' : ''; ?>">
-                        <a class="page-link" href="?page=<?php echo $i; ?>"><?php echo $i; ?></a>
+                        <a class="page-link" href="?page=<?php echo $i; ?>">
+                            <?php echo $i; ?>
+                        </a>
                     </li>
                 <?php endfor; ?>
 
-                <?php if ($currentPage < $totalPages) : ?>
+                <?php if ($currentPage < $totalPages): ?>
                     <li class="page-item">
                         <a class="page-link" href="?page=<?php echo $currentPage + 1; ?>" aria-label="Next">
                             <span aria-hidden="true">&raquo;</span>

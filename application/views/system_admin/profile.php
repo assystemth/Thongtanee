@@ -19,7 +19,7 @@
                 <div class="form-group row">
                     <div class="col-sm-2 control-label">username</div>
                     <div class="col-sm-5">
-                        <input type="text" name="m_username" class="form-control" value="<?php echo $rsedit->m_username; ?>">
+                        <input type="text" name="m_username" class="form-control" value="<?php echo $rsedit->m_username; ?>"readonly>
                     </div>
                 </div>
                 <br>

@@ -960,7 +960,7 @@
                                         <div id="submitSection">
                                             <div class="g-recaptcha" style="margin-left: -15px;" data-sitekey="6LcKoPcnAAAAAKGgUMRtkBs6chDKzC8XOoVnaZg_" data-callback="enableSubmit"></div>
                                             <div class="form-group row mt-2">
-                                                <div class="col-9">
+                                                <div class="col-9" style="z-index:100;">
                                                     <button type="submit" class="btn" id="SubmitLike" disabled><img src="docs/k.btn-sent-esv.png"></button>
                                                 </div>
                                             </div>

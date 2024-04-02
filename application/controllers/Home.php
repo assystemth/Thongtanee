@@ -151,7 +151,7 @@ class Home extends CI_Controller
 
 		$this->like_model->addLike($data);
 		$this->session->set_flashdata('save_success', TRUE);
-		redirect('home');
+		echo '<script>window.history.back();</script>';
 	}
 
 	public function login()

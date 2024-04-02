@@ -60,7 +60,7 @@
                 </div>
                 <div class="col-3">
                     <div class="d-flex justify-content-start">
-                        <button type="submit" id="loginBtn" class="btn" disabled><img src="<?php echo base_url("docs/s.btn-add-q-a.png"); ?>"></button>
+                        <button type="submit" id="loginBtn" class="btn" disabled><img src="<?php echo base_url("docs/s.btn-add-q-a2.png"); ?>"></button>
                     </div>
                 </div>
             </div>
