@@ -58,10 +58,6 @@
                     <div class="col-sm-4">
                         <select class="form-control" name="ref_pid" required>
                             <option value="<?php echo $rsedit->ref_pid; ?>"><?php echo $rsedit->pname; ?></option>
-                            <option value="" disabled>เลือกข้อมูล
-                                <?php foreach ($rspo as $rs) { ?>
-                            <option value="<?php echo $rs->pid; ?>"><?php echo $rs->pname; ?>
-                            <?php } ?>
                         </select>
                     </div>
                 </div>

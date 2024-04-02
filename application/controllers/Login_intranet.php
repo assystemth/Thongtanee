@@ -110,7 +110,8 @@ class Login_intranet extends CI_Controller
 			case 13:
 				return 'system_intranet';
 			default:
-				return 'Login_intranet'; // หากไม่พบระดับผู้ใช้งานที่เกี่ยวข้องกับการเด้ง
+			$this->logout(); // เรียกใช้ฟังก์ชั่น logout หากไม่พบระดับผู้ใช้งานที่เกี่ยวข้องกับการเด้ง
+			return 'Home/login';
 		}
 	}
 

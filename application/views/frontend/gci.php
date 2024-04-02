@@ -25,7 +25,7 @@
                     </div>
                 </div>
                 <div class="pages-content break-word mt-5">
-                    <span class="font-gi-head">1.ลักษณะตำบล</span><br>
+                    <span class="font-gi-head">1.ลักษณะที่ตั้ง</span><br>
                     <span class="font-gi-content"><?= $rs->gci_location; ?></span>
                 </div>
                 <div class="pages-content break-word mt-5">
@@ -37,7 +37,7 @@
                     <span class="font-gi-content"><?= $rs->gci_terrain; ?></span>
                 </div>
                 <div class="pages-content break-word mt-5">
-                    <span class="font-gi-head">4.พื้นที่องค์การบริหารส่วนตำบล</span><br>
+                    <span class="font-gi-head">4.พื้นที่องค์การบริหารส่วนเทศบาล</span><br>
                     <span class="font-gi-content"><?= $rs->gci_area; ?></span>
                 </div>
             </div>

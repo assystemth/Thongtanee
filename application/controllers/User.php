@@ -89,7 +89,13 @@ class User extends CI_Controller
 			case 2:
 				return 'System_admin';
 			default:
-				return 'Home/login'; // หากไม่พบระดับผู้ใช้งานที่เกี่ยวข้องกับการเด้ง
+			echo "<script>";
+			echo "alert('ไม่สามารถเข้าสู่ระบบได้ เนื่องจากคุณไม่ใช่ผู้ดูแลระบบ');";
+			// echo "window.history.back();";
+			echo "</script>";
+			$this->logout(); // เรียกใช้ฟังก์ชั่น logout หากไม่พบระดับผู้ใช้งานที่เกี่ยวข้องกับการเด้ง
+			return 'Home/login';
+
 		}
 	}
 
