@@ -219,6 +219,7 @@
                         <a class="collapse-item" href="<?php echo site_url('Guide_work_backend'); ?>">คู่มือการปฏิบัติงาน</a>
                         <a class="collapse-item" href="<?php echo site_url('Km_backend'); ?>">การจัดการความรู้ท้องถิ่น KM</a>
                         <a class="collapse-item" href="<?php echo site_url('Loadform_backend'); ?>">ดาวน์โหลดแบบฟอร์ม</a>
+                        <a class="collapse-item" href="<?php echo site_url('Mptae_backend'); ?>">มาตรการส่งเสริมคุณธรรม<br>และความโปร่งใส</a>
                     </div>
                 </div>
             </li>

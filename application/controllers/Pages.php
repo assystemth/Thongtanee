@@ -14,6 +14,7 @@ class Pages extends CI_Controller
 		$this->load->model('mui_model');
 		$this->load->model('guide_work_model');
 		$this->load->model('loadform_model');
+		$this->load->model('mptae_model');
 		$this->load->model('msg_pres_model');
 
 		$this->load->model('history_model');
@@ -471,6 +472,49 @@ class Pages extends CI_Controller
 	public function increment_download_loadform($loadform_file_id)
 	{
 		$this->loadform_model->increment_download_loadform($loadform_file_id);
+	}
+
+	public function mptae()
+	{
+		$data['query'] = $this->mptae_model->mptae_frontend_list();
+
+		$this->load->view('frontend_templat/header');
+		$this->load->view('frontend_asset/css');
+		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend/mptae', $data);
+		$this->load->view('frontend_asset/js');
+		$this->load->view('frontend_templat/footer');
+	}
+	public function mptae_detail($mptae_id)
+	{
+		$this->mptae_model->increment_view($mptae_id);
+
+		$data['rsData'] = $this->mptae_model->read($mptae_id);
+
+		// เพิ่มเงื่อนไขเพื่อตรวจสอบว่ามีข้อมูลหรือไม่
+		if (!$data['rsData']) {
+			$this->load->view('frontend_templat/header');
+			$this->load->view('frontend_asset/css');
+			$this->load->view('frontend_templat/navbar');
+			$this->load->view('frontend/empty_detail_pages');
+			$this->load->view('frontend_asset/js');
+			$this->load->view('frontend_templat/footer');
+			return; // ให้จบการทำงานที่นี่
+		}
+
+		$data['rsFile'] = $this->mptae_model->read_file($mptae_id);
+		$data['rsImg'] = $this->mptae_model->read_img($mptae_id);
+
+		$this->load->view('frontend_templat/header');
+		$this->load->view('frontend_asset/css');
+		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend/mptae_detail', $data);
+		$this->load->view('frontend_asset/js');
+		$this->load->view('frontend_templat/footer');
+	}
+	public function increment_download_mptae($mptae_file_id)
+	{
+		$this->mptae_model->increment_download_mptae($mptae_file_id);
 	}
 	public function e_gp()
 	{
