@@ -191,7 +191,8 @@
                         </li> -->
 
                     <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/site_map'); ?>"><img src="docs/t.item-img-navmid.png">&nbsp;&nbsp;แผนผังโครงสร้างรวม</a></li>
-                    <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/p_palace'); ?>"><img src="docs/t.item-img-navmid.png">&nbsp;&nbsp;ทำเนียบเทศบาลธงธานี</a></li>
+                    <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/p_palaces'); ?>"><img src="docs/t.item-img-navmid.png">&nbsp;&nbsp;ทำเนียบเทศบาลธงธานี</a></li>
+                    <!-- <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/p_palace'); ?>"><img src="docs/t.item-img-navmid.png">&nbsp;&nbsp;ทำเนียบเทศบาลธงธานี</a></li> -->
                     <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/p_executives'); ?>"><img src="docs/t.item-img-navmid.png">&nbsp;&nbsp;คณะผู้บริหาร</a></li>
                     <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/p_council'); ?>"><img src="docs/t.item-img-navmid.png">&nbsp;&nbsp;สมาชิกเทศบาล</a></li>
                     <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/p_unit_leaders'); ?>"><img src="docs/t.item-img-navmid.png">&nbsp;&nbsp;หัวหน้าส่วนราชการ</a></li>
@@ -302,7 +303,7 @@
 
                 </div>
                 <div class="dropdown-right">
-                    <li><a class="mar-left-3 dropdown-item" href="<?php echo site_url('Pages/operation_sp'); ?>"><img src="docs/t.item-img-navmid.png">&nbsp;&nbsp;สรปุผลการจัดซื้อจัดจ้าง</a></li>
+                    <li><a class="mar-left-3 dropdown-item" href="<?php echo site_url('Pages/operation_sp'); ?>"><img src="docs/t.item-img-navmid.png">&nbsp;&nbsp;สรุปผลการจัดซื้อจัดจ้าง</a></li>
                     <li><a class="mar-left-3 dropdown-item" href="<?php echo site_url('Pages/operation_erc'); ?>"><img src="docs/t.item-img-navmid.png">&nbsp;&nbsp;การประเมินความเสี่ยงการทุจริตประพฤติมิชอบ</a></li>
                     <li><a class="mar-left-3 dropdown-item" href="<?php echo site_url('Pages/operation_amf'); ?>"><img src="docs/t.item-img-navmid.png">&nbsp;&nbsp;การดำเนินการเพื่อจัดการความเสี่ยงการทุจริต</a></li>
                     <li><a class="mar-left-3 dropdown-item" href="<?php echo site_url('Pages/operation_pm'); ?>"><img src="docs/t.item-img-navmid.png">&nbsp;&nbsp;การมีส่วนร่วมของผู้บริหาร</a></li>

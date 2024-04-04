@@ -112,6 +112,7 @@ class Pages extends CI_Controller
 		$this->load->model('suggestions_model');
 		$this->load->model('questions_model');
 		$this->load->model('site_map_model');
+		$this->load->model('p_palaces_model');
 		$this->load->model('laws_ral_model');
 		$this->load->model('laws_rl_folder_model');
 		$this->load->model('laws_rl_file_model');
@@ -3551,6 +3552,18 @@ class Pages extends CI_Controller
 		$this->load->view('frontend_asset/css');
 		$this->load->view('frontend_templat/navbar');
 		$this->load->view('frontend/site_map', $data);
+		$this->load->view('frontend_asset/js');
+		$this->load->view('frontend_templat/footer');
+	}
+
+	public function p_palaces()
+	{
+		$data['query'] = $this->p_palaces_model->list_all();
+
+		$this->load->view('frontend_templat/header');
+		$this->load->view('frontend_asset/css');
+		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend/p_palaces', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
 	}

@@ -88,7 +88,8 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <!-- <h6 class="collapse-header">Custom Components:</h6> -->
                         <a class="collapse-item" href="<?php echo site_url('Site_map_backend'); ?>">แผนผังโครงสร้างภาพรวม</a>
-                        <a class="collapse-item" href="<?php echo site_url('P_palace_backend'); ?>">ทำเนียบเทศบาลธงธานี</a>
+                        <a class="collapse-item" href="<?php echo site_url('P_palaces_backend'); ?>">ทำเนียบเทศบาลธงธานี</a>
+                        <!-- <a class="collapse-item" href="<?php echo site_url('P_palace_backend'); ?>">ทำเนียบเทศบาลธงธานี</a> -->
                         <a class="collapse-item" href="<?php echo site_url('P_executives_backend'); ?>">คณะผู้บริหาร</a>
                         <a class="collapse-item" href="<?php echo site_url('P_council_backend'); ?>">สมาชิกเทศบาล</a>
                         <a class="collapse-item" href="<?php echo site_url('P_unit_leaders_backend'); ?>">หัวหน้าส่วนราชการ</a>
