@@ -9,7 +9,7 @@
     </div>
     <div class="page-center">
         <div class="head-pages">
-            <span class="font-pages-head-long">หัวหน้าส่วนราชาการ</span>
+            <span class="font-pages-head-long">หัวหน้าส่วนราชการ</span>
         </div>
     </div>
     <div class="bg-pages-p">
