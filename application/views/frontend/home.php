@@ -1405,12 +1405,12 @@
                 </div>
             </div> -->
             <div class="d-flex justify-content-end">
-            <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" style="z-index: 10;  margin-top: -15px;">
+            <div id="carouselExampleAutoplayingITA" class="carousel slide" data-bs-ride="carousel" style="z-index: 10;  margin-top: -15px;">
                     <div class="carousel-indicators">
                         <?php
                         foreach ($qPublicize_ita as $index => $img_banner) {
                             $active = ($index === 0) ? "active" : "";
-                            echo '<button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="' . $index . '" class="' . $active . '" aria-current="true" aria-label="Slide ' . ($index + 1) . '"></button>';
+                            echo '<button type="button" data-bs-target="#carouselExampleAutoplayingITA" data-bs-slide-to="' . $index . '" class="' . $active . '" aria-current="true" aria-label="Slide ' . ($index + 1) . '"></button>';
                         }
                         ?>
                     </div>
@@ -1423,11 +1423,11 @@
                             </div>
                         <?php } ?>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplayingITA" data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Previous</span>
                     </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplayingITA" data-bs-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Next</span>
                     </button>
