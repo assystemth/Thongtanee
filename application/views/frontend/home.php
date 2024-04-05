@@ -1405,7 +1405,6 @@
                 </div>
             </div> -->
             <div class="d-flex justify-content-end">
-<<<<<<< HEAD
             <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" style="z-index: 10;  margin-top: -15px;">
                     <div class="carousel-indicators">
                         <?php
@@ -1436,12 +1435,6 @@
                 <!-- <?php foreach ($qPublicize_ita as $index => $rs) { ?>
                     <a href="<?= $rs->publicize_ita_name; ?>" target="_blank" rel="noopener noreferrer">
                         <img src="<?php echo base_url('docs/img/' . $rs->publicize_ita_img); ?>" width="320px" height="520px">
-=======
-                <?php foreach ($qPublicize_ita as $index => $rs) { ?>
-                    <a href="<?= $rs->publicize_ita_link; ?>" target="_blank" rel="noopener noreferrer">
-                        <img src="<?php echo base_url('docs/img/' . $rs->publicize_ita_img); ?>" width="386px"
-                            height="546px">
->>>>>>> 0f11bc519b4e1f849d3b46851f93270f58fe290c
                     </a>
                 <?php } ?> -->
             </div>
