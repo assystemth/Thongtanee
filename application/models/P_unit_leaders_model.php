@@ -207,6 +207,25 @@ class P_unit_leaders_model extends CI_Model
 
         $this->db->delete('tbl_p_unit_leaders', array('p_unit_leaders_id' => $p_unit_leaders_id));
     }
+    
+    public function p_unit_leaders_one()
+    {
+        $this->db->select('*');
+        $this->db->from('tbl_p_unit_leaders');
+        $this->db->where('tbl_p_unit_leaders.p_unit_leaders_id', 1);
+        $query = $this->db->get();
+        return $query->result();
+    }
+
+    public function p_unit_leaders_under_one()
+    {
+        $this->db->select('*');
+        $this->db->from('tbl_p_unit_leaders');
+        $this->db->where('tbl_p_unit_leaders.p_unit_leaders_id !=', 1);
+        $query = $this->db->get();
+        return $query->result();
+    }
+
 
     public function p_unit_leaders_frontend_one()
     {

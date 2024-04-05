@@ -229,6 +229,26 @@ class P_council_model extends CI_Model
         $this->db->delete('tbl_p_council', array('p_council_id' => $p_council_id));
     }
 
+    
+    public function p_council_one()
+    {
+        $this->db->select('*');
+        $this->db->from('tbl_p_council');
+        $this->db->where('tbl_p_council.p_council_id', 1);
+        $query = $this->db->get();
+        return $query->result();
+    }
+
+    public function p_council_under_one()
+    {
+        $this->db->select('*');
+        $this->db->from('tbl_p_council');
+        $this->db->where('tbl_p_council.p_council_id !=', 1);
+        $query = $this->db->get();
+        return $query->result();
+    }
+
+
     public function p_council_frontend_one()
     {
         $this->db->select('*');

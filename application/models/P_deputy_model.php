@@ -207,6 +207,24 @@ class P_deputy_model extends CI_Model
         $this->db->delete('tbl_p_deputy', array('p_deputy_id' => $p_deputy_id));
     }
 
+    public function p_deputy_one()
+    {
+        $this->db->select('*');
+        $this->db->from('tbl_p_deputy');
+        $this->db->where('tbl_p_deputy.p_deputy_id', 1);
+        $query = $this->db->get();
+        return $query->result();
+    }
+
+    public function p_deputy_under_one()
+    {
+        $this->db->select('*');
+        $this->db->from('tbl_p_deputy');
+        $this->db->where('tbl_p_deputy.p_deputy_id !=', 1);
+        $query = $this->db->get();
+        return $query->result();
+    }
+
     public function p_deputy_frontend_one()
     {
         $this->db->select('*');

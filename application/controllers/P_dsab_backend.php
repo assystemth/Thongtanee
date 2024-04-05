@@ -22,8 +22,9 @@ class P_dsab_backend extends CI_Controller
 
     public function index()
     {
-
-        $data['query'] = $this->p_dsab_model->list_all();
+        $data['query_one'] = $this->p_dsab_model->p_dsab_one();
+        $data['query_under_one'] = $this->p_dsab_model->p_dsab_under_one();
+        // $data['query'] = $this->p_dsab_model->list_all();
 
         $this->load->view('templat/header');
         $this->load->view('asset/css');

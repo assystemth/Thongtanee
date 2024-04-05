@@ -23,7 +23,9 @@ class P_executives_backend extends CI_Controller
     public function index()
     {
 
-        $data['query'] = $this->p_executives_model->list_all();
+        $data['query_one'] = $this->p_executives_model->p_executives_one();
+        $data['query_under_one'] = $this->p_executives_model->p_executives_under_one();
+        // $data['query'] = $this->p_executives_model->list_all();
 
         $this->load->view('templat/header');
         $this->load->view('asset/css');

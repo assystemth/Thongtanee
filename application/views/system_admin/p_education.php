@@ -16,8 +16,57 @@
            <h6 class="m-0 font-weight-bold text-black">จัดการข้อมูลกองการศึกษาศาสนาและวัฒนธรรม</h6>
        </div>
        <div class="card-body">
-           <div class="table-responsive">
-
+           <div class="d-flex justify-content-center">
+               <?php foreach ($query_one as $rs) { ?>
+                   <div class="col-sm-4 mb-4 d-flex justify-content-center">
+                       <a href="<?= site_url('p_education_backend/editing_p_education/' . $rs->p_education_id); ?>" class="underline">
+                           <div class="card-personnel">
+                               <?php if (!empty($rs->p_education_img)) : ?>
+                                   <img src="<?php echo base_url('docs/img/' . $rs->p_education_img); ?>" width="216px" height="180px">
+                               <?php else : ?>
+                                   <img src="<?php echo base_url('docs/ex_personnel.png'); ?>" width="216px" height="220px">
+                               <?php endif; ?>
+                               <br>
+                               <span>
+                                   <?= $rs->p_education_name; ?>
+                                   <br>
+                                   <?= $rs->p_education_rank; ?>
+                                   <br>
+                                   <?= $rs->p_education_phone; ?>
+                               </span>
+                           </div>
+                       </a>
+                   </div>
+               <?php } ?>
+           </div>
+           <div class="row ">
+               <?php foreach ($query_under_one as $rs) { ?>
+                   <div class="col-sm-4 mb-4 d-flex justify-content-center">
+                       <a href="<?= site_url('p_education_backend/editing_p_education/' . $rs->p_education_id); ?>" class="underline">
+                           <div class="card-personnel">
+                               <?php if (!empty($rs->p_education_img)) : ?>
+                                   <img src="<?php echo base_url('docs/img/' . $rs->p_education_img); ?>" width="216px" height="180px">
+                               <?php else : ?>
+                                   <img src="<?php echo base_url('docs/ex_personnel.png'); ?>" width="216px" height="220px">
+                               <?php endif; ?>
+                               <br>
+                               <span>
+                                   <?php if (!empty($rs->p_education_name)) : ?>
+                                       <?= $rs->p_education_name; ?>
+                                   <?php else : ?>
+                                       ว่าง
+                                   <?php endif; ?>
+                                   <br>
+                                   <?= $rs->p_education_rank; ?>
+                                   <br>
+                                   <?= $rs->p_education_phone; ?>
+                               </span>
+                           </div>
+                       </a>
+                   </div>
+               <?php } ?>
+           </div>
+           <!-- <div class="table-responsive">
                <?php
                 $Index = 1;
                 ?>
@@ -44,7 +93,7 @@
                                    <?php if (!empty($rs->p_education_img)) : ?>
                                        <img src="<?php echo base_url('docs/img/' . $rs->p_education_img); ?>" width="120px" height="80px">
                                    <?php else : ?>
-                                       <img src="<?php echo base_url('docs/k.logo.png'); ?>" width="120px" height="80px">
+                                       <img src="<?php echo base_url('docs/coverphoto.jpg'); ?>" width="120px" height="80px">
                                    <?php endif; ?>
                                </td>
                                <td class="limited-text"><?= $rs->p_education_name; ?></td>
@@ -52,8 +101,8 @@
                                <td class="limited-text"><?= $rs->p_education_phone; ?></td>
                                <td><?= date('d/m/Y H:i', strtotime($rs->p_education_datesave . '+543 years')) ?> น.</td>
                                <td>
-                                   <a href="<?= site_url('P_education_backend/editing_p_education/' . $rs->p_education_id); ?>"><i class="bi bi-pencil-square fa-lg "></i></a>
-                                   <?php if (!$isDirector) : ?>
+                                   <a href="<?= site_url('p_education_backend/editing_p_education/' . $rs->p_education_id); ?>"><i class="bi bi-pencil-square fa-lg "></i></a>
+                                   <?php if (!($isDirector)) : ?>
                                        <a href="#" role="button" onclick="confirmDelete('<?= $rs->p_education_id; ?>');"><i class="bi bi-trash fa-lg "></i></a>
                                    <?php endif; ?>
                                    <script>
@@ -69,7 +118,7 @@
                                                cancelButtonText: 'ยกเลิก' // เปลี่ยนข้อความปุ่ม Cancel เป็นภาษาไทย
                                            }).then((result) => {
                                                if (result.isConfirmed) {
-                                                   window.location.href = "<?= site_url('P_education_backend/del_p_education/'); ?>" + p_education_id;
+                                                   window.location.href = "<?= site_url('p_education_backend/del_p_education/'); ?>" + p_education_id;
                                                }
                                            });
                                        }
@@ -80,7 +129,6 @@
                             $Index++;
                         } ?>
                    </tbody>
-               </table>
-           </div>
-       </div>
+               </table> 
+       </div> -->
    </div>

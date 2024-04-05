@@ -222,6 +222,26 @@ class P_dsab_model extends CI_Model
         $this->db->delete('tbl_p_dsab', array('p_dsab_id' => $p_dsab_id));
     }
 
+    
+    public function p_dsab_one()
+    {
+        $this->db->select('*');
+        $this->db->from('tbl_p_dsab');
+        $this->db->where('tbl_p_dsab.p_dsab_id', 1);
+        $query = $this->db->get();
+        return $query->result();
+    }
+
+    public function p_dsab_under_one()
+    {
+        $this->db->select('*');
+        $this->db->from('tbl_p_dsab');
+        $this->db->where('tbl_p_dsab.p_dsab_id !=', 1);
+        $query = $this->db->get();
+        return $query->result();
+    }
+
+
     public function p_dsab_frontend_one()
     {
         $this->db->select('*');

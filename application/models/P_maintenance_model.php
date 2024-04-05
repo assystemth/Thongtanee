@@ -206,6 +206,26 @@ class P_maintenance_model extends CI_Model
         $this->db->delete('tbl_p_maintenance', array('p_maintenance_id' => $p_maintenance_id));
     }
 
+    
+    public function p_maintenance_one()
+    {
+        $this->db->select('*');
+        $this->db->from('tbl_p_maintenance');
+        $this->db->where('tbl_p_maintenance.p_maintenance_id', 1);
+        $query = $this->db->get();
+        return $query->result();
+    }
+
+    public function p_maintenance_under_one()
+    {
+        $this->db->select('*');
+        $this->db->from('tbl_p_maintenance');
+        $this->db->where('tbl_p_maintenance.p_maintenance_id !=', 1);
+        $query = $this->db->get();
+        return $query->result();
+    }
+
+
     public function p_maintenance_frontend_one()
     {
         $this->db->select('*');

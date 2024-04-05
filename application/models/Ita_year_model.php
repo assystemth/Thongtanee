@@ -259,7 +259,7 @@ class Ita_year_model extends CI_Model
                 "ita_year_link_link3", tbl_ita_year_link.ita_year_link_link3,
                 "ita_year_link_link4", tbl_ita_year_link.ita_year_link_link4,
                 "ita_year_link_link5", tbl_ita_year_link.ita_year_link_link5
-            ) ORDER BY tbl_ita_year_link.ita_year_link_name ASC
+            ) ORDER BY CAST(SUBSTRING(tbl_ita_year_link.ita_year_link_name, 2) AS UNSIGNED) ASC
         ) AS link_data
     ');
         $this->db->from('tbl_ita_year_topic');

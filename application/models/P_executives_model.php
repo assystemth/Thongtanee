@@ -222,6 +222,26 @@ class P_executives_model extends CI_Model
         $this->db->delete('tbl_p_executives', array('p_executives_id' => $p_executives_id));
     }
 
+    
+    public function p_executives_one()
+    {
+        $this->db->select('*');
+        $this->db->from('tbl_p_executives');
+        $this->db->where('tbl_p_executives.p_executives_id', 1);
+        $query = $this->db->get();
+        return $query->result();
+    }
+
+    public function p_executives_under_one()
+    {
+        $this->db->select('*');
+        $this->db->from('tbl_p_executives');
+        $this->db->where('tbl_p_executives.p_executives_id !=', 1);
+        $query = $this->db->get();
+        return $query->result();
+    }
+
+
     public function p_executives_frontend_one()
     {
         $this->db->select('*');

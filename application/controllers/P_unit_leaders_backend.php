@@ -23,7 +23,9 @@ class P_unit_leaders_backend extends CI_Controller
     public function index()
     {
 
-        $data['query'] = $this->p_unit_leaders_model->list_all();
+        $data['query_one'] = $this->p_unit_leaders_model->p_unit_leaders_one();
+        $data['query_under_one'] = $this->p_unit_leaders_model->p_unit_leaders_under_one();
+        // $data['query'] = $this->p_unit_leaders_model->list_all();
 
         $this->load->view('templat/header');
         $this->load->view('asset/css');
