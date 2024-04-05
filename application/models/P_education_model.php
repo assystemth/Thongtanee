@@ -206,6 +206,24 @@ class P_education_model extends CI_Model
         $this->db->delete('tbl_p_education', array('p_education_id' => $p_education_id));
     }
 
+    public function p_education_one()
+    {
+        $this->db->select('*');
+        $this->db->from('tbl_p_education');
+        $this->db->where('tbl_p_education.p_education_id', 1);
+        $query = $this->db->get();
+        return $query->result();
+    }
+
+    public function p_education_under_one()
+    {
+        $this->db->select('*');
+        $this->db->from('tbl_p_education');
+        $this->db->where('tbl_p_education.p_education_id !=', 1);
+        $query = $this->db->get();
+        return $query->result();
+    }
+
     public function p_education_frontend_one()
     {
         $this->db->select('*');

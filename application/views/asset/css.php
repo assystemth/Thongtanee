@@ -327,4 +327,21 @@
   .hide {
     display: none !important;
   }
+
+  .card-personnel {
+    border: 2px solid gray;
+    width: 220px;
+    height: auto;
+    text-align: center;
+  }
+
+  .underline {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .underline:hover {
+    text-decoration: none;
+    color: inherit;
+}
 </style>

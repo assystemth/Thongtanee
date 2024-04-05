@@ -1405,12 +1405,38 @@
                 </div>
             </div> -->
             <div class="d-flex justify-content-end">
-                <?php foreach ($qPublicize_ita as $index => $rs) { ?>
-                    <a href="<?= $rs->publicize_ita_link; ?>" target="_blank" rel="noopener noreferrer">
-                        <img src="<?php echo base_url('docs/img/' . $rs->publicize_ita_img); ?>" width="386px"
-                            height="546px">
+            <div id="carouselExampleAutoplayingITA" class="carousel slide" data-bs-ride="carousel" style="z-index: 10;  margin-top: -15px;">
+                    <div class="carousel-indicators">
+                        <?php
+                        foreach ($qPublicize_ita as $index => $img_banner) {
+                            $active = ($index === 0) ? "active" : "";
+                            echo '<button type="button" data-bs-target="#carouselExampleAutoplayingITA" data-bs-slide-to="' . $index . '" class="' . $active . '" aria-current="true" aria-label="Slide ' . ($index + 1) . '"></button>';
+                        }
+                        ?>
+                    </div>
+                    <div class="carousel-inner">
+                        <?php foreach ($qPublicize_ita as $index => $img_publicize_ita) { ?>
+                            <div class="carousel-item <?= ($index === 0) ? "active" : ""; ?>" data-bs-interval="3000">
+                                <a href="<?= $img_publicize_ita->publicize_ita_link; ?>" target="_blank">
+                                    <img src="docs\img\<?= $img_publicize_ita->publicize_ita_img; ?>" class="d-block "style="height: 550px; width: 370px;">
+                                </a>
+                            </div>
+                        <?php } ?>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplayingITA" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplayingITA" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                <!-- <?php foreach ($qPublicize_ita as $index => $rs) { ?>
+                    <a href="<?= $rs->publicize_ita_name; ?>" target="_blank" rel="noopener noreferrer">
+                        <img src="<?php echo base_url('docs/img/' . $rs->publicize_ita_img); ?>" width="320px" height="520px">
                     </a>
-                <?php } ?>
+                <?php } ?> -->
             </div>
             <div class="d-flex justify-content-end mt-4">
                 <a href="https://www.nacc.go.th/NACCPPWFC?" target="_blank" rel="noopener noreferrer">

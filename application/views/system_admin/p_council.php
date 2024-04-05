@@ -16,8 +16,57 @@
            <h6 class="m-0 font-weight-bold text-black">จัดการข้อมูลสมาชิกสภา</h6>
        </div>
        <div class="card-body">
-           <div class="table-responsive">
-
+           <div class="d-flex justify-content-center">
+               <?php foreach ($query_one as $rs) { ?>
+                   <div class="col-sm-4 mb-4 d-flex justify-content-center">
+                       <a href="<?= site_url('p_council_backend/editing_p_council/' . $rs->p_council_id); ?>" class="underline">
+                           <div class="card-personnel">
+                               <?php if (!empty($rs->p_council_img)) : ?>
+                                   <img src="<?php echo base_url('docs/img/' . $rs->p_council_img); ?>" width="216px" height="180px">
+                               <?php else : ?>
+                                   <img src="<?php echo base_url('docs/ex_personnel.png'); ?>" width="216px" height="220px">
+                               <?php endif; ?>
+                               <br>
+                               <span>
+                                   <?= $rs->p_council_name; ?>
+                                   <br>
+                                   <?= $rs->p_council_rank; ?>
+                                   <br>
+                                   <?= $rs->p_council_phone; ?>
+                               </span>
+                           </div>
+                       </a>
+                   </div>
+               <?php } ?>
+           </div>
+           <div class="row ">
+               <?php foreach ($query_under_one as $rs) { ?>
+                   <div class="col-sm-4 mb-4 d-flex justify-content-center">
+                       <a href="<?= site_url('p_council_backend/editing_p_council/' . $rs->p_council_id); ?>" class="underline">
+                           <div class="card-personnel">
+                               <?php if (!empty($rs->p_council_img)) : ?>
+                                   <img src="<?php echo base_url('docs/img/' . $rs->p_council_img); ?>" width="216px" height="180px">
+                               <?php else : ?>
+                                   <img src="<?php echo base_url('docs/ex_personnel.png'); ?>" width="216px" height="220px">
+                               <?php endif; ?>
+                               <br>
+                               <span>
+                                   <?php if (!empty($rs->p_council_name)) : ?>
+                                       <?= $rs->p_council_name; ?>
+                                   <?php else : ?>
+                                       ว่าง
+                                   <?php endif; ?>
+                                   <br>
+                                   <?= $rs->p_council_rank; ?>
+                                   <br>
+                                   <?= $rs->p_council_phone; ?>
+                               </span>
+                           </div>
+                       </a>
+                   </div>
+               <?php } ?>
+           </div>
+           <!-- <div class="table-responsive">
                <?php
                 $Index = 1;
                 ?>
@@ -44,7 +93,7 @@
                                    <?php if (!empty($rs->p_council_img)) : ?>
                                        <img src="<?php echo base_url('docs/img/' . $rs->p_council_img); ?>" width="120px" height="80px">
                                    <?php else : ?>
-                                       <img src="<?php echo base_url('docs/k.logo.png'); ?>" width="120px" height="80px">
+                                       <img src="<?php echo base_url('docs/coverphoto.jpg'); ?>" width="120px" height="80px">
                                    <?php endif; ?>
                                </td>
                                <td class="limited-text"><?= $rs->p_council_name; ?></td>
@@ -80,7 +129,6 @@
                             $Index++;
                         } ?>
                    </tbody>
-               </table>
-           </div>
-       </div>
+               </table> 
+       </div> -->
    </div>

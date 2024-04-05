@@ -222,6 +222,26 @@ class P_employee_model extends CI_Model
         $this->db->delete('tbl_p_employee', array('p_employee_id' => $p_employee_id));
     }
 
+    
+    public function p_employee_one()
+    {
+        $this->db->select('*');
+        $this->db->from('tbl_p_employee');
+        $this->db->where('tbl_p_employee.p_employee_id', 1);
+        $query = $this->db->get();
+        return $query->result();
+    }
+
+    public function p_employee_under_one()
+    {
+        $this->db->select('*');
+        $this->db->from('tbl_p_employee');
+        $this->db->where('tbl_p_employee.p_employee_id !=', 1);
+        $query = $this->db->get();
+        return $query->result();
+    }
+
+
     public function p_employee_frontend_one()
     {
         $this->db->select('*');

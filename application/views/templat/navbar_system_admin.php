@@ -93,7 +93,7 @@
                         <a class="collapse-item" href="<?php echo site_url('P_executives_backend'); ?>">คณะผู้บริหาร</a>
                         <a class="collapse-item" href="<?php echo site_url('P_council_backend'); ?>">สมาชิกเทศบาล</a>
                         <a class="collapse-item" href="<?php echo site_url('P_unit_leaders_backend'); ?>">หัวหน้าส่วนราชการ</a>
-                        <a class="collapse-item" href="<?php echo site_url('P_employee_backend'); ?>">พนักงานเทศบาล</a>
+                        <a class="collapse-item" href="<?php echo site_url('P_employee_backend'); ?>">พนักงานจ้างเทศบาล</a>
                         <a class="collapse-item" href="<?php echo site_url('P_deputy_backend'); ?>">สำนักปลัด</a>
                         <a class="collapse-item" href="<?php echo site_url('P_treasury_backend'); ?>">กองคลัง</a>
                         <a class="collapse-item" href="<?php echo site_url('P_maintenance_backend'); ?>">กองช่าง</a>

@@ -222,6 +222,26 @@ class P_palace_model extends CI_Model
         $this->db->delete('tbl_p_palace', array('p_palace_id' => $p_palace_id));
     }
 
+
+    public function p_palace_one()
+    {
+        $this->db->select('*');
+        $this->db->from('tbl_p_palace');
+        $this->db->where('tbl_p_palace.p_palace_id', 1);
+        $query = $this->db->get();
+        return $query->result();
+    }
+
+    public function p_palace_under_one()
+    {
+        $this->db->select('*');
+        $this->db->from('tbl_p_palace');
+        $this->db->where('tbl_p_palace.p_palace_id !=', 1);
+        $query = $this->db->get();
+        return $query->result();
+    }
+
+
     public function p_palace_frontend_one()
     {
         $this->db->select('*');
@@ -282,7 +302,7 @@ class P_palace_model extends CI_Model
         return $query->result();
     }
 
-        // public function p_palace_frontend_list()
+    // public function p_palace_frontend_list()
     // {
     //     $this->db->select('*');
     //     $this->db->from('tbl_p_palace');

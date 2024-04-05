@@ -12,10 +12,60 @@
    <!-- DataTales Example -->
    <div class="card shadow mb-4">
        <div class="card-header py-3">
-           <h6 class="m-0 font-weight-bold text-black">จัดการข้อมูลพนักงานเทศบาล</h6>
+           <h6 class="m-0 font-weight-bold text-black">จัดการข้อมูลพนักงานจ้างเทศบาล</h6>
        </div>
        <div class="card-body">
-           <div class="table-responsive">
+           <div class="d-flex justify-content-center">
+               <?php foreach ($query_one as $rs) { ?>
+                   <div class="col-sm-4 mb-4 d-flex justify-content-center">
+                       <a href="<?= site_url('p_employee_backend/editing_p_employee/' . $rs->p_employee_id); ?>" class="underline">
+                           <div class="card-personnel">
+                               <?php if (!empty($rs->p_employee_img)) : ?>
+                                   <img src="<?php echo base_url('docs/img/' . $rs->p_employee_img); ?>" width="216px" height="180px">
+                               <?php else : ?>
+                                   <img src="<?php echo base_url('docs/ex_personnel.png'); ?>" width="216px" height="220px">
+                               <?php endif; ?>
+                               <br>
+                               <span>
+                                   <?= $rs->p_employee_name; ?>
+                                   <br>
+                                   <?= $rs->p_employee_rank; ?>
+                                   <br>
+                                   <?= $rs->p_employee_phone; ?>
+                               </span>
+                           </div>
+                       </a>
+                   </div>
+               <?php } ?>
+           </div>
+           <div class="row ">
+               <?php foreach ($query_under_one as $rs) { ?>
+                   <div class="col-sm-4 mb-4 d-flex justify-content-center">
+                       <a href="<?= site_url('p_employee_backend/editing_p_employee/' . $rs->p_employee_id); ?>" class="underline">
+                           <div class="card-personnel">
+                               <?php if (!empty($rs->p_employee_img)) : ?>
+                                   <img src="<?php echo base_url('docs/img/' . $rs->p_employee_img); ?>" width="216px" height="180px">
+                               <?php else : ?>
+                                   <img src="<?php echo base_url('docs/ex_personnel.png'); ?>" width="216px" height="220px">
+                               <?php endif; ?>
+                               <br>
+                               <span>
+                                   <?php if (!empty($rs->p_employee_name)) : ?>
+                                       <?= $rs->p_employee_name; ?>
+                                   <?php else : ?>
+                                       ว่าง
+                                   <?php endif; ?>
+                                   <br>
+                                   <?= $rs->p_employee_rank; ?>
+                                   <br>
+                                   <?= $rs->p_employee_phone; ?>
+                               </span>
+                           </div>
+                       </a>
+                   </div>
+               <?php } ?>
+           </div>
+           <!-- <div class="table-responsive">
                <?php
                 $Index = 1;
                 ?>
@@ -42,7 +92,7 @@
                                    <?php if (!empty($rs->p_employee_img)) : ?>
                                        <img src="<?php echo base_url('docs/img/' . $rs->p_employee_img); ?>" width="120px" height="80px">
                                    <?php else : ?>
-                                       <img src="<?php echo base_url('docs/k.logo.png'); ?>" width="120px" height="80px">
+                                       <img src="<?php echo base_url('docs/coverphoto.jpg'); ?>" width="120px" height="80px">
                                    <?php endif; ?>
                                </td>
                                <td class="limited-text"><?= $rs->p_employee_name; ?></td>
@@ -78,7 +128,6 @@
                             $Index++;
                         } ?>
                    </tbody>
-               </table>
-           </div>
-       </div>
+               </table> 
+       </div> -->
    </div>

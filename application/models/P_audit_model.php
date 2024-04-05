@@ -205,6 +205,26 @@ class P_audit_model extends CI_Model
         $this->db->delete('tbl_p_audit', array('p_audit_id' => $p_audit_id));
     }
 
+    
+    public function p_audit_one()
+    {
+        $this->db->select('*');
+        $this->db->from('tbl_p_audit');
+        $this->db->where('tbl_p_audit.p_audit_id', 1);
+        $query = $this->db->get();
+        return $query->result();
+    }
+
+    public function p_audit_under_one()
+    {
+        $this->db->select('*');
+        $this->db->from('tbl_p_audit');
+        $this->db->where('tbl_p_audit.p_audit_id !=', 1);
+        $query = $this->db->get();
+        return $query->result();
+    }
+
+
     public function p_audit_frontend_one()
     {
         $this->db->select('*');

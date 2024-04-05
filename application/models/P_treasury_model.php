@@ -207,6 +207,26 @@ class P_treasury_model extends CI_Model
         $this->db->delete('tbl_p_treasury', array('p_treasury_id' => $p_treasury_id));
     }
 
+    
+    public function p_treasury_one()
+    {
+        $this->db->select('*');
+        $this->db->from('tbl_p_treasury');
+        $this->db->where('tbl_p_treasury.p_treasury_id', 1);
+        $query = $this->db->get();
+        return $query->result();
+    }
+
+    public function p_treasury_under_one()
+    {
+        $this->db->select('*');
+        $this->db->from('tbl_p_treasury');
+        $this->db->where('tbl_p_treasury.p_treasury_id !=', 1);
+        $query = $this->db->get();
+        return $query->result();
+    }
+
+
     public function p_treasury_frontend_one()
     {
         $this->db->select('*');

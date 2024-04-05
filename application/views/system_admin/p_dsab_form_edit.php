@@ -8,7 +8,7 @@
                 <div class="form-group row">
                     <div class="col-sm-2 control-label">ชื่อ</div>
                     <div class="col-sm-5">
-                        <input type="text" name="p_dsab_name" required class="form-control" value="<?= $rsedit->p_dsab_name; ?>">
+                        <input type="text" name="p_dsab_name" class="form-control" value="<?= $rsedit->p_dsab_name; ?>">
                         <span class="fr">กรุณากรอกคำนำหน้า<?= form_error('p_dsab_name'); ?></span>
                     </div>
                 </div>
@@ -16,48 +16,19 @@
                 <div class="form-group row">
                     <div class="col-sm-2 control-label">ตำแหน่ง</div>
                     <div class="col-sm-10">
-                        <input type="text" name="p_dsab_rank" class="form-control" value="<?= $rsedit->p_dsab_rank; ?>">
+                        <input type="text" name="p_dsab_rank" class="form-control" value="<?= $rsedit->p_dsab_rank; ?> ">
                         <span class="fr"><?= form_error('p_dsab_rank'); ?></span>
                     </div>
                 </div>
                 <br>
-                <!-- <div class="form-group row">
-                    <div class="col-sm-2 control-label">ตำแหน่ง</div>
-                    <div class="col-sm-10">
-                        <?php
-                        $position = $rsedit->p_dsab_rank;
-                        $isDisabled = ($position == 'ผู้อำนวยการกองการศึกษาฯ') ? 'readonly' : '';
-                        ?>
-                        <input type="text" name="p_dsab_rank" class="form-control" value="<?= $position; ?>" <?= $isDisabled; ?>>
-                        <span class="fr"><?= form_error('p_dsab_rank'); ?></span>
-                    </div>
-                </div>
-                <br> -->
                 <div class="form-group row">
                     <div class="col-sm-2 control-label">เบอร์มือถือ</div>
                     <div class="col-sm-4">
-                        <input type="text" pattern="\d{9,10}" title="กรุณากรอกเบอร์มือถือเป็นตัวเลข 9 หรือ 10 ตัว" name="p_dsab_phone" class="form-control" value="<?= $rsedit->p_dsab_phone; ?>">
+                        <input type="text" name="p_dsab_phone" class="form-control" value="<?= $rsedit->p_dsab_phone; ?>" pattern="\d{9,10}" title="กรุณากรอกเบอร์มือถือเป็นตัวเลข 9 หรือ 10 ตัว">
                         <span class="fr"><?= form_error('p_dsab_phone'); ?></span>
                     </div>
                 </div>
                 <br>
-                <?php if ($rsedit->p_dsab_id != 1) : ?>
-                    <div class="form-group row">
-                        <div class="col-sm-2 control-label">ตำแหน่งในการแสดงผล</div>
-                        <div class="col-sm-4">
-                            <select class="form-control" id="p_dsab_column" name="p_dsab_column">
-                                <option value="<?php echo $rsedit->p_dsab_column; ?>"><?php echo $rsedit->p_dsab_column; ?></option>
-                                <option value="" disabled>เลือกข้อมูล</option>
-                                <?php
-                                for ($i = 1; $i <= 100; $i++) {
-                                    echo "<option value=\"$i\">$i</option>";
-                                }
-                                ?>
-                            </select>
-                        </div>
-                    </div>
-                    <br>
-                <?php endif; ?>
                 <div class="form-group row">
                     <div class="col-sm-2 control-label">ไฟล์รูป</div>
                     <div class="col-sm-6">
@@ -65,7 +36,7 @@
                         <?php if (!empty($rsedit->p_dsab_img)) : ?>
                             <img src="<?= base_url('docs/img/' . $rsedit->p_dsab_img); ?>" width="180px" height="220px">
                         <?php else : ?>
-                            <img src="<?= base_url('docs/k.logo.png'); ?>" width="180px" height="220px">
+                            <img src="<?= base_url('docs/ex_personnel.png'); ?>" width="180px" height="220px">
                         <?php endif; ?>
                         <br>
                         เลือกใหม่
