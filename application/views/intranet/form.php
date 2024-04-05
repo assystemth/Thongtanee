@@ -1,6 +1,18 @@
 <!-- ส่วนทางขวา -->
 <div class="flex-item-right">
    <div class="d-flex justify-content-end mb-4 mt-5">
+   <div class="search">
+            <form id="searchForm" action="<?= site_url('Intra_announce/search'); ?>" method="post">
+                <div class="input-group">
+                    <input type="text" name="search_term" class="searchTerm form-control" placeholder="ค้นหา">
+                    <div class="input-group-append">
+                        <button type="submit" class="searchButton btn btn-outline">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
       <a href="#" class="popup-insert" data-target="#popupInsert">
          <img src="<?php echo base_url("docs/intranet/btn-intra-add-file.png"); ?>" width="auto" style="max-width: 100%;">
       </a>

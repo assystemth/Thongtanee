@@ -46,7 +46,7 @@
     <!-- <div id="content"></div> -->
     <div class="bg-header">
         <div class="d-flex justify-content-end" style="padding-top: 0.7%;">
-            <div class="search">
+            <!-- <div class="search">
                 <form id="searchForm" action="<?= site_url('Intra_share_file/search_sf_treasury'); ?>" method="post">
                     <div class="input-group">
                         <input type="text" name="search_term" class="searchTerm form-control" placeholder="ค้นหา">
@@ -57,7 +57,7 @@
                         </div>
                     </div>
                 </form>
-            </div>
+            </div> -->
             <div class="dropdown">
                 <a class="dropdown-toggle" href="#" role="button" id="userDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <div class="row" style="width: 220px;">

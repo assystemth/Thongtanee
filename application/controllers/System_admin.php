@@ -9,9 +9,7 @@ class System_admin extends CI_Controller
         parent::__construct();
         if (
             $this->session->userdata('m_level') != 1 &&
-            $this->session->userdata('m_level') != 2 &&
-            $this->session->userdata('m_level') != 3 &&
-            $this->session->userdata('m_level') != 4
+            $this->session->userdata('m_level') != 2
         ) {
             redirect('user', 'refresh');
         }

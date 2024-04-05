@@ -16,7 +16,7 @@
         <div class="bg-pages-in">
             <div class="scrollable-container-gi">
                 <div class="pages-content break-word text-center">
-                    <span class="font-pages-content-head">ตารางแสดงจำนวนประชากรในเขตองค์การบริหารส่วนตำบลกาเกาะ</span><br>
+                    <span class="font-pages-content-head">ตารางแสดงจำนวนประชากรในเขตองค์การบริหารส่วนเทศบาลธงธานี</span><br>
                     <table class="table table-bordered mt-5">
                         <thead>
                             <tr>

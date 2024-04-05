@@ -73,7 +73,7 @@
 
         <?php if ($_SESSION['m_level'] == 1 || $_SESSION['m_level'] == 2 || $_SESSION['m_level'] == 3): ?>
             <div class="col-sm-4 mt-2">
-                <div class="box-folder">
+                <div class="box-folder mb-4">
                     <div class="align-items-center">
                         <a href="<?= site_url('Intra_share_file/sf_palace'); ?>" class="underline">
                             <img src="<?php echo base_url("docs/intranet/folder.png"); ?>" width="auto" style="max-width: 100%;">
@@ -99,7 +99,7 @@
 
         <?php if ($_SESSION['m_level'] == 1 || $_SESSION['m_level'] == 2 || $_SESSION['m_level'] == 5) : ?>
             <div class="col-sm-4 mt-2">
-                <div class="box-folder">
+                <div class="box-folder mb-4">
                     <div class="align-items-center">
                         <a href="<?= site_url('Intra_share_file/sf_council'); ?>" class="underline">
                             <img src="<?php echo base_url("docs/intranet/folder.png"); ?>" width="auto" style="max-width: 100%;">
@@ -112,8 +112,7 @@
 
         <?php if ($_SESSION['m_level'] == 1 || $_SESSION['m_level'] == 2 || $_SESSION['m_level'] == 6) : ?>
             <div class="col-sm-4 mt-2">
-
-                <div class="box-folder">
+                <div class="box-folder mb-4">
                     <div class="align-items-center">
                         <a href="<?= site_url('Intra_share_file/sf_unit_leaders'); ?>" class="underline">
                             <img src="<?php echo base_url("docs/intranet/folder.png"); ?>" width="auto" style="max-width: 100%;">
@@ -126,8 +125,7 @@
 
         <?php if ($_SESSION['m_level'] == 1 || $_SESSION['m_level'] == 2 || $_SESSION['m_level'] == 7) : ?>
             <div class="col-sm-4 mt-2">
-
-                <div class="box-folder">
+                <div class="box-folder mb-4">
                     <div class="align-items-center">
                         <a href="<?= site_url('Intra_share_file/sf_employee'); ?>" class="underline">
                             <img src="<?php echo base_url("docs/intranet/folder.png"); ?>" width="auto" style="max-width: 100%;">
@@ -205,7 +203,7 @@
 
         <?php if ($_SESSION['m_level'] == 1 || $_SESSION['m_level'] == 2 || $_SESSION['m_level'] == 13): ?>
             <div class="col-sm-4 mt-2">
-                <div class="box-folder">
+                <div class="box-folder mb-4">
                     <div class="align-items-center">
                         <a href="<?= site_url('Intra_share_file/sf_education'); ?>" class="underline">
                             <img src="<?php echo base_url("docs/intranet/folder.png"); ?>" width="auto" style="max-width: 100%;">

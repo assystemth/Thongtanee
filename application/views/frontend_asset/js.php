@@ -335,7 +335,7 @@
     $(document).ready(function() {
         <?php if ($this->session->flashdata('save_success')) { ?>
             Swal.fire({
-                position: 'top-end',
+                // position: 'center',
                 icon: 'success',
                 title: 'บันทึกข้อมูลสำเร็จ',
                 showConfirmButton: false,
@@ -369,7 +369,7 @@
     $(document).ready(function() {
         <?php if ($this->session->flashdata('del_success')) { ?>
             Swal.fire({
-                position: 'top-end',
+                // position: 'center',
                 icon: 'success',
                 title: 'ลบข้อมูลสำเร็จ',
                 showConfirmButton: false,

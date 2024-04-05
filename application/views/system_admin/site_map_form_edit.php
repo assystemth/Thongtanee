@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-md-3"></div>
         <div class="col-md-7">
-            <h4>แก้ไขข้อมูลผัังเว็บไซต์</h4>
+            <h4>แก้ไขข้อมูลผังเว็บไซต์</h4>
             <form action=" <?php echo site_url('site_map_backend/edit_site_map/' . $rsedit->site_map_id); ?> " method="post" class="form-horizontal" enctype="multipart/form-data">
                 <br>
                 <!-- <div class="form-group row">

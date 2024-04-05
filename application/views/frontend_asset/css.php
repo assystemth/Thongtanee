@@ -378,9 +378,9 @@
   }
 
   .card-activity img {
-    width: 180px;
+    /* width: 180px;
     height: 160px;
-    border-radius: 24px;
+    border-radius: 24px; */
   }
 
   .text-activity {
@@ -624,7 +624,7 @@
   .text-news-time {
     color: #000;
     font-family: Kanit;
-    font-size: 22px;
+    font-size: 18px;
     font-style: normal;
     font-weight: 400;
     line-height: 35.114px;

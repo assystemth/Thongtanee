@@ -1,15 +1,29 @@
 <!-- ส่วนทางขวา -->
 <div class="flex-item-right">
     <div class="d-flex justify-content-end mb-4 mt-5">
+        <div class="search">
+            <form id="searchForm" action="<?= site_url('Intra_announce/search'); ?>" method="post">
+                <div class="input-group">
+                    <input type="text" name="search_term" class="searchTerm form-control" placeholder="ค้นหา">
+                    <div class="input-group-append">
+                        <button type="submit" class="searchButton btn btn-outline">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
         <a href="#" class="popup-insert" data-target="#popupInsert">
-            <img src="<?php echo base_url("docs/intranet/btn-intra-add-file.png"); ?>" width="auto" style="max-width: 100%;">
+            <img src="<?php echo base_url("docs/intranet/btn-intra-add-file.png"); ?>" width="auto"
+                style="max-width: 100%;">
         </a>
     </div>
 
     <div id="popupInsert" class="popup">
         <div class="popup-content">
             <h4 class="black"><b>เพิ่มข้อมูลคำสั่ง/ประกาศ</b></h4>
-            <form action="<?php echo site_url('Intra_announce/add'); ?>" method="post" class="form-horizontal" enctype="multipart/form-data">
+            <form action="<?php echo site_url('Intra_announce/add'); ?>" method="post" class="form-horizontal"
+                enctype="multipart/form-data">
                 <br>
                 <div class="form-group row container">
                     <div class="col-sm-1 control-label font-18">ชื่อไฟล์</div>
@@ -21,7 +35,8 @@
                 <div class="form-group row container">
                     <div class="col-sm-1 control-label font-18">เอกสาร</div>
                     <div class="col-sm-6">
-                        <input type="file" name="intra_announce_pdf" class="form-control" accept=".pdf, .docx, .xls, .doc" required>
+                        <input type="file" name="intra_announce_pdf" class="form-control"
+                            accept=".pdf, .docx, .xls, .doc" required>
                         <span class="red">เฉพาะไฟล์ .pdf, .docx, .xls, .doc</span>
                     </div>
                 </div>
@@ -66,7 +81,7 @@
         } elseif ($fileExtension === 'xls') {
             $iconImage = "docs/intranet/icon-xls-intra.png";
         }
-    ?>
+        ?>
         <div class="file-pdf">
             <div class="row">
                 <div class="col-sm-1">
@@ -75,7 +90,9 @@
                 <div class="col-sm-7">
                     <span>ชื่อ</span><br>
                     <a href="<?= site_url('Intra_announce/announce_detail/' . $rs->intra_announce_id); ?>">
-                        <span class="black font-20 limit-font-one"><?= $rs->intra_announce_name; ?></span>
+                        <span class="black font-20 limit-font-one">
+                            <?= $rs->intra_announce_name; ?>
+                        </span>
                     </a>
                 </div>
                 <div class="col-sm-2">
@@ -94,7 +111,9 @@
                 </div>
                 <div class="col-sm-2">
                     <span>ผู้อัพโหลด</span><br>
-                    <span class="font-18"><?= $rs->intra_announce_by; ?></span>
+                    <span class="font-18">
+                        <?= $rs->intra_announce_by; ?>
+                    </span>
                 </div>
                 <!-- <div class="col-sm-2">
                     <div class="d-flex justify-content-end">
@@ -113,7 +132,7 @@
                                     &nbsp; ดาวโหลด</a>
                             </li>
 
-                            <?php if ($_SESSION['m_level'] == 1 || $_SESSION['m_level'] == 2 || $_SESSION['m_fname'] == $rs->intra_announce_by) : ?>
+                            <?php if ($_SESSION['m_level'] == 1 || $_SESSION['m_level'] == 2 || $_SESSION['m_fname'] == $rs->intra_announce_by): ?>
                                 <li>
                                     <a class="dropdown-item" href="#" ole="button" onclick="confirmDelete(<?= $rs->intra_announce_id; ?>);">
                                         <img src="<?php echo base_url("docs/intranet/icon-del-intra.png"); ?>" width="20">
@@ -148,7 +167,7 @@
     <div class="d-flex justify-content-center mt-5">
         <nav aria-label="Page navigation example">
             <ul class="pagination">
-                <?php if ($currentPage > 1) : ?>
+                <?php if ($currentPage > 1): ?>
                     <li class="page-item">
                         <a class="page-link" href="?page=<?php echo $currentPage - 1; ?>" aria-label="Previous">
                             <span aria-hidden="true">&laquo;</span>
@@ -156,13 +175,15 @@
                     </li>
                 <?php endif; ?>
 
-                <?php for ($i = 1; $i <= $totalPages; $i++) : ?>
+                <?php for ($i = 1; $i <= $totalPages; $i++): ?>
                     <li class="page-item <?php echo ($i == $currentPage) ? 'active' : ''; ?>">
-                        <a class="page-link" href="?page=<?php echo $i; ?>"><?php echo $i; ?></a>
+                        <a class="page-link" href="?page=<?php echo $i; ?>">
+                            <?php echo $i; ?>
+                        </a>
                     </li>
                 <?php endfor; ?>
 
-                <?php if ($currentPage < $totalPages) : ?>
+                <?php if ($currentPage < $totalPages): ?>
                     <li class="page-item">
                         <a class="page-link" href="?page=<?php echo $currentPage + 1; ?>" aria-label="Next">
                             <span aria-hidden="true">&raquo;</span>
