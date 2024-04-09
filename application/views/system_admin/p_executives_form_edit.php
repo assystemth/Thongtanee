@@ -52,7 +52,26 @@
                         <div class="col-sm-2 control-label"></div>
                         <div class="col-sm-10">
                             <button type="submit" class="btn btn-success">บันทึกข้อมูล</button>
-                            <a class="btn btn-danger" href="<?php echo site_url('p_executives_backend'); ?>">ยกเลิก</a>
+                            <a class="btn btn-danger" href="<?php echo site_url('p_executives_backend'); ?>">ยกเลิก</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <a class="btn btn-info" href="#" role="button" onclick="confirmDelete('<?= $rsedit->p_executives_id; ?>');">ลบข้อมูล</a>
+                            <script>
+                                function confirmDelete(p_executives_id) {
+                                    Swal.fire({
+                                        title: 'กดเพื่อยืนยัน?',
+                                        text: "คุณจะไม่สามรถกู้คืนได้อีก!",
+                                        icon: 'warning',
+                                        showCancelButton: true,
+                                        confirmButtonColor: '#3085d6',
+                                        cancelButtonColor: '#d33',
+                                        confirmButtonText: 'ใช่, ต้องการลบ!',
+                                        cancelButtonText: 'ยกเลิก' // เปลี่ยนข้อความปุ่ม Cancel เป็นภาษาไทย
+                                    }).then((result) => {
+                                        if (result.isConfirmed) {
+                                            window.location.href = "<?= site_url('p_executives_backend/del_p_executives/'); ?>" + p_executives_id;
+                                        }
+                                    });
+                                }
+                            </script>
                         </div>
                     </div>
             </form>
