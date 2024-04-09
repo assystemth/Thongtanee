@@ -219,10 +219,19 @@ class P_executives_model extends CI_Model
             unlink($old_file_path);
         }
 
-        $this->db->delete('tbl_p_executives', array('p_executives_id' => $p_executives_id));
+        // อัพเดทข้อมูลในฐานข้อมูลให้ค่าว่างหรือ null
+        $data = array(
+            'p_executives_name' => null,
+            'p_executives_rank' => null,
+            'p_executives_phone' => null,
+            'p_executives_img' => null,
+            'p_executives_by' => $this->session->userdata('m_fname'), // เพิ่มชื่อคนที่เพิ่มข้อมูล
+            // เพิ่มคอลัมน์อื่นๆ ที่ต้องการลบข้อมูล ให้ใส่ค่า null ด้วย
+        );
+        $this->db->where('p_executives_id', $p_executives_id);
+        $this->db->update('tbl_p_executives', $data);
     }
 
-    
     public function p_executives_one()
     {
         $this->db->select('*');
