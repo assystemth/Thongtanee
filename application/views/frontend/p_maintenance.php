@@ -16,10 +16,15 @@
         <div class="scrollable-container">
             <div class="page-center">
                 <?php foreach ($query_one as $rs) { ?>
-                    <?php if (!empty($rs->p_maintenance_rank)) : ?>
+                    <?php if (!empty($rs->p_maintenance_rank)): ?>
                         <div class="bg-personnel-s">
                             <div class="rounded-image-s">
-                                <img src="<?= base_url('docs/img/' . $rs->p_maintenance_img); ?>" width="100%" height="100%">
+                                <?php if (!empty($rs->p_maintenance_img)): ?>
+                                    <img src="<?php echo base_url('docs/img/' . $rs->p_maintenance_img); ?>" width="100%"
+                                        height="100%">
+                                <?php else: ?>
+                                    <img src="<?php echo base_url('docs/ex_personnel.png'); ?>" width="100%" height="100%">
+                                <?php endif; ?>
                             </div>
                         </div>
                         <div class="mt-3 center-center">
@@ -27,7 +32,7 @@
                                 <?php echo !empty($rs->p_maintenance_name) ? $rs->p_maintenance_name : 'ว่าง'; ?>
                             </span>
                             <span class="font-p-detail "><?= $rs->p_maintenance_rank; ?></span>
-                            <?php if (!empty($rs->p_maintenance_phone)) : ?>
+                            <?php if (!empty($rs->p_maintenance_phone)): ?>
                                 <span class="font-p-detail">เบอร์ <?= $rs->p_maintenance_phone; ?></span>
                             <?php endif; ?>
                         </div>
@@ -35,19 +40,24 @@
                 <?php } ?>
             </div>
             <div class="row " style="margin-top: 25px;">
-                <?php foreach ($query_under_one as $rs) : ?>
+                <?php foreach ($query_under_one as $rs): ?>
                     <div class="col-4 col-md-4 mb-3 center-center">
-                        <?php if (!empty($rs->p_maintenance_rank)) : ?>
+                        <?php if (!empty($rs->p_maintenance_rank)): ?>
                             <div class="bg-personnel-s">
                                 <div class="rounded-image-s">
-                                    <img src="<?= base_url('docs/img/' . $rs->p_maintenance_img); ?>" width="100%" height="100%">
+                                    <?php if (!empty($rs->p_maintenance_img)): ?>
+                                        <img src="<?php echo base_url('docs/img/' . $rs->p_maintenance_img); ?>" width="100%"
+                                            height="100%">
+                                    <?php else: ?>
+                                        <img src="<?php echo base_url('docs/ex_personnel.png'); ?>" width="100%" height="100%">
+                                    <?php endif; ?>
                                 </div>
                             </div>
                             <span class="font-p-name">
                                 <?php echo !empty($rs->p_maintenance_name) ? $rs->p_maintenance_name : 'ว่าง'; ?>
                             </span>
                             <span class="font-p-detail "><?= $rs->p_maintenance_rank; ?></span>
-                            <?php if (!empty($rs->p_maintenance_phone)) : ?>
+                            <?php if (!empty($rs->p_maintenance_phone)): ?>
                                 <span class="font-p-detail">เบอร์ <?= $rs->p_maintenance_phone; ?></span>
                             <?php endif; ?>
                         <?php endif; ?>
@@ -63,7 +73,7 @@
                     <div class="mt-3 center-center">
                         <span class="font-p-name"><?= $rs->p_maintenance_name; ?></span>
                         <span class="font-p-detail "><?= $rs->p_maintenance_rank; ?></span>
-                        <?php if (!empty($rs->p_maintenance_phone)) : ?>
+                        <?php if (!empty($rs->p_maintenance_phone)): ?>
                             <span class="font-p-detail">เบอร์ <?= $rs->p_maintenance_phone; ?></span>
                         <?php endif; ?>
                     </div>
@@ -71,7 +81,7 @@
             </div>
             <div class="scrollable-container-gi">
                 <div class="row " style="margin-top: 25px;">
-                    <?php foreach ($rsrow1 as $rs) : ?>
+                    <?php foreach ($rsrow1 as $rs): ?>
                         <div class="col-4 col-md-4 mb-3 center-center">
                             <div class="bg-personnel-s">
                                 <div class="rounded-image-s">
@@ -80,7 +90,7 @@
                             </div>
                             <span class="font-p-name"><?= $rs->p_maintenance_name; ?></span>
                             <span class="font-p-detail "><?= $rs->p_maintenance_rank; ?></span>
-                            <?php if (!empty($rs->p_maintenance_phone)) : ?>
+                            <?php if (!empty($rs->p_maintenance_phone)): ?>
                                 <span class="font-p-detail">เบอร์ <?= $rs->p_maintenance_phone; ?></span>
                             <?php endif; ?>
                         </div>
@@ -88,7 +98,7 @@
                 </div>
                 <br>
                 <div class="row" style="margin-top: 25px;">
-                    <?php foreach ($rsrow2 as $rs) : ?>
+                    <?php foreach ($rsrow2 as $rs): ?>
                         <div class="col-4 col-md-4 mb-3 center-center">
                             <div class="bg-personnel-s">
                                 <div class="rounded-image-s">
@@ -97,7 +107,7 @@
                             </div>
                             <span class="font-p-name "><?= $rs->p_maintenance_name; ?></span>
                             <span class="font-p-detail "><?= $rs->p_maintenance_rank; ?></span>
-                            <?php if (!empty($rs->p_maintenance_phone)) : ?>
+                            <?php if (!empty($rs->p_maintenance_phone)): ?>
                                 <span class="font-p-detail ">เบอร์ <?= $rs->p_maintenance_phone; ?></span>
                             <?php endif; ?>
                             <br>
@@ -106,7 +116,7 @@
                 </div>
                 <br>
                 <div class="row " style="margin-top: 25px;">
-                    <?php foreach ($rsrow3 as $rs) : ?>
+                    <?php foreach ($rsrow3 as $rs): ?>
                         <div class="col-4 col-md-4 mb-3 center-center">
                             <div class="bg-personnel-s">
                                 <div class="rounded-image-s">
@@ -115,7 +125,7 @@
                             </div>
                             <span class="font-p-name "><?= $rs->p_maintenance_name; ?></span>
                             <span class="font-p-detail "><?= $rs->p_maintenance_rank; ?></span>
-                            <?php if (!empty($rs->p_maintenance_phone)) : ?>
+                            <?php if (!empty($rs->p_maintenance_phone)): ?>
                                 <span class="font-p-detail ">เบอร์ <?= $rs->p_maintenance_phone; ?></span>
                             <?php endif; ?>
                         </div>
@@ -123,7 +133,7 @@
                 </div>
                 <br>
                 <div class="row " style="margin-top: 25px;">
-                    <?php foreach ($rsrow4 as $rs) : ?>
+                    <?php foreach ($rsrow4 as $rs): ?>
                         <div class="col-4 col-md-4 mb-3 center-center">
                             <div class="bg-personnel-s">
                                 <div class="rounded-image-s">
@@ -132,7 +142,7 @@
                             </div>
                             <span class="font-p-name "><?= $rs->p_maintenance_name; ?></span>
                             <span class="font-p-detail "><?= $rs->p_maintenance_rank; ?></span>
-                            <?php if (!empty($rs->p_maintenance_phone)) : ?>
+                            <?php if (!empty($rs->p_maintenance_phone)): ?>
                                 <span class="font-p-detail ">เบอร์ <?= $rs->p_maintenance_phone; ?></span>
                             <?php endif; ?>
                         </div>
@@ -140,7 +150,7 @@
                 </div>
                 <br>
                 <div class="row " style="margin-top: 25px;">
-                    <?php foreach ($rsrow5 as $rs) : ?>
+                    <?php foreach ($rsrow5 as $rs): ?>
                         <div class="col-4 col-md-4 mb-3 center-center">
                             <div class="bg-personnel-s">
                                 <div class="rounded-image-s">
@@ -149,7 +159,7 @@
                             </div>
                             <span class="font-p-name "><?= $rs->p_maintenance_name; ?></span>
                             <span class="font-p-detail "><?= $rs->p_maintenance_rank; ?></span>
-                            <?php if (!empty($rs->p_maintenance_phone)) : ?>
+                            <?php if (!empty($rs->p_maintenance_phone)): ?>
                                 <span class="font-p-detail ">เบอร์ <?= $rs->p_maintenance_phone; ?></span>
                             <?php endif; ?>
                         </div>

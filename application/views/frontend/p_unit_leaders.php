@@ -21,8 +21,11 @@
                         <!-- === -->
                         <div class="bg-personnel-s">
                             <div class="rounded-image-s">
-                                <img src="<?= base_url('docs/img/' . $rs->p_unit_leaders_img); ?>" width="100%" height="100%">
-                            </div>
+                            <?php if (!empty($rs->p_unit_leaders_img)) : ?>
+                                        <img src="<?php echo base_url('docs/img/' . $rs->p_unit_leaders_img); ?>" width="100%" height="100%">
+                                    <?php else : ?>
+                                        <img src="<?php echo base_url('docs/ex_personnel.png'); ?>" width="100%" height="100%">
+                                    <?php endif; ?>                            </div>
                         </div>
                         <div class="mt-3 center-center">
                             <!-- == -->
@@ -46,8 +49,11 @@
                             <!-- == -->
                             <div class="bg-personnel-s">
                                 <div class="rounded-image-s">
-                                    <img src="<?= base_url('docs/img/' . $rs->p_unit_leaders_img); ?>" width="100%" height="100%">
-                                </div>
+                                <?php if (!empty($rs->p_unit_leaders_img)) : ?>
+                                        <img src="<?php echo base_url('docs/img/' . $rs->p_unit_leaders_img); ?>" width="100%" height="100%">
+                                    <?php else : ?>
+                                        <img src="<?php echo base_url('docs/ex_personnel.png'); ?>" width="100%" height="100%">
+                                    <?php endif; ?>                                </div>
                             </div>
                             <!-- == -->
                             <span class="font-p-name">
