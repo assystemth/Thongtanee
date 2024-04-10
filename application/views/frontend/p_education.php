@@ -13,42 +13,56 @@
         </div>
     </div>
     <div class="bg-pages-p">
-            <div class="scrollable-container">
-                <div class="page-center">
-                    <?php foreach ($query_one as $rs) { ?>
+        <div class="scrollable-container">  
+            <div class="page-center">
+                <?php foreach ($query_one as $rs) { ?>
+                    <!-- --/ -->
+                    <?php if (!empty($rs->p_education_rank)) : ?>
+                        <!-- === -->
                         <div class="bg-personnel-s">
                             <div class="rounded-image-s">
                                 <img src="<?= base_url('docs/img/' . $rs->p_education_img); ?>" width="100%" height="100%">
                             </div>
                         </div>
                         <div class="mt-3 center-center">
-                            <span class="font-p-name"><?= $rs->p_education_name; ?></span>
+                            <!-- == -->
+                            <span class="font-p-name">
+                                <?php echo !empty($rs->p_education_name) ? $rs->p_education_name : 'ว่าง'; ?>
+                            </span>
+                            <!-- == -->
                             <span class="font-p-detail "><?= $rs->p_education_rank; ?></span>
                             <?php if (!empty($rs->p_education_phone)) : ?>
                                 <span class="font-p-detail">เบอร์ <?= $rs->p_education_phone; ?></span>
                             <?php endif; ?>
                         </div>
-                    <?php } ?>
-                </div>
-                <div class="row " style="margin-top: 25px;">
-                    <?php foreach ($query_under_one as $rs) : ?>
-                        <div class="col-4 col-md-4 mb-3 center-center">
-                            <?php if (!empty($rs->p_education_name)) : ?>
-                                <div class="bg-personnel-s">
-                                    <div class="rounded-image-s">
-                                        <img src="<?= base_url('docs/img/' . $rs->p_education_img); ?>" width="100%" height="100%">
-                                    </div>
+                    <?php endif; ?>
+                <?php } ?>
+            </div>
+            <div class="row " style="margin-top: 25px;">
+                <?php foreach ($query_under_one as $rs) : ?>
+                    <div class="col-4 col-md-4 mb-3 center-center">
+                        <!-- == -->
+                        <?php if (!empty($rs->p_education_rank)) : ?>
+                            <!-- == -->
+                            <div class="bg-personnel-s">
+                                <div class="rounded-image-s">
+                                    <img src="<?= base_url('docs/img/' . $rs->p_education_img); ?>" width="100%" height="100%">
                                 </div>
-                                <span class="font-p-name"><?= $rs->p_education_name; ?></span>
-                                <span class="font-p-detail "><?= $rs->p_education_rank; ?></span>
-                                <?php if (!empty($rs->p_education_phone)) : ?>
-                                    <span class="font-p-detail">เบอร์ <?= $rs->p_education_phone; ?></span>
-                                <?php endif; ?>
+                            </div>
+                            <!-- == -->
+                            <span class="font-p-name">
+                                <?php echo !empty($rs->p_education_name) ? $rs->p_education_name : 'ว่าง'; ?>
+                            </span>
+                            <!-- == -->
+                            <span class="font-p-detail "><?= $rs->p_education_rank; ?></span>
+                            <?php if (!empty($rs->p_education_phone)) : ?>
+                                <span class="font-p-detail">เบอร์ <?= $rs->p_education_phone; ?></span>
                             <?php endif; ?>
-                        </div>
-                    <?php endforeach; ?>
-                </div>
-                <!-- <?php foreach ($rsOne as $rs) { ?>
+                        <?php endif; ?>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+            <!-- <?php foreach ($rsOne as $rs) { ?>
                     <div class="bg-personnel-s">
                         <div class="rounded-image-s">
                             <img src="<?= base_url('docs/img/' . $rs->p_education_img); ?>" width="100%" height="100%">
@@ -149,10 +163,10 @@
                         </div>
                     <?php endforeach; ?>
                 </div> -->
-            </div>
-            <div class="margin-top-delete-topic d-flex justify-content-end mt-2">
-                <a href="<?php echo site_url('Home'); ?>"><img src="<?php echo base_url("docs/k.btn-back.png"); ?>"></a>
-            </div>
+        </div>
+        <div class="margin-top-delete-topic d-flex justify-content-end mt-2">
+            <a href="<?php echo site_url('Home'); ?>"><img src="<?php echo base_url("docs/k.btn-back.png"); ?>"></a>
         </div>
     </div>
+</div>
 </div>
