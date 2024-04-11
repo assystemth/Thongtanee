@@ -85,7 +85,7 @@
                         specialImage.addEventListener("click", goToHome);
                     } else if (today >= holiday4Start && today <= holiday4End) {
                         const specialImage = document.getElementById("special-image");
-                        specialImage.src = "https://assystem.co.th/Day/Thongtanee/songkran.jpg"; // วันสงกรานต์
+                        specialImage.src = "https://assystem.co.th/Day/Thongtanee/songkran.gif"; // วันสงกรานต์
                         specialImage.addEventListener("click", goToHome);
                     } else if (today >= holiday5Start && today <= holiday5End) {
                         const specialImage = document.getElementById("special-image");
