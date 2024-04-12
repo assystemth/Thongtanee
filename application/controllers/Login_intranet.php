@@ -109,6 +109,20 @@ class Login_intranet extends CI_Controller
 				return 'system_intranet';
 			case 13:
 				return 'system_intranet';
+			case 14:
+				return 'system_intranet';
+			case 15:
+				return 'system_intranet';
+			case 16:
+				return 'system_intranet';
+			case 17:
+				return 'system_intranet';
+			case 18:
+				return 'system_intranet';
+			case 19:
+				return 'system_intranet';
+			case 20:
+				return 'system_intranet';
 			default:
 			$this->logout(); // เรียกใช้ฟังก์ชั่น logout หากไม่พบระดับผู้ใช้งานที่เกี่ยวข้องกับการเด้ง
 			return 'Home/login';

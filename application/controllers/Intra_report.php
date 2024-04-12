@@ -31,7 +31,7 @@ class Intra_report extends CI_Controller
 
         $data['rs_complain'] = $this->complain_model->intranet_complain();
 
-        $this->load->view('intranet_templat/header_form');
+        $this->load->view('intranet_templat/header');
         $this->load->view('internet_asste/css');
         $this->load->view('intranet_templat/navbar');
         $this->load->view('intranet/report', $data);
@@ -55,7 +55,7 @@ class Intra_report extends CI_Controller
         foreach ($complains as $complain) {
             $complain->images = $this->complain_model->get_images_for_complain($complain->complain_id);
         }
-        $this->load->view('intranet_templat/header_form');
+        $this->load->view('intranet_templat/header');
         $this->load->view('internet_asste/css');
         $this->load->view('intranet_templat/navbar');
         $this->load->view('intranet/complain_all', ['complains' => $complains]);
@@ -70,7 +70,7 @@ class Intra_report extends CI_Controller
         $data['latest_query'] = $this->complain_model->getLatestDetail($complain_id);
         $data['qimg'] = $this->complain_model->get_images_for_complain($complain_id);
 
-        $this->load->view('intranet_templat/header_form');
+        $this->load->view('intranet_templat/header');
         $this->load->view('internet_asste/css');
         $this->load->view('intranet_templat/navbar');
         $this->load->view('intranet/complain_detail', $data);

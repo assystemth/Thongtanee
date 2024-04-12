@@ -38,6 +38,20 @@
                 <span class="font-24b black"><?= $rsedit->intra_news_topic; ?></span>
                 <br>
                 <span class="font-20 black"><?= $rsedit->intra_news_detail; ?></span>
+                <?php foreach ($rsFile as $file) { ?>
+                    <a class="btn btn-info btn-sm mb-2" href="<?= base_url('docs/intranet/file/' . $file->intra_news_file_pdf); ?>" target="_blank">ดูไฟล์ <?= $file->intra_news_file_pdf; ?></a>
+                    <br>
+                <?php } ?>
+                <br>
+                <div class="row mt-5">
+                    <?php foreach ($rsImg as $img) { ?>
+                        <div class="col-3 mb-3">
+                            <a href="<?= base_url('docs/intranet/img/' . $img->intra_news_img_img); ?>" data-lightbox="image-1">
+                                <img class="rounded-all" src="<?= base_url('docs/intranet/img/' . $img->intra_news_img_img); ?>" width="220px" height="220px">
+                            </a>
+                        </div>
+                    <?php } ?>
+                </div>
             </div>
         </div>
     </div>

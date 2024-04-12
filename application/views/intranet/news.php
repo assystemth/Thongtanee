@@ -2,7 +2,7 @@
 <div class="flex-item-right">
    <div class="d-flex justify-content-end" style="margin-top: 2%;">
    <div class="search">
-            <form id="searchForm" action="<?= site_url('Intra_announce/search'); ?>" method="post">
+            <form id="searchForm" action="<?= site_url('System_intranet/search'); ?>" method="post">
                 <div class="input-group">
                     <input type="text" name="search_term" class="searchTerm form-control" placeholder="ค้นหา">
                     <div class="input-group-append">

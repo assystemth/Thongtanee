@@ -22,7 +22,19 @@
 <!-- sweetalert 2 -->
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.31/dist/sweetalert2.all.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<!-- รูปภาพ preview -->
+<script src="<?= base_url('asset/'); ?>lightbox2/src/js/lightbox.js"></script>
+
 <script>
+    // รูปภาพ preview *********************************************************************
+    $(document).ready(function(){
+        lightbox.option({
+            'resizeDuration': 200,
+            'wrapAround': true
+        });
+    });
+     // **************************************************************************************
     // กดปุ่มแล้วเปลี่ยนสี navbar กลาง *********************************************************************
     $(document).ready(function() {
         var buttons = $('.dropdown-trigger');

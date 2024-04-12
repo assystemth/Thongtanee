@@ -48,15 +48,17 @@
                 <br>
                 <span class="font-page-detail-content-img"><?= $rsActivity->activity_detail; ?></span>
                 <br><br>
-                <div class="popup">
-                    <div class="row mt-5">
-                        <?php foreach ($rsImg as $img) { ?>
-                            <div class="col-3 mb-3">
+                <!-- <div class="popup"> -->
+                <div class="row mt-5">
+                    <?php foreach ($rsImg as $img) { ?>
+                        <div class="col-3 mb-3">
+                            <a href="<?php echo base_url('docs/img/' . $img->activity_img_img); ?>" data-lightbox="image-1">
                                 <img class="rounded-all" src="<?php echo base_url('docs/img/' . $img->activity_img_img); ?>" width="209px" height="202px">
-                            </div>
-                        <?php } ?>
-                    </div>
+                            </a>
+                        </div>
+                    <?php } ?>
                 </div>
+                <!-- </div> -->
             </div>
         </div>
         <div class="row">
