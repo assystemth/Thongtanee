@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-md-2"></div>
         <div class="col-md-7">
-            <h4>แก้ไขข้อมูลบัญญัติตลาด</h4>
+            <h4>แก้ไขข้อมูลเทศบัญญัติตลาด</h4>
             <form action=" <?php echo site_url('canon_market_backend/edit/' . $rsedit->canon_market_id); ?> " method="post" class="form-horizontal" enctype="multipart/form-data">
                 <br>
                 <div class="form-group row">

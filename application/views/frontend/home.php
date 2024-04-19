@@ -624,43 +624,43 @@
             <div class="content-news-detail">
                 <a href="<?php echo site_url('Pages/canon_bgps'); ?>">
                     <span class="text-news"><img src="docs/k.logo.png" width="30px"
-                            height="34px">&nbsp;&nbsp;ข้อบัญญัติงบประมาณ</span>
+                            height="34px">&nbsp;&nbsp;เทศบัญญัติงบประมาณ</span>
                 </a>
             </div>
             <div class="content-news-detail">
                 <a href="<?php echo site_url('Pages/canon_chh'); ?>">
                     <span class="text-news"><img src="docs/k.logo.png" width="30px"
-                            height="34px">&nbsp;&nbsp;ข้อบัญญัติการควบคุมกิจการที่เป็นอันตรายต่อสุขภาพ</span>
+                            height="34px">&nbsp;&nbsp;เทศบัญญัติการควบคุมกิจการที่เป็นอันตรายต่อสุขภาพ</span>
                 </a>
             </div>
             <div class="content-news-detail">
                 <a href="<?php echo site_url('Pages/canon_ritw'); ?>">
                     <span class="text-news"><img src="docs/k.logo.png" width="30px"
-                            height="34px">&nbsp;&nbsp;ข้อบัญญัติการติดตั้งระบบบำบัดน้ำเสียในอาคาร</span>
+                            height="34px">&nbsp;&nbsp;เทศบัญญัติการติดตั้งระบบบำบัดน้ำเสียในอาคาร</span>
                 </a>
             </div>
             <div class="content-news-detail">
                 <a href="<?php echo site_url('Pages/canon_market'); ?>">
                     <span class="text-news"><img src="docs/k.logo.png" width="30px"
-                            height="34px">&nbsp;&nbsp;ข้อบัญญัติตลาด</span>
+                            height="34px">&nbsp;&nbsp;เทศบัญญัติตลาด</span>
                 </a>
             </div>
             <div class="content-news-detail">
                 <a href="<?php echo site_url('Pages/canon_rmwp'); ?>">
                     <span class="text-news"><img src="docs/k.logo.png" width="30px"
-                            height="34px">&nbsp;&nbsp;ข้อบัญญัติการจัดการสิ่งปฏิกูลและมูลฝอย</span>
+                            height="34px">&nbsp;&nbsp;เทศบัญญัติการจัดการสิ่งปฏิกูลและมูลฝอย</span>
                 </a>
             </div>
             <div class="content-news-detail">
                 <a href="<?php echo site_url('Pages/canon_rcsp'); ?>">
                     <span class="text-news"><img src="docs/k.logo.png" width="30px"
-                            height="34px">&nbsp;&nbsp;ข้อบัญญัติหลักเกณฑ์การคัดมูลฝอย</span>
+                            height="34px">&nbsp;&nbsp;เทศบัญญัติหลักเกณฑ์การคัดมูลฝอย</span>
                 </a>
             </div>
             <div class="content-news-detail">
                 <a href="<?php echo site_url('Pages/canon_rcp'); ?>">
                     <span class="text-news"><img src="docs/k.logo.png" width="30px"
-                            height="34px">&nbsp;&nbsp;ข้อบัญญัติการควบคุมการเลี้ยงหรือปล่อยสุนัขและแมว</span>
+                            height="34px">&nbsp;&nbsp;เทศบัญญัติการควบคุมการเลี้ยงหรือปล่อยสุนัขและแมว</span>
                 </a>
             </div>
         </div>

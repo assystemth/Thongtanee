@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-md-2"></div>
         <div class="col-md-7">
-            <h4>แก้ไขข้อมูลข้อบัญญัติการควบคุมการเลี้ยงหรือปล่อยสุนัขและแมว</h4>
+            <h4>แก้ไขข้อมูลเทศบัญญัติการควบคุมการเลี้ยงหรือปล่อยสุนัขและแมว</h4>
             <form action=" <?php echo site_url('canon_rcp_backend/edit/' . $rsedit->canon_rcp_id); ?> " method="post" class="form-horizontal" enctype="multipart/form-data">
                 <br>
                 <div class="form-group row">

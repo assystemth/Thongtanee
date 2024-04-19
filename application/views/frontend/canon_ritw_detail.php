@@ -4,12 +4,12 @@
             <span class="font-path-1 underline"><a href="<?php echo site_url('Home'); ?>">หน้าแรก</a></span>
         </div>
         <div class="path2-2">
-            <span class="font-path-2 underline"><a href="#">ข้อบัญญัติ</a></span>
+            <span class="font-path-2 underline"><a href="#">เทศบัญญัติ</a></span>
         </div>
     </div>
     <div class="page-center">
         <div class="head-pages-three">
-            <span class="font-pages-head-long">ข้อบัญญัติการติดตั้งระบบบำบัดน้ำเสียในอาคาร</span>
+            <span class="font-pages-head-long">เทศบัญญัติการติดตั้งระบบบำบัดน้ำเสียในอาคาร</span>
         </div>
     </div>
     <div class="bg-pages-in ">

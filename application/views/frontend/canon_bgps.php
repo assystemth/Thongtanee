@@ -4,13 +4,13 @@
             <span class="font-path-1 underline"><a href="<?php echo site_url('Home'); ?>">หน้าแรก</a></span>
         </div>
         <div class="path2-3">
-            <span class="font-path-2 underline"><a href="#">ข้อบัญญัติงบประมาณ</a></span>
+            <span class="font-path-2 underline"><a href="#">เทศบัญญัติงบประมาณ</a></span>
         </div>
     </div>
     <div class="container-pages-news">
         <div class="page-center">
             <div class="head-pages">
-                <span class="font-pages-head">ข้อบัญญัติงบประมาณ</span>
+                <span class="font-pages-head">เทศบัญญัติงบประมาณ</span>
             </div>
         </div>
         <div style="padding-top: 80px;"></div>

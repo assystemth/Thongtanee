@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-md-3"></div>
         <div class="col-md-7">
-            <h4>เพิ่มข้อมูลผังเว็บไซต์</h4>
+            <h4>เพิ่มข้อมูลแผนผังโครงสร้างภาพรวม/h4>
             <form action=" <?php echo site_url('site_map_backend/add_site_map'); ?> " method="post" class="form-horizontal" enctype="multipart/form-data">
                 <br>
                 <!-- <div class="form-group row">

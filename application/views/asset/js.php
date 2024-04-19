@@ -33,6 +33,34 @@
 <!-- Bootstrap core JavaScript-->
 <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script>
+   // ค้นหา hide show  click *********************************************************************
+   $(document).ready(function() {
+        // เมื่อมีการคลิกที่ส่วนอื่นๆ ของเอกสาร
+        $(document).on('click', function(event) {
+            var target = $(event.target);
+            var menuList = $('#menuList');
+
+            // ตรวจสอบว่าคลิกที่ #menuList หรือไม่
+            if (!target.closest('#menuList').length) {
+                // ถ้าไม่ใช่ ให้ซ่อน #menuList
+                menuList.hide();
+            }
+        });
+
+        // เมื่อมีการพิมพ์ใน input
+        $('#searchInput').on('input', function() {
+            var inputValue = $(this).val().trim();
+            var menuList = $('#menuList');
+            if (inputValue === '') {
+                menuList.hide();
+            } else {
+                menuList.show();
+            }
+        });
+    });
+
+    // **************************************************************************************
+
     // ปุ่มย้อนกลับของยกเลิก *********************************************************************
     function goBack() {
         window.history.back();
@@ -42,6 +70,14 @@
     //  เมนูเปิดปิดการแสดงผล navbar **************************************************************
     function toggleCollapse(collapseId) {
         var collapseElement = document.getElementById(collapseId);
+        var allCollapseElements = document.querySelectorAll('.collapse');
+
+        allCollapseElements.forEach(function(element) {
+            if (element.id !== collapseId && element.classList.contains('show')) {
+                element.classList.remove('show');
+            }
+        });
+
         if (collapseElement.classList.contains('show')) {
             collapseElement.classList.remove('show');
         } else {
@@ -49,6 +85,7 @@
         }
     }
     // **************************************************************************************
+
 
     //  เมนูค้นหา navbar **************************************************************
     function search() {

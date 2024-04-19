@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-md-2"></div>
         <div class="col-md-7">
-            <h4>เพิ่มข้อมูลข้อบัญญัติการติดตั้งระบบบำบัดน้ำเสียในอาคาร</h4>
+            <h4>เพิ่มข้อมูลเทศบัญญัติการติดตั้งระบบบำบัดน้ำเสียในอาคาร</h4>
             <form action=" <?php echo site_url('canon_ritw_backend/add'); ?> " method="post" class="form-horizontal" enctype="multipart/form-data">
                 <br>
                 <div class="form-group row">
