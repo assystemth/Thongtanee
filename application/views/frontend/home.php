@@ -289,7 +289,7 @@
                     <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/plan_pae'); ?>"><img
                                 src="docs/t.item-img-navmid.png">&nbsp;&nbsp;โครงการส่งเสริมกิจกรรมผู้สูงอายุ</a></li>
                     <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/plan_spgl'); ?>"><img
-                                src="docs/t.item-img-navmid.png">&nbsp;&nbsp;มาตรฐานกำหมดตำแหน่งพนักงานเทศบาล</a></li>
+                                src="docs/t.item-img-navmid.png">&nbsp;&nbsp;มาตรฐานกำหนดตำแหน่งพนักงานเทศบาล</a></li>
                 </div>
             </ul>
         </div>
@@ -320,6 +320,9 @@
                     <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/mptae'); ?>"><img
                                 src="docs/t.item-img-navmid.png">&nbsp;&nbsp;มาตรการส่งเสริมคุณธรรมและความโปร่งใส</a>
                     </li>
+                    <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/operation_eg'); ?>"><img
+                                src="docs/t.item-img-navmid.png">&nbsp;&nbsp;ประมวลจริยธรรมสำหรับเจ้าหน้าที่ของรัฐ</a>
+                    </li>
                 </div>
             </ul>
         </div>
@@ -345,22 +348,21 @@
                     <li><a class="mar-left-9 dropdown-item"
                             href="<?php echo site_url('Pages/operation_rdam_hr'); ?>"><img
                                 src="docs/t.item-img-navmid.png">&nbsp;&nbsp;การบริหารและพัฒนาทรัพยากรบุคคล</a></li>
-                    <li><a class="mar-left-12 dropdown-item"
+                    <li><a class="mar-left-9 dropdown-item"
                             href="<?php echo site_url('Pages/operation_policy_hr'); ?>"><img
                                 src="docs/t.item-img-navmid.png">&nbsp;&nbsp;นโยบายบริหารทรัพยากรบุคคล</a></li>
-                    <li><a class="mar-left-12 dropdown-item"
-                            href="<?php echo site_url('Pages/operation_am_hr'); ?>"><img
+                    <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/operation_am_hr'); ?>"><img
                                 src="docs/t.item-img-navmid.png">&nbsp;&nbsp;การดำเนินการตามนโยบายการบริหาร<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ทรัพยากรบุคคล</a>
                     </li>
-                    <li><a class="mar-left-12 dropdown-item" href="<?php echo site_url('Pages/operation_omp'); ?>"><img
+                    <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/operation_omp'); ?>"><img
                                 src="docs/t.item-img-navmid.png">&nbsp;&nbsp;การออกคำสั่งด้านการบริหารงานบุคคล</a></li>
-                    <li><a class="mar-left-12 dropdown-item"
+                    <li><a class="mar-left-9 dropdown-item"
                             href="<?php echo site_url('Pages/operation_cdm_topic'); ?>"><img
                                 src="docs/t.item-img-navmid.png">&nbsp;&nbsp;หลักเกณฑ์การบริหารและพัฒนา<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ทรัพยากรบุคคล</a>
                     </li>
                 </div>
                 <div class="dropdown-center">
-                    <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/ita_all'); ?>"><img
+                    <li><a class="mar-left-12 dropdown-item" href="<?php echo site_url('Pages/ita_all'); ?>"><img
                                 src="docs/t.item-img-navmid.png">&nbsp;&nbsp;ITA การประเมินคุณธรรมและความโปร่งใส</a>
                     </li>
                     <li><a class="mar-left-12 dropdown-item" href="<?php echo site_url('Pages/operation_aca'); ?>"><img
@@ -375,7 +377,7 @@
                                 src="docs/t.item-img-navmid.png">&nbsp;&nbsp;การเปิดโอกาสให้มีส่วนร่วม</a></li>
                     <li><a class="mar-left-12 dropdown-item" href="<?php echo site_url('Pages/operation_eco'); ?>"><img
                                 src="docs/t.item-img-navmid.png">&nbsp;&nbsp;การเสริมสร้างวัฒนธรรมองค์กร</a></li>
-                    <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/lpa'); ?>"><img
+                    <li><a class="mar-left-12 dropdown-item" href="<?php echo site_url('Pages/lpa'); ?>"><img
                                 src="docs/t.item-img-navmid.png">&nbsp;&nbsp;LPA การประเมินประสิทธิภาพขององค์กร</a></li>
 
                     <!-- <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/operation_am_hr'); ?>"><img src="docs/t.item-img-navmid.png">&nbsp;&nbsp;การดำเนินการบริหารทรัพยากรบุคคล</a></li>
@@ -920,7 +922,8 @@
                 endforeach;
             else: ?>
                 <div class="text-center">
-                    <span style="font-size: 23px;">เนื่องจากระบบส่วนกลางมีปัญหา เว็บไซต์ไม่สามารถดึงข้อมูลจากระบบการจัดซื้อจัดจ้างภาครัฐได้<br>
+                    <span style="font-size: 23px;">เนื่องจากระบบส่วนกลางมีปัญหา
+                        เว็บไซต์ไม่สามารถดึงข้อมูลจากระบบการจัดซื้อจัดจ้างภาครัฐได้<br>
                         แก้ไขเบื้องต้นโดยการ Refresh หน้าเว็บอีกครั้ง หรือรอการแก้ไขจากผู้ดูแลระบบเว็บฯ ส่วนกลาง<br>
                         ต้องขออภัยเป็นอย่างสูงในความไม่สะดวก
                     </span>

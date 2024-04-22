@@ -201,6 +201,7 @@
                         <a class="collapse-item" href="<?php echo site_url('operation_amf_backend'); ?>">การดำเนินการเพื่อจัดการ<br>ความเสี่ยงการทุจริต</a>
                         <a class="collapse-item" href="<?php echo site_url('Operation_pm_backend'); ?>">การมีส่วนร่วมของผู้บริหาร</a>
                         <a class="collapse-item" href="<?php echo site_url('Operation_aa_backend'); ?>">กิจการสภา</a>
+                        
                     </div>
                 </div>
             </li>
@@ -219,6 +220,7 @@
                         <a class="collapse-item" href="<?php echo site_url('Km_backend'); ?>">การจัดการความรู้ท้องถิ่น KM</a>
                         <a class="collapse-item" href="<?php echo site_url('Loadform_backend'); ?>">ดาวน์โหลดแบบฟอร์ม</a>
                         <a class="collapse-item" href="<?php echo site_url('Mptae_backend'); ?>">มาตรการส่งเสริมคุณธรรม<br>และความโปร่งใส</a>
+                        <a class="collapse-item" href="<?php echo site_url('Operation_eg_backend'); ?>">ประมวลจริยธรรมสำหรับ<br>เจ้าหน้าที่ของรัฐ</a>
                     </div>
                 </div>
             </li>
@@ -1191,6 +1193,13 @@
 
                     <li class="hide">
                         <span>มาตรการส่งเสริมคุณธรรมและความโปร่งใส</span>
+                    </li>
+                </a>
+
+                <a href="<?php echo site_url('Operation_eg_backend'); ?>" class="link">
+
+                    <li class="hide">
+                        <span>ประมวลจริยธรรมสำหรับเจ้าหน้าที่ของรัฐ</span>
                     </li>
                 </a>
 

@@ -4,12 +4,12 @@
             <span class="font-path-1 underline"><a href="<?php echo site_url('Home'); ?>">หน้าแรก</a></span>
         </div>
         <div class="path2-2">
-            <span class="font-path-2 underline"><a href="#">การดำเนินงาน</a></span>
+            <span class="font-path-2 underline"><a href="#">มาตรการภายใน</a></span>
         </div>
     </div>
     <div class="container-pages-news">
         <div class="page-center">
-            <div class="head-pages-three">
+            <div class="head-pages-two">
                 <span class="font-pages-head">ประมวลจริยธรรมสำหรับเจ้าหน้าที่ของรัฐ</span>
             </div>
         </div>

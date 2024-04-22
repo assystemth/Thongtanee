@@ -103,6 +103,7 @@ class Pages extends CI_Controller
 		$this->load->model('ita_model');
 		$this->load->model('operation_procurement_model');
 		$this->load->model('operation_aa_model');
+		$this->load->model('operation_eg_model');
 		$this->load->model('operation_aditn_model');
 
 		$this->load->model('newsletter_model');
@@ -3318,6 +3319,48 @@ class Pages extends CI_Controller
 	public function increment_download_operation_aa($operation_aa_file_id)
 	{
 		$this->operation_aa_model->increment_download_operation_aa($operation_aa_file_id);
+	}
+	public function operation_eg()
+	{
+		$data['query'] = $this->operation_eg_model->operation_eg_frontend();
+
+		$this->load->view('frontend_templat/header');
+		$this->load->view('frontend_asset/css');
+		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend/operation_eg', $data);
+		$this->load->view('frontend_asset/js');
+		$this->load->view('frontend_templat/footer');
+	}
+	public function operation_eg_detail($operation_eg_id)
+	{
+		$this->operation_eg_model->increment_view($operation_eg_id);
+
+		$data['rsData'] = $this->operation_eg_model->read($operation_eg_id);
+
+		// เพิ่มเงื่อนไขเพื่อตรวจสอบว่ามีข้อมูลหรือไม่
+		if (!$data['rsData']) {
+			$this->load->view('frontend_templat/header');
+			$this->load->view('frontend_asset/css');
+			$this->load->view('frontend_templat/navbar');
+			$this->load->view('frontend/empty_detail_pages');
+			$this->load->view('frontend_asset/js');
+			$this->load->view('frontend_templat/footer');
+			return; // ให้จบการทำงานที่นี่
+		}
+
+		$data['rsFile'] = $this->operation_eg_model->read_file($operation_eg_id);
+		$data['rsImg'] = $this->operation_eg_model->read_img($operation_eg_id);
+
+		$this->load->view('frontend_templat/header');
+		$this->load->view('frontend_asset/css');
+		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend/operation_eg_detail', $data);
+		$this->load->view('frontend_asset/js');
+		$this->load->view('frontend_templat/footer');
+	}
+	public function increment_download_operation_eg($operation_eg_file_id)
+	{
+		$this->operation_eg_model->increment_download_operation_eg($operation_eg_file_id);
 	}
 	public function newsletter()
 	{
