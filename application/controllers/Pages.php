@@ -2708,7 +2708,8 @@ class Pages extends CI_Controller
 			return; // ให้จบการทำงานที่นี่
 		}
 
-		$data['rsFile'] = $this->operation_policy_hr_model->read_file($operation_policy_hr_id);
+		$data['rsPdf'] = $this->operation_policy_hr_model->read_pdf($operation_policy_hr_id);
+		$data['rsDoc'] = $this->operation_policy_hr_model->read_doc($operation_policy_hr_id);
 		$data['rsImg'] = $this->operation_policy_hr_model->read_img($operation_policy_hr_id);
 
 		$this->load->view('frontend_templat/header');

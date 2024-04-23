@@ -192,7 +192,7 @@
                         <input type="file" name="operation_rdam_hr_file_doc[]" class="form-control mt-1" accept="application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/vnd.ms-powerpoint,application/vnd.openxmlformats-officedocument.presentationml.presentation,application/vnd.ms-excel,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" multiple>
                         <span class="black-add">สามารถอัพโหลดได้หลายไฟล์</span>
                         <br>
-                        <span class="red-add">(เฉพาะไฟล์ PDF)</span>
+                        <span class="red-add">(เฉพาะไฟล์ .doc .docx .ppt .pptx .xls .xlsx)</span>
                     </div>
                 </div>
                 <br>
