@@ -1303,7 +1303,7 @@
                         <div class="content-like">
                             <div class="row">
                                 <div class="col-6" style="margin-top: -25px;">
-                                    <form action="<?php echo site_url('home/addLike'); ?>" id="FormaddLike"
+                                    <form id="reCAPTCHA3" action="<?php echo site_url('home/addLike'); ?>" id="FormaddLike"
                                         method="post">
                                         <div class="form-check">
                                             <input class="form-check-input border-like" type="radio" value="ดีมาก"
@@ -1318,10 +1318,10 @@
                                             <label class="form-check-label font-like-label" for="ดี">ดี</label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input border-like" type="radio" value="พอใช้"
+                                            <input class="form-check-input border-like" type="radio" value="ปานกลาง"
                                                 id="flexCheckDefault3" name="like_name"
                                                 onclick="toggleCheckbox('flexCheckDefault3')" />
-                                            <label class="form-check-label font-like-label" for="พอใช้">ปานกลาง</label>
+                                            <label class="form-check-label font-like-label" for="ปานกลาง">ปานกลาง</label>
                                         </div>
                                         <div class="form-check">
                                             <input class="form-check-input border-like" type="radio" value="พอใช้"
@@ -1330,13 +1330,13 @@
                                             <label class="form-check-label font-like-label" for="พอใช้">พอใช้</label>
                                         </div>
                                         <div id="submitSection">
-                                            <div class="g-recaptcha" style="margin-left: -15px;"
+                                            <!-- <div class="g-recaptcha" style="margin-left: -15px;"
                                                 data-sitekey="6LcKoPcnAAAAAKGgUMRtkBs6chDKzC8XOoVnaZg_"
-                                                data-callback="enableSubmit"></div>
+                                                data-callback="enableSubmit"></div> -->
                                             <div class="form-group row mt-2">
                                                 <div class="col-9" style="z-index:100;">
-                                                    <button type="submit" class="btn" id="SubmitLike" disabled><img
-                                                            src="docs/k.btn-sent-esv.png"></button>
+                                                    <!-- <button type="submit" class="btn" id="SubmitLike" disabled><img src="docs/k.btn-sent-esv.png"></button> -->
+                                                    <button data-action='submit' data-callback='onSubmit' data-sitekey="6LcfiLYpAAAAAI7_U3nkRRxKF7e8B_fwOGqi7g6x" type="submit" class="btn g-recaptcha" id="SubmitLike"><img src="docs/k.btn-sent-esv.png"></button>
                                                 </div>
                                             </div>
                                         </div>

@@ -136,7 +136,7 @@
             </nav>
 
             <div class="pages-select-q-a-chat underline">
-                <form action=" <?php echo site_url('Pages/add_reply_q_a'); ?> " method="post" class="form-horizontal" enctype="multipart/form-data">
+                <form id="reCAPTCHA3" action=" <?php echo site_url('Pages/add_reply_q_a'); ?> " method="post" class="form-horizontal" enctype="multipart/form-data">
                     <br>
                     <input type="hidden" name="q_a_reply_ref_id" class="form-control font-label-e-service-complain" required value="<?= $rsData->q_a_id; ?>">
                     <div class="row">
@@ -169,17 +169,18 @@
             <div class="row">
                 <div class="col-9">
                     <div class="d-flex justify-content-end">
-                        <div class="g-recaptcha" data-sitekey="6LcKoPcnAAAAAKGgUMRtkBs6chDKzC8XOoVnaZg_" data-callback="enableLoginButton"></div>
+                        <!-- <div class="g-recaptcha" data-sitekey="6LcKoPcnAAAAAKGgUMRtkBs6chDKzC8XOoVnaZg_" data-callback="enableLoginButton"></div> -->
                     </div>
                 </div>
                 <div class="col-3">
                     <div class="d-flex justify-content-stat">
-                        <button type="submit" id="loginBtn" class="btn" disabled><img src="<?php echo base_url("docs/s.btn-add-q-a.png"); ?>"></button>
+                        <!-- <button type="submit" id="loginBtn" class="btn" disabled><img src="<?php echo base_url("docs/s.btn-add-q-a.png"); ?>"></button> -->
+                        <button data-action='submit' data-callback='onSubmit' data-sitekey="6LcfiLYpAAAAAI7_U3nkRRxKF7e8B_fwOGqi7g6x" type="submit" id="loginBtn" class="btn g-recaptcha"><img src="<?php echo base_url("docs/s.btn-add-q-a.png"); ?>"></button>
                     </div>
                 </div>
             </div>
             </form>
-            <div class="margin-top-delete-topic d-flex justify-content-end">
+            <div class="margin-top-delete-topic d-flex justify-content-end mt-3">
                 <a href="<?php echo site_url('Pages/q_a'); ?>"><img src="<?php echo base_url("docs/k.btn-back.png"); ?>"></a>
             </div>
         </div>
@@ -188,7 +189,7 @@
 
 <script>
     // เมื่อ reCAPTCHA ผ่านการตรวจสอบ
-    function enableLoginButton() {
-        document.getElementById("loginBtn").removeAttribute("disabled");
-    }
+    // function enableLoginButton() {
+    //     document.getElementById("loginBtn").removeAttribute("disabled");
+    // }
 </script>

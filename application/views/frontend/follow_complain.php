@@ -25,13 +25,13 @@
     </div>
     <div class="container-pages-news">
         <div class="page-center">
-            <div class="head-pages">
+            <div class="head-pages-two">
                 <span class="font-pages-head">ติดตามสถานะเรื่องร้องเรียน</span>
             </div>
         </div>
         <div class="bg-pages-in-e-service-flcp ">
             <div class="pages-follow-complain underline">
-                <form action=" <?php echo site_url('Pages/follow_complain'); ?> " method="post" class="form-horizontal" enctype="multipart/form-data">
+                <form id="reCAPTCHA3" action=" <?php echo site_url('Pages/follow_complain'); ?> " method="post" class="form-horizontal" enctype="multipart/form-data">
                     <div class="form-group">
                         <br>
                         <div class="col-sm-12 control-label font-e-service-complain text-center">กรุณากรอกหมายเลขเรื่องร้องเรียน</div>
@@ -44,10 +44,11 @@
                                 <?php endif; ?>
                             </div>
                             <div class="col-sm-4 mb-3" style="margin-left: -100px;">
-                                <div class="g-recaptcha" data-sitekey="6LcKoPcnAAAAAKGgUMRtkBs6chDKzC8XOoVnaZg_" data-callback="enableLoginButton"></div>
+                                <!-- <div class="g-recaptcha" data-sitekey="6LcKoPcnAAAAAKGgUMRtkBs6chDKzC8XOoVnaZg_" data-callback="enableLoginButton"></div> -->
                             </div>
                             <div class="col-sm-2" style="margin-left: -50px;">
-                                <button type="submit" id="loginBtn" class="btn" disabled><img src="<?php echo base_url("docs/s.btn-add-q-a.png"); ?>"></button>
+                                <!-- <button type="submit" id="loginBtn" class="btn" disabled><img src="<?php echo base_url("docs/s.btn-add-q-a.png"); ?>"></button> -->
+                                <button data-action='submit' data-callback='onSubmit' data-sitekey="6LcfiLYpAAAAAI7_U3nkRRxKF7e8B_fwOGqi7g6x" type="submit" id="loginBtn" class="btn g-recaptcha"><img src="<?php echo base_url("docs/s.btn-add-q-a.png"); ?>"></button>
                             </div>
                         </div>
                     </div>
@@ -129,7 +130,7 @@
 
 <script>
     // เมื่อ reCAPTCHA ผ่านการตรวจสอบ
-    function enableLoginButton() {
-        document.getElementById("loginBtn").removeAttribute("disabled");
-    }
+    // function enableLoginButton() {
+    //     document.getElementById("loginBtn").removeAttribute("disabled");
+    // }
 </script>

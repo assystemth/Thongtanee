@@ -16,7 +16,7 @@
         </div>
         <div class="bg-pages-in-e-service ">
             <div class="pages-form-es-complain-q-a underline">
-                <form action=" <?php echo site_url('Pages/add_q_a'); ?> " method="post" class="form-horizontal" enctype="multipart/form-data">
+                <form id="reCAPTCHA3" action=" <?php echo site_url('Pages/add_q_a'); ?> " method="post" class="form-horizontal" enctype="multipart/form-data">
                     <br>
                     <div class="form-group">
                         <div class="col-sm-12 control-label font-e-service-complain">หัวข้อคำถาม</div>
@@ -55,12 +55,13 @@
             <div class="row">
                 <div class="col-9">
                     <div class="d-flex justify-content-end">
-                        <div class="g-recaptcha" data-sitekey="6LcKoPcnAAAAAKGgUMRtkBs6chDKzC8XOoVnaZg_" data-callback="enableLoginButton"></div>
+                        <!-- <div class="g-recaptcha" data-sitekey="6LcKoPcnAAAAAKGgUMRtkBs6chDKzC8XOoVnaZg_" data-callback="enableLoginButton"></div> -->
                     </div>
                 </div>
                 <div class="col-3">
                     <div class="d-flex justify-content-start">
-                        <button type="submit" id="loginBtn" class="btn" disabled><img src="<?php echo base_url("docs/s.btn-add-q-a2.png"); ?>"></button>
+                        <!-- <button type="submit" id="loginBtn" class="btn" disabled><img src="<?php echo base_url("docs/s.btn-add-q-a2.png"); ?>"></button> -->
+                        <button data-action='submit' data-callback='onSubmit' data-sitekey="6LcfiLYpAAAAAI7_U3nkRRxKF7e8B_fwOGqi7g6x" type="submit" id="loginBtn" class="btn g-recaptcha"><img src="<?php echo base_url("docs/s.btn-add-q-a2.png"); ?>"></button>
                     </div>
                 </div>
             </div>
@@ -74,7 +75,7 @@
 
 <script>
     // เมื่อ reCAPTCHA ผ่านการตรวจสอบ
-    function enableLoginButton() {
-        document.getElementById("loginBtn").removeAttribute("disabled");
-    }
+    // function enableLoginButton() {
+    //     document.getElementById("loginBtn").removeAttribute("disabled");
+    // }
 </script>

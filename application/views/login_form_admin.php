@@ -11,6 +11,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    <!-- reCAPTCHA 3 -->
+    <script src="https://www.google.com/recaptcha/api.js?render=6LcfiLYpAAAAAI7_U3nkRRxKF7e8B_fwOGqi7g6x"></script>
     <!--Stylesheet-->
     <style media="screen">
         *,
@@ -345,7 +347,7 @@
         <div class="shape"></div>
         <div class="shape"></div>
     </div> -->
-        <form action="<?php echo site_url('user/check2'); ?>" method="post">
+        <form id="reCAPTCHA3" action="<?php echo site_url('user/check2'); ?>" method="post">
             <!-- ตรวจสอบว่ามีค่าในคุกกี้ remember หรือไม่ -->
             <?php if (isset($_COOKIE['remember'])) {
                 $remember_data = json_decode($_COOKIE['remember'], true);
@@ -373,8 +375,9 @@
             <!-- <a href="<?php echo site_url('Qrcodetest'); ?>">qr code</a> -->
 
             <div style="margin-left: 10%;" >
-                <div class="g-recaptcha" data-sitekey="6LcKoPcnAAAAAKGgUMRtkBs6chDKzC8XOoVnaZg_" data-callback="enableLoginButton"></div>
-                <button type="submit" class="loginBtn" id="loginBtn" disabled>เข้าสู่ระบบ</button>
+                <!-- <div class="g-recaptcha" data-sitekey="6LcKoPcnAAAAAKGgUMRtkBs6chDKzC8XOoVnaZg_" data-callback="enableLoginButton"></div> -->
+                <!-- <button type="submit" class="loginBtn" id="loginBtn" disabled>เข้าสู่ระบบ</button> -->
+                <button data-action='submit' data-callback='onSubmit' data-sitekey="6LcfiLYpAAAAAI7_U3nkRRxKF7e8B_fwOGqi7g6x" type="submit" class="loginBtn g-recaptcha" id="loginBtn" disabled>เข้าสู่ระบบ</button>
             </div>
 
             <!-- <div class="social">
@@ -394,8 +397,11 @@
     <script src="https://kit.fontawesome.com/74345a2175.js" crossorigin="anonymous"></script>
     <script>
         // เมื่อ reCAPTCHA ผ่านการตรวจสอบ
-        function enableLoginButton() {
-            document.getElementById("loginBtn").removeAttribute("disabled");
+        // function enableLoginButton() {
+        //     document.getElementById("loginBtn").removeAttribute("disabled");
+        // }
+        function onSubmit(token) {
+            document.getElementById("reCAPTCHA3").submit();
         }
 
     //     document.addEventListener("DOMContentLoaded", function() {
