@@ -2286,7 +2286,8 @@ class Pages extends CI_Controller
 			return; // ให้จบการทำงานที่นี่
 		}
 
-		$data['rsFile'] = $this->operation_reauf_model->read_file($operation_reauf_id);
+		$data['rsPdf'] = $this->operation_reauf_model->read_pdf($operation_reauf_id);
+		$data['rsDoc'] = $this->operation_reauf_model->read_doc($operation_reauf_id);
 		$data['rsImg'] = $this->operation_reauf_model->read_img($operation_reauf_id);
 
 		$this->load->view('frontend_templat/header');
@@ -2328,7 +2329,8 @@ class Pages extends CI_Controller
 			return; // ให้จบการทำงานที่นี่
 		}
 
-		$data['rsFile'] = $this->operation_rse_model->read_file($operation_rse_id);
+		$data['rsPdf'] = $this->operation_rse_model->read_pdf($operation_rse_id);
+		$data['rsDoc'] = $this->operation_rse_model->read_doc($operation_rse_id);
 		$data['rsImg'] = $this->operation_rse_model->read_img($operation_rse_id);
 
 		$this->load->view('frontend_templat/header');
@@ -2790,7 +2792,8 @@ class Pages extends CI_Controller
 			return; // ให้จบการทำงานที่นี่
 		}
 
-		$data['rsFile'] = $this->operation_rdam_hr_model->read_file($operation_rdam_hr_id);
+		$data['rsPdf'] = $this->operation_rdam_hr_model->read_pdf($operation_rdam_hr_id);
+		$data['rsDoc'] = $this->operation_rdam_hr_model->read_doc($operation_rdam_hr_id);
 		$data['rsImg'] = $this->operation_rdam_hr_model->read_img($operation_rdam_hr_id);
 
 		$this->load->view('frontend_templat/header');

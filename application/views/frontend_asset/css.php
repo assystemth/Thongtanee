@@ -2959,4 +2959,9 @@
     /* background-color: #000; */
     color: #000;
   }
+
+  .font-doc {
+    font-size: 20px;
+    text-shadow: 1px 1px #ccc;
+  }
 </style>
