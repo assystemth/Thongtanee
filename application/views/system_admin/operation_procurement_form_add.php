@@ -78,7 +78,7 @@
                         <input type="file" name="operation_procurement_file_pdf[]" class="form-control" accept="application/pdf" multiple>
                         <span class="black-add">สามารถอัพโหลดได้หลายไฟล์</span>
                         <br>
-                        <span class="red-add">(เฉพาะไฟล์ PDF)</span>
+                        <span class="red-add">(เฉพาะไฟล์เอกสาร)</span>
                     </div>
                 </div>
                 <br>

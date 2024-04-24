@@ -2372,7 +2372,8 @@ class Pages extends CI_Controller
 			return; // ให้จบการทำงานที่นี่
 		}
 
-		$data['rsFile'] = $this->operation_omp_model->read_file($operation_omp_id);
+		$data['rsPdf'] = $this->operation_omp_model->read_pdf($operation_omp_id);
+		$data['rsDoc'] = $this->operation_omp_model->read_doc($operation_omp_id);
 		$data['rsImg'] = $this->operation_omp_model->read_img($operation_omp_id);
 
 		$this->load->view('frontend_templat/header');
@@ -2624,7 +2625,8 @@ class Pages extends CI_Controller
 			return; // ให้จบการทำงานที่นี่
 		}
 
-		$data['rsFile'] = $this->operation_sap_model->read_file($operation_sap_id);
+		$data['rsPdf'] = $this->operation_sap_model->read_pdf($operation_sap_id);
+		$data['rsDoc'] = $this->operation_sap_model->read_doc($operation_sap_id);
 		$data['rsImg'] = $this->operation_sap_model->read_img($operation_sap_id);
 
 		$this->load->view('frontend_templat/header');
@@ -2751,7 +2753,8 @@ class Pages extends CI_Controller
 			return; // ให้จบการทำงานที่นี่
 		}
 
-		$data['rsFile'] = $this->operation_am_hr_model->read_file($operation_am_hr_id);
+		$data['rsPdf'] = $this->operation_am_hr_model->read_pdf($operation_am_hr_id);
+		$data['rsDoc'] = $this->operation_am_hr_model->read_doc($operation_am_hr_id);
 		$data['rsImg'] = $this->operation_am_hr_model->read_img($operation_am_hr_id);
 
 		$this->load->view('frontend_templat/header');
@@ -3016,7 +3019,8 @@ class Pages extends CI_Controller
 			return; // ให้จบการทำงานที่นี่
 		}
 
-		$data['rsFile'] = $this->operation_mcc_model->read_file($operation_mcc_id);
+		$data['rsPdf'] = $this->operation_mcc_model->read_pdf($operation_mcc_id);
+		$data['rsDoc'] = $this->operation_mcc_model->read_doc($operation_mcc_id);
 		$data['rsImg'] = $this->operation_mcc_model->read_img($operation_mcc_id);
 
 		$this->load->view('frontend_templat/header');
@@ -3058,7 +3062,8 @@ class Pages extends CI_Controller
 			return; // ให้จบการทำงานที่นี่
 		}
 
-		$data['rsFile'] = $this->operation_aca_model->read_file($operation_aca_id);
+		$data['rsPdf'] = $this->operation_aca_model->read_pdf($operation_aca_id);
+		$data['rsDoc'] = $this->operation_aca_model->read_doc($operation_aca_id);
 		$data['rsImg'] = $this->operation_aca_model->read_img($operation_aca_id);
 
 		$this->load->view('frontend_templat/header');
@@ -3151,7 +3156,8 @@ class Pages extends CI_Controller
 			return; // ให้จบการทำงานที่นี่
 		}
 
-		$data['rsFile'] = $this->ita_model->read_file($ita_id);
+		$data['rsPdf'] = $this->ita_model->read_pdf($ita_id);
+		$data['rsDoc'] = $this->ita_model->read_doc($ita_id);
 		$data['rsImg'] = $this->ita_model->read_img($ita_id);
 
 		$this->load->view('frontend_templat/header');

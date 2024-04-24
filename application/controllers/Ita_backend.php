@@ -8,7 +8,9 @@ class Ita_backend extends CI_Controller
         parent::__construct();
         if (
             $this->session->userdata('m_level') != 1 &&
-            $this->session->userdata('m_level') != 2 
+            $this->session->userdata('m_level') != 2 &&
+            $this->session->userdata('m_level') != 3 &&
+            $this->session->userdata('m_level') != 4
         ) {
             redirect('user', 'refresh');
         }
@@ -21,9 +23,13 @@ class Ita_backend extends CI_Controller
     {
         $ita = $this->ita_model->list_all();
 
-        foreach ($ita as $files) {
-            $files->file = $this->ita_model->list_all_pdf($files->ita_id);
+        foreach ($ita as $pdf) {
+            $pdf->pdf = $this->ita_model->list_all_pdf($pdf->ita_id);
         }
+        foreach ($ita as $doc) {
+            $doc->doc = $this->ita_model->list_all_doc($doc->ita_id);
+        }
+
 
         $this->load->view('templat/header');
         $this->load->view('asset/css');
@@ -53,7 +59,8 @@ class Ita_backend extends CI_Controller
     public function editing($ita_id)
     {
         $data['rsedit'] = $this->ita_model->read($ita_id);
-        $data['rsFile'] = $this->ita_model->read_file($ita_id);
+        $data['rsPdf'] = $this->ita_model->read_pdf($ita_id);
+        $data['rsDoc'] = $this->ita_model->read_doc($ita_id);
         $data['rsImg'] = $this->ita_model->read_img($ita_id);
         // echo '<pre>';
         // print_r($data['rsfile']);
@@ -79,10 +86,19 @@ class Ita_backend extends CI_Controller
         $this->ita_model->update_ita_status();
     }
 
-    public function del_pdf($file_id)
+    public function del_pdf($pdf_id)
     {
-        // เรียกใช้ฟังก์ชันใน Model เพื่อลบไฟล์ PDF ด้วย $file_id
-        $this->ita_model->del_pdf($file_id);
+        // เรียกใช้ฟังก์ชันใน Model เพื่อลบไฟล์ PDF ด้วย $pdf_id
+        $this->ita_model->del_pdf($pdf_id);
+
+        // ใส่สคริปต์ JavaScript เพื่อรีเฟรชหน้าเดิม
+        echo '<script>window.history.back();</script>';
+    }
+
+    public function del_doc($doc_id)
+    {
+        // เรียกใช้ฟังก์ชันใน Model เพื่อลบไฟล์ PDF ด้วย $doc_id
+        $this->ita_model->del_doc($doc_id);
 
         // ใส่สคริปต์ JavaScript เพื่อรีเฟรชหน้าเดิม
         echo '<script>window.history.back();</script>';
@@ -101,6 +117,7 @@ class Ita_backend extends CI_Controller
     {
         $this->ita_model->del_ita_img($ita_id);
         $this->ita_model->del_ita_pdf($ita_id);
+        $this->ita_model->del_ita_doc($ita_id);
         $this->ita_model->del_ita($ita_id);
         $this->session->set_flashdata('del_success', TRUE);
         redirect('ita_backend');

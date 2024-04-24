@@ -75,10 +75,20 @@
                 <div class="form-group row">
                     <div class="col-sm-3 control-label">ไฟล์เอกสารเพิ่มเติม</div>
                     <div class="col-sm-6">
-                        <input type="file" name="operation_omp_file_pdf[]" class="form-control" accept="application/pdf" multiple>
+                        <input type="file" name="operation_omp_pdf_pdf[]" class="form-control" accept="application/pdf" multiple>
                         <span class="black-add">สามารถอัพโหลดได้หลายไฟล์</span>
                         <br>
                         <span class="red-add">(เฉพาะไฟล์ PDF)</span>
+                    </div>
+                </div>
+                <br>
+                <div class="form-group row">
+                    <div class="col-sm-3 control-label">ไฟล์เอกสารเพิ่มเติม</div>
+                    <div class="col-sm-6">
+                        <input type="file" name="operation_omp_file_doc[]" class="form-control" accept="application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/vnd.ms-powerpoint,application/vnd.openxmlformats-officedocument.presentationml.presentation,application/vnd.ms-excel,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" multiple>
+                        <span class="black-add">สามารถอัพโหลดได้หลายไฟล์</span>
+                        <br>
+                        <span class="red-add">(เฉพาะไฟล์ .doc .docx .ppt .pptx .xls .xlsx)</span>
                     </div>
                 </div>
                 <br>
