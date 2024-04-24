@@ -414,7 +414,6 @@ class guide_work_model extends CI_Model
         $this->db->select('*');
         $this->db->from('tbl_guide_work');
         $this->db->where('tbl_guide_work.guide_work_status', 'show');
-        $this->db->limit(8);
         $this->db->order_by('tbl_guide_work.guide_work_date', 'DESC');
         $query = $this->db->get();
         return $query->result();

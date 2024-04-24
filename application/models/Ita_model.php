@@ -534,7 +534,6 @@ class Ita_model extends CI_Model
         $this->db->select('*');
         $this->db->from('tbl_ita');
         $this->db->where('tbl_ita.ita_status', 'show');
-        $this->db->limit(8);
         $this->db->order_by('tbl_ita.ita_date', 'DESC');
         $query = $this->db->get();
         return $query->result();

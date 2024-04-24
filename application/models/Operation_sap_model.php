@@ -534,7 +534,7 @@ class Operation_sap_model extends CI_Model
         $this->db->select('*');
         $this->db->from('tbl_operation_sap');
         $this->db->where('tbl_operation_sap.operation_sap_status', 'show');
-        $this->db->limit(8);
+        
         $this->db->order_by('tbl_operation_sap.operation_sap_date', 'DESC');
         $query = $this->db->get();
         return $query->result();

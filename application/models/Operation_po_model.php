@@ -534,7 +534,7 @@ class Operation_po_model extends CI_Model
         $this->db->select('*');
         $this->db->from('tbl_operation_po');
         $this->db->where('tbl_operation_po.operation_po_status', 'show');
-        $this->db->limit(8);
+        
         $this->db->order_by('tbl_operation_po.operation_po_date', 'DESC');
         $query = $this->db->get();
         return $query->result();

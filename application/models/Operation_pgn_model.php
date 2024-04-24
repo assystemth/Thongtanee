@@ -534,7 +534,7 @@ class Operation_pgn_model extends CI_Model
         $this->db->select('*');
         $this->db->from('tbl_operation_pgn');
         $this->db->where('tbl_operation_pgn.operation_pgn_status', 'show');
-        $this->db->limit(8);
+        
         $this->db->order_by('tbl_operation_pgn.operation_pgn_date', 'DESC');
         $query = $this->db->get();
         return $query->result();

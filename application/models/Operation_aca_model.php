@@ -534,7 +534,7 @@ class Operation_aca_model extends CI_Model
         $this->db->select('*');
         $this->db->from('tbl_operation_aca');
         $this->db->where('tbl_operation_aca.operation_aca_status', 'show');
-        $this->db->limit(8);
+        
         $this->db->order_by('tbl_operation_aca.operation_aca_date', 'DESC');
         $query = $this->db->get();
         return $query->result();

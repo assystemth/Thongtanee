@@ -494,7 +494,7 @@ class Operation_cdm_model extends CI_Model
     {
         $this->db->select('*');
         $this->db->from('tbl_operation_cdm_type');
-        $this->db->limit(8);
+        
         $this->db->order_by('tbl_operation_cdm_type.operation_cdm_type_date', 'DESC');
         $query = $this->db->get();
         return $query->result();

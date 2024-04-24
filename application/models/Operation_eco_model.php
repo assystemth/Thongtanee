@@ -534,7 +534,7 @@ class Operation_eco_model extends CI_Model
         $this->db->select('*');
         $this->db->from('tbl_operation_eco');
         $this->db->where('tbl_operation_eco.operation_eco_status', 'show');
-        $this->db->limit(8);
+        
         $this->db->order_by('tbl_operation_eco.operation_eco_date', 'DESC');
         $query = $this->db->get();
         return $query->result();
