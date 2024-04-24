@@ -26,7 +26,7 @@
                     <tr>
                         <th style="width: 5%;">ลำดับ</th>
                         <th style="width: 13%;">รูปภาพ</th>
-                        <th style="width: 15%;">ไฟล์ PDF</th>
+                        <th style="width: 15%;">ไฟล์เอกสาร</th>
                         <th style="width: 30%;">ชื่อ</th>
                         <th style="width: 15%;">อัพโหลด</th>
                         <th style="width: 7%;">วันที่</th>
@@ -47,9 +47,12 @@
                                 <?php endif; ?>
                             </td>
                             <td>
-                                <?php foreach ($rs->file as $pdf) : ?>
-                                    <a class="btn btn-info btn-sm mt-1" href="<?php echo base_url('docs/file/' . $pdf->operation_pm_file_pdf); ?>" target="_blank">ดูไฟล์เดิม!</a>
-                                    <br>
+                            <?php foreach ($rs->pdf as $pdf) : ?>
+                                    <a class="btn btn-primary btn-sm mt-1" href="<?php echo base_url('docs/file/' . $pdf->operation_pm_pdf_pdf); ?>" target="_blank">ดูไฟล์เดิม!</a>
+                                <?php endforeach; ?>
+                                <br>
+                                <?php foreach ($rs->doc as $doc) : ?>
+                                    <a class="btn btn-info btn-sm mt-1" href="<?php echo base_url('docs/file/' . $doc->operation_pm_file_doc); ?>" target="_blank">ดูไฟล์เดิม!</a>
                                 <?php endforeach; ?>
                             </td>
                             <td class="limited-text"><?= $rs->operation_pm_name; ?></td>

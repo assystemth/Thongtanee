@@ -23,9 +23,13 @@ class Operation_pgn_backend extends CI_Controller
     {
         $operation_pgn = $this->operation_pgn_model->list_all();
 
-        foreach ($operation_pgn as $files) {
-            $files->file = $this->operation_pgn_model->list_all_pdf($files->operation_pgn_id);
+        foreach ($operation_pgn as $pdf) {
+            $pdf->pdf = $this->operation_pgn_model->list_all_pdf($pdf->operation_pgn_id);
         }
+        foreach ($operation_pgn as $doc) {
+            $doc->doc = $this->operation_pgn_model->list_all_doc($doc->operation_pgn_id);
+        }
+
 
         $this->load->view('templat/header');
         $this->load->view('asset/css');
@@ -55,7 +59,8 @@ class Operation_pgn_backend extends CI_Controller
     public function editing($operation_pgn_id)
     {
         $data['rsedit'] = $this->operation_pgn_model->read($operation_pgn_id);
-        $data['rsFile'] = $this->operation_pgn_model->read_file($operation_pgn_id);
+        $data['rsPdf'] = $this->operation_pgn_model->read_pdf($operation_pgn_id);
+        $data['rsDoc'] = $this->operation_pgn_model->read_doc($operation_pgn_id);
         $data['rsImg'] = $this->operation_pgn_model->read_img($operation_pgn_id);
         // echo '<pre>';
         // print_r($data['rsfile']);
@@ -81,10 +86,19 @@ class Operation_pgn_backend extends CI_Controller
         $this->operation_pgn_model->update_operation_pgn_status();
     }
 
-    public function del_pdf($file_id)
+    public function del_pdf($pdf_id)
     {
-        // เรียกใช้ฟังก์ชันใน Model เพื่อลบไฟล์ PDF ด้วย $file_id
-        $this->operation_pgn_model->del_pdf($file_id);
+        // เรียกใช้ฟังก์ชันใน Model เพื่อลบไฟล์ PDF ด้วย $pdf_id
+        $this->operation_pgn_model->del_pdf($pdf_id);
+
+        // ใส่สคริปต์ JavaScript เพื่อรีเฟรชหน้าเดิม
+        echo '<script>window.history.back();</script>';
+    }
+
+    public function del_doc($doc_id)
+    {
+        // เรียกใช้ฟังก์ชันใน Model เพื่อลบไฟล์ PDF ด้วย $doc_id
+        $this->operation_pgn_model->del_doc($doc_id);
 
         // ใส่สคริปต์ JavaScript เพื่อรีเฟรชหน้าเดิม
         echo '<script>window.history.back();</script>';
@@ -103,6 +117,7 @@ class Operation_pgn_backend extends CI_Controller
     {
         $this->operation_pgn_model->del_operation_pgn_img($operation_pgn_id);
         $this->operation_pgn_model->del_operation_pgn_pdf($operation_pgn_id);
+        $this->operation_pgn_model->del_operation_pgn_doc($operation_pgn_id);
         $this->operation_pgn_model->del_operation_pgn($operation_pgn_id);
         $this->session->set_flashdata('del_success', TRUE);
         redirect('operation_pgn_backend');
