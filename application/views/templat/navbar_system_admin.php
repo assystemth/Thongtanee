@@ -201,7 +201,9 @@
                         <a class="collapse-item" href="<?php echo site_url('operation_amf_backend'); ?>">การดำเนินการเพื่อจัดการ<br>ความเสี่ยงการทุจริต</a>
                         <a class="collapse-item" href="<?php echo site_url('Operation_pm_backend'); ?>">การมีส่วนร่วมของผู้บริหาร</a>
                         <a class="collapse-item" href="<?php echo site_url('Operation_aa_backend'); ?>">กิจการสภา</a>
-                        
+                        <a class="collapse-item" href="<?php echo site_url('p_rpobuy_backend'); ?>">รายการจัดซื้อจัดจ้างหรือ<br>การจัดหาพัสดุ</a>
+                        <a class="collapse-item" href="<?php echo site_url('p_sopopip_backend'); ?>">รายงานความก้าวหน้าการจัด<br>ซื้อจัดจ้างหรือการจัดหาพัสดุ</a>
+                        <a class="collapse-item" href="<?php echo site_url('P_sopopaortsr_backend'); ?>">รายงานสรุปผลการจัดซื้อจัด<br>จ้างหรือการจัดหาพัสดุประจำปี</a>
                     </div>
                 </div>
             </li>
@@ -1146,7 +1148,24 @@
                         <span>จัดการข้อมูลกิจการสภา</span>
                     </li>
                 </a>
+                <a href="<?php echo site_url('P_rpobuy_backend'); ?>" class="link">
 
+                    <li class="hide">
+                        <span>รายการจัดซื้อจัดจ้างหรือการจัดหาพัสดุ</span>
+                    </li>
+                </a>
+                <a href="<?php echo site_url('P_sopopip_backend'); ?>" class="link">
+
+                    <li class="hide">
+                        <span>รายงานความก้าวหน้าการจัดซื้อจัดจ้างหรือการจัดหาพัสดุ</span>
+                    </li>
+                </a>
+                <a href="<?php echo site_url('P_sopopaortsr_backend'); ?>" class="link">
+
+                    <li class="hide">
+                        <span>รายงานสรุปผลการจัดซื้อจัดจ้างหรือการจัดหาพัสดุประจำปี</span>
+                    </li>
+                </a>
                 <!-- มาตราการภายใน -->
                 <a href="<?php echo site_url('Order_backend'); ?>" class="link">
 

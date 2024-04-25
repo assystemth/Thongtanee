@@ -90,6 +90,9 @@ class Pages extends CI_Controller
 		$this->load->model('p_reb_model');
 		$this->load->model('operation_sap_model');
 		$this->load->model('operation_pm_model');
+		$this->load->model('p_rpobuy_model');
+		$this->load->model('p_sopopip_model');
+		$this->load->model('p_sopopaortsr_model');
 		$this->load->model('operation_policy_hr_model');
 		$this->load->model('operation_am_hr_model');
 		$this->load->model('operation_rdam_hr_model');
@@ -2685,6 +2688,135 @@ class Pages extends CI_Controller
 	public function increment_download_operation_pm($operation_pm_file_id)
 	{
 		$this->operation_pm_model->increment_download_operation_pm($operation_pm_file_id);
+	}
+	public function p_rpobuy()
+	{
+		$data['query'] = $this->p_rpobuy_model->p_rpobuy_frontend_list();
+
+		$this->load->view('frontend_templat/header');
+		$this->load->view('frontend_asset/css');
+		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend/p_rpobuy', $data);
+		$this->load->view('frontend_asset/js');
+		$this->load->view('frontend_templat/footer');
+	}
+	public function p_rpobuy_detail($p_rpobuy_id)
+	{
+		$this->p_rpobuy_model->increment_view($p_rpobuy_id);
+
+		$data['rsData'] = $this->p_rpobuy_model->read($p_rpobuy_id);
+
+		// เพิ่มเงื่อนไขเพื่อตรวจสอบว่ามีข้อมูลหรือไม่
+		if (!$data['rsData']) {
+			$this->load->view('frontend_templat/header');
+			$this->load->view('frontend_asset/css');
+			$this->load->view('frontend_templat/navbar');
+			$this->load->view('frontend/empty_detail_pages');
+			$this->load->view('frontend_asset/js');
+			$this->load->view('frontend_templat/footer');
+			return; // ให้จบการทำงานที่นี่
+		}
+
+		$data['rsPdf'] = $this->p_rpobuy_model->read_pdf($p_rpobuy_id);
+		$data['rsDoc'] = $this->p_rpobuy_model->read_doc($p_rpobuy_id);
+		$data['rsImg'] = $this->p_rpobuy_model->read_img($p_rpobuy_id);
+
+		$this->load->view('frontend_templat/header');
+		$this->load->view('frontend_asset/css');
+		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend/p_rpobuy_detail', $data);
+		$this->load->view('frontend_asset/js');
+		$this->load->view('frontend_templat/footer');
+	}
+	public function increment_download_p_rpobuy($p_rpobuy_file_id)
+	{
+		$this->p_rpobuy_model->increment_download_p_rpobuy($p_rpobuy_file_id);
+	}
+	public function p_sopopip()
+	{
+		$data['query'] = $this->p_sopopip_model->p_sopopip_frontend_list();
+
+		$this->load->view('frontend_templat/header');
+		$this->load->view('frontend_asset/css');
+		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend/p_sopopip', $data);
+		$this->load->view('frontend_asset/js');
+		$this->load->view('frontend_templat/footer');
+	}
+	public function p_sopopip_detail($p_sopopip_id)
+	{
+		$this->p_sopopip_model->increment_view($p_sopopip_id);
+
+		$data['rsData'] = $this->p_sopopip_model->read($p_sopopip_id);
+
+		// เพิ่มเงื่อนไขเพื่อตรวจสอบว่ามีข้อมูลหรือไม่
+		if (!$data['rsData']) {
+			$this->load->view('frontend_templat/header');
+			$this->load->view('frontend_asset/css');
+			$this->load->view('frontend_templat/navbar');
+			$this->load->view('frontend/empty_detail_pages');
+			$this->load->view('frontend_asset/js');
+			$this->load->view('frontend_templat/footer');
+			return; // ให้จบการทำงานที่นี่
+		}
+
+		$data['rsPdf'] = $this->p_sopopip_model->read_pdf($p_sopopip_id);
+		$data['rsDoc'] = $this->p_sopopip_model->read_doc($p_sopopip_id);
+		$data['rsImg'] = $this->p_sopopip_model->read_img($p_sopopip_id);
+
+		$this->load->view('frontend_templat/header');
+		$this->load->view('frontend_asset/css');
+		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend/p_sopopip_detail', $data);
+		$this->load->view('frontend_asset/js');
+		$this->load->view('frontend_templat/footer');
+	}
+	public function increment_download_p_sopopip($p_sopopip_file_id)
+	{
+		$this->p_sopopip_model->increment_download_p_sopopip($p_sopopip_file_id);
+	}
+	public function p_sopopaortsr()
+	{
+		$data['query'] = $this->p_sopopaortsr_model->p_sopopaortsr_frontend_list();
+
+		$this->load->view('frontend_templat/header');
+		$this->load->view('frontend_asset/css');
+		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend/p_sopopaortsr', $data);
+		$this->load->view('frontend_asset/js');
+		$this->load->view('frontend_templat/footer');
+	}
+	public function p_sopopaortsr_detail($p_sopopaortsr_id)
+	{
+		$this->p_sopopaortsr_model->increment_view($p_sopopaortsr_id);
+
+		$data['rsData'] = $this->p_sopopaortsr_model->read($p_sopopaortsr_id);
+
+		// เพิ่มเงื่อนไขเพื่อตรวจสอบว่ามีข้อมูลหรือไม่
+		if (!$data['rsData']) {
+			$this->load->view('frontend_templat/header');
+			$this->load->view('frontend_asset/css');
+			$this->load->view('frontend_templat/navbar');
+			$this->load->view('frontend/empty_detail_pages');
+			$this->load->view('frontend_asset/js');
+			$this->load->view('frontend_templat/footer');
+			return; // ให้จบการทำงานที่นี่
+		}
+
+		$data['rsPdf'] = $this->p_sopopaortsr_model->read_pdf($p_sopopaortsr_id);
+		$data['rsDoc'] = $this->p_sopopaortsr_model->read_doc($p_sopopaortsr_id);
+		$data['rsImg'] = $this->p_sopopaortsr_model->read_img($p_sopopaortsr_id);
+
+		$this->load->view('frontend_templat/header');
+		$this->load->view('frontend_asset/css');
+		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend/p_sopopaortsr_detail', $data);
+		$this->load->view('frontend_asset/js');
+		$this->load->view('frontend_templat/footer');
+	}
+	public function increment_download_p_sopopaortsr($p_sopopaortsr_file_id)
+	{
+		$this->p_sopopaortsr_model->increment_download_p_sopopaortsr($p_sopopaortsr_file_id);
 	}
 	public function operation_policy_hr()
 	{
