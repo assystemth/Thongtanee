@@ -521,7 +521,7 @@ class Pages extends CI_Controller
 	public function e_gp()
 	{
 		// URL of the Open API
-		$api_url = 'https://opend.data.go.th/govspending/cgdcontract?api-key=TH3JFBwJZlaXdDCpcVfSFGuoofCJ1heX&year=2566&dept_code=5450503&budget_start=0&budget_end=1000000000&offset=0&limit=500&keyword=&winner_tin=';
+		$api_url = 'https://opend.data.go.th/govspending/cgdcontract?api-key=TH3JFBwJZlaXdDCpcVfSFGuoofCJ1heX&year=2567&dept_code=5450503&budget_start=0&budget_end=1000000000&offset=0&limit=500&keyword=&winner_tin=';
 
 		// Fetch data from the API
 		$api_data = file_get_contents($api_url);
