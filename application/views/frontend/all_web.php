@@ -86,6 +86,14 @@
                             <a href="<?php echo site_url('Pages/operation_pm'); ?>" class="font-content-all-web">การมีส่วนร่วมของผู้บริหาร</a><br>
                             <div class="mt-1"></div>
                             <a href="<?php echo site_url('Pages/operation_aa'); ?>" class="font-content-all-web">กิจการสภา</a><br>
+                            <a class="font-content-all-web">การจัดซื้อจัดจ้างหรือการจัดหาพัสดุ</a><br>
+                            <div class="mt-1"></div>
+                            <a href="<?php echo site_url('Pages/p_rpobuy'); ?>" class="font-content-all-web dot-laws">รายการจัดซื้อจัดจ้างหรือการจัดหาพัสดุ</a><br>
+                            <div class="mt-1"></div>
+                            <a href="<?php echo site_url('Pages/p_sopopip'); ?>" class="font-content-all-web dot-laws">รายงานความก้าวหน้าการจัดซื้อจัดจ้าง<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;หรือการจัดหาพัสดุ</a><br>
+                            <div class="mt-1"></div>
+                            <a href="<?php echo site_url('Pages/p_sopopaortsr'); ?>" class="font-content-all-web dot-laws">รายงานสรุปผลการจัดซื้อจัดจ้าง<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;หรือการจัดหาพัสดุประจำปี</a><br>
+                            <div class="mt-1"></div>
                         </div>
                     </div>
 
