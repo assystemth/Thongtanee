@@ -11,19 +11,21 @@
 
 
   <!-- boostrap  -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link href="<?= base_url('asset/'); ?>boostrap/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"> 
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> -->
   <!-- w3schools -->
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <!-- awesome  -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <!-- Add Swiper styles -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
   <!-- font  -->
   <link href='https://fonts.googleapis.com/css?family=Kanit' rel='stylesheet'>
   <!-- google map -->
   <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
   <!-- ใช้ CSS ของ Swiper -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link href="<?= base_url('asset/'); ?>swiper/swiper/swiper-bundle.min.css" rel="stylesheet"> 
+
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> -->
 
   <link rel="stylesheet" type="text/css" href="./style.css" />
 
@@ -35,13 +37,12 @@
   <script id="cookieWow" type="text/javascript" src="https://cookiecdn.com/configs/6QsrB4Cv2uYE2WoAmghffBjz" data-cwcid="6QsrB4Cv2uYE2WoAmghffBjz"></script>
 
   <!-- สไลด์ Slick Carousel -->
-  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link href="<?= base_url('asset/'); ?>slick/slick-carousel/slick/slick.css" rel="stylesheet"> 
+
+  <!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" /> -->
 
   <!-- รูปภาพ preview -->
   <link href="<?= base_url('asset/'); ?>lightbox2/src/css/lightbox.css" rel="stylesheet">
-  <link href="<?= base_url('asset/'); ?>swiper/swiper/swiper-bundle.min.css" rel="stylesheet"> 
-  <link href="<?= base_url('asset/'); ?>slick/slick-carousel/slick/slick.css" rel="stylesheet"> 
-  <link href="<?= base_url('asset/'); ?>boostrap/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"> 
 
    <!-- Search Google -->
    <script async src="https://cse.google.com/cse.js?cx=c38f57088c50147a9"></script>

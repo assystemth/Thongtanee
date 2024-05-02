@@ -1,11 +1,11 @@
 <!-- Include Bootstrap CSS and JavaScript -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="<?= base_url('asset/'); ?>boostrap/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script> -->
 <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <!-- awesome  -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
-<!-- Add Swiper JS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
  <!-- reCAPTCHA 3 -->
  <script src="https://www.google.com/recaptcha/api.js?render=6LcfiLYpAAAAAI7_U3nkRRxKF7e8B_fwOGqi7g6x"></script>
 <!-- reCAPTCHA2  -->
@@ -15,10 +15,13 @@
 <script src="<?= base_url('asset/'); ?>rpie.js"></script>
 
 <!-- ใช้ JavaScript ของ Swiper -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="<?= base_url('asset/'); ?>swiper/swiper/swiper-bundle.min.js"></script>
+
+<!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
 
 <!-- ใช้ JavaScript ของ Slick Carousel  -->
-<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="<?= base_url('asset/'); ?>slick/slick-carousel/slick/slick.min.js"></script>
+<!-- <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> -->
 
 <!-- sweetalert 2 -->
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.31/dist/sweetalert2.all.min.js"></script>
@@ -26,9 +29,6 @@
 
 <!-- รูปภาพ preview -->
 <script src="<?= base_url('asset/'); ?>lightbox2/src/js/lightbox.js"></script>
-<script src="<?= base_url('asset/'); ?>swiper/swiper/swiper-bundle.min.js"></script>
-<script src="<?= base_url('asset/'); ?>slick/slick-carousel/slick/slick.min.js"></script>
-<script src="<?= base_url('asset/'); ?>boostrap/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
 <script>
     // รูปภาพ preview *********************************************************************
