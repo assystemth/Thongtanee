@@ -99,6 +99,8 @@ class Intra_it extends CI_Controller
         $this->load->view('internet_asste/js');
         $this->load->view('internet_asste/php');
         $this->load->view('intranet_templat/footer');
+
+
         
     }
 

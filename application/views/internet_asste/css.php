@@ -779,7 +779,7 @@
         border-bottom: 1px solid; 
         color: #E2E2E2;
         margin-top: -10px;
-        padding: 2px 5px 2px 2px;
+        padding: 10px 5px 2px 2px;
         
     }
     .btn-all-it {
@@ -795,4 +795,9 @@
         background: #0FC2C0;
         color: #fff;
     }
+
+    .padding-icon{
+        padding: 15px 15px;
+    }
+    
 </style>

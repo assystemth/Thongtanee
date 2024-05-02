@@ -496,7 +496,7 @@
 
                     <div class="text-activity underline three-line-ellipsis mt-1">
                         <a href="<?= site_url('pages/activity_detail/' . $activity->activity_id); ?>">
-                            <span>
+                            <span class="text-activity">
                                 <?= strip_tags($activity->activity_name); ?>
                             </span>
                         </a>
@@ -874,7 +874,7 @@
                 foreach ($limited_data as $data):
                     ?>
                     <div class="content-news-detail">
-                        <span class="text-news"><a href="<?= htmlspecialchars($data['url']) ?>" target="_blank">
+                        <span class="text-news"><a href="<?= htmlspecialchars($data['url']) ?>" target="_blank" style="color: #000;">
                                 <img src="<?php echo base_url("docs/e-gp.png"); ?>" style="width: 40; height: 40px;">
                                 <?= htmlspecialchars($data['project_name']) ?>
                             </a></span>
