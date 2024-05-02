@@ -17,7 +17,7 @@
 
     }
 
-    .welcome {
+    .comecome {
         background-image: url('<?php echo base_url("docs/intranet/welcome19v4.jpg"); ?>');
         background-size: contain;
         background-repeat: no-repeat;
@@ -681,5 +681,118 @@
         width: 100%;
         height: auto;
         padding: 25px 30px;
+    }
+    .card-all-it {
+        border-radius: 14px;
+        background: #FFF;
+        box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.15);
+        width: 100%;
+        height: 45vh;
+        flex-shrink: 0;
+        padding: 25px 30px;
+        text-align: center;
+
+    }
+
+    .card-all-it2 {
+        border-radius: 14px;
+        background: #FFF;
+        box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.15);
+        width: 208px;
+        height: 95vh;
+        flex-shrink: 0;
+        padding: 25px 30px;
+    }
+    
+    .card-sale {
+        color: #000;
+        text-align: center;
+        font-family: Kanit;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        /* 171.429% */
+    }
+
+    .card-service-top {
+        font-size: 16px;
+        height: 25px;
+
+
+    }
+
+    .card-service {
+        font-size: 14px;
+        height: 10.5vh;
+
+    }
+
+    .sale-img {
+        border-radius: 50%;
+        width: 100%;
+        height: 8vh;
+        margin: auto;
+    }
+
+    .dropdown-sale {
+        cursor: pointer;
+    }
+
+    .dropdown-menu {
+        /* margin-left: 100px; */
+        width: 280px;
+        height: 135px;
+        /* background: #E2E2E2; */
+    }
+
+    .detail-sale {
+        padding: 15px 15px 15px 15px;
+        color: #6298E8;
+        /* width: 100%;
+        height: 100%; */
+        margin: auto;
+    }
+    .detail-sale2 {
+        padding: 15px 15px 15px 15px;
+    }
+
+    .dropdown-top {
+        color: #000;
+        text-align: center;
+        font-family: Kanit;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px;
+    }
+
+    .font-sale-gray {
+        color: #B4B4B4;
+        
+    }
+
+    .font-sale-black {
+        color: #000000;
+    }
+    .border-gray{
+        border-bottom: 1px solid; 
+        color: #E2E2E2;
+        margin-top: -10px;
+        padding: 2px 5px 2px 2px;
+        
+    }
+    .btn-all-it {
+        border-radius: 14px;
+        background: #0FC2C0;
+        width: 103px;
+        height: 38.351px;
+        flex-shrink: 0;
+        color: #fff;
+    }
+
+    .btn-all-it:hover {
+        background: #0FC2C0;
+        color: #fff;
     }
 </style>

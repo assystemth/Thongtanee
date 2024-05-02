@@ -39,6 +39,9 @@
                 <a class="navbar-link" data-image-src="<?php echo base_url("docs/intranet/nav-intranet-btn-hover8.png"); ?>" href="<?php echo site_url('Intra_report'); ?>">
                     <img src="<?php echo base_url("docs/intranet/nav-intranet-btn8.png"); ?>" width="100%" height="100%" style="padding-top: 5%;">
                 </a>
+                <a class="navbar-link" data-image-src="<?php echo base_url("docs/intranet/nav-intranet-btn-hover9.png"); ?>" href="<?php echo site_url('Intra_it'); ?>">
+                    <img src="<?php echo base_url("docs/intranet/nav-intranet-btn9.png"); ?>" width="100%" height="100%" style="padding-top: 5%;">
+                </a>
             </div>
         </div>
 

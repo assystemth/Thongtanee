@@ -39,6 +39,9 @@
 
   <!-- รูปภาพ preview -->
   <link href="<?= base_url('asset/'); ?>lightbox2/src/css/lightbox.css" rel="stylesheet">
+  <link href="<?= base_url('asset/'); ?>swiper/swiper/swiper-bundle.min.css" rel="stylesheet"> 
+  <link href="<?= base_url('asset/'); ?>slick/slick-carousel/slick/slick.css" rel="stylesheet"> 
+  <link href="<?= base_url('asset/'); ?>boostrap/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"> 
 
    <!-- Search Google -->
    <script async src="https://cse.google.com/cse.js?cx=c38f57088c50147a9"></script>

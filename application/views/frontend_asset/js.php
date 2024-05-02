@@ -26,6 +26,9 @@
 
 <!-- รูปภาพ preview -->
 <script src="<?= base_url('asset/'); ?>lightbox2/src/js/lightbox.js"></script>
+<script src="<?= base_url('asset/'); ?>swiper/swiper/swiper-bundle.min.js"></script>
+<script src="<?= base_url('asset/'); ?>slick/slick-carousel/slick/slick.min.js"></script>
+<script src="<?= base_url('asset/'); ?>boostrap/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
 <script>
     // รูปภาพ preview *********************************************************************
