@@ -181,11 +181,13 @@ class Corruption_model extends CI_Model
         $used_space_mb = $this->space_model->get_used_space();
         $upload_limit_mb = $this->space_model->get_limit_storage();
 
+        // If images are uploaded, calculate the total space required
         $total_space_required = 0;
-        $corruption_imgs = $_FILES['corruption_imgs'];
-
-        foreach ($corruption_imgs['size'] as $size) {
-            $total_space_required += $size;
+        if (isset($_FILES['corruption_imgs']) && !empty($_FILES['corruption_imgs']['name'][0])) {
+            $corruption_imgs = $_FILES['corruption_imgs'];
+            foreach ($corruption_imgs['size'] as $size) {
+                $total_space_required += $size;
+            }
         }
 
         // Check if there's enough space
@@ -195,6 +197,7 @@ class Corruption_model extends CI_Model
             return;
         }
 
+        // Prepare corruption data
         $corruption_data = array(
             'corruption_topic' => $this->input->post('corruption_topic'),
             'corruption_detail' => $this->input->post('corruption_detail'),
@@ -204,44 +207,48 @@ class Corruption_model extends CI_Model
             'corruption_address' => $this->input->post('corruption_address'),
         );
 
-        // Config for uploading additional images
-        $config['upload_path'] = './docs/img';
-        $config['allowed_types'] = 'gif|jpg|png|jpeg';
-        $this->load->library('upload', $config);
-
-        $corruption_imgs = $_FILES['corruption_imgs'];
-
+        // Insert corruption data into database
         $this->db->trans_start();
         $this->db->insert('tbl_corruption', $corruption_data);
         $corruption_id = $this->db->insert_id();
 
-        // Upload and insert data into tbl_corruption_img
-        $image_data = array(); // Initialize the array
-        foreach ($corruption_imgs['name'] as $index => $name) {
-            $_FILES['corruption_img']['name'] = $name;
-            $_FILES['corruption_img']['type'] = $corruption_imgs['type'][$index];
-            $_FILES['corruption_img']['tmp_name'] = $corruption_imgs['tmp_name'][$index];
-            $_FILES['corruption_img']['error'] = $corruption_imgs['error'][$index];
-            $_FILES['corruption_img']['size'] = $corruption_imgs['size'][$index];
+        // If images are uploaded, process and insert them into tbl_corruption_img
+        if (isset($corruption_imgs)) {
+            $image_data = array(); // Initialize the array
+            $config['upload_path'] = './docs/img';
+            $config['allowed_types'] = 'gif|jpg|png|jpeg';
+            $this->load->library('upload', $config);
 
-            if (!$this->upload->do_upload('corruption_img')) {
-                $this->session->set_flashdata('save_maxsize', TRUE);
-                redirect('Pages/adding_corruption'); // กลับไปหน้าเดิม
-                return;
+            foreach ($corruption_imgs['name'] as $index => $name) {
+                $_FILES['corruption_img']['name'] = $name;
+                $_FILES['corruption_img']['type'] = $corruption_imgs['type'][$index];
+                $_FILES['corruption_img']['tmp_name'] = $corruption_imgs['tmp_name'][$index];
+                $_FILES['corruption_img']['error'] = $corruption_imgs['error'][$index];
+                $_FILES['corruption_img']['size'] = $corruption_imgs['size'][$index];
+
+                if (!$this->upload->do_upload('corruption_img')) {
+                    $this->session->set_flashdata('save_maxsize', TRUE);
+                    redirect('Pages/adding_corruption');
+                    return;
+                }
+
+                $upload_data = $this->upload->data();
+                $image_data[] = array(
+                    'corruption_img_ref_id' => $corruption_id,
+                    'corruption_img_img' => $upload_data['file_name']
+                );
             }
 
-            $upload_data = $this->upload->data();
-            $image_data[] = array(
-                'corruption_img_ref_id' => $corruption_id,
-                'corruption_img_img' => $upload_data['file_name']
-            );
+            // Insert image data into database
+            $this->db->insert_batch('tbl_corruption_img', $image_data);
         }
-
-        $this->db->insert_batch('tbl_corruption_img', $image_data);
 
         $this->db->trans_complete();
 
+        // Update server space usage
         $this->space_model->update_server_current();
+
+        // Set flash message for success
         $this->session->set_flashdata('save_success', TRUE);
     }
 }

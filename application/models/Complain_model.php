@@ -219,21 +219,21 @@ class Complain_model extends CI_Model
         // Check used space
         $used_space_mb = $this->space_model->get_used_space();
         $upload_limit_mb = $this->space_model->get_limit_storage();
-
+    
         $total_space_required = 0;
         $complain_imgs = $_FILES['complain_imgs'];
-
+    
         foreach ($complain_imgs['size'] as $size) {
             $total_space_required += $size;
         }
-
+    
         // Check if there's enough space
         if ($used_space_mb + ($total_space_required / (1024 * 1024 * 1024)) >= $upload_limit_mb) {
             $this->session->set_flashdata('save_error', TRUE);
             redirect('Pages/adding_complain');
             return;
         }
-
+    
         $complain_data = array(
             'complain_type' => $this->input->post('complain_type'),
             'complain_topic' => $this->input->post('complain_topic'),
@@ -243,47 +243,54 @@ class Complain_model extends CI_Model
             'complain_email' => $this->input->post('complain_email'),
             'complain_address' => $this->input->post('complain_address'),
         );
-
+    
         // Config for uploading additional images
         $config['upload_path'] = './docs/img';
         $config['allowed_types'] = 'gif|jpg|png|jpeg';
         $this->load->library('upload', $config);
-
-        $complain_imgs = $_FILES['complain_imgs'];
-
-        $this->db->trans_start();
-        $this->db->insert('tbl_complain', $complain_data);
-        $complain_id = $this->db->insert_id();
-
-        // Upload and insert data into tbl_complain_img
-        $image_data = array(); // Initialize the array
-        foreach ($complain_imgs['name'] as $index => $name) {
-            $_FILES['complain_img']['name'] = $name;
-            $_FILES['complain_img']['type'] = $complain_imgs['type'][$index];
-            $_FILES['complain_img']['tmp_name'] = $complain_imgs['tmp_name'][$index];
-            $_FILES['complain_img']['error'] = $complain_imgs['error'][$index];
-            $_FILES['complain_img']['size'] = $complain_imgs['size'][$index];
-
-            if (!$this->upload->do_upload('complain_img')) {
-                $this->session->set_flashdata('save_maxsize', TRUE);
-                redirect('Pages/adding_complain'); // กลับไปหน้าเดิม
-                return;
+    
+        // Check if any file is uploaded
+        if (!empty($_FILES['complain_imgs']['name'][0])) {
+            $complain_imgs = $_FILES['complain_imgs'];
+    
+            $this->db->trans_start();
+            $this->db->insert('tbl_complain', $complain_data);
+            $complain_id = $this->db->insert_id();
+    
+            // Upload and insert data into tbl_complain_img
+            $image_data = array(); // Initialize the array
+            foreach ($complain_imgs['name'] as $index => $name) {
+                $_FILES['complain_img']['name'] = $name;
+                $_FILES['complain_img']['type'] = $complain_imgs['type'][$index];
+                $_FILES['complain_img']['tmp_name'] = $complain_imgs['tmp_name'][$index];
+                $_FILES['complain_img']['error'] = $complain_imgs['error'][$index];
+                $_FILES['complain_img']['size'] = $complain_imgs['size'][$index];
+    
+                if (!$this->upload->do_upload('complain_img')) {
+                    $this->session->set_flashdata('save_maxsize', TRUE);
+                    redirect('Pages/adding_complain'); // กลับไปหน้าเดิม
+                    return;
+                }
+    
+                $upload_data = $this->upload->data();
+                $image_data[] = array(
+                    'complain_img_ref_id' => $complain_id,
+                    'complain_img_img' => $upload_data['file_name']
+                );
             }
-
-            $upload_data = $this->upload->data();
-            $image_data[] = array(
-                'complain_img_ref_id' => $complain_id,
-                'complain_img_img' => $upload_data['file_name']
-            );
+    
+            $this->db->insert_batch('tbl_complain_img', $image_data);
+    
+            $this->db->trans_complete();
+        } else {
+            // If no image uploaded, just insert text data
+            $this->db->insert('tbl_complain', $complain_data);
+            $complain_id = $this->db->insert_id();
         }
-
-        $this->db->insert_batch('tbl_complain_img', $image_data);
-
-        $this->db->trans_complete();
-
+    
         // ดึงข้อมูลจาก tbl_complain หลังจากอัปเดต
         $complainData = $this->db->get_where('tbl_complain', array('complain_id' => $complain_id))->row();
-
+    
         if ($complainData) {
             $message = "เรื่องร้องเรียน ใหม่ !" . "\n";
             $message .= "case: " . $complainData->complain_id . "\n";
@@ -296,12 +303,17 @@ class Complain_model extends CI_Model
             $message .= "อีเมล: " . $complainData->complain_email . "\n";
             // เพิ่มข้อมูลอื่น ๆ ตามที่คุณต้องการ
         }
-
-        $this->sendLineNotifyImg($message, $upload_data['full_path']);
-
+    
+        // Send notification
+        if (!empty($upload_data['full_path'])) {
+            $this->sendLineNotifyImg($message, $upload_data['full_path']);
+        } else {
+            $this->sendLineNotify($message);
+        }
+    
         $this->space_model->update_server_current();
         $this->session->set_flashdata('save_success', TRUE);
-
+    
         return $complain_id;
     }
 

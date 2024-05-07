@@ -80,9 +80,9 @@
                         </div>
                         <div class="col-4">
                             <div class="form-group">
-                                <div class="col-sm-12 control-label font-e-service-complain">อีเมล <span class="red-font">*</span></div>
+                                <div class="col-sm-12 control-label font-e-service-complain">อีเมล</div>
                                 <div class="col-sm-12 mt-2">
-                                    <input type="email" name="complain_email" class="form-control font-label-e-service-complain" required placeholder="example@youremail.com">
+                                    <input type="email" name="complain_email" class="form-control font-label-e-service-complain" placeholder="example@youremail.com">
                                 </div>
                             </div>
                         </div>
@@ -98,14 +98,14 @@
                     <div class="form-group">
                         <label for="exampleFormControlTextarea1" class="form-label  font-e-service-complain">รายละเอียด <span class="red-font">*</span></label>
                         <div class="col-sm-12">
-                            <textarea name="complain_detail" class="form-control font-label-e-service-complain" id="exampleFormControlTextarea1" rows="6" placeholder="กรอกรายละเอียดเพิ่มเติม..."></textarea>
+                            <textarea name="complain_detail" class="form-control font-label-e-service-complain" id="exampleFormControlTextarea1" rows="6" required placeholder="กรอกรายละเอียดเพิ่มเติม..."></textarea>
                         </div>
                     </div>
                     <br>
                     <div class="form-group">
-                        <div class="col-sm-7 control-label font-e-service-complain">รูปภาพเพิ่มเติม(สามารถเพิ่มได้หลายรูป) <span class="red-font">*</span></div>
+                        <div class="col-sm-7 control-label font-e-service-complain">รูปภาพเพิ่มเติม(สามารถเพิ่มได้หลายรูป)</div>
                         <div class="col-sm-12 mt-2">
-                            <input type="file" name="complain_imgs[]" class="form-control " accept="image/*" multiple required>
+                            <input type="file" name="complain_imgs[]" class="form-control " accept="image/*" multiple>
                         </div>
                     </div>
             </div>
