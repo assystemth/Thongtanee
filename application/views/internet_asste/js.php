@@ -45,6 +45,60 @@
 <script type="text/javascript" src="https://www.google.com/jsapi"></script>
 
 <script>
+  // dropdown report e-gp *********************************************************************
+  function showChartPurchase(chartId, year) {
+    // ซ่อนทุก chart ก่อน
+    document.querySelectorAll('.chang_chart_purchase').forEach(container => {
+      container.style.display = 'none';
+    });
+
+    // แสดง chart ที่เลือก
+    document.getElementById(chartId).style.display = 'block';
+
+    // เปลี่ยนข้อความในปุ่ม dropdown เป็นปีที่เลือก
+    document.getElementById('dropdownMenuLinkPurchase').innerText = 'ปีงบประมาณ ' + year;
+  }
+
+  function showChartType(chartId, year) {
+    // ซ่อนทุก chart ก่อน
+    document.querySelectorAll('.chang_chart_type').forEach(container => {
+      container.style.display = 'none';
+    });
+
+    // แสดง chart ที่เลือก
+    document.getElementById(chartId).style.display = 'block';
+
+    // เปลี่ยนข้อความในปุ่ม dropdown เป็นปีที่เลือก
+    document.getElementById('dropdownMenuLinkType').innerText = 'ปีงบประมาณ ' + year;
+  }
+
+  function showChartStatus(chartId, year) {
+    // ซ่อนทุก chart ก่อน
+    document.querySelectorAll('.chang_chart_status').forEach(container => {
+      container.style.display = 'none';
+    });
+
+    // แสดง chart ที่เลือก
+    document.getElementById(chartId).style.display = 'block';
+
+    // เปลี่ยนข้อความในปุ่ม dropdown เป็นปีที่เลือก
+    document.getElementById('dropdownMenuLinkStatus').innerText = 'ปีงบประมาณ ' + year;
+  }
+
+  function showChart(chartId, year) {
+    // ซ่อนทุก chart ก่อน
+    document.querySelectorAll('.chang_tmt_budjet').forEach(container => {
+      container.style.display = 'none';
+    });
+
+    // แสดง chart ที่เลือก
+    document.getElementById(chartId).style.display = 'block';
+
+    // เปลี่ยนข้อความในปุ่ม dropdown เป็นปีที่เลือก
+    document.getElementById('dropdownMenuLinkBudget').innerText = 'ปีงบประมาณ ' + year;
+  }
+
+  // **************************************************************************************
   // รูปภาพ preview *********************************************************************
   $(document).ready(function() {
     lightbox.option({
