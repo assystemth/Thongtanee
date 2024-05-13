@@ -1,8 +1,6 @@
 <!-- Include Bootstrap CSS and JavaScript -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-3.7.1.min.js"
-  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 
 <!-- sweetalert 2 -->
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.31/dist/sweetalert2.all.min.js"></script>
@@ -41,9 +39,14 @@
 <!-- รูปภาพ preview -->
 <script src="<?= base_url('asset/'); ?>lightbox2/src/js/lightbox.js"></script>
 
+<!-- chart w3school -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+<!-- chart google -->
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+
 <script>
   // รูปภาพ preview *********************************************************************
-  $(document).ready(function () {
+  $(document).ready(function() {
     lightbox.option({
       'resizeDuration': 200,
       'wrapAround': true
@@ -51,15 +54,15 @@
   });
   // **************************************************************************************
   // คำหยาบ vulgar **********************************
-  $(document).ready(function () {
+  $(document).ready(function() {
     // เมื่อคลิกปุ่ม "จัดการ"
-    $(".popup-insert").click(function () {
+    $(".popup-insert").click(function() {
       var target = $(this).data("target");
       $(target).show();
     });
 
     // เมื่อคลิกปุ่ม "ยกเลิก"
-    $(".cancel-button").click(function () {
+    $(".cancel-button").click(function() {
       var target = $(this).data("target");
       $(target).hide();
     });
@@ -67,11 +70,11 @@
 
   // ***************************************************
 
-  document.addEventListener("DOMContentLoaded", function () {
+  document.addEventListener("DOMContentLoaded", function() {
     var currentPage = '<?php echo current_url(); ?>';
     var navbarLinks = document.querySelectorAll('.navbar-link');
 
-    navbarLinks.forEach(function (link) {
+    navbarLinks.forEach(function(link) {
       var linkHref = link.getAttribute('href');
       var linkImageSrc = link.getAttribute('data-image-src');
 
@@ -82,8 +85,8 @@
       }
 
       // เพิ่ม Event Listener เพื่อตรวจสอบการคลิกทุกรายการ
-      link.addEventListener('click', function (event) {
-        navbarLinks.forEach(function (innerLink) {
+      link.addEventListener('click', function(event) {
+        navbarLinks.forEach(function(innerLink) {
           innerLink.classList.remove('active');
         });
 
@@ -99,7 +102,7 @@
   }
 
 
-  $(document).ready(function () {
+  $(document).ready(function() {
     <?php if ($this->session->flashdata('save_success')) { ?>
       Swal.fire({
         position: 'top-end',
@@ -111,7 +114,7 @@
     <?php } ?>
   });
 
-  $(document).ready(function () {
+  $(document).ready(function() {
     <?php if ($this->session->flashdata('save_error')) { ?>
       Swal.fire({
         icon: 'error',
@@ -122,7 +125,7 @@
     <?php } ?>
   });
 
-  $(document).ready(function () {
+  $(document).ready(function() {
     <?php if ($this->session->flashdata('save_maxsize')) { ?>
       Swal.fire({
         icon: 'error',
@@ -133,7 +136,7 @@
     <?php } ?>
   });
 
-  $(document).ready(function () {
+  $(document).ready(function() {
     <?php if ($this->session->flashdata('del_success')) { ?>
       Swal.fire({
         position: 'top-end',
@@ -145,7 +148,7 @@
     <?php } ?>
   });
 
-  $(document).ready(function () {
+  $(document).ready(function() {
     <?php if ($this->session->flashdata('save_again')) { ?>
       Swal.fire({
         icon: 'warning',
@@ -156,7 +159,7 @@
     <?php } ?>
   });
 
-  $(document).ready(function () {
+  $(document).ready(function() {
     <?php if ($this->session->flashdata('password_mismatch')) { ?>
       Swal.fire({
         icon: 'warning',

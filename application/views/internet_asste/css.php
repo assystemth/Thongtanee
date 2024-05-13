@@ -800,4 +800,78 @@
         padding: 15px 15px;
     }
     
+      /* งบประมาณและโครงการอาจากตรงนี้ */
+      .card-all-report-project {
+        border-radius: 14px;
+        background: #FFF;
+        box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.15);
+        width: 100%;
+        height: auto;
+        padding: 25px 30px;
+    }
+
+    .font-topic-egp {
+        color: #000;
+        font-family: Kanit;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 31.685px;
+        /* 176.027% */
+    }
+
+    .budgetChart {
+        width: 100%;
+        min-height: 355px;
+    }
+
+    .dot1 {
+        height: 15px;
+        width: 15px;
+        background-color: #30A4FC;
+        border-radius: 50%;
+        display: inline-block;
+        margin-right: 5px;
+    }
+
+    .dot2 {
+        height: 15px;
+        width: 15px;
+        background-color: #30E8AA;
+        border-radius: 50%;
+        display: inline-block;
+        margin-right: 5px;
+    }
+
+    .dot3 {
+        height: 15px;
+        width: 15px;
+        background-color: #DF4848;
+        border-radius: 50%;
+        display: inline-block;
+        margin-right: 5px;
+    }
+
+    .dot4 {
+        height: 15px;
+        width: 15px;
+        background-color: #FBBC41;
+        border-radius: 50%;
+        display: inline-block;
+        margin-right: 5px;
+    }
+
+    .font-label-ChartStatus {
+        font-size: 15px;
+        color: #7E7E7E;
+    }
+
+    .color-money-chart {
+        color: #045D8B;
+    }
+
+    .font-head-egp {
+        font-size: 20px;
+        font-weight: 800;
+    }
 </style>

@@ -38,10 +38,14 @@
     <!-- Custom styles for this page -->
     <link href="<?= base_url(); ?>vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 
-      <!-- รูปภาพ preview -->
-  <link href="<?= base_url('asset/'); ?>lightbox2/src/css/lightbox.css" rel="stylesheet">
-  
-  
+    <!-- รูปภาพ preview -->
+    <link href="<?= base_url('asset/'); ?>lightbox2/src/css/lightbox.css" rel="stylesheet">
+
+    <!-- Include Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+    <script src="https://unpkg.com/chart.js-plugin-labels-dv/dist/chartjs-plugin-labels.min.js"></script>
+
 </head>
 
 <body>
@@ -68,7 +72,7 @@
             <div class="dropdown">
                 <a class="dropdown-toggle" href="#" role="button" id="userDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <div class="row" style="width: 220px;">
-                        <div class="col-6" >
+                        <div class="col-6">
                             <span class="font-header-name limit-font-one"><?php echo $this->session->userdata('m_fname'); ?>&nbsp;<?php echo $this->session->userdata('m_lname'); ?></span>
                             <span class="font-rank-name limit-font-one">
                                 <?php
