@@ -299,7 +299,6 @@
                 yAxes: [{
                     ticks: {
                         min: 0,
-                        max: 15000000,
                         callback: function(value, index, values) {
                             return value.toLocaleString();
                         }
@@ -309,7 +308,6 @@
                     type: 'linear',
                     ticks: {
                         min: 0,
-                        max: 300,
                         callback: function(value, index, values) {
                             return value.toLocaleString();
                         }
