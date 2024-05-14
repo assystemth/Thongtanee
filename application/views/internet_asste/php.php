@@ -213,9 +213,9 @@
         });
 
         data.addRows([
-            ['2567', <?php echo $sum_price_build_money_y2567; ?>, numberFormat(<?php echo $sum_price_build_money_y2567; ?>), <?php echo $sum_money_y2567; ?>, numberFormat(<?php echo $sum_money_y2567; ?>)],
+            ['2565', <?php echo $sum_price_build_money_y2565; ?>, numberFormat(<?php echo $sum_price_build_money_y2565; ?>), <?php echo $sum_money_y2565; ?>, numberFormat(<?php echo $sum_money_y2565; ?>)],
             ['2566', <?php echo $sum_price_build_money_y2566; ?>, numberFormat(<?php echo $sum_price_build_money_y2566; ?>), <?php echo $sum_money_y2566; ?>, numberFormat(<?php echo $sum_money_y2566; ?>)],
-            ['2565', <?php echo $sum_price_build_money_y2565; ?>, numberFormat(<?php echo $sum_price_build_money_y2565; ?>), <?php echo $sum_money_y2565; ?>, numberFormat(<?php echo $sum_money_y2565; ?>)]
+            ['2567', <?php echo $sum_price_build_money_y2567; ?>, numberFormat(<?php echo $sum_price_build_money_y2567; ?>), <?php echo $sum_money_y2567; ?>, numberFormat(<?php echo $sum_money_y2567; ?>)],
         ]);
 
         // Set chart options
