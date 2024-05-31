@@ -1262,7 +1262,7 @@
 <script>
     // setup
     const dataStatusMoney2565 = {
-        labels: ['สิ้นสุดสัญญา', 'ระหว่างดำเนินการ'],
+        labels: ['ระหว่างดำเนินการ', 'สิ้นสุดสัญญา'],
         datasets: [{
             label: 'จำนวนเงิน',
             data: [<?php echo $sum_money_by_status_process_y2565; ?>, <?php echo $sum_money_by_status_end_y2565; ?>],
@@ -1307,7 +1307,7 @@
                         } else {
                             // ถ้ามากกว่าศูนย์ให้แสดงผลค่าตามปกติ
                             // return ctx.chart.data.labels[ctx.dataIndex] + ': ' + value + ' บาท';
-                             return ctx.chart.data.labels[ctx.dataIndex] + ': ' + value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + ' โครงการ';
+                             return ctx.chart.data.labels[ctx.dataIndex] + ': ' + value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + ' บาท';
                         }
                     },
                     color: ['#000', '#000'], // กำหนดสีให้กับ datalabels ตามลำดับของข้อมูลใน labels
@@ -1332,7 +1332,7 @@
 
     // setup
     const dataStatusProject2565 = {
-        labels: ['สิ้นสุดสัญญา', 'ระหว่างดำเนินการ'],
+        labels: ['ระหว่างดำเนินการ', 'สิ้นสุดสัญญา'],
         datasets: [{
             label: 'จำนวนโครงการ',
             data: [<?php echo $sum_project_status_process_y2565; ?>, <?php echo $sum_project_status_end_y2565; ?>],
@@ -1404,7 +1404,7 @@
 
     // setup
     const dataStatusMoney2566 = {
-        labels: ['สิ้นสุดสัญญา', 'ระหว่างดำเนินการ'],
+        labels: ['ระหว่างดำเนินการ', 'สิ้นสุดสัญญา'],
         datasets: [{
             label: 'จำนวนเงิน',
             data: [<?php echo $sum_money_by_status_process_y2566; ?>, <?php echo $sum_money_by_status_end_y2566; ?>],
@@ -1449,7 +1449,7 @@
                         } else {
                             // ถ้ามากกว่าศูนย์ให้แสดงผลค่าตามปกติ
                             // return ctx.chart.data.labels[ctx.dataIndex] + ': ' + value + ' บาท';
-                             return ctx.chart.data.labels[ctx.dataIndex] + ': ' + value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + ' โครงการ';
+                             return ctx.chart.data.labels[ctx.dataIndex] + ': ' + value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + ' บาท';
                         }
                     },
                     color: ['#000', '#000'], // กำหนดสีให้กับ datalabels ตามลำดับของข้อมูลใน labels
@@ -1474,7 +1474,7 @@
 
     // setup
     const dataStatusProject2566 = {
-        labels: ['สิ้นสุดสัญญา', 'ระหว่างดำเนินการ'],
+        labels: ['ระหว่างดำเนินการ', 'สิ้นสุดสัญญา'],
         datasets: [{
             label: 'จำนวนโครงการ',
             data: [<?php echo $sum_project_status_process_y2566; ?>, <?php echo $sum_project_status_end_y2566; ?>],
@@ -1546,7 +1546,7 @@
 
     // setup
     const dataStatusMoney2567 = {
-        labels: ['สิ้นสุดสัญญา', 'ระหว่างดำเนินการ'],
+        labels: ['ระหว่างดำเนินการ', 'สิ้นสุดสัญญา'],
         datasets: [{
             label: 'จำนวนเงิน',
             data: [<?php echo $sum_money_by_status_process_y2567; ?>, <?php echo $sum_money_by_status_end_y2567; ?>],
@@ -1591,7 +1591,7 @@
                         } else {
                             // ถ้ามากกว่าศูนย์ให้แสดงผลค่าตามปกติ
                             // return ctx.chart.data.labels[ctx.dataIndex] + ': ' + value + ' บาท';
-                             return ctx.chart.data.labels[ctx.dataIndex] + ': ' + value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + ' โครงการ';
+                             return ctx.chart.data.labels[ctx.dataIndex] + ': ' + value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + ' บาท';
                         }
                     },
                     color: ['#000', '#000'], // กำหนดสีให้กับ datalabels ตามลำดับของข้อมูลใน labels
