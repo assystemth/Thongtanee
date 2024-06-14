@@ -169,7 +169,7 @@
                         <a class="collapse-item" href="<?php echo site_url('Pbsv_gup_backend'); ?>">คู่มือสำหรับประชาชน</a>
                         <a class="collapse-item" href="<?php echo site_url('Pbsv_fp_backend'); ?>">การรับฟังความคิดเห็นของ<br>ประชาชน</a>
                         <a class="collapse-item" href="<?php echo site_url('Pbsv_ppdp_backend'); ?>">นโยบายคุ้มครองข้อมูลส่วน<br>บุคคล</a>
-                        <a class="collapse-item" href="<?php echo site_url('Pbsv_open_data_backend'); ?>">ฐานข้อมูลเปิดภาครัฐ<br>(Open Data)</a>
+                        <a class="collapse-item" href="<?php echo site_url('Odata_backend'); ?>">ฐานข้อมูลเปิดภาครัฐ<br>(Open Data)</a>
                     </div>
                 </div>
             </li>
@@ -1019,7 +1019,7 @@
                         <span>นโยบายคุ้มครองข้อมูลส่วนบุคคล</span>
                     </li>
                 </a>
-                <a href="<?php echo site_url('Pbsv_open_data_backend'); ?>" class="link">
+                <a href="<?php echo site_url('Odata_backend'); ?>" class="link">
 
                     <li class="hide">
                         <span>ฐานข้อมูลเปิดภาครัฐ (Open Data)</span>

@@ -356,7 +356,7 @@
                     <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/pbsv_gup'); ?>"><img src="docs/t.item-img-navmid.png">&nbsp;&nbsp;คู่มือสำหรับประชาชน</a></li>
                     <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/pbsv_fp'); ?>"><img src="docs/t.item-img-navmid.png">&nbsp;&nbsp;การรับฟังความคิดเห็นของประชาชน</a></li>
                     <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/pbsv_ppdp'); ?>"><img src="docs/t.item-img-navmid.png">&nbsp;&nbsp;นโยบายคุ้มครองข้อมูลส่วนบุคคล</a></li>
-                    <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/pbsv_open_data'); ?>"><img src="docs/t.item-img-navmid.png">&nbsp;&nbsp;ฐานข้อมูลเปิดภาครัฐ (Open Data)</a></li>
+                    <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/odata'); ?>"><img src="docs/t.item-img-navmid.png">&nbsp;&nbsp;ฐานข้อมูลเปิดภาครัฐ (Open Data)</a></li>
                 </div>
             </ul>
         </div>
