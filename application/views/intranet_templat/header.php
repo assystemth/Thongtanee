@@ -13,7 +13,7 @@
 <script src="https://kit.fontawesome.com/9d1d9a82d2.js" crossorigin="anonymous"></script> -->
     <link rel="icon" href="<?php echo base_url("docs/logo.png"); ?>" type="image/x-icon">
 
-    <title>เทศบาลดอนโมง - ระบบอินทราเน็ต</title>
+    <title>เทศบาลตำบลธงธานี - ระบบอินทราเน็ต</title>
     <!-- boostrap  -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <!-- icon -->
