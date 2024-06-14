@@ -79,6 +79,8 @@ class Pages extends CI_Controller
 		$this->load->model('pbsv_ems_model');
 		$this->load->model('pbsv_gup_model');
 		$this->load->model('pbsv_e_book_model');
+		$this->load->model('pbsv_open_data_model');
+
 
 		$this->load->model('operation_reauf_model');
 		$this->load->model('operation_rse_model');
@@ -2261,6 +2263,50 @@ class Pages extends CI_Controller
 	{
 		$this->pbsv_e_book_model->increment_download_pbsv_e_book($pbsv_e_book_file_id);
 	}
+
+	public function pbsv_open_data()
+	{
+		$data['query'] = $this->pbsv_open_data_model->pbsv_open_data_frontend();
+
+		$this->load->view('frontend_templat/header');
+		$this->load->view('frontend_asset/css');
+		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend/pbsv_open_data', $data);
+		$this->load->view('frontend_asset/js');
+		$this->load->view('frontend_templat/footer');
+	}
+	public function pbsv_open_data_detail($pbsv_open_data_id)
+	{
+		$this->pbsv_open_data_model->increment_view($pbsv_open_data_id);
+
+		$data['rsData'] = $this->pbsv_open_data_model->read($pbsv_open_data_id);
+
+		// เพิ่มเงื่อนไขเพื่อตรวจสอบว่ามีข้อมูลหรือไม่
+		if (!$data['rsData']) {
+			$this->load->view('frontend_templat/header');
+			$this->load->view('frontend_asset/css');
+			$this->load->view('frontend_templat/navbar');
+			$this->load->view('frontend/empty_detail_pages');
+			$this->load->view('frontend_asset/js');
+			$this->load->view('frontend_templat/footer');
+			return; // ให้จบการทำงานที่นี่
+		}
+
+		$data['rsFile'] = $this->pbsv_open_data_model->read_file($pbsv_open_data_id);
+		$data['rsImg'] = $this->pbsv_open_data_model->read_img($pbsv_open_data_id);
+
+		$this->load->view('frontend_templat/header');
+		$this->load->view('frontend_asset/css');
+		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend/pbsv_open_data_detail', $data);
+		$this->load->view('frontend_asset/js');
+		$this->load->view('frontend_templat/footer');
+	}
+	public function increment_download_pbsv_open_data($pbsv_open_data_file_id)
+	{
+		$this->pbsv_open_data_model->increment_download_pbsv_open_data($pbsv_open_data_file_id);
+	}
+
 	public function operation_reauf()
 	{
 		$data['query'] = $this->operation_reauf_model->operation_reauf_frontend();
