@@ -751,69 +751,91 @@
             </div>
         </div>
         <div id="tab2" class="tab-content">
-            <?php
-            // เพิ่มตัวแปร $limited_data เพื่อจัดเก็บ array ที่จะใช้กับ array_slice
-            $limited_data = [];
+            <?php foreach ($qEgp as $egp) { ?>
+                <div class="content-news-detail">
+                <a href="https://process3.gprocurement.go.th/egp2procmainWeb/jsp/procsearch.sch?servlet=gojsp&proc_id=ShowHTMLFile&processFlows=Procure&projectId=<?= $egp->project_id; ?>&templateType=W2&temp_Announ=A&temp_itemNo=0&seqNo=1" target="_blank">
+                        <div class="row">
+                            <div class="col-10">
+                                <span class="text-news"><img src="docs/e-gp.png" width="30px" height="34px">&nbsp;&nbsp;
+                                    <?= strip_tags($egp->project_name); ?>
+                                </span>
+                            </div>
+                            <div class="col-2">
+                                <div class="row">
+                                    <div class="col-10">
+                                        <div class="d-flex justify-content-end ">
+                                            <span class="text-news-time">
+                                            <?php
+                                            // สมมติว่าค่าที่ได้รับมาจากตัวแปร $rs['doc_date'] อยู่ในรูปแบบ "10 ม.ค. 67"
+                                            $dateStr = $egp->transaction_date;
 
-            foreach ($json_data as $key1 => $value1) :
-                if (is_array($value1)) :
-                    foreach ($value1 as $key2 => $value2) :
-                        if (is_array($value2)) :
-                            foreach ($value2 as $key3 => $value3) :
-                                if ($key3 === 'project_id') :
-                                    $url = 'https://process3.gprocurement.go.th/egp2procmainWeb/jsp/procsearch.sch?servlet=gojsp&proc_id=ShowHTMLFile&processFlows=Procure&projectId=' . $value3 . '&templateType=W2&temp_Announ=A&temp_itemNo=0&seqNo=1';
-                                endif;
-                                if ($key3 === 'project_name') :
-                                    // ใส่ข้อมูลลงใน $limited_data
-                                    $limited_data[] = [
-                                        'url' => $url,
-                                        'project_name' => $value3,
-                                    ];
-                                endif;
-                            endforeach;
-                        endif;
-                    endforeach;
-                endif;
-            // Add a new line after each subarray at the first level
-            endforeach;
+                                            // // แปลงเดือนจากชื่อไทยย่อเป็นชื่อเต็ม
+                                            // $thaiMonths = [
+                                            //     'ม.ค.' => 'มกราคม',
+                                            //     'ก.พ.' => 'กุมภาพันธ์',
+                                            //     'มี.ค.' => 'มีนาคม',
+                                            //     'เม.ย.' => 'เมษายน',
+                                            //     'พ.ค.' => 'พฤษภาคม',
+                                            //     'มิ.ย.' => 'มิถุนายน',
+                                            //     'ก.ค.' => 'กรกฎาคม',
+                                            //     'ส.ค.' => 'สิงหาคม',
+                                            //     'ก.ย.' => 'กันยายน',
+                                            //     'ต.ค.' => 'ตุลาคม',
+                                            //     'พ.ย.' => 'พฤศจิกายน',
+                                            //     'ธ.ค.' => 'ธันวาคม',
+                                            // ];
 
-            // เรียงลำดับ $limited_data ตาม 'project_id' ล่าสุด
-            usort($limited_data, function ($a, $b) {
-                return $b['url'] <=> $a['url'];
-            });
+                                            // // แปลงเดือนใน $dateStr โดยใช้การแทนที่จาก array $thaiMonths
+                                            // foreach ($thaiMonths as $shortMonth => $fullMonth) {
+                                            //     if (strpos($dateStr, $shortMonth) !== false) {
+                                            //         $dateStr = str_replace($shortMonth, $fullMonth, $dateStr);
+                                            //         break; // ออกจาก loop เมื่อเจอการแทนที่แล้ว
+                                            //     }
+                                            // }
 
-            // ในกรณีที่ต้องการแสดงเฉพาะ 4 แถวล่าสุด
-            $limited_data = array_slice($limited_data, 0, 8);
+                                            // แปลงปีคริสต์ศักราช (สองหลัก) เป็นปีพุทธศักราช (สี่หลัก)
+                                            preg_match('/\d{2}$/', $dateStr, $matches);
+                                            if ($matches) {
+                                                $year = $matches[0]; // ดึงตัวเลขสองหลักท้ายสุด ซึ่งคือปีในรูปแบบ 67
+                                                $fullYear = (int)$year < 50 ? '25' . $year : '25' . $year; // เพิ่ม '25' ข้างหน้าปี
+                                                $dateStr = str_replace($year, $fullYear, $dateStr); // แทนที่ปีด้วยปีที่เพิ่ม '25' ข้างหน้า
+                                            }
 
-            // ตรวจสอบว่ามีข้อมูลหรือไม่และแสดงผลลัพธ์
-            if (!empty($limited_data)) :
-                foreach ($limited_data as $data) :
-            ?>
-                    <div class="content-news-detail">
-                        <span class="text-news"><a href="<?= htmlspecialchars($data['url']) ?>" target="_blank" style="color: #000;">
-                                <img src="<?php echo base_url("docs/e-gp.png"); ?>" style="width: 40; height: 40px;">
-                                <?= htmlspecialchars($data['project_name']) ?>
-                            </a></span>
-                    </div>
-                    <!-- <div class="d-flex justify-content-center" style="margin-top: -28px;">
-                        <a href="<?php echo site_url('Pages/e_gp'); ?>">
-                            <img src="docs/k.btn-all.png">
-                        </a>
-                    </div> -->
-                <?php
-                endforeach;
-            else : ?>
-                <div class="text-center">
-                    <span style="font-size: 23px;">เนื่องจากระบบส่วนกลางมีปัญหา
-                        เว็บไซต์ไม่สามารถดึงข้อมูลจากระบบการจัดซื้อจัดจ้างภาครัฐได้<br>
-                        แก้ไขเบื้องต้นโดยการ Refresh หน้าเว็บอีกครั้ง หรือรอการแก้ไขจากผู้ดูแลระบบเว็บฯ ส่วนกลาง<br>
-                        ต้องขออภัยเป็นอย่างสูงในความไม่สะดวก
-                    </span>
+                                            // แสดงผลลัพธ์
+                                            echo $dateStr; // ตัวอย่างเช่น "10 มกราคม 2567"
+                                            ?>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="col-2" style="margin-top: -28px; margin-left: -32px;">
+                                        <?php
+                                        // วันที่ของข่าว
+                                        $contract_contract_date = new DateTime($egp->contract_contract_date);
+
+                                        // วันที่ปัจจุบัน
+                                        $current_date = new DateTime();
+
+                                        // คำนวณหาความต่างของวัน
+                                        $interval = $current_date->diff($contract_contract_date);
+                                        $days_difference = $interval->days;
+
+                                        // ถ้ามากกว่า 30 วัน ให้ซ่อนไว้
+                                        if ($days_difference > 30) {
+                                            // ไม่แสดงรูปภาพ
+                                        } else {
+                                            // แสดงรูปภาพ
+                                            echo '<img src="docs/news-new.gif" width="40" height="16">';
+                                        }
+                                        ?>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
                 </div>
-            <?php endif; ?>
-
+            <?php } ?>
             <div class="d-flex justify-content-center" style="margin-top: -28px;">
-                <a href="<?php echo site_url('Pages/e_gp'); ?>">
+                <a href="<?php echo site_url('Pages/egp'); ?>">
                     <img src="docs/k.btn-all.png">
                 </a>
             </div>

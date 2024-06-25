@@ -133,6 +133,7 @@ class Pages extends CI_Controller
 
 		$this->load->model('odata_model');
 
+		$this->load->model('intra_egp_model');
 	}
 
 	// public function index()
@@ -526,32 +527,38 @@ class Pages extends CI_Controller
 	{
 		$this->mptae_model->increment_download_mptae($mptae_file_id);
 	}
-	public function e_gp()
+	public function egp()
 	{
-		// URL of the Open API
-		$api_url = 'https://opend.data.go.th/govspending/cgdcontract?api-key=TH3JFBwJZlaXdDCpcVfSFGuoofCJ1heX&year=2567&dept_code=5450503&budget_start=0&budget_end=1000000000&offset=0&limit=500&keyword=&winner_tin=';
+		// // URL of the Open API
+		// $api_url = 'https://opend.data.go.th/govspending/cgdcontract?api-key=TH3JFBwJZlaXdDCpcVfSFGuoofCJ1heX&year=2566&dept_code=6320120&budget_start=0&budget_end=1000000000&offset=0&limit=500&keyword=&winner_tin=';
 
-		// Fetch data from the API
-		$api_data = file_get_contents($api_url);
+		// // Fetch data from the API
+		// $api_data = file_get_contents($api_url);
 
-		// Check if data is fetched successfully
-		if ($api_data !== FALSE) {
-			// Decode the JSON data
-			$json_data = json_decode($api_data, TRUE);
+		// // Check if data is fetched successfully
+		// if ($api_data !== FALSE) {
+		// 	// Decode the JSON data
+		// 	$json_data = json_decode($api_data, TRUE);
 
-			// Check if JSON decoding is successful
-			if ($json_data !== NULL) {
-				// Pass JSON data to the view
-				$data['json_data'] = $json_data;
+		// 	// Check if JSON decoding is successful
+		// 	if ($json_data !== NULL) {
+		// 		// Pass JSON data to the view
+		// 		$data['json_data'] = $json_data;
+		$data['q2567'] = $this->intra_egp_model->egp_y2567();
+		$data['q2566'] = $this->intra_egp_model->egp_y2566();
+		$data['q2565'] = $this->intra_egp_model->egp_y2565();
+		$data['q2564'] = $this->intra_egp_model->egp_y2564();
+		$data['q2563'] = $this->intra_egp_model->egp_y2563();
 
-				$this->load->view('frontend_templat/header');
-				$this->load->view('frontend_asset/css');
-				$this->load->view('frontend_templat/navbar');
-				$this->load->view('frontend/e_gp', $data);
-				$this->load->view('frontend_asset/js');
-				$this->load->view('frontend_templat/footer');
-			}
-		}
+
+		$this->load->view('frontend_templat/header');
+		$this->load->view('frontend_asset/css');
+		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend/e_gp', $data);
+		$this->load->view('frontend_asset/js');
+		$this->load->view('frontend_templat/footer');
+		// 	}
+		// }
 	}
 	public function otop()
 	{

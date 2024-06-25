@@ -1030,4 +1030,54 @@ class Intra_egp_model extends CI_Model
             return array();
         }
     }
+
+    public function egp_frontend()
+    {
+        $this->db->select('*');
+        $this->db->from('tbl_bp_report_y2567');
+        $this->db->limit(8);
+        $this->db->order_by('tbl_bp_report_y2567.contract_contract_date', 'DESC');
+        $query = $this->db->get();
+        return $query->result();
+    }
+    public function egp_y2567()
+    {
+        $this->db->select('*');
+        $this->db->from('tbl_bp_report_y2567');
+        $this->db->order_by('tbl_bp_report_y2567.contract_contract_date', 'DESC');
+        $query = $this->db->get();
+        return $query->result();
+    }
+    public function egp_y2566()
+    {
+        $this->db->select('*');
+        $this->db->from('tbl_bp_report_y2566');
+        $this->db->order_by('tbl_bp_report_y2566.contract_contract_date', 'DESC');
+        $query = $this->db->get();
+        return $query->result();
+    }
+    public function egp_y2565()
+    {
+        $this->db->select('*');
+        $this->db->from('tbl_bp_report_y2565');
+        $this->db->order_by('tbl_bp_report_y2565.contract_contract_date', 'DESC');
+        $query = $this->db->get();
+        return $query->result();
+    }
+    public function egp_y2564()
+    {
+        $this->db->select('*');
+        $this->db->from('tbl_bp_report_y2564');
+        $this->db->order_by('tbl_bp_report_y2564.contract_contract_date', 'DESC');
+        $query = $this->db->get();
+        return $query->result();
+    }
+    public function egp_y2563()
+    {
+        $this->db->select('*');
+        $this->db->from('tbl_bp_report_y2563');
+        $this->db->order_by('tbl_bp_report_y2563.contract_contract_date', 'DESC');
+        $query = $this->db->get();
+        return $query->result();
+    }
 }
