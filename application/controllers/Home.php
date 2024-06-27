@@ -114,37 +114,37 @@ class Home extends CI_Controller
 
 	private function loadApiData()
 	{
-		// URL of the Open API
-		$api_url = 'https://opend.data.go.th/govspending/cgdcontract?api-key=TH3JFBwJZlaXdDCpcVfSFGuoofCJ1heX&year=2567&dept_code=5450503&budget_start=0&budget_end=1000000000&offset=0&limit=500&keyword=&winner_tin=';
+		// // URL of the Open API
+		// $api_url = 'https://opend.data.go.th/govspending/cgdcontract?api-key=TH3JFBwJZlaXdDCpcVfSFGuoofCJ1heX&year=2567&dept_code=5450503&budget_start=0&budget_end=1000000000&offset=0&limit=500&keyword=&winner_tin=';
 
-		// Configure options for the HTTP request
-		$options = [
-			'http' => [
-				'method' => 'GET',
-				// 'timeout' => 5, // Set a timeout value for the request (in seconds)
-				'ignore_errors' => true, // Ignore HTTP errors to handle them manually
-			],
-		];
+		// // Configure options for the HTTP request
+		// $options = [
+		// 	'http' => [
+		// 		'method' => 'GET',
+		// 		// 'timeout' => 5, // Set a timeout value for the request (in seconds)
+		// 		'ignore_errors' => true, // Ignore HTTP errors to handle them manually
+		// 	],
+		// ];
 
-		// Create a stream context with the specified options
-		$context = stream_context_create($options);
+		// // Create a stream context with the specified options
+		// $context = stream_context_create($options);
 
-		// Fetch data from the API using file_get_contents with the specified context
-		$api_data = file_get_contents($api_url, false, $context);
+		// // Fetch data from the API using file_get_contents with the specified context
+		// $api_data = file_get_contents($api_url, false, $context);
 
-		// Check if data is fetched successfully
-		if ($api_data !== FALSE) {
-			// Decode the JSON data
-			$json_data = json_decode($api_data, TRUE);
+		// // Check if data is fetched successfully
+		// if ($api_data !== FALSE) {
+		// 	// Decode the JSON data
+		// 	$json_data = json_decode($api_data, TRUE);
 
-			// Check if JSON decoding is successful
-			if ($json_data !== NULL) {
-				return $json_data;
-			}
-		}
+		// 	// Check if JSON decoding is successful
+		// 	if ($json_data !== NULL) {
+		// 		return $json_data;
+		// 	}
+		// }
 
-		// ในกรณีที่มีปัญหาในการโหลดหรือประมวลผลข้อมูล
-		return FALSE; // แก้ไขให้ฟังก์ชันนี้คืนค่า FALSE แทน []
+		// // ในกรณีที่มีปัญหาในการโหลดหรือประมวลผลข้อมูล
+		// return FALSE; // แก้ไขให้ฟังก์ชันนี้คืนค่า FALSE แทน []
 	}
 
 	public function addLike()
